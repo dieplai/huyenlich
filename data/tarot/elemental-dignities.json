@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.0",
+  "source_basis": ["golden_dawn_book_t", "mary_greer_reversals", "product_editorial"],
+  "purpose": "Rules for evaluating how suits/elements strengthen, soften, neutralize, or challenge each other in a Tarot spread.",
+  "suit_to_element": {
+    "wands": "fire",
+    "cups": "water",
+    "swords": "air",
+    "pentacles": "earth"
+  },
+  "elements": {
+    "fire": {
+      "name_vi": "Hỏa",
+      "suits": ["wands"],
+      "keywords_vi": ["hành động", "đam mê", "ý chí", "tốc độ", "sáng tạo"],
+      "shadow_vi": ["nóng vội", "bốc đồng", "đốt năng lượng quá nhanh"]
+    },
+    "water": {
+      "name_vi": "Thủy",
+      "suits": ["cups"],
+      "keywords_vi": ["cảm xúc", "tình yêu", "trực giác", "chữa lành", "gắn kết"],
+      "shadow_vi": ["mơ hồ", "phụ thuộc cảm xúc", "ngập trong cảm giác"]
+    },
+    "air": {
+      "name_vi": "Khí",
+      "suits": ["swords"],
+      "keywords_vi": ["lý trí", "sự thật", "giao tiếp", "quyết định", "xung đột tinh thần"],
+      "shadow_vi": ["lo âu", "lạnh lùng", "suy nghĩ quá mức"]
+    },
+    "earth": {
+      "name_vi": "Thổ",
+      "suits": ["pentacles"],
+      "keywords_vi": ["vật chất", "công việc", "thân thể", "tiền bạc", "nền tảng"],
+      "shadow_vi": ["chậm trễ", "bám víu", "quá thực dụng"]
+    }
+  },
+  "matrix": {
+    "fire": {
+      "fire": {
+        "relation": "same",
+        "weight": 2,
+        "effect": "amplifies",
+        "summary_vi": "Hai năng lượng Hỏa làm chủ đề hành động, đam mê và tốc độ mạnh hơn."
+      },
+      "air": {
+        "relation": "friendly",
+        "weight": 1,
+        "effect": "supports",
+        "summary_vi": "Khí nuôi Hỏa: ý tưởng, lời nói hoặc sự rõ ràng có thể thúc đẩy hành động."
+      },
+      "earth": {
+        "relation": "neutral",
+        "weight": 0,
+        "effect": "grounds_or_slows",
+        "summary_vi": "Thổ có thể giúp Hỏa thành hình, nhưng cũng có thể làm chậm xung lực."
+      },
+      "water": {
+        "relation": "contrary",
+        "weight": -2,
+        "effect": "weakens_or_conflicts",
+        "summary_vi": "Thủy làm dịu hoặc dập Hỏa: cảm xúc có thể làm chậm hành động, hoặc hành động quá nhanh làm tổn thương cảm xúc."
+      }
+    },
+    "water": {
+      "fire": {
+        "relation": "contrary",
+        "weight": -2,
+        "effect": "weakens_or_conflicts",
+        "summary_vi": "Hỏa và Thủy tạo căng thẳng giữa cảm xúc và hành động."
+      },
+      "water": {
+        "relation": "same",
+        "weight": 2,
+        "effect": "amplifies",
+        "summary_vi": "Hai năng lượng Thủy làm cảm xúc, trực giác và quan hệ trở thành trọng tâm."
+      },
+      "air": {
+        "relation": "neutral",
+        "weight": 0,
+        "effect": "clarifies_or_overthinks",
+        "summary_vi": "Khí có thể gọi tên cảm xúc, nhưng cũng có thể khiến cảm xúc bị phân tích quá mức."
+      },
+      "earth": {
+        "relation": "friendly",
+        "weight": 1,
+        "effect": "supports",
+        "summary_vi": "Thổ chứa Thủy: cảm xúc được nâng đỡ bằng sự ổn định, chăm sóc và cam kết thực tế."
+      }
+    },
+    "air": {
+      "fire": {
+        "relation": "friendly",
+        "weight": 1,
+        "effect": "supports",
+        "summary_vi": "Khí và Hỏa hỗ trợ nhau: ý tưởng kích hoạt hành động."
+      },
+      "water": {
+        "relation": "neutral",
+        "weight": 0,
+        "effect": "clarifies_or_overthinks",
+        "summary_vi": "Khí có thể làm rõ cảm xúc, hoặc tạo vòng lặp suy nghĩ về cảm xúc."
+      },
+      "air": {
+        "relation": "same",
+        "weight": 2,
+        "effect": "amplifies",
+        "summary_vi": "Hai năng lượng Khí làm lý trí, giao tiếp, quyết định và căng thẳng tinh thần nổi bật."
+      },
+      "earth": {
+        "relation": "contrary",
+        "weight": -2,
+        "effect": "weakens_or_conflicts",
+        "summary_vi": "Khí và Thổ căng nhau: ý tưởng có thể gặp giới hạn thực tế, hoặc thực tế làm nghẹt tầm nhìn."
+      }
+    },
+    "earth": {
+      "fire": {
+        "relation": "neutral",
+        "weight": 0,
+        "effect": "grounds_or_slows",
+        "summary_vi": "Thổ có thể giúp Hỏa thành kết quả, nhưng cũng có thể làm chậm động lực."
+      },
+      "water": {
+        "relation": "friendly",
+        "weight": 1,
+        "effect": "supports",
+        "summary_vi": "Thổ và Thủy hỗ trợ nhau: cảm xúc được đặt vào nền tảng thực tế."
+      },
+      "air": {
+        "relation": "contrary",
+        "weight": -2,
+        "effect": "weakens_or_conflicts",
+        "summary_vi": "Thổ và Khí căng nhau: thực tế và lý trí có thể kéo về hai hướng."
+      },
+      "earth": {
+        "relation": "same",
+        "weight": 2,
+        "effect": "amplifies",
+        "summary_vi": "Hai năng lượng Thổ làm công việc, tiền bạc, thân thể và nền tảng dài hạn mạnh hơn."
+      }
+    }
+  },
+  "triad_rules": [
+    {
+      "id": "center_card_primary",
+      "description_vi": "Trong cụm ba lá, lá giữa là tiếng nói chính; hai lá bên trái/phải là modifier."
+    },
+    {
+      "id": "both_modifiers_support",
+      "condition": "left_relation_to_center in ['same','friendly'] and right_relation_to_center in ['same','friendly']",
+      "effect": "center_amplified",
+      "interpretation_vi": "Chủ đề chính của lá giữa được củng cố rõ."
+    },
+    {
+      "id": "one_modifier_contrary",
+      "condition": "one modifier contrary, the other same/friendly/neutral",
+      "effect": "center_mixed",
+      "interpretation_vi": "Lá giữa vẫn quan trọng nhưng đang gặp một lực cản hoặc điều kiện cần xử lý."
+    },
+    {
+      "id": "both_modifiers_contrary",
+      "condition": "left_relation_to_center == 'contrary' and right_relation_to_center == 'contrary'",
+      "effect": "center_weakened_or_blocked",
+      "interpretation_vi": "Năng lượng của lá giữa bị chặn, bị làm yếu, hoặc trở thành bài học cần chú ý."
+    },
+    {
+      "id": "left_right_contrary",
+      "condition": "left_relation_to_right == 'contrary'",
+      "effect": "tension_around_center",
+      "interpretation_vi": "Hai lực bên ngoài kéo ngược nhau; lá giữa cần được đọc như trục cân bằng hoặc điểm quyết định."
+    }
+  ],
+  "implementation_notes": [
+    "Do not hide or ignore weakened cards in product UX.",
+    "When an element is weakened, phrase it as blocked, delayed, conflicted, or needing grounding.",
+    "Elemental dignity is a weighting layer, not the only interpretation."
+  ]
+}

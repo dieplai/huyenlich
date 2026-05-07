@@ -1,0 +1,1576 @@
+{
+  "schema_version": "1.0",
+  "deck": {
+    "id": "rider-waite-smith",
+    "name": "Rider-Waite-Smith Tarot",
+    "artist": "Pamela Colman Smith",
+    "publisher": "William Rider & Son",
+    "first_published": 1910,
+    "card_count": 78,
+    "language": "vi",
+    "source_category": "https://commons.wikimedia.org/wiki/Category:Rider-Waite-Smith_tarot_deck_(TaionWC)",
+    "license_note": "Wikimedia Commons lists the Rider-Waite original deck as public domain in the United States and United Kingdom; this manifest uses the TaionWC Commons image set."
+  },
+  "image_defaults": {
+    "provider": "Wikimedia Commons",
+    "local_base_path": "public/textures/cards/rws",
+    "download_url_pattern": "https://commons.wikimedia.org/wiki/Special:Redirect/file/{file_name}"
+  },
+  "spreads": [
+    {
+      "id": "one_card",
+      "name_vi": "Một Lá",
+      "positions": ["Thông điệp chính"]
+    },
+    {
+      "id": "past_present_future",
+      "name_vi": "Quá Khứ - Hiện Tại - Tương Lai",
+      "positions": ["Quá khứ", "Hiện tại", "Tương lai"]
+    },
+    {
+      "id": "situation_action_outcome",
+      "name_vi": "Tình Huống - Hành Động - Kết Quả",
+      "positions": ["Tình huống", "Hành động nên chọn", "Kết quả tiềm năng"]
+    }
+  ],
+  "cards": [
+    {
+      "id": "major-00-the-fool",
+      "deck_index": 0,
+      "name_en": "The Fool",
+      "name_vi": "Kẻ Khờ",
+      "arcana": "major",
+      "number": 0,
+      "suit": null,
+      "rank": null,
+      "keywords_vi": ["khởi đầu", "tự do", "niềm tin", "phiêu lưu"],
+      "upright_vi": "Một khởi đầu mới đang mở ra. Lá này khuyến khích bước đi với tinh thần cởi mở, tin vào trải nghiệm và cho phép bản thân học trong lúc đi.",
+      "reversed_vi": "Cảnh báo sự bốc đồng, thiếu chuẩn bị hoặc né tránh trách nhiệm. Cần phân biệt tự do thật với hành động thiếu cân nhắc.",
+      "image": {
+        "file_name": "RWS Tarot 00 Fool.jpg",
+        "local_path": "public/textures/cards/rws/major-00-the-fool.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_00_Fool.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RWS%20Tarot%2000%20Fool.jpg"
+      }
+    },
+    {
+      "id": "major-01-the-magician",
+      "deck_index": 1,
+      "name_en": "The Magician",
+      "name_vi": "Nhà Ảo Thuật",
+      "arcana": "major",
+      "number": 1,
+      "suit": null,
+      "rank": null,
+      "keywords_vi": ["ý chí", "biểu hiện", "kỹ năng", "chủ động"],
+      "upright_vi": "Bạn có đủ công cụ để biến ý tưởng thành hiện thực. Đây là lúc tập trung ý chí, dùng kỹ năng và hành động rõ ràng.",
+      "reversed_vi": "Năng lượng bị phân tán hoặc dùng sai mục đích. Cần tránh thao túng, hứa quá mức hoặc bắt đầu khi chưa thật sự làm chủ nguồn lực.",
+      "image": {
+        "file_name": "RWS Tarot 01 Magician.jpg",
+        "local_path": "public/textures/cards/rws/major-01-the-magician.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_01_Magician.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RWS%20Tarot%2001%20Magician.jpg"
+      }
+    },
+    {
+      "id": "major-02-the-high-priestess",
+      "deck_index": 2,
+      "name_en": "The High Priestess",
+      "name_vi": "Nữ Tư Tế",
+      "arcana": "major",
+      "number": 2,
+      "suit": null,
+      "rank": null,
+      "keywords_vi": ["trực giác", "bí mật", "nội tâm", "lắng nghe"],
+      "upright_vi": "Câu trả lời nằm trong sự tĩnh lặng. Hãy quan sát, lắng nghe trực giác và đừng vội ép mọi thứ lộ diện.",
+      "reversed_vi": "Bạn có thể đang bỏ qua tiếng nói bên trong hoặc bị nhiễu bởi thông tin mơ hồ. Cần kiểm chứng cảm nhận trước khi quyết định.",
+      "image": {
+        "file_name": "RWS Tarot 02 High Priestess.jpg",
+        "local_path": "public/textures/cards/rws/major-02-the-high-priestess.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_02_High_Priestess.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RWS%20Tarot%2002%20High%20Priestess.jpg"
+      }
+    },
+    {
+      "id": "major-03-the-empress",
+      "deck_index": 3,
+      "name_en": "The Empress",
+      "name_vi": "Nữ Hoàng",
+      "arcana": "major",
+      "number": 3,
+      "suit": null,
+      "rank": null,
+      "keywords_vi": ["nuôi dưỡng", "sáng tạo", "phong phú", "cảm xúc"],
+      "upright_vi": "Năng lượng sinh sôi, chăm sóc và sáng tạo đang mạnh. Đây là thời điểm nuôi dưỡng dự án, quan hệ hoặc đời sống thân thể.",
+      "reversed_vi": "Có xu hướng cạn kiệt vì chăm sóc quá mức hoặc mất kết nối với nhu cầu của mình. Cần phục hồi và đặt ranh giới.",
+      "image": {
+        "file_name": "RWS Tarot 03 Empress.jpg",
+        "local_path": "public/textures/cards/rws/major-03-the-empress.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_03_Empress.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RWS%20Tarot%2003%20Empress.jpg"
+      }
+    },
+    {
+      "id": "major-04-the-emperor",
+      "deck_index": 4,
+      "name_en": "The Emperor",
+      "name_vi": "Hoàng Đế",
+      "arcana": "major",
+      "number": 4,
+      "suit": null,
+      "rank": null,
+      "keywords_vi": ["cấu trúc", "quyền lực", "kỷ luật", "bảo vệ"],
+      "upright_vi": "Cần trật tự, nguyên tắc và trách nhiệm. Lá này ủng hộ việc xây hệ thống, đặt luật chơi và đứng vững trong vai trò lãnh đạo.",
+      "reversed_vi": "Quyền lực có thể trở nên cứng nhắc hoặc thiếu kiểm soát. Hãy xem lại cách dùng kỷ luật và nhu cầu kiểm soát.",
+      "image": {
+        "file_name": "RWS Tarot 04 Emperor.jpg",
+        "local_path": "public/textures/cards/rws/major-04-the-emperor.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_04_Emperor.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RWS%20Tarot%2004%20Emperor.jpg"
+      }
+    },
+    {
+      "id": "major-05-the-hierophant",
+      "deck_index": 5,
+      "name_en": "The Hierophant",
+      "name_vi": "Giáo Hoàng",
+      "arcana": "major",
+      "number": 5,
+      "suit": null,
+      "rank": null,
+      "keywords_vi": ["truyền thống", "niềm tin", "học hỏi", "hệ thống"],
+      "upright_vi": "Hãy tìm tri thức từ hệ thống đã được kiểm chứng, người thầy hoặc cộng đồng có kỷ luật. Niềm tin cần được đặt trong cấu trúc.",
+      "reversed_vi": "Có thể bạn đang bị ràng buộc bởi khuôn mẫu cũ. Lá này hỏi liệu quy tắc hiện tại còn phục vụ sự thật của bạn hay không.",
+      "image": {
+        "file_name": "RWS Tarot 05 Hierophant.jpg",
+        "local_path": "public/textures/cards/rws/major-05-the-hierophant.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_05_Hierophant.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RWS%20Tarot%2005%20Hierophant.jpg"
+      }
+    },
+    {
+      "id": "major-06-the-lovers",
+      "deck_index": 6,
+      "name_en": "The Lovers",
+      "name_vi": "Những Người Yêu Nhau",
+      "arcana": "major",
+      "number": 6,
+      "suit": null,
+      "rank": null,
+      "keywords_vi": ["lựa chọn", "gắn kết", "giá trị", "hài hòa"],
+      "upright_vi": "Một lựa chọn quan trọng cần được đưa ra từ giá trị thật của trái tim. Trong quan hệ, lá này nói về sự đồng thuận và kết nối sâu.",
+      "reversed_vi": "Mất đồng bộ về giá trị, né tránh quyết định hoặc thiếu cam kết. Cần đối thoại trung thực thay vì chỉ giữ vẻ hòa hợp.",
+      "image": {
+        "file_name": "RWS Tarot 06 Lovers.jpg",
+        "local_path": "public/textures/cards/rws/major-06-the-lovers.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_06_Lovers.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RWS%20Tarot%2006%20Lovers.jpg"
+      }
+    },
+    {
+      "id": "major-07-the-chariot",
+      "deck_index": 7,
+      "name_en": "The Chariot",
+      "name_vi": "Cỗ Xe",
+      "arcana": "major",
+      "number": 7,
+      "suit": null,
+      "rank": null,
+      "keywords_vi": ["ý chí", "tiến lên", "kiểm soát", "chiến thắng"],
+      "upright_vi": "Bạn có thể vượt qua lực kéo trái chiều nếu giữ mục tiêu rõ. Đây là lá của kỷ luật, di chuyển và chiến thắng bằng ý chí.",
+      "reversed_vi": "Mất hướng, cố kiểm soát quá mức hoặc để cảm xúc kéo lệch đường. Cần chỉnh lại mục tiêu trước khi tăng tốc.",
+      "image": {
+        "file_name": "RWS Tarot 07 Chariot.jpg",
+        "local_path": "public/textures/cards/rws/major-07-the-chariot.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_07_Chariot.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RWS%20Tarot%2007%20Chariot.jpg"
+      }
+    },
+    {
+      "id": "major-08-strength",
+      "deck_index": 8,
+      "name_en": "Strength",
+      "name_vi": "Sức Mạnh",
+      "arcana": "major",
+      "number": 8,
+      "suit": null,
+      "rank": null,
+      "keywords_vi": ["can đảm", "dịu dàng", "kiên nhẫn", "nội lực"],
+      "upright_vi": "Sức mạnh thật đến từ sự điềm tĩnh và lòng can đảm mềm mại. Hãy thuần hóa phản ứng bản năng thay vì đàn áp chúng.",
+      "reversed_vi": "Thiếu tự tin, kiệt sức hoặc phản ứng quá mạnh. Cần quay lại chăm sóc nội lực trước khi đối đầu tình huống.",
+      "image": {
+        "file_name": "RWS Tarot 08 Strength.jpg",
+        "local_path": "public/textures/cards/rws/major-08-strength.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_08_Strength.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RWS%20Tarot%2008%20Strength.jpg"
+      }
+    },
+    {
+      "id": "major-09-the-hermit",
+      "deck_index": 9,
+      "name_en": "The Hermit",
+      "name_vi": "Ẩn Sĩ",
+      "arcana": "major",
+      "number": 9,
+      "suit": null,
+      "rank": null,
+      "keywords_vi": ["chiêm nghiệm", "tìm kiếm", "cô tịch", "minh triết"],
+      "upright_vi": "Hãy tạm lùi khỏi tiếng ồn để tìm ánh sáng bên trong. Lá này ủng hộ nghiên cứu, chữa lành và quyết định có chiều sâu.",
+      "reversed_vi": "Cô lập quá mức hoặc sợ đối diện câu trả lời thật. Cần phân biệt nghỉ ngơi nội tâm với trốn tránh đời sống.",
+      "image": {
+        "file_name": "RWS Tarot 09 Hermit.jpg",
+        "local_path": "public/textures/cards/rws/major-09-the-hermit.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_09_Hermit.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RWS%20Tarot%2009%20Hermit.jpg"
+      }
+    },
+    {
+      "id": "major-10-wheel-of-fortune",
+      "deck_index": 10,
+      "name_en": "Wheel of Fortune",
+      "name_vi": "Bánh Xe Số Phận",
+      "arcana": "major",
+      "number": 10,
+      "suit": null,
+      "rank": null,
+      "keywords_vi": ["chu kỳ", "vận hội", "biến chuyển", "định mệnh"],
+      "upright_vi": "Chu kỳ đang xoay và cơ hội mới có thể xuất hiện. Hãy linh hoạt, nhận ra thời điểm và hành động khi bánh xe mở cửa.",
+      "reversed_vi": "Chống lại thay đổi hoặc lặp lại mô thức cũ. Cần nhìn bài học của chu kỳ trước khi mong vận may đổi hướng.",
+      "image": {
+        "file_name": "RWS Tarot 10 Wheel of Fortune.jpg",
+        "local_path": "public/textures/cards/rws/major-10-wheel-of-fortune.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_10_Wheel_of_Fortune.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RWS%20Tarot%2010%20Wheel%20of%20Fortune.jpg"
+      }
+    },
+    {
+      "id": "major-11-justice",
+      "deck_index": 11,
+      "name_en": "Justice",
+      "name_vi": "Công Lý",
+      "arcana": "major",
+      "number": 11,
+      "suit": null,
+      "rank": null,
+      "keywords_vi": ["cân bằng", "sự thật", "nhân quả", "quyết định"],
+      "upright_vi": "Sự thật, trách nhiệm và cân bằng là trọng tâm. Quyết định đúng cần dựa trên dữ kiện rõ ràng và sự công bằng.",
+      "reversed_vi": "Thiên lệch, né trách nhiệm hoặc thiếu minh bạch. Cần xem lại cam kết, giấy tờ và hệ quả của lựa chọn.",
+      "image": {
+        "file_name": "RWS Tarot 11 Justice.jpg",
+        "local_path": "public/textures/cards/rws/major-11-justice.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_11_Justice.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RWS%20Tarot%2011%20Justice.jpg"
+      }
+    },
+    {
+      "id": "major-12-the-hanged-man",
+      "deck_index": 12,
+      "name_en": "The Hanged Man",
+      "name_vi": "Người Treo Ngược",
+      "arcana": "major",
+      "number": 12,
+      "suit": null,
+      "rank": null,
+      "keywords_vi": ["tạm dừng", "góc nhìn mới", "buông", "hy sinh"],
+      "upright_vi": "Tình huống cần một khoảng dừng để đổi góc nhìn. Không phải mọi tiến triển đều đến từ hành động nhanh.",
+      "reversed_vi": "Mắc kẹt vì trì hoãn hoặc hy sinh không cần thiết. Cần nhận ra điều gì đang giữ bạn trong thế bất động.",
+      "image": {
+        "file_name": "RWS Tarot 12 Hanged Man.jpg",
+        "local_path": "public/textures/cards/rws/major-12-the-hanged-man.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_12_Hanged_Man.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RWS%20Tarot%2012%20Hanged%20Man.jpg"
+      }
+    },
+    {
+      "id": "major-13-death",
+      "deck_index": 13,
+      "name_en": "Death",
+      "name_vi": "Cái Chết",
+      "arcana": "major",
+      "number": 13,
+      "suit": null,
+      "rank": null,
+      "keywords_vi": ["kết thúc", "chuyển hóa", "buông bỏ", "tái sinh"],
+      "upright_vi": "Một giai đoạn cần khép lại để nhường chỗ cho chuyển hóa. Lá này nói về sự kết thúc tự nhiên hơn là mất mát tuyệt đối.",
+      "reversed_vi": "Kháng cự thay đổi hoặc bám vào điều đã hết vai trò. Càng trì hoãn buông bỏ, quá trình tái sinh càng nặng nề.",
+      "image": {
+        "file_name": "RWS Tarot 13 Death.jpg",
+        "local_path": "public/textures/cards/rws/major-13-death.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_13_Death.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RWS%20Tarot%2013%20Death.jpg"
+      }
+    },
+    {
+      "id": "major-14-temperance",
+      "deck_index": 14,
+      "name_en": "Temperance",
+      "name_vi": "Tiết Chế",
+      "arcana": "major",
+      "number": 14,
+      "suit": null,
+      "rank": null,
+      "keywords_vi": ["hòa hợp", "chữa lành", "điều độ", "pha trộn"],
+      "upright_vi": "Cần cân bằng các phần khác nhau của đời sống. Sự tiến triển đến từ điều độ, kiên nhẫn và chữa lành từng chút.",
+      "reversed_vi": "Mất cân bằng, quá đà hoặc vội ép kết quả. Hãy chỉnh lại nhịp sống, thói quen và cách phân bổ năng lượng.",
+      "image": {
+        "file_name": "RWS Tarot 14 Temperance.jpg",
+        "local_path": "public/textures/cards/rws/major-14-temperance.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_14_Temperance.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RWS%20Tarot%2014%20Temperance.jpg"
+      }
+    },
+    {
+      "id": "major-15-the-devil",
+      "deck_index": 15,
+      "name_en": "The Devil",
+      "name_vi": "Ác Quỷ",
+      "arcana": "major",
+      "number": 15,
+      "suit": null,
+      "rank": null,
+      "keywords_vi": ["ràng buộc", "ám ảnh", "vật chất", "bóng tối"],
+      "upright_vi": "Lá này phơi bày ràng buộc, thói quen hoặc ham muốn đang chi phối bạn. Nhìn rõ xiềng xích là bước đầu để tháo nó.",
+      "reversed_vi": "Cơ hội giải phóng khỏi mô thức cũ đang xuất hiện. Tuy nhiên, cần hành động thật thay vì chỉ nhận ra vấn đề.",
+      "image": {
+        "file_name": "RWS Tarot 15 Devil.jpg",
+        "local_path": "public/textures/cards/rws/major-15-the-devil.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_15_Devil.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RWS%20Tarot%2015%20Devil.jpg"
+      }
+    },
+    {
+      "id": "major-16-the-tower",
+      "deck_index": 16,
+      "name_en": "The Tower",
+      "name_vi": "Tòa Tháp",
+      "arcana": "major",
+      "number": 16,
+      "suit": null,
+      "rank": null,
+      "keywords_vi": ["sụp đổ", "sự thật", "giải phóng", "đột biến"],
+      "upright_vi": "Một cấu trúc thiếu bền vững có thể bị phá vỡ để sự thật lộ ra. Dù bất ngờ, đây là quá trình giải phóng.",
+      "reversed_vi": "Bạn có thể đang cố tránh biến động cần thiết. Càng bám vào nền móng sai, thay đổi sau cùng càng mạnh.",
+      "image": {
+        "file_name": "RWS Tarot 16 Tower.jpg",
+        "local_path": "public/textures/cards/rws/major-16-the-tower.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_16_Tower.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RWS%20Tarot%2016%20Tower.jpg"
+      }
+    },
+    {
+      "id": "major-17-the-star",
+      "deck_index": 17,
+      "name_en": "The Star",
+      "name_vi": "Ngôi Sao",
+      "arcana": "major",
+      "number": 17,
+      "suit": null,
+      "rank": null,
+      "keywords_vi": ["hy vọng", "chữa lành", "cảm hứng", "niềm tin"],
+      "upright_vi": "Sau biến động, hy vọng trở lại. Lá này là tín hiệu chữa lành, cảm hứng và niềm tin vào con đường dài.",
+      "reversed_vi": "Mất niềm tin hoặc không cho bản thân nhận sự nâng đỡ. Cần chăm lại nguồn cảm hứng nhỏ nhất.",
+      "image": {
+        "file_name": "RWS Tarot 17 Star.jpg",
+        "local_path": "public/textures/cards/rws/major-17-the-star.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_17_Star.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RWS%20Tarot%2017%20Star.jpg"
+      }
+    },
+    {
+      "id": "major-18-the-moon",
+      "deck_index": 18,
+      "name_en": "The Moon",
+      "name_vi": "Mặt Trăng",
+      "arcana": "major",
+      "number": 18,
+      "suit": null,
+      "rank": null,
+      "keywords_vi": ["ảo ảnh", "tiềm thức", "nỗi sợ", "trực giác"],
+      "upright_vi": "Không phải mọi thứ đang rõ ràng. Hãy đi chậm, quan sát nỗi sợ và phân biệt trực giác với tưởng tượng.",
+      "reversed_vi": "Sương mù bắt đầu tan hoặc bí mật dần lộ diện. Cần đối mặt cảm xúc thay vì để chúng điều khiển âm thầm.",
+      "image": {
+        "file_name": "RWS Tarot 18 Moon.jpg",
+        "local_path": "public/textures/cards/rws/major-18-the-moon.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_18_Moon.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RWS%20Tarot%2018%20Moon.jpg"
+      }
+    },
+    {
+      "id": "major-19-the-sun",
+      "deck_index": 19,
+      "name_en": "The Sun",
+      "name_vi": "Mặt Trời",
+      "arcana": "major",
+      "number": 19,
+      "suit": null,
+      "rank": null,
+      "keywords_vi": ["niềm vui", "rõ ràng", "thành công", "sức sống"],
+      "upright_vi": "Ánh sáng, sự rõ ràng và niềm vui đang mạnh. Lá này ủng hộ công khai, tự tin và tận hưởng thành quả.",
+      "reversed_vi": "Niềm vui bị che bởi nghi ngờ hoặc sự mệt mỏi. Cần đơn giản hóa vấn đề và quay lại điều đem lại sức sống.",
+      "image": {
+        "file_name": "RWS Tarot 19 Sun.jpg",
+        "local_path": "public/textures/cards/rws/major-19-the-sun.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_19_Sun.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RWS%20Tarot%2019%20Sun.jpg"
+      }
+    },
+    {
+      "id": "major-20-judgement",
+      "deck_index": 20,
+      "name_en": "Judgement",
+      "name_vi": "Phán Xét",
+      "arcana": "major",
+      "number": 20,
+      "suit": null,
+      "rank": null,
+      "keywords_vi": ["thức tỉnh", "tiếng gọi", "tái sinh", "đánh giá"],
+      "upright_vi": "Một tiếng gọi mới đang đánh thức bạn. Đây là lúc nhìn lại quá khứ, rút bài học và bước vào phiên bản trưởng thành hơn.",
+      "reversed_vi": "Tự phán xét quá nặng hoặc lẩn tránh tiếng gọi thật. Cần tha thứ cho quá khứ để có thể tiến lên.",
+      "image": {
+        "file_name": "RWS Tarot 20 Judgement.jpg",
+        "local_path": "public/textures/cards/rws/major-20-judgement.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_20_Judgement.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RWS%20Tarot%2020%20Judgement.jpg"
+      }
+    },
+    {
+      "id": "major-21-the-world",
+      "deck_index": 21,
+      "name_en": "The World",
+      "name_vi": "Thế Giới",
+      "arcana": "major",
+      "number": 21,
+      "suit": null,
+      "rank": null,
+      "keywords_vi": ["hoàn tất", "hội nhập", "thành tựu", "chu kỳ mới"],
+      "upright_vi": "Một chu kỳ lớn đang hoàn thiện. Lá này nói về thành tựu, sự hội nhập và cảm giác đã đi trọn một hành trình.",
+      "reversed_vi": "Còn một bước cuối chưa hoàn tất hoặc bạn chưa cho phép mình ghi nhận thành quả. Cần khép vòng đúng cách.",
+      "image": {
+        "file_name": "RWS Tarot 21 World.jpg",
+        "local_path": "public/textures/cards/rws/major-21-the-world.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_21_World.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RWS%20Tarot%2021%20World.jpg"
+      }
+    },
+    {
+      "id": "wands-01-ace",
+      "deck_index": 22,
+      "name_en": "Ace of Wands",
+      "name_vi": "Át Gậy",
+      "arcana": "minor",
+      "number": 1,
+      "suit": "wands",
+      "rank": "ace",
+      "element": "fire",
+      "keywords_vi": ["tia lửa", "động lực", "khởi phát", "đam mê"],
+      "upright_vi": "Một nguồn cảm hứng hoặc cơ hội hành động mới xuất hiện. Hãy nắm lấy tia lửa đầu tiên và thử nghiệm nhanh.",
+      "reversed_vi": "Cảm hứng bị chặn, thiếu động lực hoặc bắt đầu quá vội. Cần tìm lại lý do thật sự khiến bạn muốn hành động.",
+      "image": {
+        "file_name": "Wands01.jpg",
+        "local_path": "public/textures/cards/rws/wands-01-ace.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Wands01.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Wands01.jpg"
+      }
+    },
+    {
+      "id": "wands-02-two",
+      "deck_index": 23,
+      "name_en": "Two of Wands",
+      "name_vi": "Hai Gậy",
+      "arcana": "minor",
+      "number": 2,
+      "suit": "wands",
+      "rank": "two",
+      "element": "fire",
+      "keywords_vi": ["lập kế hoạch", "tầm nhìn", "lựa chọn", "mở rộng"],
+      "upright_vi": "Bạn đang đứng trước lựa chọn mở rộng. Cần nhìn xa hơn vùng quen thuộc và lập kế hoạch trước khi đi.",
+      "reversed_vi": "Sợ rời vùng an toàn hoặc kế hoạch thiếu thực tế. Hãy xác định mục tiêu rồi chia thành bước nhỏ.",
+      "image": {
+        "file_name": "Wands02.jpg",
+        "local_path": "public/textures/cards/rws/wands-02-two.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Wands02.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Wands02.jpg"
+      }
+    },
+    {
+      "id": "wands-03-three",
+      "deck_index": 24,
+      "name_en": "Three of Wands",
+      "name_vi": "Ba Gậy",
+      "arcana": "minor",
+      "number": 3,
+      "suit": "wands",
+      "rank": "three",
+      "element": "fire",
+      "keywords_vi": ["mở rộng", "chờ kết quả", "tầm xa", "tiến triển"],
+      "upright_vi": "Những bước đầu đã được đặt ra và bạn đang nhìn về kết quả xa hơn. Lá này ủng hộ mở thị trường, hợp tác và tầm nhìn dài.",
+      "reversed_vi": "Trì hoãn, thiếu chuẩn bị hoặc kỳ vọng chưa đúng với thực tế. Cần rà lại chiến lược mở rộng.",
+      "image": {
+        "file_name": "Wands03.jpg",
+        "local_path": "public/textures/cards/rws/wands-03-three.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Wands03.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Wands03.jpg"
+      }
+    },
+    {
+      "id": "wands-04-four",
+      "deck_index": 25,
+      "name_en": "Four of Wands",
+      "name_vi": "Bốn Gậy",
+      "arcana": "minor",
+      "number": 4,
+      "suit": "wands",
+      "rank": "four",
+      "element": "fire",
+      "keywords_vi": ["ăn mừng", "nền tảng", "gia đình", "cột mốc"],
+      "upright_vi": "Một cột mốc đáng ghi nhận đang đến. Đây là lá của sự ổn định vui vẻ, lễ kỷ niệm và cảm giác thuộc về.",
+      "reversed_vi": "Niềm vui bị trì hoãn hoặc nền tảng chưa thật chắc. Cần xử lý bất ổn trong nhà, nhóm hoặc cam kết chung.",
+      "image": {
+        "file_name": "Wands04.jpg",
+        "local_path": "public/textures/cards/rws/wands-04-four.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Wands04.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Wands04.jpg"
+      }
+    },
+    {
+      "id": "wands-05-five",
+      "deck_index": 26,
+      "name_en": "Five of Wands",
+      "name_vi": "Năm Gậy",
+      "arcana": "minor",
+      "number": 5,
+      "suit": "wands",
+      "rank": "five",
+      "element": "fire",
+      "keywords_vi": ["cạnh tranh", "xung đột", "va chạm", "thử sức"],
+      "upright_vi": "Có sự cạnh tranh hoặc nhiều ý chí va vào nhau. Xung đột này có thể giúp làm rõ vị trí nếu được điều phối tốt.",
+      "reversed_vi": "Tránh xung đột đến mức vấn đề kéo dài, hoặc tranh cãi không còn mục đích. Cần đưa cuộc chơi về luật rõ ràng.",
+      "image": {
+        "file_name": "Wands05.jpg",
+        "local_path": "public/textures/cards/rws/wands-05-five.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Wands05.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Wands05.jpg"
+      }
+    },
+    {
+      "id": "wands-06-six",
+      "deck_index": 27,
+      "name_en": "Six of Wands",
+      "name_vi": "Sáu Gậy",
+      "arcana": "minor",
+      "number": 6,
+      "suit": "wands",
+      "rank": "six",
+      "element": "fire",
+      "keywords_vi": ["chiến thắng", "ghi nhận", "tự tin", "dẫn đầu"],
+      "upright_vi": "Thành quả được nhìn nhận và bạn có cơ hội bước ra vị trí nổi bật. Hãy đón nhận sự công nhận một cách chín chắn.",
+      "reversed_vi": "Thiếu tự tin, sợ bị đánh giá hoặc thành công chưa bền. Cần kiểm tra xem bạn đang tìm giá trị từ bên ngoài quá nhiều không.",
+      "image": {
+        "file_name": "Wands06.jpg",
+        "local_path": "public/textures/cards/rws/wands-06-six.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Wands06.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Wands06.jpg"
+      }
+    },
+    {
+      "id": "wands-07-seven",
+      "deck_index": 28,
+      "name_en": "Seven of Wands",
+      "name_vi": "Bảy Gậy",
+      "arcana": "minor",
+      "number": 7,
+      "suit": "wands",
+      "rank": "seven",
+      "element": "fire",
+      "keywords_vi": ["phòng thủ", "lập trường", "can đảm", "áp lực"],
+      "upright_vi": "Bạn cần bảo vệ lập trường trước áp lực. Lá này khuyên đứng vững, nhưng chọn trận chiến thật đáng để giữ.",
+      "reversed_vi": "Quá phòng thủ hoặc mệt vì luôn phải chứng minh. Cần phân biệt ranh giới cần giữ với cái tôi đang phản ứng.",
+      "image": {
+        "file_name": "Wands07.jpg",
+        "local_path": "public/textures/cards/rws/wands-07-seven.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Wands07.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Wands07.jpg"
+      }
+    },
+    {
+      "id": "wands-08-eight",
+      "deck_index": 29,
+      "name_en": "Eight of Wands",
+      "name_vi": "Tám Gậy",
+      "arcana": "minor",
+      "number": 8,
+      "suit": "wands",
+      "rank": "eight",
+      "element": "fire",
+      "keywords_vi": ["tốc độ", "tin tức", "di chuyển", "tiến nhanh"],
+      "upright_vi": "Mọi thứ tăng tốc. Tin tức, di chuyển hoặc phản hồi nhanh có thể xuất hiện; hãy giữ sự rõ ràng để không bị cuốn đi.",
+      "reversed_vi": "Trì hoãn, rối thông tin hoặc hành động hấp tấp. Cần ưu tiên kênh giao tiếp và thời điểm phù hợp.",
+      "image": {
+        "file_name": "Wands08.jpg",
+        "local_path": "public/textures/cards/rws/wands-08-eight.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Wands08.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Wands08.jpg"
+      }
+    },
+    {
+      "id": "wands-09-nine",
+      "deck_index": 30,
+      "name_en": "Nine of Wands",
+      "name_vi": "Chín Gậy",
+      "arcana": "minor",
+      "number": 9,
+      "suit": "wands",
+      "rank": "nine",
+      "element": "fire",
+      "keywords_vi": ["kiên cường", "cảnh giác", "bền bỉ", "ranh giới"],
+      "upright_vi": "Bạn đã đi qua nhiều thử thách và cần giữ sức cho chặng cuối. Bền bỉ là tốt, nhưng đừng quên hồi phục.",
+      "reversed_vi": "Cạn kiệt, phòng thủ quá mức hoặc muốn bỏ cuộc sát vạch đích. Cần hỗ trợ và chiến lược bảo toàn năng lượng.",
+      "image": {
+        "file_name": "Wands09.jpg",
+        "local_path": "public/textures/cards/rws/wands-09-nine.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Wands09.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Wands09.jpg"
+      }
+    },
+    {
+      "id": "wands-10-ten",
+      "deck_index": 31,
+      "name_en": "Ten of Wands",
+      "name_vi": "Mười Gậy",
+      "arcana": "minor",
+      "number": 10,
+      "suit": "wands",
+      "rank": "ten",
+      "element": "fire",
+      "keywords_vi": ["gánh nặng", "trách nhiệm", "quá tải", "hoàn tất"],
+      "upright_vi": "Bạn đang gánh nhiều trách nhiệm. Dù mục tiêu gần hoàn tất, cần biết phân quyền và bỏ bớt phần không cần thiết.",
+      "reversed_vi": "Gánh nặng đến mức mất phương hướng hoặc đang đặt xuống trách nhiệm cũ. Hãy xác định điều nào thật sự thuộc về bạn.",
+      "image": {
+        "file_name": "Wands10.jpg",
+        "local_path": "public/textures/cards/rws/wands-10-ten.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Wands10.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Wands10.jpg"
+      }
+    },
+    {
+      "id": "wands-11-page",
+      "deck_index": 32,
+      "name_en": "Page of Wands",
+      "name_vi": "Tiểu Đồng Gậy",
+      "arcana": "minor",
+      "number": 11,
+      "suit": "wands",
+      "rank": "page",
+      "element": "fire",
+      "keywords_vi": ["khám phá", "tin mới", "nhiệt huyết", "học thử"],
+      "upright_vi": "Tinh thần học hỏi và thử nghiệm đang mở. Một tin tức hoặc ý tưởng mới có thể thắp lại hứng thú.",
+      "reversed_vi": "Nóng hứng rồi bỏ, hoặc thiếu trải nghiệm để triển khai. Cần thử nhỏ và học qua phản hồi thật.",
+      "image": {
+        "file_name": "Wands11.jpg",
+        "local_path": "public/textures/cards/rws/wands-11-page.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Wands11.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Wands11.jpg"
+      }
+    },
+    {
+      "id": "wands-12-knight",
+      "deck_index": 33,
+      "name_en": "Knight of Wands",
+      "name_vi": "Kỵ Sĩ Gậy",
+      "arcana": "minor",
+      "number": 12,
+      "suit": "wands",
+      "rank": "knight",
+      "element": "fire",
+      "keywords_vi": ["hành động", "phiêu lưu", "tốc độ", "đam mê"],
+      "upright_vi": "Năng lượng hành động mạnh, phù hợp di chuyển, chinh phục và thử thách. Hãy dùng lửa này có định hướng.",
+      "reversed_vi": "Bốc đồng, thiếu cam kết hoặc lao đi mà không tính hậu quả. Cần giảm tốc trước khi quyết định lớn.",
+      "image": {
+        "file_name": "Wands12.jpg",
+        "local_path": "public/textures/cards/rws/wands-12-knight.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Wands12.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Wands12.jpg"
+      }
+    },
+    {
+      "id": "wands-13-queen",
+      "deck_index": 34,
+      "name_en": "Queen of Wands",
+      "name_vi": "Nữ Hoàng Gậy",
+      "arcana": "minor",
+      "number": 13,
+      "suit": "wands",
+      "rank": "queen",
+      "element": "fire",
+      "keywords_vi": ["tự tin", "cuốn hút", "ấm áp", "độc lập"],
+      "upright_vi": "Bạn được khuyến khích tỏa sáng tự nhiên, dẫn dắt bằng sự ấm áp và lòng tự tin. Sức hút đến từ việc là chính mình.",
+      "reversed_vi": "Ghen tị, tự nghi ngờ hoặc dùng sức hút để kiểm soát. Cần quay lại nội lực thay vì phản ứng với so sánh.",
+      "image": {
+        "file_name": "Wands13.jpg",
+        "local_path": "public/textures/cards/rws/wands-13-queen.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Wands13.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Wands13.jpg"
+      }
+    },
+    {
+      "id": "wands-14-king",
+      "deck_index": 35,
+      "name_en": "King of Wands",
+      "name_vi": "Vua Gậy",
+      "arcana": "minor",
+      "number": 14,
+      "suit": "wands",
+      "rank": "king",
+      "element": "fire",
+      "keywords_vi": ["lãnh đạo", "tầm nhìn", "can đảm", "hành động lớn"],
+      "upright_vi": "Lãnh đạo bằng tầm nhìn và sự chủ động. Đây là lá của người dám đặt hướng đi và truyền lửa cho người khác.",
+      "reversed_vi": "Độc đoán, nóng nảy hoặc tầm nhìn không đi cùng trách nhiệm. Cần kiểm tra cách bạn dùng quyền ảnh hưởng.",
+      "image": {
+        "file_name": "Wands14.jpg",
+        "local_path": "public/textures/cards/rws/wands-14-king.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Wands14.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Wands14.jpg"
+      }
+    },
+    {
+      "id": "cups-01-ace",
+      "deck_index": 36,
+      "name_en": "Ace of Cups",
+      "name_vi": "Át Cốc",
+      "arcana": "minor",
+      "number": 1,
+      "suit": "cups",
+      "rank": "ace",
+      "element": "water",
+      "keywords_vi": ["cảm xúc mới", "tình yêu", "chữa lành", "mở lòng"],
+      "upright_vi": "Một dòng cảm xúc mới đang mở ra. Lá này ủng hộ tình yêu, sự chữa lành và việc cho phép trái tim được mềm lại.",
+      "reversed_vi": "Cảm xúc bị nén, khó mở lòng hoặc cần chăm sóc bản thân trước khi trao đi. Hãy lắng nghe điều trái tim thật sự cần.",
+      "image": {
+        "file_name": "Cups01.jpg",
+        "local_path": "public/textures/cards/rws/cups-01-ace.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Cups01.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cups01.jpg"
+      }
+    },
+    {
+      "id": "cups-02-two",
+      "deck_index": 37,
+      "name_en": "Two of Cups",
+      "name_vi": "Hai Cốc",
+      "arcana": "minor",
+      "number": 2,
+      "suit": "cups",
+      "rank": "two",
+      "element": "water",
+      "keywords_vi": ["kết nối", "hòa hợp", "cam kết", "đối ứng"],
+      "upright_vi": "Một sự kết nối hai chiều có tiềm năng sâu sắc. Đây là lá của tình cảm, thỏa thuận và sự tôn trọng lẫn nhau.",
+      "reversed_vi": "Mất cân bằng trong trao nhận hoặc hiểu lầm cảm xúc. Cần nói rõ nhu cầu và kỳ vọng.",
+      "image": {
+        "file_name": "Cups02.jpg",
+        "local_path": "public/textures/cards/rws/cups-02-two.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Cups02.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cups02.jpg"
+      }
+    },
+    {
+      "id": "cups-03-three",
+      "deck_index": 38,
+      "name_en": "Three of Cups",
+      "name_vi": "Ba Cốc",
+      "arcana": "minor",
+      "number": 3,
+      "suit": "cups",
+      "rank": "three",
+      "element": "water",
+      "keywords_vi": ["bạn bè", "ăn mừng", "cộng đồng", "chia sẻ"],
+      "upright_vi": "Niềm vui đến từ cộng đồng, bạn bè hoặc sự chia sẻ cảm xúc. Hãy cho phép mình nhận hỗ trợ và cùng ăn mừng.",
+      "reversed_vi": "Lạc lõng trong nhóm, drama xã hội hoặc vui quá mức. Cần chọn môi trường nuôi dưỡng mình thật sự.",
+      "image": {
+        "file_name": "Cups03.jpg",
+        "local_path": "public/textures/cards/rws/cups-03-three.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Cups03.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cups03.jpg"
+      }
+    },
+    {
+      "id": "cups-04-four",
+      "deck_index": 39,
+      "name_en": "Four of Cups",
+      "name_vi": "Bốn Cốc",
+      "arcana": "minor",
+      "number": 4,
+      "suit": "cups",
+      "rank": "four",
+      "element": "water",
+      "keywords_vi": ["chán nản", "suy ngẫm", "bỏ lỡ", "khép lòng"],
+      "upright_vi": "Bạn có thể đang mệt mỏi hoặc không còn hứng thú với lựa chọn trước mắt. Hãy nghỉ, nhưng đừng bỏ qua cơ hội đang đến lặng lẽ.",
+      "reversed_vi": "Dần thoát khỏi sự trì trệ cảm xúc. Đây là lúc mở mắt với lựa chọn mới và chủ động kết nối lại.",
+      "image": {
+        "file_name": "Cups04.jpg",
+        "local_path": "public/textures/cards/rws/cups-04-four.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Cups04.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cups04.jpg"
+      }
+    },
+    {
+      "id": "cups-05-five",
+      "deck_index": 40,
+      "name_en": "Five of Cups",
+      "name_vi": "Năm Cốc",
+      "arcana": "minor",
+      "number": 5,
+      "suit": "cups",
+      "rank": "five",
+      "element": "water",
+      "keywords_vi": ["tiếc nuối", "mất mát", "buồn bã", "nhìn lại"],
+      "upright_vi": "Nỗi buồn về điều đã mất đang chiếm nhiều không gian. Lá này nhắc rằng vẫn còn nguồn lực phía sau nếu bạn quay lại nhìn.",
+      "reversed_vi": "Quá trình chấp nhận và chữa lành bắt đầu. Bạn có thể buông trách móc và nhận lại phần còn nguyên vẹn.",
+      "image": {
+        "file_name": "Cups05.jpg",
+        "local_path": "public/textures/cards/rws/cups-05-five.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Cups05.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cups05.jpg"
+      }
+    },
+    {
+      "id": "cups-06-six",
+      "deck_index": 41,
+      "name_en": "Six of Cups",
+      "name_vi": "Sáu Cốc",
+      "arcana": "minor",
+      "number": 6,
+      "suit": "cups",
+      "rank": "six",
+      "element": "water",
+      "keywords_vi": ["ký ức", "tuổi thơ", "sự dịu dàng", "quá khứ"],
+      "upright_vi": "Quá khứ, kỷ niệm hoặc sự trong trẻo cũ có thể quay lại. Hãy nhận món quà của ký ức nhưng đừng sống mãi trong đó.",
+      "reversed_vi": "Bám vào quá khứ hoặc cần chữa lành câu chuyện cũ. Cần trưởng thành mà không đánh mất sự dịu dàng.",
+      "image": {
+        "file_name": "Cups06.jpg",
+        "local_path": "public/textures/cards/rws/cups-06-six.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Cups06.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cups06.jpg"
+      }
+    },
+    {
+      "id": "cups-07-seven",
+      "deck_index": 42,
+      "name_en": "Seven of Cups",
+      "name_vi": "Bảy Cốc",
+      "arcana": "minor",
+      "number": 7,
+      "suit": "cups",
+      "rank": "seven",
+      "element": "water",
+      "keywords_vi": ["ảo tưởng", "nhiều lựa chọn", "mơ mộng", "cám dỗ"],
+      "upright_vi": "Có nhiều lựa chọn hấp dẫn nhưng không phải lựa chọn nào cũng thật. Cần phân biệt tưởng tượng, ham muốn và khả năng thực tế.",
+      "reversed_vi": "Sương mù lựa chọn đang tan. Đây là lúc chốt ưu tiên và ngừng tiêu hao trong khả năng vô hạn.",
+      "image": {
+        "file_name": "Cups07.jpg",
+        "local_path": "public/textures/cards/rws/cups-07-seven.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Cups07.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cups07.jpg"
+      }
+    },
+    {
+      "id": "cups-08-eight",
+      "deck_index": 43,
+      "name_en": "Eight of Cups",
+      "name_vi": "Tám Cốc",
+      "arcana": "minor",
+      "number": 8,
+      "suit": "cups",
+      "rank": "eight",
+      "element": "water",
+      "keywords_vi": ["rời đi", "tìm kiếm", "buông bỏ", "thiếu vắng"],
+      "upright_vi": "Bạn có thể cần rời một điều từng có ý nghĩa để tìm chiều sâu mới. Không phải bỏ đi vì thất bại, mà vì linh hồn cần hơn thế.",
+      "reversed_vi": "Sợ rời đi hoặc quay lưng quá sớm. Cần thành thật xem điều này còn nuôi dưỡng bạn hay không.",
+      "image": {
+        "file_name": "Cups08.jpg",
+        "local_path": "public/textures/cards/rws/cups-08-eight.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Cups08.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cups08.jpg"
+      }
+    },
+    {
+      "id": "cups-09-nine",
+      "deck_index": 44,
+      "name_en": "Nine of Cups",
+      "name_vi": "Chín Cốc",
+      "arcana": "minor",
+      "number": 9,
+      "suit": "cups",
+      "rank": "nine",
+      "element": "water",
+      "keywords_vi": ["ước nguyện", "hài lòng", "tận hưởng", "đủ đầy"],
+      "upright_vi": "Một mong muốn có thể thành hình và mang lại cảm giác mãn nguyện. Hãy tận hưởng mà vẫn biết ơn nguồn lực đã tạo nên nó.",
+      "reversed_vi": "Hài lòng bề ngoài nhưng bên trong còn thiếu. Cần hỏi mong muốn này có thật sự thuộc về bạn hay chỉ là hình ảnh đẹp.",
+      "image": {
+        "file_name": "Cups09.jpg",
+        "local_path": "public/textures/cards/rws/cups-09-nine.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Cups09.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cups09.jpg"
+      }
+    },
+    {
+      "id": "cups-10-ten",
+      "deck_index": 45,
+      "name_en": "Ten of Cups",
+      "name_vi": "Mười Cốc",
+      "arcana": "minor",
+      "number": 10,
+      "suit": "cups",
+      "rank": "ten",
+      "element": "water",
+      "keywords_vi": ["hạnh phúc", "gia đình", "hòa hợp", "trọn vẹn"],
+      "upright_vi": "Lá này nói về sự hòa hợp cảm xúc, gia đình hoặc cộng đồng thân thương. Niềm vui bền vững đến từ chia sẻ thật.",
+      "reversed_vi": "Hình ảnh hạnh phúc có thể đang lệch với cảm xúc thật. Cần chữa những rạn nhỏ trước khi chúng thành khoảng cách lớn.",
+      "image": {
+        "file_name": "Cups10.jpg",
+        "local_path": "public/textures/cards/rws/cups-10-ten.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Cups10.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cups10.jpg"
+      }
+    },
+    {
+      "id": "cups-11-page",
+      "deck_index": 46,
+      "name_en": "Page of Cups",
+      "name_vi": "Tiểu Đồng Cốc",
+      "arcana": "minor",
+      "number": 11,
+      "suit": "cups",
+      "rank": "page",
+      "element": "water",
+      "keywords_vi": ["tin cảm xúc", "sáng tạo", "mở lòng", "trực giác trẻ"],
+      "upright_vi": "Một thông điệp dịu dàng, lời xin lỗi hoặc cảm hứng sáng tạo có thể đến. Hãy đón nhận cảm xúc mới bằng sự tò mò.",
+      "reversed_vi": "Nhạy cảm quá mức, mơ mộng hoặc khó nói ra cảm xúc. Cần biểu đạt chân thật thay vì giấu trong tưởng tượng.",
+      "image": {
+        "file_name": "Cups11.jpg",
+        "local_path": "public/textures/cards/rws/cups-11-page.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Cups11.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cups11.jpg"
+      }
+    },
+    {
+      "id": "cups-12-knight",
+      "deck_index": 47,
+      "name_en": "Knight of Cups",
+      "name_vi": "Kỵ Sĩ Cốc",
+      "arcana": "minor",
+      "number": 12,
+      "suit": "cups",
+      "rank": "knight",
+      "element": "water",
+      "keywords_vi": ["lãng mạn", "đề nghị", "theo tim", "sáng tạo"],
+      "upright_vi": "Một lời mời, đề nghị tình cảm hoặc dòng cảm hứng lãng mạn đang tiến đến. Hãy đi theo trái tim nhưng vẫn giữ sự rõ ràng.",
+      "reversed_vi": "Lãng mạn hóa quá mức, thất thường hoặc hứa hẹn không vững. Cần nhìn hành động hơn lời nói.",
+      "image": {
+        "file_name": "Cups12.jpg",
+        "local_path": "public/textures/cards/rws/cups-12-knight.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Cups12.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cups12.jpg"
+      }
+    },
+    {
+      "id": "cups-13-queen",
+      "deck_index": 48,
+      "name_en": "Queen of Cups",
+      "name_vi": "Nữ Hoàng Cốc",
+      "arcana": "minor",
+      "number": 13,
+      "suit": "cups",
+      "rank": "queen",
+      "element": "water",
+      "keywords_vi": ["thấu cảm", "trực giác", "chăm sóc", "cảm xúc sâu"],
+      "upright_vi": "Trực giác và lòng thấu cảm đang là sức mạnh. Hãy chăm sóc cảm xúc của mình như cách bạn chăm người khác.",
+      "reversed_vi": "Quá tải cảm xúc, thiếu ranh giới hoặc hấp thụ tâm trạng người khác. Cần quay về trung tâm của mình.",
+      "image": {
+        "file_name": "Cups13.jpg",
+        "local_path": "public/textures/cards/rws/cups-13-queen.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Cups13.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cups13.jpg"
+      }
+    },
+    {
+      "id": "cups-14-king",
+      "deck_index": 49,
+      "name_en": "King of Cups",
+      "name_vi": "Vua Cốc",
+      "arcana": "minor",
+      "number": 14,
+      "suit": "cups",
+      "rank": "king",
+      "element": "water",
+      "keywords_vi": ["điềm tĩnh", "trưởng thành cảm xúc", "từ bi", "kiểm soát"],
+      "upright_vi": "Sự trưởng thành cảm xúc giúp bạn giữ bình tĩnh giữa sóng nước. Hãy lãnh đạo bằng lòng từ bi và sự ổn định.",
+      "reversed_vi": "Kìm nén cảm xúc, thao túng mềm hoặc mất kiểm soát bên trong. Cần gọi đúng tên cảm xúc thay vì phủ nhận.",
+      "image": {
+        "file_name": "Cups14.jpg",
+        "local_path": "public/textures/cards/rws/cups-14-king.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Cups14.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cups14.jpg"
+      }
+    },
+    {
+      "id": "swords-01-ace",
+      "deck_index": 50,
+      "name_en": "Ace of Swords",
+      "name_vi": "Át Kiếm",
+      "arcana": "minor",
+      "number": 1,
+      "suit": "swords",
+      "rank": "ace",
+      "element": "air",
+      "keywords_vi": ["sự thật", "ý tưởng", "rõ ràng", "đột phá"],
+      "upright_vi": "Một sự thật hoặc ý tưởng sắc bén xuất hiện. Lá này ủng hộ quyết định rõ ràng, nói thật và cắt bỏ nhiễu.",
+      "reversed_vi": "Mơ hồ, hiểu lầm hoặc dùng lời nói như vũ khí. Cần kiểm tra thông tin trước khi kết luận.",
+      "image": {
+        "file_name": "Swords01.jpg",
+        "local_path": "public/textures/cards/rws/swords-01-ace.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Swords01.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Swords01.jpg"
+      }
+    },
+    {
+      "id": "swords-02-two",
+      "deck_index": 51,
+      "name_en": "Two of Swords",
+      "name_vi": "Hai Kiếm",
+      "arcana": "minor",
+      "number": 2,
+      "suit": "swords",
+      "rank": "two",
+      "element": "air",
+      "keywords_vi": ["bế tắc", "lựa chọn", "né tránh", "cân bằng trí óc"],
+      "upright_vi": "Bạn đang giữ thế trung lập trước một quyết định khó. Cần tháo bịt mắt, nhìn dữ kiện và chấp nhận cảm xúc đi kèm.",
+      "reversed_vi": "Sự né tránh không còn hiệu quả. Quyết định có thể khó, nhưng trì hoãn chỉ làm áp lực tăng lên.",
+      "image": {
+        "file_name": "Swords02.jpg",
+        "local_path": "public/textures/cards/rws/swords-02-two.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Swords02.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Swords02.jpg"
+      }
+    },
+    {
+      "id": "swords-03-three",
+      "deck_index": 52,
+      "name_en": "Three of Swords",
+      "name_vi": "Ba Kiếm",
+      "arcana": "minor",
+      "number": 3,
+      "suit": "swords",
+      "rank": "three",
+      "element": "air",
+      "keywords_vi": ["đau lòng", "sự thật đau", "chia ly", "giải phóng"],
+      "upright_vi": "Một sự thật có thể gây đau nhưng cũng mở đường cho chữa lành. Hãy cho phép cảm xúc được đi qua thay vì phủ nhận.",
+      "reversed_vi": "Vết thương đang được rút mũi nhọn ra. Cần tha thứ, không phải để quên, mà để giải phóng mình.",
+      "image": {
+        "file_name": "Swords03.jpg",
+        "local_path": "public/textures/cards/rws/swords-03-three.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Swords03.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Swords03.jpg"
+      }
+    },
+    {
+      "id": "swords-04-four",
+      "deck_index": 53,
+      "name_en": "Four of Swords",
+      "name_vi": "Bốn Kiếm",
+      "arcana": "minor",
+      "number": 4,
+      "suit": "swords",
+      "rank": "four",
+      "element": "air",
+      "keywords_vi": ["nghỉ ngơi", "tĩnh dưỡng", "hồi phục", "im lặng"],
+      "upright_vi": "Tâm trí cần nghỉ để phục hồi. Đây không phải lúc ép bản thân trả lời mọi thứ ngay lập tức.",
+      "reversed_vi": "Nghỉ quá lâu thành trì trệ, hoặc cơ thể buộc bạn dừng lại. Cần phục hồi chủ động và quay lại nhịp phù hợp.",
+      "image": {
+        "file_name": "Swords04.jpg",
+        "local_path": "public/textures/cards/rws/swords-04-four.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Swords04.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Swords04.jpg"
+      }
+    },
+    {
+      "id": "swords-05-five",
+      "deck_index": 54,
+      "name_en": "Five of Swords",
+      "name_vi": "Năm Kiếm",
+      "arcana": "minor",
+      "number": 5,
+      "suit": "swords",
+      "rank": "five",
+      "element": "air",
+      "keywords_vi": ["thắng thua", "xung đột", "cái tôi", "chiến lược"],
+      "upright_vi": "Chiến thắng bằng mọi giá có thể để lại tổn thất quan hệ. Hãy hỏi điều bạn muốn giữ sau cuộc tranh luận là gì.",
+      "reversed_vi": "Có cơ hội hạ vũ khí, xin lỗi hoặc rời khỏi cuộc đấu không đáng. Cần chọn bình an hơn việc chứng minh mình đúng.",
+      "image": {
+        "file_name": "Swords05.jpg",
+        "local_path": "public/textures/cards/rws/swords-05-five.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Swords05.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Swords05.jpg"
+      }
+    },
+    {
+      "id": "swords-06-six",
+      "deck_index": 55,
+      "name_en": "Six of Swords",
+      "name_vi": "Sáu Kiếm",
+      "arcana": "minor",
+      "number": 6,
+      "suit": "swords",
+      "rank": "six",
+      "element": "air",
+      "keywords_vi": ["dịch chuyển", "rời bão", "chuyển tiếp", "chữa lành"],
+      "upright_vi": "Bạn đang rời khỏi vùng nhiễu động để đến nơi yên hơn. Quá trình này có thể buồn, nhưng cần thiết.",
+      "reversed_vi": "Khó rời quá khứ hoặc chuyển tiếp bị chậm. Cần xác định điều gì đang neo bạn lại.",
+      "image": {
+        "file_name": "Swords06.jpg",
+        "local_path": "public/textures/cards/rws/swords-06-six.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Swords06.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Swords06.jpg"
+      }
+    },
+    {
+      "id": "swords-07-seven",
+      "deck_index": 56,
+      "name_en": "Seven of Swords",
+      "name_vi": "Bảy Kiếm",
+      "arcana": "minor",
+      "number": 7,
+      "suit": "swords",
+      "rank": "seven",
+      "element": "air",
+      "keywords_vi": ["chiến thuật", "bí mật", "né tránh", "khôn khéo"],
+      "upright_vi": "Tình huống cần chiến thuật và quan sát kỹ. Tuy nhiên, hãy cẩn trọng với sự thiếu minh bạch hoặc né trách nhiệm.",
+      "reversed_vi": "Bí mật có thể lộ ra hoặc bạn cần thành thật với chính mình. Cách đi vòng không còn bền.",
+      "image": {
+        "file_name": "Swords07.jpg",
+        "local_path": "public/textures/cards/rws/swords-07-seven.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Swords07.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Swords07.jpg"
+      }
+    },
+    {
+      "id": "swords-08-eight",
+      "deck_index": 57,
+      "name_en": "Eight of Swords",
+      "name_vi": "Tám Kiếm",
+      "arcana": "minor",
+      "number": 8,
+      "suit": "swords",
+      "rank": "eight",
+      "element": "air",
+      "keywords_vi": ["giới hạn", "mắc kẹt", "niềm tin cản trở", "sợ hãi"],
+      "upright_vi": "Bạn có thể cảm thấy bị kẹt, nhưng một phần xiềng xích đến từ niềm tin và nỗi sợ. Hãy tìm bước nhỏ có thể kiểm soát.",
+      "reversed_vi": "Nhận ra lối ra, tháo niềm tin cũ hoặc thoát khỏi sự tự giới hạn. Đây là tiến trình lấy lại quyền chọn.",
+      "image": {
+        "file_name": "Swords08.jpg",
+        "local_path": "public/textures/cards/rws/swords-08-eight.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Swords08.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Swords08.jpg"
+      }
+    },
+    {
+      "id": "swords-09-nine",
+      "deck_index": 58,
+      "name_en": "Nine of Swords",
+      "name_vi": "Chín Kiếm",
+      "arcana": "minor",
+      "number": 9,
+      "suit": "swords",
+      "rank": "nine",
+      "element": "air",
+      "keywords_vi": ["lo âu", "mất ngủ", "hối hận", "tâm trí quá tải"],
+      "upright_vi": "Tâm trí đang phóng đại nỗi sợ hoặc tự trách. Cần đưa lo âu ra ánh sáng, nói với người tin cậy và xử lý từng phần.",
+      "reversed_vi": "Áp lực tinh thần bắt đầu giảm khi bạn tìm hỗ trợ hoặc nhìn sự thật rõ hơn. Đừng tiếp tục chịu đựng một mình.",
+      "image": {
+        "file_name": "Swords09.jpg",
+        "local_path": "public/textures/cards/rws/swords-09-nine.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Swords09.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Swords09.jpg"
+      }
+    },
+    {
+      "id": "swords-10-ten",
+      "deck_index": 59,
+      "name_en": "Ten of Swords",
+      "name_vi": "Mười Kiếm",
+      "arcana": "minor",
+      "number": 10,
+      "suit": "swords",
+      "rank": "ten",
+      "element": "air",
+      "keywords_vi": ["kết thúc đau", "chạm đáy", "buông", "bình minh mới"],
+      "upright_vi": "Một chu kỳ tinh thần đã đến điểm kết thúc. Dù đau, lá này cũng cho thấy sau cùng vẫn có bình minh mới.",
+      "reversed_vi": "Bạn đang hồi phục sau giai đoạn nặng hoặc chưa chịu khép lại điều đã kết thúc. Cần cho phép mình đứng dậy chậm rãi.",
+      "image": {
+        "file_name": "Swords10.jpg",
+        "local_path": "public/textures/cards/rws/swords-10-ten.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Swords10.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Swords10.jpg"
+      }
+    },
+    {
+      "id": "swords-11-page",
+      "deck_index": 60,
+      "name_en": "Page of Swords",
+      "name_vi": "Tiểu Đồng Kiếm",
+      "arcana": "minor",
+      "number": 11,
+      "suit": "swords",
+      "rank": "page",
+      "element": "air",
+      "keywords_vi": ["tò mò", "tin tức", "quan sát", "học hỏi"],
+      "upright_vi": "Một ý tưởng, tin tức hoặc nhu cầu học hỏi đang xuất hiện. Hãy hỏi đúng câu hỏi và giữ đầu óc linh hoạt.",
+      "reversed_vi": "Nói vội, tin đồn hoặc quan sát quá mức thành nghi ngờ. Cần xác minh trước khi phản ứng.",
+      "image": {
+        "file_name": "Swords11.jpg",
+        "local_path": "public/textures/cards/rws/swords-11-page.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Swords11.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Swords11.jpg"
+      }
+    },
+    {
+      "id": "swords-12-knight",
+      "deck_index": 61,
+      "name_en": "Knight of Swords",
+      "name_vi": "Kỵ Sĩ Kiếm",
+      "arcana": "minor",
+      "number": 12,
+      "suit": "swords",
+      "rank": "knight",
+      "element": "air",
+      "keywords_vi": ["tốc độ", "quyết liệt", "tranh luận", "hành động trí óc"],
+      "upright_vi": "Năng lượng lao nhanh theo ý tưởng. Phù hợp xử lý việc cần quyết đoán, nhưng cần tránh đâm thẳng vào xung đột không cần thiết.",
+      "reversed_vi": "Hấp tấp, lời nói sắc quá hoặc thiếu dữ kiện. Cần chậm lại để chiến lược không bị phá bởi tốc độ.",
+      "image": {
+        "file_name": "Swords12.jpg",
+        "local_path": "public/textures/cards/rws/swords-12-knight.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Swords12.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Swords12.jpg"
+      }
+    },
+    {
+      "id": "swords-13-queen",
+      "deck_index": 62,
+      "name_en": "Queen of Swords",
+      "name_vi": "Nữ Hoàng Kiếm",
+      "arcana": "minor",
+      "number": 13,
+      "suit": "swords",
+      "rank": "queen",
+      "element": "air",
+      "keywords_vi": ["sáng suốt", "ranh giới", "trung thực", "độc lập"],
+      "upright_vi": "Sự sáng suốt và ranh giới rõ là sức mạnh của bạn. Hãy nói thật, cắt nhiễu và quyết định dựa trên điều đã thấy rõ.",
+      "reversed_vi": "Lời nói có thể quá lạnh hoặc ranh giới thành bức tường. Cần giữ sự thật mà không đánh mất lòng trắc ẩn.",
+      "image": {
+        "file_name": "Swords13.jpg",
+        "local_path": "public/textures/cards/rws/swords-13-queen.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Swords13.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Swords13.jpg"
+      }
+    },
+    {
+      "id": "swords-14-king",
+      "deck_index": 63,
+      "name_en": "King of Swords",
+      "name_vi": "Vua Kiếm",
+      "arcana": "minor",
+      "number": 14,
+      "suit": "swords",
+      "rank": "king",
+      "element": "air",
+      "keywords_vi": ["lý trí", "quyền lực trí tuệ", "luật lệ", "chiến lược"],
+      "upright_vi": "Hãy dùng lý trí, nguyên tắc và chiến lược. Lá này ủng hộ quyết định công bằng, chuyên nghiệp và có cấu trúc.",
+      "reversed_vi": "Lạnh lùng, độc đoán hoặc dùng lý lẽ để áp đặt. Cần kiểm tra đạo đức của quyền lực trí tuệ.",
+      "image": {
+        "file_name": "Swords14.jpg",
+        "local_path": "public/textures/cards/rws/swords-14-king.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Swords14.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Swords14.jpg"
+      }
+    },
+    {
+      "id": "pentacles-01-ace",
+      "deck_index": 64,
+      "name_en": "Ace of Pentacles",
+      "name_vi": "Át Tiền",
+      "arcana": "minor",
+      "number": 1,
+      "suit": "pentacles",
+      "rank": "ace",
+      "element": "earth",
+      "keywords_vi": ["cơ hội vật chất", "hạt giống", "tài chính", "thực tế"],
+      "upright_vi": "Một cơ hội thực tế về tiền bạc, công việc hoặc sức khỏe đang mở. Hãy gieo hạt bằng hành động cụ thể.",
+      "reversed_vi": "Cơ hội chưa chín, quản lý nguồn lực kém hoặc bỏ lỡ vì thiếu chuẩn bị. Cần kiểm tra nền tảng thực tế.",
+      "image": {
+        "file_name": "Pents01.jpg",
+        "local_path": "public/textures/cards/rws/pentacles-01-ace.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Pents01.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Pents01.jpg"
+      }
+    },
+    {
+      "id": "pentacles-02-two",
+      "deck_index": 65,
+      "name_en": "Two of Pentacles",
+      "name_vi": "Hai Tiền",
+      "arcana": "minor",
+      "number": 2,
+      "suit": "pentacles",
+      "rank": "two",
+      "element": "earth",
+      "keywords_vi": ["cân bằng", "xoay xở", "ưu tiên", "linh hoạt"],
+      "upright_vi": "Bạn đang xoay nhiều trách nhiệm cùng lúc. Cần giữ nhịp linh hoạt và ưu tiên điều tạo ổn định lâu dài.",
+      "reversed_vi": "Quá tải, mất cân bằng tài chính hoặc lịch trình rối. Cần bỏ bớt cam kết và lập lại thứ tự ưu tiên.",
+      "image": {
+        "file_name": "Pents02.jpg",
+        "local_path": "public/textures/cards/rws/pentacles-02-two.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Pents02.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Pents02.jpg"
+      }
+    },
+    {
+      "id": "pentacles-03-three",
+      "deck_index": 66,
+      "name_en": "Three of Pentacles",
+      "name_vi": "Ba Tiền",
+      "arcana": "minor",
+      "number": 3,
+      "suit": "pentacles",
+      "rank": "three",
+      "element": "earth",
+      "keywords_vi": ["hợp tác", "tay nghề", "xây dựng", "đánh giá"],
+      "upright_vi": "Công việc tiến triển nhờ kỹ năng và hợp tác đúng vai. Hãy để chuyên môn được nhìn thấy và nhận phản hồi xây dựng.",
+      "reversed_vi": "Thiếu phối hợp, tiêu chuẩn không rõ hoặc không được ghi nhận. Cần làm rõ vai trò và kỳ vọng.",
+      "image": {
+        "file_name": "Pents03.jpg",
+        "local_path": "public/textures/cards/rws/pentacles-03-three.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Pents03.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Pents03.jpg"
+      }
+    },
+    {
+      "id": "pentacles-04-four",
+      "deck_index": 67,
+      "name_en": "Four of Pentacles",
+      "name_vi": "Bốn Tiền",
+      "arcana": "minor",
+      "number": 4,
+      "suit": "pentacles",
+      "rank": "four",
+      "element": "earth",
+      "keywords_vi": ["giữ chặt", "an toàn", "kiểm soát", "tích lũy"],
+      "upright_vi": "Nhu cầu an toàn tài chính hoặc kiểm soát nguồn lực đang mạnh. Tích lũy là tốt, nhưng đừng để sợ mất làm nghẹt dòng chảy.",
+      "reversed_vi": "Buông kiểm soát, chi tiêu thiếu an toàn hoặc học cách chia sẻ. Cần cân bằng giữ và cho.",
+      "image": {
+        "file_name": "Pents04.jpg",
+        "local_path": "public/textures/cards/rws/pentacles-04-four.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Pents04.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Pents04.jpg"
+      }
+    },
+    {
+      "id": "pentacles-05-five",
+      "deck_index": 68,
+      "name_en": "Five of Pentacles",
+      "name_vi": "Năm Tiền",
+      "arcana": "minor",
+      "number": 5,
+      "suit": "pentacles",
+      "rank": "five",
+      "element": "earth",
+      "keywords_vi": ["thiếu thốn", "khó khăn", "bị bỏ rơi", "tìm hỗ trợ"],
+      "upright_vi": "Cảm giác thiếu thốn hoặc bị đứng ngoài có thể xuất hiện. Lá này nhắc rằng hỗ trợ đang gần hơn bạn nghĩ.",
+      "reversed_vi": "Tình hình vật chất hoặc tinh thần bắt đầu hồi phục. Hãy chủ động nhận giúp đỡ và xây lại nền tảng.",
+      "image": {
+        "file_name": "Pents05.jpg",
+        "local_path": "public/textures/cards/rws/pentacles-05-five.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Pents05.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Pents05.jpg"
+      }
+    },
+    {
+      "id": "pentacles-06-six",
+      "deck_index": 69,
+      "name_en": "Six of Pentacles",
+      "name_vi": "Sáu Tiền",
+      "arcana": "minor",
+      "number": 6,
+      "suit": "pentacles",
+      "rank": "six",
+      "element": "earth",
+      "keywords_vi": ["cho nhận", "hào phóng", "cân bằng quyền lực", "hỗ trợ"],
+      "upright_vi": "Dòng cho và nhận cần cân bằng. Bạn có thể đang ở vị trí giúp người khác hoặc học cách nhận sự hỗ trợ xứng đáng.",
+      "reversed_vi": "Cho nhận lệch, nợ ân tình hoặc quyền lực tài chính không lành mạnh. Cần minh bạch điều kiện.",
+      "image": {
+        "file_name": "Pents06.jpg",
+        "local_path": "public/textures/cards/rws/pentacles-06-six.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Pents06.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Pents06.jpg"
+      }
+    },
+    {
+      "id": "pentacles-07-seven",
+      "deck_index": 70,
+      "name_en": "Seven of Pentacles",
+      "name_vi": "Bảy Tiền",
+      "arcana": "minor",
+      "number": 7,
+      "suit": "pentacles",
+      "rank": "seven",
+      "element": "earth",
+      "keywords_vi": ["đánh giá", "kiên nhẫn", "đầu tư", "chờ thu hoạch"],
+      "upright_vi": "Bạn đang ở giai đoạn đánh giá kết quả của nỗ lực dài hạn. Kiên nhẫn là cần thiết, nhưng cũng nên chỉnh chiến lược nếu đất không còn hợp.",
+      "reversed_vi": "Mất kiên nhẫn, đầu tư sai chỗ hoặc không thấy kết quả. Cần đo lại lợi ích và chi phí thật.",
+      "image": {
+        "file_name": "Pents07.jpg",
+        "local_path": "public/textures/cards/rws/pentacles-07-seven.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Pents07.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Pents07.jpg"
+      }
+    },
+    {
+      "id": "pentacles-08-eight",
+      "deck_index": 71,
+      "name_en": "Eight of Pentacles",
+      "name_vi": "Tám Tiền",
+      "arcana": "minor",
+      "number": 8,
+      "suit": "pentacles",
+      "rank": "eight",
+      "element": "earth",
+      "keywords_vi": ["rèn nghề", "chăm chỉ", "kỹ năng", "lặp lại"],
+      "upright_vi": "Sự tiến bộ đến từ luyện tập đều và chú ý chi tiết. Đây là lá của tay nghề, học sâu và cải thiện từng ngày.",
+      "reversed_vi": "Làm máy móc, chán nghề hoặc thiếu tiêu chuẩn. Cần tìm lại mục tiêu của việc rèn luyện.",
+      "image": {
+        "file_name": "Pents08.jpg",
+        "local_path": "public/textures/cards/rws/pentacles-08-eight.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Pents08.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Pents08.jpg"
+      }
+    },
+    {
+      "id": "pentacles-09-nine",
+      "deck_index": 72,
+      "name_en": "Nine of Pentacles",
+      "name_vi": "Chín Tiền",
+      "arcana": "minor",
+      "number": 9,
+      "suit": "pentacles",
+      "rank": "nine",
+      "element": "earth",
+      "keywords_vi": ["tự chủ", "sung túc", "thành quả", "phẩm chất"],
+      "upright_vi": "Thành quả cá nhân, sự tự chủ và gu sống tinh tế đang nổi bật. Hãy ghi nhận công sức đã đưa bạn đến đây.",
+      "reversed_vi": "Phụ thuộc vật chất, tự giá trị lung lay hoặc hưởng thụ thiếu nền. Cần xây lại cảm giác đủ từ bên trong.",
+      "image": {
+        "file_name": "Pents09.jpg",
+        "local_path": "public/textures/cards/rws/pentacles-09-nine.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Pents09.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Pents09.jpg"
+      }
+    },
+    {
+      "id": "pentacles-10-ten",
+      "deck_index": 73,
+      "name_en": "Ten of Pentacles",
+      "name_vi": "Mười Tiền",
+      "arcana": "minor",
+      "number": 10,
+      "suit": "pentacles",
+      "rank": "ten",
+      "element": "earth",
+      "keywords_vi": ["di sản", "gia đình", "ổn định", "tài sản"],
+      "upright_vi": "Lá này nói về nền tảng bền, gia đình, tài sản hoặc thành quả truyền lại. Hãy nghĩ theo chiều dài của di sản.",
+      "reversed_vi": "Bất ổn gia đình, tranh chấp tài sản hoặc mô thức thế hệ cần chữa. Cần minh bạch về giá trị và trách nhiệm.",
+      "image": {
+        "file_name": "Pents10.jpg",
+        "local_path": "public/textures/cards/rws/pentacles-10-ten.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Pents10.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Pents10.jpg"
+      }
+    },
+    {
+      "id": "pentacles-11-page",
+      "deck_index": 74,
+      "name_en": "Page of Pentacles",
+      "name_vi": "Tiểu Đồng Tiền",
+      "arcana": "minor",
+      "number": 11,
+      "suit": "pentacles",
+      "rank": "page",
+      "element": "earth",
+      "keywords_vi": ["học nghề", "cơ hội nhỏ", "thực hành", "kế hoạch"],
+      "upright_vi": "Một cơ hội học tập, công việc hoặc tài chính nhỏ nhưng thực tế đang đến. Hãy bắt đầu bằng thói quen chắc chắn.",
+      "reversed_vi": "Thiếu tập trung, lười thực hành hoặc cơ hội bị bỏ lỡ vì chưa chuẩn bị. Cần quay lại bài học căn bản.",
+      "image": {
+        "file_name": "Pents11.jpg",
+        "local_path": "public/textures/cards/rws/pentacles-11-page.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Pents11.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Pents11.jpg"
+      }
+    },
+    {
+      "id": "pentacles-12-knight",
+      "deck_index": 75,
+      "name_en": "Knight of Pentacles",
+      "name_vi": "Kỵ Sĩ Tiền",
+      "arcana": "minor",
+      "number": 12,
+      "suit": "pentacles",
+      "rank": "knight",
+      "element": "earth",
+      "keywords_vi": ["bền bỉ", "trách nhiệm", "chậm chắc", "quy trình"],
+      "upright_vi": "Tiến độ chậm nhưng đáng tin. Lá này khuyên làm đều, giữ cam kết và tối ưu quy trình thay vì tìm đường tắt.",
+      "reversed_vi": "Trì trệ, bảo thủ hoặc mắc kẹt trong thói quen. Cần thêm linh hoạt mà không phá nền tảng.",
+      "image": {
+        "file_name": "Pents12.jpg",
+        "local_path": "public/textures/cards/rws/pentacles-12-knight.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Pents12.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Pents12.jpg"
+      }
+    },
+    {
+      "id": "pentacles-13-queen",
+      "deck_index": 76,
+      "name_en": "Queen of Pentacles",
+      "name_vi": "Nữ Hoàng Tiền",
+      "arcana": "minor",
+      "number": 13,
+      "suit": "pentacles",
+      "rank": "queen",
+      "element": "earth",
+      "keywords_vi": ["nuôi dưỡng vật chất", "thực tế", "ấm áp", "ổn định"],
+      "upright_vi": "Sự chăm sóc thực tế, ổn định và giàu cảm giác an toàn là trọng tâm. Hãy xây môi trường sống nuôi dưỡng cả thân và tâm.",
+      "reversed_vi": "Ôm đồm việc chăm sóc, kiệt sức hoặc bất ổn vật chất. Cần chăm mình bằng hành động cụ thể.",
+      "image": {
+        "file_name": "Pents13.jpg",
+        "local_path": "public/textures/cards/rws/pentacles-13-queen.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Pents13.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Pents13.jpg"
+      }
+    },
+    {
+      "id": "pentacles-14-king",
+      "deck_index": 77,
+      "name_en": "King of Pentacles",
+      "name_vi": "Vua Tiền",
+      "arcana": "minor",
+      "number": 14,
+      "suit": "pentacles",
+      "rank": "king",
+      "element": "earth",
+      "keywords_vi": ["thành tựu", "quản trị", "an toàn", "thịnh vượng"],
+      "upright_vi": "Năng lượng quản trị nguồn lực, tài chính và thành tựu bền vững đang mạnh. Hãy lãnh đạo bằng sự ổn định và trách nhiệm.",
+      "reversed_vi": "Vật chất hóa quá mức, kiểm soát tài chính hoặc bảo thủ. Cần nhớ thịnh vượng thật cũng cần sự hào phóng và đạo đức.",
+      "image": {
+        "file_name": "Pents14.jpg",
+        "local_path": "public/textures/cards/rws/pentacles-14-king.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Pents14.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Pents14.jpg"
+      }
+    }
+  ]
+}

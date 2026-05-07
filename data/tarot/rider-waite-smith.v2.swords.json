@@ -1,0 +1,990 @@
+{
+    "schema_version":  "2.0-minor-swords",
+    "deck_id":  "rider-waite-smith",
+    "coverage":  {
+                     "card_count":  14,
+                     "notes_vi":  "V2 cho 14 lá suit Kiếm, sinh từ rank framework + suit framework đã lưu trong rule data."
+                 },
+    "cards":  [
+                  {
+                      "id":  "swords-01-ace",
+                      "source_basis":  [
+                                           "waite",
+                                           "golden_dawn_book_t",
+                                           "joan_bunning_learning_tarot",
+                                           "benebell_holistic_tarot",
+                                           "product_editorial"
+                                       ],
+                      "core":  {
+                                   "essence_vi":  "Át Kiếm kết hợp năng lượng hạt giống mới với lĩnh vực suy nghĩ, sự thật, giao tiếp và xung đột tinh thần. Cốt lõi là một cơ hội nguyên sơ vừa mở ra.",
+                                   "keywords_vi":  [
+                                                       "hạt giống mới",
+                                                       "suy nghĩ, sự thật, giao tiếp và xung đột tinh thần",
+                                                       "một cơ hội nguyên sơ vừa mở ra"
+                                                   ],
+                                   "shadow_keywords_vi":  [
+                                                              "lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá",
+                                                              "khó phân biệt tiềm năng thật với cảm hứng thoáng qua"
+                                                          ]
+                               },
+                      "orientation":  {
+                                          "upright":  {
+                                                          "general_vi":  "có tín hiệu mới đáng chú ý, nhưng nó mới là hạt giống và cần được nuôi đúng cách. Với suit Kiếm, trọng tâm rơi vào suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                                          "love_vi":  "Trong tình yêu, Át Kiếm nói về lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra. có tín hiệu mới đáng chú ý, nhưng nó mới là hạt giống và cần được nuôi đúng cách.",
+                                                          "career_vi":  "Về công việc, lá này đặt hạt giống mới vào quyết định, chiến lược, tranh luận, dữ kiện và áp lực trí óc. có tín hiệu mới đáng chú ý, nhưng nó mới là hạt giống và cần được nuôi đúng cách.",
+                                                          "money_vi":  "Về tiền bạc, lá này liên quan phân tích rủi ro, hợp đồng, quyết định dựa trên dữ kiện và tránh suy nghĩ cực đoan. có tín hiệu mới đáng chú ý, nhưng nó mới là hạt giống và cần được nuôi đúng cách.",
+                                                          "inner_work_vi":  "Ở tầng nội tâm, lá này chạm tới tiếng nói trong đầu, nỗi sợ, niềm tin và cách bạn diễn giải sự việc. có tín hiệu mới đáng chú ý, nhưng nó mới là hạt giống và cần được nuôi đúng cách.",
+                                                          "advice_vi":  "đón cơ hội bằng một bước nhỏ, không vội biến nó thành cam kết lớn. nói rõ, kiểm chứng dữ kiện và cắt bớt suy diễn.",
+                                                          "warning_vi":  "sự thật không nên được dùng như vũ khí. Điểm cần tránh là khó phân biệt tiềm năng thật với cảm hứng thoáng qua."
+                                                      },
+                                          "reversed":  {
+                                                           "general_vi":  "cơ hội có đó nhưng bị chậm, bị bỏ lỡ hoặc chưa đủ nền để nảy mầm. Mặt lệch của suit Kiếm là lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "love_vi":  "Trong tình yêu, lá ngược cho thấy lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra đang bị chặn hoặc lệch. cơ hội có đó nhưng bị chậm, bị bỏ lỡ hoặc chưa đủ nền để nảy mầm.",
+                                                           "career_vi":  "Về công việc, lá ngược cảnh báo quyết định, chiến lược, tranh luận, dữ kiện và áp lực trí óc đang thiếu nhịp, thiếu hướng hoặc thiếu sự trưởng thành phù hợp. cơ hội có đó nhưng bị chậm, bị bỏ lỡ hoặc chưa đủ nền để nảy mầm.",
+                                                           "money_vi":  "Về tiền bạc, cần cẩn trọng vì phân tích rủi ro, hợp đồng, quyết định dựa trên dữ kiện và tránh suy nghĩ cực đoan có thể bị chi phối bởi mặt lệch: lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "inner_work_vi":  "Ở tầng nội tâm, lá ngược cho thấy bạn cần nhìn lại tiếng nói trong đầu, nỗi sợ, niềm tin và cách bạn diễn giải sự việc khi nó bị kéo bởi lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "advice_vi":  "đón cơ hội bằng một bước nhỏ, không vội biến nó thành cam kết lớn, nhưng trước hết hãy xử lý phần bị chặn: khó phân biệt tiềm năng thật với cảm hứng thoáng qua.",
+                                                           "warning_vi":  "Nếu không điều chỉnh, lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá sẽ làm hạt giống mới biến thành điểm nghẽn."
+                                                       }
+                                      },
+                      "position_overrides":  {
+                                                 "situation":  "Tình huống đang biểu hiện hạt giống mới trong vùng suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                                 "action":  "đón cơ hội bằng một bước nhỏ, không vội biến nó thành cam kết lớn",
+                                                 "outcome":  "một cửa mới mở ra, kết quả phụ thuộc vào cách bạn chăm nó",
+                                                 "challenge":  "khó phân biệt tiềm năng thật với cảm hứng thoáng qua",
+                                                 "future":  "một cửa mới mở ra, kết quả phụ thuộc vào cách bạn chăm nó"
+                                             },
+                      "relationship_signals":  {
+                                                   "default":  "có tín hiệu mới hoặc mong muốn làm mới, nhưng cần xem nó có được nuôi bằng hành động không. Với Kiếm, hãy quan sát lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra.",
+                                                   "existing_relationship":  "Nếu hỏi có nên tiếp tục, Át Kiếm yêu cầu xem lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra đang giúp hai bên tiến gần hơn hay chỉ lặp lại cùng mô thức. Trục chính là hạt giống mới.",
+                                                   "situationship":  "Trong mập mờ, lá này nhấn vào một cơ hội nguyên sơ vừa mở ra trong vùng suy nghĩ, sự thật, giao tiếp và xung đột tinh thần. Dấu hiệu cần xem là có chuyển thành hành động rõ hay chỉ dừng ở cảm giác.",
+                                                   "ex":  "Với người cũ, Át Kiếm hỏi liệu bài học hạt giống mới đã được hiểu chưa, hay hai bên chỉ đang chạm lại vì thói quen cũ.",
+                                                   "no_contact":  "Nếu đang im lặng, lá này cho thấy năng lượng Kiếm đang bị giữ lại. Hãy xem dấu hiệu liên hệ nếu có mang tính trưởng thành hay chỉ là xung lực."
+                                               },
+                      "symbols":  [
+                                      {
+                                          "symbol":  "suit Kiếm",
+                                          "meaning_vi":  "Đưa trọng tâm về suy nghĩ, sự thật, giao tiếp và xung đột tinh thần, thuộc nguyên tố Khí."
+                                      },
+                                      {
+                                          "symbol":  "rank Át",
+                                          "meaning_vi":  "Đưa câu chuyện vào giai đoạn hạt giống mới."
+                                      }
+                                  ],
+                      "reader_notes_vi":  [
+                                              "Đọc lá này bằng cách kết hợp rank trước, suit sau: hạt giống mới + suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                              "Không đổi nghĩa gốc của lá; V2 chỉ giúp diễn giải theo ngữ cảnh câu hỏi và position."
+                                          ]
+                  },
+                  {
+                      "id":  "swords-02-two",
+                      "source_basis":  [
+                                           "waite",
+                                           "golden_dawn_book_t",
+                                           "joan_bunning_learning_tarot",
+                                           "benebell_holistic_tarot",
+                                           "product_editorial"
+                                       ],
+                      "core":  {
+                                   "essence_vi":  "Hai Kiếm kết hợp năng lượng lựa chọn và cân bằng với lĩnh vực suy nghĩ, sự thật, giao tiếp và xung đột tinh thần. Cốt lõi là hai lực, hai hướng hoặc hai người đang cần tìm điểm cân bằng.",
+                                   "keywords_vi":  [
+                                                       "lựa chọn và cân bằng",
+                                                       "suy nghĩ, sự thật, giao tiếp và xung đột tinh thần",
+                                                       "hai lực, hai hướng hoặc hai người đang cần tìm điểm cân bằng"
+                                                   ],
+                                   "shadow_keywords_vi":  [
+                                                              "lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá",
+                                                              "do dự, chờ người khác quyết hộ hoặc giữ hòa khí bằng im lặng"
+                                                          ]
+                               },
+                      "orientation":  {
+                                          "upright":  {
+                                                          "general_vi":  "tình huống cần đối thoại, cân bằng hoặc lựa chọn rõ hơn. Với suit Kiếm, trọng tâm rơi vào suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                                          "love_vi":  "Trong tình yêu, Hai Kiếm nói về lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra. tình huống cần đối thoại, cân bằng hoặc lựa chọn rõ hơn.",
+                                                          "career_vi":  "Về công việc, lá này đặt lựa chọn và cân bằng vào quyết định, chiến lược, tranh luận, dữ kiện và áp lực trí óc. tình huống cần đối thoại, cân bằng hoặc lựa chọn rõ hơn.",
+                                                          "money_vi":  "Về tiền bạc, lá này liên quan phân tích rủi ro, hợp đồng, quyết định dựa trên dữ kiện và tránh suy nghĩ cực đoan. tình huống cần đối thoại, cân bằng hoặc lựa chọn rõ hơn.",
+                                                          "inner_work_vi":  "Ở tầng nội tâm, lá này chạm tới tiếng nói trong đầu, nỗi sợ, niềm tin và cách bạn diễn giải sự việc. tình huống cần đối thoại, cân bằng hoặc lựa chọn rõ hơn.",
+                                                          "advice_vi":  "đặt hai lựa chọn lên bàn và xem điều gì thật sự đáp lại bạn. nói rõ, kiểm chứng dữ kiện và cắt bớt suy diễn.",
+                                                          "warning_vi":  "sự thật không nên được dùng như vũ khí. Điểm cần tránh là do dự, chờ người khác quyết hộ hoặc giữ hòa khí bằng im lặng."
+                                                      },
+                                          "reversed":  {
+                                                           "general_vi":  "sự cân bằng lệch, do dự hoặc né quyết định đang làm tình huống đứng yên. Mặt lệch của suit Kiếm là lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "love_vi":  "Trong tình yêu, lá ngược cho thấy lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra đang bị chặn hoặc lệch. sự cân bằng lệch, do dự hoặc né quyết định đang làm tình huống đứng yên.",
+                                                           "career_vi":  "Về công việc, lá ngược cảnh báo quyết định, chiến lược, tranh luận, dữ kiện và áp lực trí óc đang thiếu nhịp, thiếu hướng hoặc thiếu sự trưởng thành phù hợp. sự cân bằng lệch, do dự hoặc né quyết định đang làm tình huống đứng yên.",
+                                                           "money_vi":  "Về tiền bạc, cần cẩn trọng vì phân tích rủi ro, hợp đồng, quyết định dựa trên dữ kiện và tránh suy nghĩ cực đoan có thể bị chi phối bởi mặt lệch: lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "inner_work_vi":  "Ở tầng nội tâm, lá ngược cho thấy bạn cần nhìn lại tiếng nói trong đầu, nỗi sợ, niềm tin và cách bạn diễn giải sự việc khi nó bị kéo bởi lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "advice_vi":  "đặt hai lựa chọn lên bàn và xem điều gì thật sự đáp lại bạn, nhưng trước hết hãy xử lý phần bị chặn: do dự, chờ người khác quyết hộ hoặc giữ hòa khí bằng im lặng.",
+                                                           "warning_vi":  "Nếu không điều chỉnh, lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá sẽ làm lựa chọn và cân bằng biến thành điểm nghẽn."
+                                                       }
+                                      },
+                      "position_overrides":  {
+                                                 "situation":  "Tình huống đang biểu hiện lựa chọn và cân bằng trong vùng suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                                 "action":  "đặt hai lựa chọn lên bàn và xem điều gì thật sự đáp lại bạn",
+                                                 "outcome":  "xu hướng phụ thuộc vào việc hai phía có tìm được điểm chung không",
+                                                 "challenge":  "do dự, chờ người khác quyết hộ hoặc giữ hòa khí bằng im lặng",
+                                                 "future":  "xu hướng phụ thuộc vào việc hai phía có tìm được điểm chung không"
+                                             },
+                      "relationship_signals":  {
+                                                   "default":  "dấu hiệu cần xem là sự đáp lại có hai chiều không. Với Kiếm, hãy quan sát lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra.",
+                                                   "existing_relationship":  "Nếu hỏi có nên tiếp tục, Hai Kiếm yêu cầu xem lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra đang giúp hai bên tiến gần hơn hay chỉ lặp lại cùng mô thức. Trục chính là lựa chọn và cân bằng.",
+                                                   "situationship":  "Trong mập mờ, lá này nhấn vào hai lực, hai hướng hoặc hai người đang cần tìm điểm cân bằng trong vùng suy nghĩ, sự thật, giao tiếp và xung đột tinh thần. Dấu hiệu cần xem là có chuyển thành hành động rõ hay chỉ dừng ở cảm giác.",
+                                                   "ex":  "Với người cũ, Hai Kiếm hỏi liệu bài học lựa chọn và cân bằng đã được hiểu chưa, hay hai bên chỉ đang chạm lại vì thói quen cũ.",
+                                                   "no_contact":  "Nếu đang im lặng, lá này cho thấy năng lượng Kiếm đang bị giữ lại. Hãy xem dấu hiệu liên hệ nếu có mang tính trưởng thành hay chỉ là xung lực."
+                                               },
+                      "symbols":  [
+                                      {
+                                          "symbol":  "suit Kiếm",
+                                          "meaning_vi":  "Đưa trọng tâm về suy nghĩ, sự thật, giao tiếp và xung đột tinh thần, thuộc nguyên tố Khí."
+                                      },
+                                      {
+                                          "symbol":  "rank Hai",
+                                          "meaning_vi":  "Đưa câu chuyện vào giai đoạn lựa chọn và cân bằng."
+                                      }
+                                  ],
+                      "reader_notes_vi":  [
+                                              "Đọc lá này bằng cách kết hợp rank trước, suit sau: lựa chọn và cân bằng + suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                              "Không đổi nghĩa gốc của lá; V2 chỉ giúp diễn giải theo ngữ cảnh câu hỏi và position."
+                                          ]
+                  },
+                  {
+                      "id":  "swords-03-three",
+                      "source_basis":  [
+                                           "waite",
+                                           "golden_dawn_book_t",
+                                           "joan_bunning_learning_tarot",
+                                           "benebell_holistic_tarot",
+                                           "product_editorial"
+                                       ],
+                      "core":  {
+                                   "essence_vi":  "Ba Kiếm kết hợp năng lượng phát triển và biểu đạt với lĩnh vực suy nghĩ, sự thật, giao tiếp và xung đột tinh thần. Cốt lõi là năng lượng bắt đầu mở rộng qua giao tiếp, hợp tác hoặc biểu hiện ra ngoài.",
+                                   "keywords_vi":  [
+                                                       "phát triển và biểu đạt",
+                                                       "suy nghĩ, sự thật, giao tiếp và xung đột tinh thần",
+                                                       "năng lượng bắt đầu mở rộng qua giao tiếp, hợp tác hoặc biểu hiện ra ngoài"
+                                                   ],
+                                   "shadow_keywords_vi":  [
+                                                              "lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá",
+                                                              "nói nhiều nhưng chưa cùng xây, hoặc có người thứ ba/yếu tố ngoài làm nhiễu"
+                                                          ]
+                               },
+                      "orientation":  {
+                                          "upright":  {
+                                                          "general_vi":  "có tiến triển khi mọi thứ được chia sẻ, thể hiện hoặc cùng xây. Với suit Kiếm, trọng tâm rơi vào suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                                          "love_vi":  "Trong tình yêu, Ba Kiếm nói về lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra. có tiến triển khi mọi thứ được chia sẻ, thể hiện hoặc cùng xây.",
+                                                          "career_vi":  "Về công việc, lá này đặt phát triển và biểu đạt vào quyết định, chiến lược, tranh luận, dữ kiện và áp lực trí óc. có tiến triển khi mọi thứ được chia sẻ, thể hiện hoặc cùng xây.",
+                                                          "money_vi":  "Về tiền bạc, lá này liên quan phân tích rủi ro, hợp đồng, quyết định dựa trên dữ kiện và tránh suy nghĩ cực đoan. có tiến triển khi mọi thứ được chia sẻ, thể hiện hoặc cùng xây.",
+                                                          "inner_work_vi":  "Ở tầng nội tâm, lá này chạm tới tiếng nói trong đầu, nỗi sợ, niềm tin và cách bạn diễn giải sự việc. có tiến triển khi mọi thứ được chia sẻ, thể hiện hoặc cùng xây.",
+                                                          "advice_vi":  "đưa điều đang nghĩ/cảm ra thành trao đổi hoặc kế hoạch chung. nói rõ, kiểm chứng dữ kiện và cắt bớt suy diễn.",
+                                                          "warning_vi":  "sự thật không nên được dùng như vũ khí. Điểm cần tránh là nói nhiều nhưng chưa cùng xây, hoặc có người thứ ba/yếu tố ngoài làm nhiễu."
+                                                      },
+                                          "reversed":  {
+                                                           "general_vi":  "sự phát triển bị chậm vì thiếu phối hợp, thiếu rõ ràng hoặc biểu đạt chưa thật. Mặt lệch của suit Kiếm là lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "love_vi":  "Trong tình yêu, lá ngược cho thấy lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra đang bị chặn hoặc lệch. sự phát triển bị chậm vì thiếu phối hợp, thiếu rõ ràng hoặc biểu đạt chưa thật.",
+                                                           "career_vi":  "Về công việc, lá ngược cảnh báo quyết định, chiến lược, tranh luận, dữ kiện và áp lực trí óc đang thiếu nhịp, thiếu hướng hoặc thiếu sự trưởng thành phù hợp. sự phát triển bị chậm vì thiếu phối hợp, thiếu rõ ràng hoặc biểu đạt chưa thật.",
+                                                           "money_vi":  "Về tiền bạc, cần cẩn trọng vì phân tích rủi ro, hợp đồng, quyết định dựa trên dữ kiện và tránh suy nghĩ cực đoan có thể bị chi phối bởi mặt lệch: lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "inner_work_vi":  "Ở tầng nội tâm, lá ngược cho thấy bạn cần nhìn lại tiếng nói trong đầu, nỗi sợ, niềm tin và cách bạn diễn giải sự việc khi nó bị kéo bởi lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "advice_vi":  "đưa điều đang nghĩ/cảm ra thành trao đổi hoặc kế hoạch chung, nhưng trước hết hãy xử lý phần bị chặn: nói nhiều nhưng chưa cùng xây, hoặc có người thứ ba/yếu tố ngoài làm nhiễu.",
+                                                           "warning_vi":  "Nếu không điều chỉnh, lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá sẽ làm phát triển và biểu đạt biến thành điểm nghẽn."
+                                                       }
+                                      },
+                      "position_overrides":  {
+                                                 "situation":  "Tình huống đang biểu hiện phát triển và biểu đạt trong vùng suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                                 "action":  "đưa điều đang nghĩ/cảm ra thành trao đổi hoặc kế hoạch chung",
+                                                 "outcome":  "tình huống có thể mở rộng nếu có sự phối hợp thật",
+                                                 "challenge":  "nói nhiều nhưng chưa cùng xây, hoặc có người thứ ba/yếu tố ngoài làm nhiễu",
+                                                 "future":  "tình huống có thể mở rộng nếu có sự phối hợp thật"
+                                             },
+                      "relationship_signals":  {
+                                                   "default":  "dấu hiệu cần xem là hai bên có cùng góp phần phát triển kết nối không. Với Kiếm, hãy quan sát lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra.",
+                                                   "existing_relationship":  "Nếu hỏi có nên tiếp tục, Ba Kiếm yêu cầu xem lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra đang giúp hai bên tiến gần hơn hay chỉ lặp lại cùng mô thức. Trục chính là phát triển và biểu đạt.",
+                                                   "situationship":  "Trong mập mờ, lá này nhấn vào năng lượng bắt đầu mở rộng qua giao tiếp, hợp tác hoặc biểu hiện ra ngoài trong vùng suy nghĩ, sự thật, giao tiếp và xung đột tinh thần. Dấu hiệu cần xem là có chuyển thành hành động rõ hay chỉ dừng ở cảm giác.",
+                                                   "ex":  "Với người cũ, Ba Kiếm hỏi liệu bài học phát triển và biểu đạt đã được hiểu chưa, hay hai bên chỉ đang chạm lại vì thói quen cũ.",
+                                                   "no_contact":  "Nếu đang im lặng, lá này cho thấy năng lượng Kiếm đang bị giữ lại. Hãy xem dấu hiệu liên hệ nếu có mang tính trưởng thành hay chỉ là xung lực."
+                                               },
+                      "symbols":  [
+                                      {
+                                          "symbol":  "suit Kiếm",
+                                          "meaning_vi":  "Đưa trọng tâm về suy nghĩ, sự thật, giao tiếp và xung đột tinh thần, thuộc nguyên tố Khí."
+                                      },
+                                      {
+                                          "symbol":  "rank Ba",
+                                          "meaning_vi":  "Đưa câu chuyện vào giai đoạn phát triển và biểu đạt."
+                                      }
+                                  ],
+                      "reader_notes_vi":  [
+                                              "Đọc lá này bằng cách kết hợp rank trước, suit sau: phát triển và biểu đạt + suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                              "Không đổi nghĩa gốc của lá; V2 chỉ giúp diễn giải theo ngữ cảnh câu hỏi và position."
+                                          ]
+                  },
+                  {
+                      "id":  "swords-04-four",
+                      "source_basis":  [
+                                           "waite",
+                                           "golden_dawn_book_t",
+                                           "joan_bunning_learning_tarot",
+                                           "benebell_holistic_tarot",
+                                           "product_editorial"
+                                       ],
+                      "core":  {
+                                   "essence_vi":  "Bốn Kiếm kết hợp năng lượng cấu trúc và ổn định với lĩnh vực suy nghĩ, sự thật, giao tiếp và xung đột tinh thần. Cốt lõi là nhu cầu về nền tảng, ranh giới và cảm giác an toàn.",
+                                   "keywords_vi":  [
+                                                       "cấu trúc và ổn định",
+                                                       "suy nghĩ, sự thật, giao tiếp và xung đột tinh thần",
+                                                       "nhu cầu về nền tảng, ranh giới và cảm giác an toàn"
+                                                   ],
+                                   "shadow_keywords_vi":  [
+                                                              "lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá",
+                                                              "bám vào an toàn cũ hoặc thiếu nền để đi xa"
+                                                          ]
+                               },
+                      "orientation":  {
+                                          "upright":  {
+                                                          "general_vi":  "tình huống cần được đặt vào cấu trúc rõ hơn để ổn định. Với suit Kiếm, trọng tâm rơi vào suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                                          "love_vi":  "Trong tình yêu, Bốn Kiếm nói về lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra. tình huống cần được đặt vào cấu trúc rõ hơn để ổn định.",
+                                                          "career_vi":  "Về công việc, lá này đặt cấu trúc và ổn định vào quyết định, chiến lược, tranh luận, dữ kiện và áp lực trí óc. tình huống cần được đặt vào cấu trúc rõ hơn để ổn định.",
+                                                          "money_vi":  "Về tiền bạc, lá này liên quan phân tích rủi ro, hợp đồng, quyết định dựa trên dữ kiện và tránh suy nghĩ cực đoan. tình huống cần được đặt vào cấu trúc rõ hơn để ổn định.",
+                                                          "inner_work_vi":  "Ở tầng nội tâm, lá này chạm tới tiếng nói trong đầu, nỗi sợ, niềm tin và cách bạn diễn giải sự việc. tình huống cần được đặt vào cấu trúc rõ hơn để ổn định.",
+                                                          "advice_vi":  "làm rõ ranh giới, nhịp độ và điều kiện tối thiểu. nói rõ, kiểm chứng dữ kiện và cắt bớt suy diễn.",
+                                                          "warning_vi":  "sự thật không nên được dùng như vũ khí. Điểm cần tránh là bám vào an toàn cũ hoặc thiếu nền để đi xa."
+                                                      },
+                                          "reversed":  {
+                                                           "general_vi":  "sự ổn định có thể thành cứng, hoặc nền tảng chưa đủ chắc. Mặt lệch của suit Kiếm là lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "love_vi":  "Trong tình yêu, lá ngược cho thấy lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra đang bị chặn hoặc lệch. sự ổn định có thể thành cứng, hoặc nền tảng chưa đủ chắc.",
+                                                           "career_vi":  "Về công việc, lá ngược cảnh báo quyết định, chiến lược, tranh luận, dữ kiện và áp lực trí óc đang thiếu nhịp, thiếu hướng hoặc thiếu sự trưởng thành phù hợp. sự ổn định có thể thành cứng, hoặc nền tảng chưa đủ chắc.",
+                                                           "money_vi":  "Về tiền bạc, cần cẩn trọng vì phân tích rủi ro, hợp đồng, quyết định dựa trên dữ kiện và tránh suy nghĩ cực đoan có thể bị chi phối bởi mặt lệch: lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "inner_work_vi":  "Ở tầng nội tâm, lá ngược cho thấy bạn cần nhìn lại tiếng nói trong đầu, nỗi sợ, niềm tin và cách bạn diễn giải sự việc khi nó bị kéo bởi lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "advice_vi":  "làm rõ ranh giới, nhịp độ và điều kiện tối thiểu, nhưng trước hết hãy xử lý phần bị chặn: bám vào an toàn cũ hoặc thiếu nền để đi xa.",
+                                                           "warning_vi":  "Nếu không điều chỉnh, lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá sẽ làm cấu trúc và ổn định biến thành điểm nghẽn."
+                                                       }
+                                      },
+                      "position_overrides":  {
+                                                 "situation":  "Tình huống đang biểu hiện cấu trúc và ổn định trong vùng suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                                 "action":  "làm rõ ranh giới, nhịp độ và điều kiện tối thiểu",
+                                                 "outcome":  "có thể ổn định nếu cấu trúc lành mạnh; nếu không, sự tù túng sẽ lộ ra",
+                                                 "challenge":  "bám vào an toàn cũ hoặc thiếu nền để đi xa",
+                                                 "future":  "có thể ổn định nếu cấu trúc lành mạnh; nếu không, sự tù túng sẽ lộ ra"
+                                             },
+                      "relationship_signals":  {
+                                                   "default":  "dấu hiệu cần xem là kết nối này đem lại an toàn hay chỉ giữ bạn trong khuôn quen. Với Kiếm, hãy quan sát lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra.",
+                                                   "existing_relationship":  "Nếu hỏi có nên tiếp tục, Bốn Kiếm yêu cầu xem lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra đang giúp hai bên tiến gần hơn hay chỉ lặp lại cùng mô thức. Trục chính là cấu trúc và ổn định.",
+                                                   "situationship":  "Trong mập mờ, lá này nhấn vào nhu cầu về nền tảng, ranh giới và cảm giác an toàn trong vùng suy nghĩ, sự thật, giao tiếp và xung đột tinh thần. Dấu hiệu cần xem là có chuyển thành hành động rõ hay chỉ dừng ở cảm giác.",
+                                                   "ex":  "Với người cũ, Bốn Kiếm hỏi liệu bài học cấu trúc và ổn định đã được hiểu chưa, hay hai bên chỉ đang chạm lại vì thói quen cũ.",
+                                                   "no_contact":  "Nếu đang im lặng, lá này cho thấy năng lượng Kiếm đang bị giữ lại. Hãy xem dấu hiệu liên hệ nếu có mang tính trưởng thành hay chỉ là xung lực."
+                                               },
+                      "symbols":  [
+                                      {
+                                          "symbol":  "suit Kiếm",
+                                          "meaning_vi":  "Đưa trọng tâm về suy nghĩ, sự thật, giao tiếp và xung đột tinh thần, thuộc nguyên tố Khí."
+                                      },
+                                      {
+                                          "symbol":  "rank Bốn",
+                                          "meaning_vi":  "Đưa câu chuyện vào giai đoạn cấu trúc và ổn định."
+                                      }
+                                  ],
+                      "reader_notes_vi":  [
+                                              "Đọc lá này bằng cách kết hợp rank trước, suit sau: cấu trúc và ổn định + suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                              "Không đổi nghĩa gốc của lá; V2 chỉ giúp diễn giải theo ngữ cảnh câu hỏi và position."
+                                          ]
+                  },
+                  {
+                      "id":  "swords-05-five",
+                      "source_basis":  [
+                                           "waite",
+                                           "golden_dawn_book_t",
+                                           "joan_bunning_learning_tarot",
+                                           "benebell_holistic_tarot",
+                                           "product_editorial"
+                                       ],
+                      "core":  {
+                                   "essence_vi":  "Năm Kiếm kết hợp năng lượng biến động và thử thách với lĩnh vực suy nghĩ, sự thật, giao tiếp và xung đột tinh thần. Cốt lõi là một điểm căng xuất hiện để buộc tình huống phải điều chỉnh.",
+                                   "keywords_vi":  [
+                                                       "biến động và thử thách",
+                                                       "suy nghĩ, sự thật, giao tiếp và xung đột tinh thần",
+                                                       "một điểm căng xuất hiện để buộc tình huống phải điều chỉnh"
+                                                   ],
+                                   "shadow_keywords_vi":  [
+                                                              "lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá",
+                                                              "phản ứng vì tổn thương, cạnh tranh hoặc cảm giác thiếu"
+                                                          ]
+                               },
+                      "orientation":  {
+                                          "upright":  {
+                                                          "general_vi":  "có xung đột, thiếu hụt hoặc biến động cần nhìn thẳng. Với suit Kiếm, trọng tâm rơi vào suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                                          "love_vi":  "Trong tình yêu, Năm Kiếm nói về lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra. có xung đột, thiếu hụt hoặc biến động cần nhìn thẳng.",
+                                                          "career_vi":  "Về công việc, lá này đặt biến động và thử thách vào quyết định, chiến lược, tranh luận, dữ kiện và áp lực trí óc. có xung đột, thiếu hụt hoặc biến động cần nhìn thẳng.",
+                                                          "money_vi":  "Về tiền bạc, lá này liên quan phân tích rủi ro, hợp đồng, quyết định dựa trên dữ kiện và tránh suy nghĩ cực đoan. có xung đột, thiếu hụt hoặc biến động cần nhìn thẳng.",
+                                                          "inner_work_vi":  "Ở tầng nội tâm, lá này chạm tới tiếng nói trong đầu, nỗi sợ, niềm tin và cách bạn diễn giải sự việc. có xung đột, thiếu hụt hoặc biến động cần nhìn thẳng.",
+                                                          "advice_vi":  "xác định đúng điểm đau, không cố thắng mọi cuộc đấu. nói rõ, kiểm chứng dữ kiện và cắt bớt suy diễn.",
+                                                          "warning_vi":  "sự thật không nên được dùng như vũ khí. Điểm cần tránh là phản ứng vì tổn thương, cạnh tranh hoặc cảm giác thiếu."
+                                                      },
+                                          "reversed":  {
+                                                           "general_vi":  "xung đột đang lắng xuống hoặc bị né tránh quá lâu. Mặt lệch của suit Kiếm là lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "love_vi":  "Trong tình yêu, lá ngược cho thấy lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra đang bị chặn hoặc lệch. xung đột đang lắng xuống hoặc bị né tránh quá lâu.",
+                                                           "career_vi":  "Về công việc, lá ngược cảnh báo quyết định, chiến lược, tranh luận, dữ kiện và áp lực trí óc đang thiếu nhịp, thiếu hướng hoặc thiếu sự trưởng thành phù hợp. xung đột đang lắng xuống hoặc bị né tránh quá lâu.",
+                                                           "money_vi":  "Về tiền bạc, cần cẩn trọng vì phân tích rủi ro, hợp đồng, quyết định dựa trên dữ kiện và tránh suy nghĩ cực đoan có thể bị chi phối bởi mặt lệch: lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "inner_work_vi":  "Ở tầng nội tâm, lá ngược cho thấy bạn cần nhìn lại tiếng nói trong đầu, nỗi sợ, niềm tin và cách bạn diễn giải sự việc khi nó bị kéo bởi lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "advice_vi":  "xác định đúng điểm đau, không cố thắng mọi cuộc đấu, nhưng trước hết hãy xử lý phần bị chặn: phản ứng vì tổn thương, cạnh tranh hoặc cảm giác thiếu.",
+                                                           "warning_vi":  "Nếu không điều chỉnh, lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá sẽ làm biến động và thử thách biến thành điểm nghẽn."
+                                                       }
+                                      },
+                      "position_overrides":  {
+                                                 "situation":  "Tình huống đang biểu hiện biến động và thử thách trong vùng suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                                 "action":  "xác định đúng điểm đau, không cố thắng mọi cuộc đấu",
+                                                 "outcome":  "nếu không điều chỉnh, biến động tiếp tục; nếu học được bài, tình huống đổi hướng",
+                                                 "challenge":  "phản ứng vì tổn thương, cạnh tranh hoặc cảm giác thiếu",
+                                                 "future":  "nếu không điều chỉnh, biến động tiếp tục; nếu học được bài, tình huống đổi hướng"
+                                             },
+                      "relationship_signals":  {
+                                                   "default":  "dấu hiệu cần xem là xung đột này giúp rõ hơn hay chỉ làm cả hai cạn đi. Với Kiếm, hãy quan sát lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra.",
+                                                   "existing_relationship":  "Nếu hỏi có nên tiếp tục, Năm Kiếm yêu cầu xem lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra đang giúp hai bên tiến gần hơn hay chỉ lặp lại cùng mô thức. Trục chính là biến động và thử thách.",
+                                                   "situationship":  "Trong mập mờ, lá này nhấn vào một điểm căng xuất hiện để buộc tình huống phải điều chỉnh trong vùng suy nghĩ, sự thật, giao tiếp và xung đột tinh thần. Dấu hiệu cần xem là có chuyển thành hành động rõ hay chỉ dừng ở cảm giác.",
+                                                   "ex":  "Với người cũ, Năm Kiếm hỏi liệu bài học biến động và thử thách đã được hiểu chưa, hay hai bên chỉ đang chạm lại vì thói quen cũ.",
+                                                   "no_contact":  "Nếu đang im lặng, lá này cho thấy năng lượng Kiếm đang bị giữ lại. Hãy xem dấu hiệu liên hệ nếu có mang tính trưởng thành hay chỉ là xung lực."
+                                               },
+                      "symbols":  [
+                                      {
+                                          "symbol":  "suit Kiếm",
+                                          "meaning_vi":  "Đưa trọng tâm về suy nghĩ, sự thật, giao tiếp và xung đột tinh thần, thuộc nguyên tố Khí."
+                                      },
+                                      {
+                                          "symbol":  "rank Năm",
+                                          "meaning_vi":  "Đưa câu chuyện vào giai đoạn biến động và thử thách."
+                                      }
+                                  ],
+                      "reader_notes_vi":  [
+                                              "Đọc lá này bằng cách kết hợp rank trước, suit sau: biến động và thử thách + suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                              "Không đổi nghĩa gốc của lá; V2 chỉ giúp diễn giải theo ngữ cảnh câu hỏi và position."
+                                          ]
+                  },
+                  {
+                      "id":  "swords-06-six",
+                      "source_basis":  [
+                                           "waite",
+                                           "golden_dawn_book_t",
+                                           "joan_bunning_learning_tarot",
+                                           "benebell_holistic_tarot",
+                                           "product_editorial"
+                                       ],
+                      "core":  {
+                                   "essence_vi":  "Sáu Kiếm kết hợp năng lượng điều hòa và phục hồi với lĩnh vực suy nghĩ, sự thật, giao tiếp và xung đột tinh thần. Cốt lõi là năng lượng tìm lại sự cân bằng sau biến động.",
+                                   "keywords_vi":  [
+                                                       "điều hòa và phục hồi",
+                                                       "suy nghĩ, sự thật, giao tiếp và xung đột tinh thần",
+                                                       "năng lượng tìm lại sự cân bằng sau biến động"
+                                                   ],
+                                   "shadow_keywords_vi":  [
+                                                              "lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá",
+                                                              "một bên cho quá nhiều, hoặc quá khứ kéo hiện tại lệch đi"
+                                                          ]
+                               },
+                      "orientation":  {
+                                          "upright":  {
+                                                          "general_vi":  "có cơ hội hỗ trợ, chữa lành hoặc đưa tình huống về nhịp dễ thở hơn. Với suit Kiếm, trọng tâm rơi vào suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                                          "love_vi":  "Trong tình yêu, Sáu Kiếm nói về lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra. có cơ hội hỗ trợ, chữa lành hoặc đưa tình huống về nhịp dễ thở hơn.",
+                                                          "career_vi":  "Về công việc, lá này đặt điều hòa và phục hồi vào quyết định, chiến lược, tranh luận, dữ kiện và áp lực trí óc. có cơ hội hỗ trợ, chữa lành hoặc đưa tình huống về nhịp dễ thở hơn.",
+                                                          "money_vi":  "Về tiền bạc, lá này liên quan phân tích rủi ro, hợp đồng, quyết định dựa trên dữ kiện và tránh suy nghĩ cực đoan. có cơ hội hỗ trợ, chữa lành hoặc đưa tình huống về nhịp dễ thở hơn.",
+                                                          "inner_work_vi":  "Ở tầng nội tâm, lá này chạm tới tiếng nói trong đầu, nỗi sợ, niềm tin và cách bạn diễn giải sự việc. có cơ hội hỗ trợ, chữa lành hoặc đưa tình huống về nhịp dễ thở hơn.",
+                                                          "advice_vi":  "đưa mọi thứ về công bằng, hỗ trợ và nhịp lành. nói rõ, kiểm chứng dữ kiện và cắt bớt suy diễn.",
+                                                          "warning_vi":  "sự thật không nên được dùng như vũ khí. Điểm cần tránh là một bên cho quá nhiều, hoặc quá khứ kéo hiện tại lệch đi."
+                                                      },
+                                          "reversed":  {
+                                                           "general_vi":  "sự trao nhận lệch hoặc quá khứ vẫn chưa được đặt đúng chỗ. Mặt lệch của suit Kiếm là lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "love_vi":  "Trong tình yêu, lá ngược cho thấy lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra đang bị chặn hoặc lệch. sự trao nhận lệch hoặc quá khứ vẫn chưa được đặt đúng chỗ.",
+                                                           "career_vi":  "Về công việc, lá ngược cảnh báo quyết định, chiến lược, tranh luận, dữ kiện và áp lực trí óc đang thiếu nhịp, thiếu hướng hoặc thiếu sự trưởng thành phù hợp. sự trao nhận lệch hoặc quá khứ vẫn chưa được đặt đúng chỗ.",
+                                                           "money_vi":  "Về tiền bạc, cần cẩn trọng vì phân tích rủi ro, hợp đồng, quyết định dựa trên dữ kiện và tránh suy nghĩ cực đoan có thể bị chi phối bởi mặt lệch: lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "inner_work_vi":  "Ở tầng nội tâm, lá ngược cho thấy bạn cần nhìn lại tiếng nói trong đầu, nỗi sợ, niềm tin và cách bạn diễn giải sự việc khi nó bị kéo bởi lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "advice_vi":  "đưa mọi thứ về công bằng, hỗ trợ và nhịp lành, nhưng trước hết hãy xử lý phần bị chặn: một bên cho quá nhiều, hoặc quá khứ kéo hiện tại lệch đi.",
+                                                           "warning_vi":  "Nếu không điều chỉnh, lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá sẽ làm điều hòa và phục hồi biến thành điểm nghẽn."
+                                                       }
+                                      },
+                      "position_overrides":  {
+                                                 "situation":  "Tình huống đang biểu hiện điều hòa và phục hồi trong vùng suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                                 "action":  "đưa mọi thứ về công bằng, hỗ trợ và nhịp lành",
+                                                 "outcome":  "có thể mềm lại nếu hai bên biết trao nhận đúng mức",
+                                                 "challenge":  "một bên cho quá nhiều, hoặc quá khứ kéo hiện tại lệch đi",
+                                                 "future":  "có thể mềm lại nếu hai bên biết trao nhận đúng mức"
+                                             },
+                      "relationship_signals":  {
+                                                   "default":  "dấu hiệu cần xem là sự cho nhận có cân bằng và làm bạn nhẹ hơn không. Với Kiếm, hãy quan sát lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra.",
+                                                   "existing_relationship":  "Nếu hỏi có nên tiếp tục, Sáu Kiếm yêu cầu xem lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra đang giúp hai bên tiến gần hơn hay chỉ lặp lại cùng mô thức. Trục chính là điều hòa và phục hồi.",
+                                                   "situationship":  "Trong mập mờ, lá này nhấn vào năng lượng tìm lại sự cân bằng sau biến động trong vùng suy nghĩ, sự thật, giao tiếp và xung đột tinh thần. Dấu hiệu cần xem là có chuyển thành hành động rõ hay chỉ dừng ở cảm giác.",
+                                                   "ex":  "Với người cũ, Sáu Kiếm hỏi liệu bài học điều hòa và phục hồi đã được hiểu chưa, hay hai bên chỉ đang chạm lại vì thói quen cũ.",
+                                                   "no_contact":  "Nếu đang im lặng, lá này cho thấy năng lượng Kiếm đang bị giữ lại. Hãy xem dấu hiệu liên hệ nếu có mang tính trưởng thành hay chỉ là xung lực."
+                                               },
+                      "symbols":  [
+                                      {
+                                          "symbol":  "suit Kiếm",
+                                          "meaning_vi":  "Đưa trọng tâm về suy nghĩ, sự thật, giao tiếp và xung đột tinh thần, thuộc nguyên tố Khí."
+                                      },
+                                      {
+                                          "symbol":  "rank Sáu",
+                                          "meaning_vi":  "Đưa câu chuyện vào giai đoạn điều hòa và phục hồi."
+                                      }
+                                  ],
+                      "reader_notes_vi":  [
+                                              "Đọc lá này bằng cách kết hợp rank trước, suit sau: điều hòa và phục hồi + suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                              "Không đổi nghĩa gốc của lá; V2 chỉ giúp diễn giải theo ngữ cảnh câu hỏi và position."
+                                          ]
+                  },
+                  {
+                      "id":  "swords-07-seven",
+                      "source_basis":  [
+                                           "waite",
+                                           "golden_dawn_book_t",
+                                           "joan_bunning_learning_tarot",
+                                           "benebell_holistic_tarot",
+                                           "product_editorial"
+                                       ],
+                      "core":  {
+                                   "essence_vi":  "Bảy Kiếm kết hợp năng lượng kiểm tra và chọn lọc với lĩnh vực suy nghĩ, sự thật, giao tiếp và xung đột tinh thần. Cốt lõi là một bài kiểm tra về niềm tin, lựa chọn, phòng thủ hoặc sự rõ ràng bên trong.",
+                                   "keywords_vi":  [
+                                                       "kiểm tra và chọn lọc",
+                                                       "suy nghĩ, sự thật, giao tiếp và xung đột tinh thần",
+                                                       "một bài kiểm tra về niềm tin, lựa chọn, phòng thủ hoặc sự rõ ràng bên trong"
+                                                   ],
+                                   "shadow_keywords_vi":  [
+                                                              "lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá",
+                                                              "nghi ngờ, phòng thủ, mơ hồ hoặc muốn kết quả nhanh"
+                                                          ]
+                               },
+                      "orientation":  {
+                                          "upright":  {
+                                                          "general_vi":  "tình huống cần quan sát kỹ và chọn lọc thay vì phản ứng ngay. Với suit Kiếm, trọng tâm rơi vào suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                                          "love_vi":  "Trong tình yêu, Bảy Kiếm nói về lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra. tình huống cần quan sát kỹ và chọn lọc thay vì phản ứng ngay.",
+                                                          "career_vi":  "Về công việc, lá này đặt kiểm tra và chọn lọc vào quyết định, chiến lược, tranh luận, dữ kiện và áp lực trí óc. tình huống cần quan sát kỹ và chọn lọc thay vì phản ứng ngay.",
+                                                          "money_vi":  "Về tiền bạc, lá này liên quan phân tích rủi ro, hợp đồng, quyết định dựa trên dữ kiện và tránh suy nghĩ cực đoan. tình huống cần quan sát kỹ và chọn lọc thay vì phản ứng ngay.",
+                                                          "inner_work_vi":  "Ở tầng nội tâm, lá này chạm tới tiếng nói trong đầu, nỗi sợ, niềm tin và cách bạn diễn giải sự việc. tình huống cần quan sát kỹ và chọn lọc thay vì phản ứng ngay.",
+                                                          "advice_vi":  "chậm lại để xem điều gì thật sự đáng giữ. nói rõ, kiểm chứng dữ kiện và cắt bớt suy diễn.",
+                                                          "warning_vi":  "sự thật không nên được dùng như vũ khí. Điểm cần tránh là nghi ngờ, phòng thủ, mơ hồ hoặc muốn kết quả nhanh."
+                                                      },
+                                          "reversed":  {
+                                                           "general_vi":  "bạn có thể đang phòng thủ quá mức, mất kiên nhẫn hoặc né bài học chính. Mặt lệch của suit Kiếm là lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "love_vi":  "Trong tình yêu, lá ngược cho thấy lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra đang bị chặn hoặc lệch. bạn có thể đang phòng thủ quá mức, mất kiên nhẫn hoặc né bài học chính.",
+                                                           "career_vi":  "Về công việc, lá ngược cảnh báo quyết định, chiến lược, tranh luận, dữ kiện và áp lực trí óc đang thiếu nhịp, thiếu hướng hoặc thiếu sự trưởng thành phù hợp. bạn có thể đang phòng thủ quá mức, mất kiên nhẫn hoặc né bài học chính.",
+                                                           "money_vi":  "Về tiền bạc, cần cẩn trọng vì phân tích rủi ro, hợp đồng, quyết định dựa trên dữ kiện và tránh suy nghĩ cực đoan có thể bị chi phối bởi mặt lệch: lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "inner_work_vi":  "Ở tầng nội tâm, lá ngược cho thấy bạn cần nhìn lại tiếng nói trong đầu, nỗi sợ, niềm tin và cách bạn diễn giải sự việc khi nó bị kéo bởi lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "advice_vi":  "chậm lại để xem điều gì thật sự đáng giữ, nhưng trước hết hãy xử lý phần bị chặn: nghi ngờ, phòng thủ, mơ hồ hoặc muốn kết quả nhanh.",
+                                                           "warning_vi":  "Nếu không điều chỉnh, lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá sẽ làm kiểm tra và chọn lọc biến thành điểm nghẽn."
+                                                       }
+                                      },
+                      "position_overrides":  {
+                                                 "situation":  "Tình huống đang biểu hiện kiểm tra và chọn lọc trong vùng suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                                 "action":  "chậm lại để xem điều gì thật sự đáng giữ",
+                                                 "outcome":  "xu hướng phụ thuộc vào khả năng nhìn rõ bài kiểm tra đang diễn ra",
+                                                 "challenge":  "nghi ngờ, phòng thủ, mơ hồ hoặc muốn kết quả nhanh",
+                                                 "future":  "xu hướng phụ thuộc vào khả năng nhìn rõ bài kiểm tra đang diễn ra"
+                                             },
+                      "relationship_signals":  {
+                                                   "default":  "dấu hiệu cần xem là thử thách này làm kết nối trưởng thành hay làm bạn luôn trong thế phòng thủ. Với Kiếm, hãy quan sát lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra.",
+                                                   "existing_relationship":  "Nếu hỏi có nên tiếp tục, Bảy Kiếm yêu cầu xem lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra đang giúp hai bên tiến gần hơn hay chỉ lặp lại cùng mô thức. Trục chính là kiểm tra và chọn lọc.",
+                                                   "situationship":  "Trong mập mờ, lá này nhấn vào một bài kiểm tra về niềm tin, lựa chọn, phòng thủ hoặc sự rõ ràng bên trong trong vùng suy nghĩ, sự thật, giao tiếp và xung đột tinh thần. Dấu hiệu cần xem là có chuyển thành hành động rõ hay chỉ dừng ở cảm giác.",
+                                                   "ex":  "Với người cũ, Bảy Kiếm hỏi liệu bài học kiểm tra và chọn lọc đã được hiểu chưa, hay hai bên chỉ đang chạm lại vì thói quen cũ.",
+                                                   "no_contact":  "Nếu đang im lặng, lá này cho thấy năng lượng Kiếm đang bị giữ lại. Hãy xem dấu hiệu liên hệ nếu có mang tính trưởng thành hay chỉ là xung lực."
+                                               },
+                      "symbols":  [
+                                      {
+                                          "symbol":  "suit Kiếm",
+                                          "meaning_vi":  "Đưa trọng tâm về suy nghĩ, sự thật, giao tiếp và xung đột tinh thần, thuộc nguyên tố Khí."
+                                      },
+                                      {
+                                          "symbol":  "rank Bảy",
+                                          "meaning_vi":  "Đưa câu chuyện vào giai đoạn kiểm tra và chọn lọc."
+                                      }
+                                  ],
+                      "reader_notes_vi":  [
+                                              "Đọc lá này bằng cách kết hợp rank trước, suit sau: kiểm tra và chọn lọc + suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                              "Không đổi nghĩa gốc của lá; V2 chỉ giúp diễn giải theo ngữ cảnh câu hỏi và position."
+                                          ]
+                  },
+                  {
+                      "id":  "swords-08-eight",
+                      "source_basis":  [
+                                           "waite",
+                                           "golden_dawn_book_t",
+                                           "joan_bunning_learning_tarot",
+                                           "benebell_holistic_tarot",
+                                           "product_editorial"
+                                       ],
+                      "core":  {
+                                   "essence_vi":  "Tám Kiếm kết hợp năng lượng chuyển động và làm chủ với lĩnh vực suy nghĩ, sự thật, giao tiếp và xung đột tinh thần. Cốt lõi là năng lượng đi vào quá trình vận hành, rèn luyện hoặc tăng tốc.",
+                                   "keywords_vi":  [
+                                                       "chuyển động và làm chủ",
+                                                       "suy nghĩ, sự thật, giao tiếp và xung đột tinh thần",
+                                                       "năng lượng đi vào quá trình vận hành, rèn luyện hoặc tăng tốc"
+                                                   ],
+                                   "shadow_keywords_vi":  [
+                                                              "lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá",
+                                                              "mất kiểm soát tốc độ, thiếu kiên trì hoặc mắc trong lặp lại"
+                                                          ]
+                               },
+                      "orientation":  {
+                                          "upright":  {
+                                                          "general_vi":  "tình huống có thể tiến triển nếu có kỷ luật và hướng rõ. Với suit Kiếm, trọng tâm rơi vào suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                                          "love_vi":  "Trong tình yêu, Tám Kiếm nói về lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra. tình huống có thể tiến triển nếu có kỷ luật và hướng rõ.",
+                                                          "career_vi":  "Về công việc, lá này đặt chuyển động và làm chủ vào quyết định, chiến lược, tranh luận, dữ kiện và áp lực trí óc. tình huống có thể tiến triển nếu có kỷ luật và hướng rõ.",
+                                                          "money_vi":  "Về tiền bạc, lá này liên quan phân tích rủi ro, hợp đồng, quyết định dựa trên dữ kiện và tránh suy nghĩ cực đoan. tình huống có thể tiến triển nếu có kỷ luật và hướng rõ.",
+                                                          "inner_work_vi":  "Ở tầng nội tâm, lá này chạm tới tiếng nói trong đầu, nỗi sợ, niềm tin và cách bạn diễn giải sự việc. tình huống có thể tiến triển nếu có kỷ luật và hướng rõ.",
+                                                          "advice_vi":  "đưa năng lượng vào quy trình cụ thể. nói rõ, kiểm chứng dữ kiện và cắt bớt suy diễn.",
+                                                          "warning_vi":  "sự thật không nên được dùng như vũ khí. Điểm cần tránh là mất kiểm soát tốc độ, thiếu kiên trì hoặc mắc trong lặp lại."
+                                                      },
+                                          "reversed":  {
+                                                           "general_vi":  "tiến trình bị chặn, quá nhanh, quá máy móc hoặc thiếu điều chỉnh. Mặt lệch của suit Kiếm là lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "love_vi":  "Trong tình yêu, lá ngược cho thấy lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra đang bị chặn hoặc lệch. tiến trình bị chặn, quá nhanh, quá máy móc hoặc thiếu điều chỉnh.",
+                                                           "career_vi":  "Về công việc, lá ngược cảnh báo quyết định, chiến lược, tranh luận, dữ kiện và áp lực trí óc đang thiếu nhịp, thiếu hướng hoặc thiếu sự trưởng thành phù hợp. tiến trình bị chặn, quá nhanh, quá máy móc hoặc thiếu điều chỉnh.",
+                                                           "money_vi":  "Về tiền bạc, cần cẩn trọng vì phân tích rủi ro, hợp đồng, quyết định dựa trên dữ kiện và tránh suy nghĩ cực đoan có thể bị chi phối bởi mặt lệch: lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "inner_work_vi":  "Ở tầng nội tâm, lá ngược cho thấy bạn cần nhìn lại tiếng nói trong đầu, nỗi sợ, niềm tin và cách bạn diễn giải sự việc khi nó bị kéo bởi lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "advice_vi":  "đưa năng lượng vào quy trình cụ thể, nhưng trước hết hãy xử lý phần bị chặn: mất kiểm soát tốc độ, thiếu kiên trì hoặc mắc trong lặp lại.",
+                                                           "warning_vi":  "Nếu không điều chỉnh, lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá sẽ làm chuyển động và làm chủ biến thành điểm nghẽn."
+                                                       }
+                                      },
+                      "position_overrides":  {
+                                                 "situation":  "Tình huống đang biểu hiện chuyển động và làm chủ trong vùng suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                                 "action":  "đưa năng lượng vào quy trình cụ thể",
+                                                 "outcome":  "có chuyển động rõ nếu không để nó lệch nhịp",
+                                                 "challenge":  "mất kiểm soát tốc độ, thiếu kiên trì hoặc mắc trong lặp lại",
+                                                 "future":  "có chuyển động rõ nếu không để nó lệch nhịp"
+                                             },
+                      "relationship_signals":  {
+                                                   "default":  "dấu hiệu cần xem là hai bên có cùng tạo chuyển động đều không. Với Kiếm, hãy quan sát lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra.",
+                                                   "existing_relationship":  "Nếu hỏi có nên tiếp tục, Tám Kiếm yêu cầu xem lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra đang giúp hai bên tiến gần hơn hay chỉ lặp lại cùng mô thức. Trục chính là chuyển động và làm chủ.",
+                                                   "situationship":  "Trong mập mờ, lá này nhấn vào năng lượng đi vào quá trình vận hành, rèn luyện hoặc tăng tốc trong vùng suy nghĩ, sự thật, giao tiếp và xung đột tinh thần. Dấu hiệu cần xem là có chuyển thành hành động rõ hay chỉ dừng ở cảm giác.",
+                                                   "ex":  "Với người cũ, Tám Kiếm hỏi liệu bài học chuyển động và làm chủ đã được hiểu chưa, hay hai bên chỉ đang chạm lại vì thói quen cũ.",
+                                                   "no_contact":  "Nếu đang im lặng, lá này cho thấy năng lượng Kiếm đang bị giữ lại. Hãy xem dấu hiệu liên hệ nếu có mang tính trưởng thành hay chỉ là xung lực."
+                                               },
+                      "symbols":  [
+                                      {
+                                          "symbol":  "suit Kiếm",
+                                          "meaning_vi":  "Đưa trọng tâm về suy nghĩ, sự thật, giao tiếp và xung đột tinh thần, thuộc nguyên tố Khí."
+                                      },
+                                      {
+                                          "symbol":  "rank Tám",
+                                          "meaning_vi":  "Đưa câu chuyện vào giai đoạn chuyển động và làm chủ."
+                                      }
+                                  ],
+                      "reader_notes_vi":  [
+                                              "Đọc lá này bằng cách kết hợp rank trước, suit sau: chuyển động và làm chủ + suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                              "Không đổi nghĩa gốc của lá; V2 chỉ giúp diễn giải theo ngữ cảnh câu hỏi và position."
+                                          ]
+                  },
+                  {
+                      "id":  "swords-09-nine",
+                      "source_basis":  [
+                                           "waite",
+                                           "golden_dawn_book_t",
+                                           "joan_bunning_learning_tarot",
+                                           "benebell_holistic_tarot",
+                                           "product_editorial"
+                                       ],
+                      "core":  {
+                                   "essence_vi":  "Chín Kiếm kết hợp năng lượng kết tinh và tự chủ với lĩnh vực suy nghĩ, sự thật, giao tiếp và xung đột tinh thần. Cốt lõi là một giai đoạn gần hoàn tất, đòi hỏi nhìn sâu và giữ năng lượng của mình.",
+                                   "keywords_vi":  [
+                                                       "kết tinh và tự chủ",
+                                                       "suy nghĩ, sự thật, giao tiếp và xung đột tinh thần",
+                                                       "một giai đoạn gần hoàn tất, đòi hỏi nhìn sâu và giữ năng lượng của mình"
+                                                   ],
+                                   "shadow_keywords_vi":  [
+                                                              "lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá",
+                                                              "cạn sức trước vạch cuối hoặc giữ mọi thứ một mình quá lâu"
+                                                          ]
+                               },
+                      "orientation":  {
+                                          "upright":  {
+                                                          "general_vi":  "bạn đã đi qua nhiều điều và đang chạm tới kết quả hoặc nhận thức quan trọng. Với suit Kiếm, trọng tâm rơi vào suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                                          "love_vi":  "Trong tình yêu, Chín Kiếm nói về lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra. bạn đã đi qua nhiều điều và đang chạm tới kết quả hoặc nhận thức quan trọng.",
+                                                          "career_vi":  "Về công việc, lá này đặt kết tinh và tự chủ vào quyết định, chiến lược, tranh luận, dữ kiện và áp lực trí óc. bạn đã đi qua nhiều điều và đang chạm tới kết quả hoặc nhận thức quan trọng.",
+                                                          "money_vi":  "Về tiền bạc, lá này liên quan phân tích rủi ro, hợp đồng, quyết định dựa trên dữ kiện và tránh suy nghĩ cực đoan. bạn đã đi qua nhiều điều và đang chạm tới kết quả hoặc nhận thức quan trọng.",
+                                                          "inner_work_vi":  "Ở tầng nội tâm, lá này chạm tới tiếng nói trong đầu, nỗi sợ, niềm tin và cách bạn diễn giải sự việc. bạn đã đi qua nhiều điều và đang chạm tới kết quả hoặc nhận thức quan trọng.",
+                                                          "advice_vi":  "ghi nhận điều đã đi qua và bảo vệ phần năng lượng còn lại. nói rõ, kiểm chứng dữ kiện và cắt bớt suy diễn.",
+                                                          "warning_vi":  "sự thật không nên được dùng như vũ khí. Điểm cần tránh là cạn sức trước vạch cuối hoặc giữ mọi thứ một mình quá lâu."
+                                                      },
+                                          "reversed":  {
+                                                           "general_vi":  "sự gần hoàn tất bị cản bởi mệt mỏi, cô lập hoặc chưa dám nhận bài học. Mặt lệch của suit Kiếm là lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "love_vi":  "Trong tình yêu, lá ngược cho thấy lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra đang bị chặn hoặc lệch. sự gần hoàn tất bị cản bởi mệt mỏi, cô lập hoặc chưa dám nhận bài học.",
+                                                           "career_vi":  "Về công việc, lá ngược cảnh báo quyết định, chiến lược, tranh luận, dữ kiện và áp lực trí óc đang thiếu nhịp, thiếu hướng hoặc thiếu sự trưởng thành phù hợp. sự gần hoàn tất bị cản bởi mệt mỏi, cô lập hoặc chưa dám nhận bài học.",
+                                                           "money_vi":  "Về tiền bạc, cần cẩn trọng vì phân tích rủi ro, hợp đồng, quyết định dựa trên dữ kiện và tránh suy nghĩ cực đoan có thể bị chi phối bởi mặt lệch: lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "inner_work_vi":  "Ở tầng nội tâm, lá ngược cho thấy bạn cần nhìn lại tiếng nói trong đầu, nỗi sợ, niềm tin và cách bạn diễn giải sự việc khi nó bị kéo bởi lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "advice_vi":  "ghi nhận điều đã đi qua và bảo vệ phần năng lượng còn lại, nhưng trước hết hãy xử lý phần bị chặn: cạn sức trước vạch cuối hoặc giữ mọi thứ một mình quá lâu.",
+                                                           "warning_vi":  "Nếu không điều chỉnh, lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá sẽ làm kết tinh và tự chủ biến thành điểm nghẽn."
+                                                       }
+                                      },
+                      "position_overrides":  {
+                                                 "situation":  "Tình huống đang biểu hiện kết tinh và tự chủ trong vùng suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                                 "action":  "ghi nhận điều đã đi qua và bảo vệ phần năng lượng còn lại",
+                                                 "outcome":  "kết quả gần hiện ra, nhưng cần đi nốt đoạn cuối với sự tỉnh táo",
+                                                 "challenge":  "cạn sức trước vạch cuối hoặc giữ mọi thứ một mình quá lâu",
+                                                 "future":  "kết quả gần hiện ra, nhưng cần đi nốt đoạn cuối với sự tỉnh táo"
+                                             },
+                      "relationship_signals":  {
+                                                   "default":  "dấu hiệu cần xem là kết nối này làm bạn trưởng thành hay chỉ khiến bạn phải tự chịu đựng. Với Kiếm, hãy quan sát lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra.",
+                                                   "existing_relationship":  "Nếu hỏi có nên tiếp tục, Chín Kiếm yêu cầu xem lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra đang giúp hai bên tiến gần hơn hay chỉ lặp lại cùng mô thức. Trục chính là kết tinh và tự chủ.",
+                                                   "situationship":  "Trong mập mờ, lá này nhấn vào một giai đoạn gần hoàn tất, đòi hỏi nhìn sâu và giữ năng lượng của mình trong vùng suy nghĩ, sự thật, giao tiếp và xung đột tinh thần. Dấu hiệu cần xem là có chuyển thành hành động rõ hay chỉ dừng ở cảm giác.",
+                                                   "ex":  "Với người cũ, Chín Kiếm hỏi liệu bài học kết tinh và tự chủ đã được hiểu chưa, hay hai bên chỉ đang chạm lại vì thói quen cũ.",
+                                                   "no_contact":  "Nếu đang im lặng, lá này cho thấy năng lượng Kiếm đang bị giữ lại. Hãy xem dấu hiệu liên hệ nếu có mang tính trưởng thành hay chỉ là xung lực."
+                                               },
+                      "symbols":  [
+                                      {
+                                          "symbol":  "suit Kiếm",
+                                          "meaning_vi":  "Đưa trọng tâm về suy nghĩ, sự thật, giao tiếp và xung đột tinh thần, thuộc nguyên tố Khí."
+                                      },
+                                      {
+                                          "symbol":  "rank Chín",
+                                          "meaning_vi":  "Đưa câu chuyện vào giai đoạn kết tinh và tự chủ."
+                                      }
+                                  ],
+                      "reader_notes_vi":  [
+                                              "Đọc lá này bằng cách kết hợp rank trước, suit sau: kết tinh và tự chủ + suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                              "Không đổi nghĩa gốc của lá; V2 chỉ giúp diễn giải theo ngữ cảnh câu hỏi và position."
+                                          ]
+                  },
+                  {
+                      "id":  "swords-10-ten",
+                      "source_basis":  [
+                                           "waite",
+                                           "golden_dawn_book_t",
+                                           "joan_bunning_learning_tarot",
+                                           "benebell_holistic_tarot",
+                                           "product_editorial"
+                                       ],
+                      "core":  {
+                                   "essence_vi":  "Mười Kiếm kết hợp năng lượng hoàn tất và chuyển pha với lĩnh vực suy nghĩ, sự thật, giao tiếp và xung đột tinh thần. Cốt lõi là một chu kỳ đi tới điểm đầy hoặc điểm kết thúc.",
+                                   "keywords_vi":  [
+                                                       "hoàn tất và chuyển pha",
+                                                       "suy nghĩ, sự thật, giao tiếp và xung đột tinh thần",
+                                                       "một chu kỳ đi tới điểm đầy hoặc điểm kết thúc"
+                                                   ],
+                                   "shadow_keywords_vi":  [
+                                                              "lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá",
+                                                              "bám vào chu kỳ cũ vì sợ khoảng trống sau đó"
+                                                          ]
+                               },
+                      "orientation":  {
+                                          "upright":  {
+                                                          "general_vi":  "tình huống đang đạt đỉnh, hoàn tất hoặc cần chuyển sang vòng mới. Với suit Kiếm, trọng tâm rơi vào suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                                          "love_vi":  "Trong tình yêu, Mười Kiếm nói về lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra. tình huống đang đạt đỉnh, hoàn tất hoặc cần chuyển sang vòng mới.",
+                                                          "career_vi":  "Về công việc, lá này đặt hoàn tất và chuyển pha vào quyết định, chiến lược, tranh luận, dữ kiện và áp lực trí óc. tình huống đang đạt đỉnh, hoàn tất hoặc cần chuyển sang vòng mới.",
+                                                          "money_vi":  "Về tiền bạc, lá này liên quan phân tích rủi ro, hợp đồng, quyết định dựa trên dữ kiện và tránh suy nghĩ cực đoan. tình huống đang đạt đỉnh, hoàn tất hoặc cần chuyển sang vòng mới.",
+                                                          "inner_work_vi":  "Ở tầng nội tâm, lá này chạm tới tiếng nói trong đầu, nỗi sợ, niềm tin và cách bạn diễn giải sự việc. tình huống đang đạt đỉnh, hoàn tất hoặc cần chuyển sang vòng mới.",
+                                                          "advice_vi":  "khép vòng, dọn phần dư và chuẩn bị chuyển pha. nói rõ, kiểm chứng dữ kiện và cắt bớt suy diễn.",
+                                                          "warning_vi":  "sự thật không nên được dùng như vũ khí. Điểm cần tránh là bám vào chu kỳ cũ vì sợ khoảng trống sau đó."
+                                                      },
+                                          "reversed":  {
+                                                           "general_vi":  "chu kỳ chưa được khép đúng cách hoặc bạn đang kéo dài phần đã quá tải. Mặt lệch của suit Kiếm là lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "love_vi":  "Trong tình yêu, lá ngược cho thấy lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra đang bị chặn hoặc lệch. chu kỳ chưa được khép đúng cách hoặc bạn đang kéo dài phần đã quá tải.",
+                                                           "career_vi":  "Về công việc, lá ngược cảnh báo quyết định, chiến lược, tranh luận, dữ kiện và áp lực trí óc đang thiếu nhịp, thiếu hướng hoặc thiếu sự trưởng thành phù hợp. chu kỳ chưa được khép đúng cách hoặc bạn đang kéo dài phần đã quá tải.",
+                                                           "money_vi":  "Về tiền bạc, cần cẩn trọng vì phân tích rủi ro, hợp đồng, quyết định dựa trên dữ kiện và tránh suy nghĩ cực đoan có thể bị chi phối bởi mặt lệch: lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "inner_work_vi":  "Ở tầng nội tâm, lá ngược cho thấy bạn cần nhìn lại tiếng nói trong đầu, nỗi sợ, niềm tin và cách bạn diễn giải sự việc khi nó bị kéo bởi lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "advice_vi":  "khép vòng, dọn phần dư và chuẩn bị chuyển pha, nhưng trước hết hãy xử lý phần bị chặn: bám vào chu kỳ cũ vì sợ khoảng trống sau đó.",
+                                                           "warning_vi":  "Nếu không điều chỉnh, lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá sẽ làm hoàn tất và chuyển pha biến thành điểm nghẽn."
+                                                       }
+                                      },
+                      "position_overrides":  {
+                                                 "situation":  "Tình huống đang biểu hiện hoàn tất và chuyển pha trong vùng suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                                 "action":  "khép vòng, dọn phần dư và chuẩn bị chuyển pha",
+                                                 "outcome":  "một chương có xu hướng kết thúc để mở chương khác",
+                                                 "challenge":  "bám vào chu kỳ cũ vì sợ khoảng trống sau đó",
+                                                 "future":  "một chương có xu hướng kết thúc để mở chương khác"
+                                             },
+                      "relationship_signals":  {
+                                                   "default":  "dấu hiệu cần xem là hai người đang đi tới cột mốc trưởng thành hơn hay tới điểm quá tải. Với Kiếm, hãy quan sát lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra.",
+                                                   "existing_relationship":  "Nếu hỏi có nên tiếp tục, Mười Kiếm yêu cầu xem lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra đang giúp hai bên tiến gần hơn hay chỉ lặp lại cùng mô thức. Trục chính là hoàn tất và chuyển pha.",
+                                                   "situationship":  "Trong mập mờ, lá này nhấn vào một chu kỳ đi tới điểm đầy hoặc điểm kết thúc trong vùng suy nghĩ, sự thật, giao tiếp và xung đột tinh thần. Dấu hiệu cần xem là có chuyển thành hành động rõ hay chỉ dừng ở cảm giác.",
+                                                   "ex":  "Với người cũ, Mười Kiếm hỏi liệu bài học hoàn tất và chuyển pha đã được hiểu chưa, hay hai bên chỉ đang chạm lại vì thói quen cũ.",
+                                                   "no_contact":  "Nếu đang im lặng, lá này cho thấy năng lượng Kiếm đang bị giữ lại. Hãy xem dấu hiệu liên hệ nếu có mang tính trưởng thành hay chỉ là xung lực."
+                                               },
+                      "symbols":  [
+                                      {
+                                          "symbol":  "suit Kiếm",
+                                          "meaning_vi":  "Đưa trọng tâm về suy nghĩ, sự thật, giao tiếp và xung đột tinh thần, thuộc nguyên tố Khí."
+                                      },
+                                      {
+                                          "symbol":  "rank Mười",
+                                          "meaning_vi":  "Đưa câu chuyện vào giai đoạn hoàn tất và chuyển pha."
+                                      }
+                                  ],
+                      "reader_notes_vi":  [
+                                              "Đọc lá này bằng cách kết hợp rank trước, suit sau: hoàn tất và chuyển pha + suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                              "Không đổi nghĩa gốc của lá; V2 chỉ giúp diễn giải theo ngữ cảnh câu hỏi và position."
+                                          ]
+                  },
+                  {
+                      "id":  "swords-11-page",
+                      "source_basis":  [
+                                           "waite",
+                                           "golden_dawn_book_t",
+                                           "joan_bunning_learning_tarot",
+                                           "benebell_holistic_tarot",
+                                           "product_editorial"
+                                       ],
+                      "core":  {
+                                   "essence_vi":  "Tiểu Đồng Kiếm kết hợp năng lượng người học và tín hiệu mới với lĩnh vực suy nghĩ, sự thật, giao tiếp và xung đột tinh thần. Cốt lõi là một năng lượng non mới, tò mò hoặc một thông điệp đang xuất hiện.",
+                                   "keywords_vi":  [
+                                                       "người học và tín hiệu mới",
+                                                       "suy nghĩ, sự thật, giao tiếp và xung đột tinh thần",
+                                                       "một năng lượng non mới, tò mò hoặc một thông điệp đang xuất hiện"
+                                                   ],
+                                   "shadow_keywords_vi":  [
+                                                              "lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá",
+                                                              "thiếu kinh nghiệm, nói chưa tới hoặc hứng lên rồi thôi"
+                                                          ]
+                               },
+                      "orientation":  {
+                                          "upright":  {
+                                                          "general_vi":  "có tin mới, sự tò mò hoặc cơ hội học cách tiếp cận khác. Với suit Kiếm, trọng tâm rơi vào suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                                          "love_vi":  "Trong tình yêu, Tiểu Đồng Kiếm nói về lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra. có tin mới, sự tò mò hoặc cơ hội học cách tiếp cận khác.",
+                                                          "career_vi":  "Về công việc, lá này đặt người học và tín hiệu mới vào quyết định, chiến lược, tranh luận, dữ kiện và áp lực trí óc. có tin mới, sự tò mò hoặc cơ hội học cách tiếp cận khác.",
+                                                          "money_vi":  "Về tiền bạc, lá này liên quan phân tích rủi ro, hợp đồng, quyết định dựa trên dữ kiện và tránh suy nghĩ cực đoan. có tin mới, sự tò mò hoặc cơ hội học cách tiếp cận khác.",
+                                                          "inner_work_vi":  "Ở tầng nội tâm, lá này chạm tới tiếng nói trong đầu, nỗi sợ, niềm tin và cách bạn diễn giải sự việc. có tin mới, sự tò mò hoặc cơ hội học cách tiếp cận khác.",
+                                                          "advice_vi":  "hỏi, học, thử nhỏ và đừng vội đòi sự trưởng thành hoàn chỉnh. nói rõ, kiểm chứng dữ kiện và cắt bớt suy diễn.",
+                                                          "warning_vi":  "sự thật không nên được dùng như vũ khí. Điểm cần tránh là thiếu kinh nghiệm, nói chưa tới hoặc hứng lên rồi thôi."
+                                                      },
+                                          "reversed":  {
+                                                           "general_vi":  "năng lượng còn non, thiếu nhất quán hoặc chưa biết diễn đạt đúng. Mặt lệch của suit Kiếm là lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "love_vi":  "Trong tình yêu, lá ngược cho thấy lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra đang bị chặn hoặc lệch. năng lượng còn non, thiếu nhất quán hoặc chưa biết diễn đạt đúng.",
+                                                           "career_vi":  "Về công việc, lá ngược cảnh báo quyết định, chiến lược, tranh luận, dữ kiện và áp lực trí óc đang thiếu nhịp, thiếu hướng hoặc thiếu sự trưởng thành phù hợp. năng lượng còn non, thiếu nhất quán hoặc chưa biết diễn đạt đúng.",
+                                                           "money_vi":  "Về tiền bạc, cần cẩn trọng vì phân tích rủi ro, hợp đồng, quyết định dựa trên dữ kiện và tránh suy nghĩ cực đoan có thể bị chi phối bởi mặt lệch: lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "inner_work_vi":  "Ở tầng nội tâm, lá ngược cho thấy bạn cần nhìn lại tiếng nói trong đầu, nỗi sợ, niềm tin và cách bạn diễn giải sự việc khi nó bị kéo bởi lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "advice_vi":  "hỏi, học, thử nhỏ và đừng vội đòi sự trưởng thành hoàn chỉnh, nhưng trước hết hãy xử lý phần bị chặn: thiếu kinh nghiệm, nói chưa tới hoặc hứng lên rồi thôi.",
+                                                           "warning_vi":  "Nếu không điều chỉnh, lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá sẽ làm người học và tín hiệu mới biến thành điểm nghẽn."
+                                                       }
+                                      },
+                      "position_overrides":  {
+                                                 "situation":  "Tình huống đang biểu hiện người học và tín hiệu mới trong vùng suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                                 "action":  "hỏi, học, thử nhỏ và đừng vội đòi sự trưởng thành hoàn chỉnh",
+                                                 "outcome":  "xu hướng là một tín hiệu/tin nhắn/bước học mới hơn là kết luận cuối",
+                                                 "challenge":  "thiếu kinh nghiệm, nói chưa tới hoặc hứng lên rồi thôi",
+                                                 "future":  "xu hướng là một tín hiệu/tin nhắn/bước học mới hơn là kết luận cuối"
+                                             },
+                      "relationship_signals":  {
+                                                   "default":  "dấu hiệu cần xem là sự quan tâm có trưởng thành dần không hay chỉ là tò mò nhất thời. Với Kiếm, hãy quan sát lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra.",
+                                                   "existing_relationship":  "Nếu hỏi có nên tiếp tục, Tiểu Đồng Kiếm yêu cầu xem lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra đang giúp hai bên tiến gần hơn hay chỉ lặp lại cùng mô thức. Trục chính là người học và tín hiệu mới.",
+                                                   "situationship":  "Trong mập mờ, lá này nhấn vào một năng lượng non mới, tò mò hoặc một thông điệp đang xuất hiện trong vùng suy nghĩ, sự thật, giao tiếp và xung đột tinh thần. Dấu hiệu cần xem là có chuyển thành hành động rõ hay chỉ dừng ở cảm giác.",
+                                                   "ex":  "Với người cũ, Tiểu Đồng Kiếm hỏi liệu bài học người học và tín hiệu mới đã được hiểu chưa, hay hai bên chỉ đang chạm lại vì thói quen cũ.",
+                                                   "no_contact":  "Nếu đang im lặng, lá này cho thấy năng lượng Kiếm đang bị giữ lại. Hãy xem dấu hiệu liên hệ nếu có mang tính trưởng thành hay chỉ là xung lực."
+                                               },
+                      "symbols":  [
+                                      {
+                                          "symbol":  "suit Kiếm",
+                                          "meaning_vi":  "Đưa trọng tâm về suy nghĩ, sự thật, giao tiếp và xung đột tinh thần, thuộc nguyên tố Khí."
+                                      },
+                                      {
+                                          "symbol":  "rank Tiểu Đồng",
+                                          "meaning_vi":  "Đưa câu chuyện vào giai đoạn người học và tín hiệu mới."
+                                      }
+                                  ],
+                      "reader_notes_vi":  [
+                                              "Đọc lá này bằng cách kết hợp rank trước, suit sau: người học và tín hiệu mới + suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                              "Không đổi nghĩa gốc của lá; V2 chỉ giúp diễn giải theo ngữ cảnh câu hỏi và position."
+                                          ]
+                  },
+                  {
+                      "id":  "swords-12-knight",
+                      "source_basis":  [
+                                           "waite",
+                                           "golden_dawn_book_t",
+                                           "joan_bunning_learning_tarot",
+                                           "benebell_holistic_tarot",
+                                           "product_editorial"
+                                       ],
+                      "core":  {
+                                   "essence_vi":  "Kỵ Sĩ Kiếm kết hợp năng lượng người hành động và xung lực với lĩnh vực suy nghĩ, sự thật, giao tiếp và xung đột tinh thần. Cốt lõi là năng lượng tiến tới, theo đuổi hoặc đẩy tình huống sang trạng thái động.",
+                                   "keywords_vi":  [
+                                                       "người hành động và xung lực",
+                                                       "suy nghĩ, sự thật, giao tiếp và xung đột tinh thần",
+                                                       "năng lượng tiến tới, theo đuổi hoặc đẩy tình huống sang trạng thái động"
+                                                   ],
+                                   "shadow_keywords_vi":  [
+                                                              "lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá",
+                                                              "bốc đồng, cực đoan hoặc thiếu cam kết với đoạn đường dài"
+                                                          ]
+                               },
+                      "orientation":  {
+                                          "upright":  {
+                                                          "general_vi":  "có hành động, động lực hoặc một người/sự kiện đang lao tới. Với suit Kiếm, trọng tâm rơi vào suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                                          "love_vi":  "Trong tình yêu, Kỵ Sĩ Kiếm nói về lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra. có hành động, động lực hoặc một người/sự kiện đang lao tới.",
+                                                          "career_vi":  "Về công việc, lá này đặt người hành động và xung lực vào quyết định, chiến lược, tranh luận, dữ kiện và áp lực trí óc. có hành động, động lực hoặc một người/sự kiện đang lao tới.",
+                                                          "money_vi":  "Về tiền bạc, lá này liên quan phân tích rủi ro, hợp đồng, quyết định dựa trên dữ kiện và tránh suy nghĩ cực đoan. có hành động, động lực hoặc một người/sự kiện đang lao tới.",
+                                                          "inner_work_vi":  "Ở tầng nội tâm, lá này chạm tới tiếng nói trong đầu, nỗi sợ, niềm tin và cách bạn diễn giải sự việc. có hành động, động lực hoặc một người/sự kiện đang lao tới.",
+                                                          "advice_vi":  "hành động nhưng phải biết mình đang theo đuổi điều gì. nói rõ, kiểm chứng dữ kiện và cắt bớt suy diễn.",
+                                                          "warning_vi":  "sự thật không nên được dùng như vũ khí. Điểm cần tránh là bốc đồng, cực đoan hoặc thiếu cam kết với đoạn đường dài."
+                                                      },
+                                          "reversed":  {
+                                                           "general_vi":  "hành động quá đà, thiếu ổn định hoặc bị chặn giữa đường. Mặt lệch của suit Kiếm là lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "love_vi":  "Trong tình yêu, lá ngược cho thấy lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra đang bị chặn hoặc lệch. hành động quá đà, thiếu ổn định hoặc bị chặn giữa đường.",
+                                                           "career_vi":  "Về công việc, lá ngược cảnh báo quyết định, chiến lược, tranh luận, dữ kiện và áp lực trí óc đang thiếu nhịp, thiếu hướng hoặc thiếu sự trưởng thành phù hợp. hành động quá đà, thiếu ổn định hoặc bị chặn giữa đường.",
+                                                           "money_vi":  "Về tiền bạc, cần cẩn trọng vì phân tích rủi ro, hợp đồng, quyết định dựa trên dữ kiện và tránh suy nghĩ cực đoan có thể bị chi phối bởi mặt lệch: lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "inner_work_vi":  "Ở tầng nội tâm, lá ngược cho thấy bạn cần nhìn lại tiếng nói trong đầu, nỗi sợ, niềm tin và cách bạn diễn giải sự việc khi nó bị kéo bởi lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "advice_vi":  "hành động nhưng phải biết mình đang theo đuổi điều gì, nhưng trước hết hãy xử lý phần bị chặn: bốc đồng, cực đoan hoặc thiếu cam kết với đoạn đường dài.",
+                                                           "warning_vi":  "Nếu không điều chỉnh, lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá sẽ làm người hành động và xung lực biến thành điểm nghẽn."
+                                                       }
+                                      },
+                      "position_overrides":  {
+                                                 "situation":  "Tình huống đang biểu hiện người hành động và xung lực trong vùng suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                                 "action":  "hành động nhưng phải biết mình đang theo đuổi điều gì",
+                                                 "outcome":  "tình huống có thể chuyển động nhanh, tốt hay xấu tùy mức định hướng",
+                                                 "challenge":  "bốc đồng, cực đoan hoặc thiếu cam kết với đoạn đường dài",
+                                                 "future":  "tình huống có thể chuyển động nhanh, tốt hay xấu tùy mức định hướng"
+                                             },
+                      "relationship_signals":  {
+                                                   "default":  "dấu hiệu cần xem là người kia tiến tới vì rõ lòng hay chỉ bị cảm xúc/ham muốn kéo. Với Kiếm, hãy quan sát lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra.",
+                                                   "existing_relationship":  "Nếu hỏi có nên tiếp tục, Kỵ Sĩ Kiếm yêu cầu xem lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra đang giúp hai bên tiến gần hơn hay chỉ lặp lại cùng mô thức. Trục chính là người hành động và xung lực.",
+                                                   "situationship":  "Trong mập mờ, lá này nhấn vào năng lượng tiến tới, theo đuổi hoặc đẩy tình huống sang trạng thái động trong vùng suy nghĩ, sự thật, giao tiếp và xung đột tinh thần. Dấu hiệu cần xem là có chuyển thành hành động rõ hay chỉ dừng ở cảm giác.",
+                                                   "ex":  "Với người cũ, Kỵ Sĩ Kiếm hỏi liệu bài học người hành động và xung lực đã được hiểu chưa, hay hai bên chỉ đang chạm lại vì thói quen cũ.",
+                                                   "no_contact":  "Nếu đang im lặng, lá này cho thấy năng lượng Kiếm đang bị giữ lại. Hãy xem dấu hiệu liên hệ nếu có mang tính trưởng thành hay chỉ là xung lực."
+                                               },
+                      "symbols":  [
+                                      {
+                                          "symbol":  "suit Kiếm",
+                                          "meaning_vi":  "Đưa trọng tâm về suy nghĩ, sự thật, giao tiếp và xung đột tinh thần, thuộc nguyên tố Khí."
+                                      },
+                                      {
+                                          "symbol":  "rank Kỵ Sĩ",
+                                          "meaning_vi":  "Đưa câu chuyện vào giai đoạn người hành động và xung lực."
+                                      }
+                                  ],
+                      "reader_notes_vi":  [
+                                              "Đọc lá này bằng cách kết hợp rank trước, suit sau: người hành động và xung lực + suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                              "Không đổi nghĩa gốc của lá; V2 chỉ giúp diễn giải theo ngữ cảnh câu hỏi và position."
+                                          ]
+                  },
+                  {
+                      "id":  "swords-13-queen",
+                      "source_basis":  [
+                                           "waite",
+                                           "golden_dawn_book_t",
+                                           "joan_bunning_learning_tarot",
+                                           "benebell_holistic_tarot",
+                                           "product_editorial"
+                                       ],
+                      "core":  {
+                                   "essence_vi":  "Nữ Hoàng Kiếm kết hợp năng lượng người làm chủ bên trong với lĩnh vực suy nghĩ, sự thật, giao tiếp và xung đột tinh thần. Cốt lõi là năng lượng trưởng thành, tiếp nhận, nuôi dưỡng và làm chủ suit ở tầng nội tâm.",
+                                   "keywords_vi":  [
+                                                       "người làm chủ bên trong",
+                                                       "suy nghĩ, sự thật, giao tiếp và xung đột tinh thần",
+                                                       "năng lượng trưởng thành, tiếp nhận, nuôi dưỡng và làm chủ suit ở tầng nội tâm"
+                                                   ],
+                                   "shadow_keywords_vi":  [
+                                                              "lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá",
+                                                              "ôm quá nhiều, phản ứng từ tổn thương hoặc thiếu tự chăm"
+                                                          ]
+                               },
+                      "orientation":  {
+                                          "upright":  {
+                                                          "general_vi":  "có sự trưởng thành cảm xúc/nội lực và khả năng giữ không gian cho điều quan trọng. Với suit Kiếm, trọng tâm rơi vào suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                                          "love_vi":  "Trong tình yêu, Nữ Hoàng Kiếm nói về lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra. có sự trưởng thành cảm xúc/nội lực và khả năng giữ không gian cho điều quan trọng.",
+                                                          "career_vi":  "Về công việc, lá này đặt người làm chủ bên trong vào quyết định, chiến lược, tranh luận, dữ kiện và áp lực trí óc. có sự trưởng thành cảm xúc/nội lực và khả năng giữ không gian cho điều quan trọng.",
+                                                          "money_vi":  "Về tiền bạc, lá này liên quan phân tích rủi ro, hợp đồng, quyết định dựa trên dữ kiện và tránh suy nghĩ cực đoan. có sự trưởng thành cảm xúc/nội lực và khả năng giữ không gian cho điều quan trọng.",
+                                                          "inner_work_vi":  "Ở tầng nội tâm, lá này chạm tới tiếng nói trong đầu, nỗi sợ, niềm tin và cách bạn diễn giải sự việc. có sự trưởng thành cảm xúc/nội lực và khả năng giữ không gian cho điều quan trọng.",
+                                                          "advice_vi":  "giữ phẩm chất của mình nhưng đặt ranh giới mềm. nói rõ, kiểm chứng dữ kiện và cắt bớt suy diễn.",
+                                                          "warning_vi":  "sự thật không nên được dùng như vũ khí. Điểm cần tránh là ôm quá nhiều, phản ứng từ tổn thương hoặc thiếu tự chăm."
+                                                      },
+                                          "reversed":  {
+                                                           "general_vi":  "năng lượng chăm sóc/làm chủ bị lệch, quá tải hoặc thiếu ranh giới. Mặt lệch của suit Kiếm là lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "love_vi":  "Trong tình yêu, lá ngược cho thấy lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra đang bị chặn hoặc lệch. năng lượng chăm sóc/làm chủ bị lệch, quá tải hoặc thiếu ranh giới.",
+                                                           "career_vi":  "Về công việc, lá ngược cảnh báo quyết định, chiến lược, tranh luận, dữ kiện và áp lực trí óc đang thiếu nhịp, thiếu hướng hoặc thiếu sự trưởng thành phù hợp. năng lượng chăm sóc/làm chủ bị lệch, quá tải hoặc thiếu ranh giới.",
+                                                           "money_vi":  "Về tiền bạc, cần cẩn trọng vì phân tích rủi ro, hợp đồng, quyết định dựa trên dữ kiện và tránh suy nghĩ cực đoan có thể bị chi phối bởi mặt lệch: lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "inner_work_vi":  "Ở tầng nội tâm, lá ngược cho thấy bạn cần nhìn lại tiếng nói trong đầu, nỗi sợ, niềm tin và cách bạn diễn giải sự việc khi nó bị kéo bởi lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "advice_vi":  "giữ phẩm chất của mình nhưng đặt ranh giới mềm, nhưng trước hết hãy xử lý phần bị chặn: ôm quá nhiều, phản ứng từ tổn thương hoặc thiếu tự chăm.",
+                                                           "warning_vi":  "Nếu không điều chỉnh, lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá sẽ làm người làm chủ bên trong biến thành điểm nghẽn."
+                                                       }
+                                      },
+                      "position_overrides":  {
+                                                 "situation":  "Tình huống đang biểu hiện người làm chủ bên trong trong vùng suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                                 "action":  "giữ phẩm chất của mình nhưng đặt ranh giới mềm",
+                                                 "outcome":  "tình huống có thể dịu và sâu hơn nếu có sự trưởng thành bên trong",
+                                                 "challenge":  "ôm quá nhiều, phản ứng từ tổn thương hoặc thiếu tự chăm",
+                                                 "future":  "tình huống có thể dịu và sâu hơn nếu có sự trưởng thành bên trong"
+                                             },
+                      "relationship_signals":  {
+                                                   "default":  "dấu hiệu cần xem là tình cảm có được nuôi bằng sự trưởng thành hay bằng việc một người ôm hết. Với Kiếm, hãy quan sát lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra.",
+                                                   "existing_relationship":  "Nếu hỏi có nên tiếp tục, Nữ Hoàng Kiếm yêu cầu xem lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra đang giúp hai bên tiến gần hơn hay chỉ lặp lại cùng mô thức. Trục chính là người làm chủ bên trong.",
+                                                   "situationship":  "Trong mập mờ, lá này nhấn vào năng lượng trưởng thành, tiếp nhận, nuôi dưỡng và làm chủ suit ở tầng nội tâm trong vùng suy nghĩ, sự thật, giao tiếp và xung đột tinh thần. Dấu hiệu cần xem là có chuyển thành hành động rõ hay chỉ dừng ở cảm giác.",
+                                                   "ex":  "Với người cũ, Nữ Hoàng Kiếm hỏi liệu bài học người làm chủ bên trong đã được hiểu chưa, hay hai bên chỉ đang chạm lại vì thói quen cũ.",
+                                                   "no_contact":  "Nếu đang im lặng, lá này cho thấy năng lượng Kiếm đang bị giữ lại. Hãy xem dấu hiệu liên hệ nếu có mang tính trưởng thành hay chỉ là xung lực."
+                                               },
+                      "symbols":  [
+                                      {
+                                          "symbol":  "suit Kiếm",
+                                          "meaning_vi":  "Đưa trọng tâm về suy nghĩ, sự thật, giao tiếp và xung đột tinh thần, thuộc nguyên tố Khí."
+                                      },
+                                      {
+                                          "symbol":  "rank Nữ Hoàng",
+                                          "meaning_vi":  "Đưa câu chuyện vào giai đoạn người làm chủ bên trong."
+                                      }
+                                  ],
+                      "reader_notes_vi":  [
+                                              "Đọc lá này bằng cách kết hợp rank trước, suit sau: người làm chủ bên trong + suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                              "Không đổi nghĩa gốc của lá; V2 chỉ giúp diễn giải theo ngữ cảnh câu hỏi và position."
+                                          ]
+                  },
+                  {
+                      "id":  "swords-14-king",
+                      "source_basis":  [
+                                           "waite",
+                                           "golden_dawn_book_t",
+                                           "joan_bunning_learning_tarot",
+                                           "benebell_holistic_tarot",
+                                           "product_editorial"
+                                       ],
+                      "core":  {
+                                   "essence_vi":  "Vua Kiếm kết hợp năng lượng người quản trị và chịu trách nhiệm với lĩnh vực suy nghĩ, sự thật, giao tiếp và xung đột tinh thần. Cốt lõi là năng lượng trưởng thành, điều phối, thể hiện ra ngoài và chịu trách nhiệm với suit.",
+                                   "keywords_vi":  [
+                                                       "người quản trị và chịu trách nhiệm",
+                                                       "suy nghĩ, sự thật, giao tiếp và xung đột tinh thần",
+                                                       "năng lượng trưởng thành, điều phối, thể hiện ra ngoài và chịu trách nhiệm với suit"
+                                                   ],
+                                   "shadow_keywords_vi":  [
+                                                              "lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá",
+                                                              "lạm quyền, kiểm soát hoặc thiếu trưởng thành trong cách dùng năng lượng"
+                                                          ]
+                               },
+                      "orientation":  {
+                                          "upright":  {
+                                                          "general_vi":  "cần sự rõ ràng, trách nhiệm và khả năng dẫn dắt năng lượng này một cách chín chắn. Với suit Kiếm, trọng tâm rơi vào suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                                          "love_vi":  "Trong tình yêu, Vua Kiếm nói về lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra. cần sự rõ ràng, trách nhiệm và khả năng dẫn dắt năng lượng này một cách chín chắn.",
+                                                          "career_vi":  "Về công việc, lá này đặt người quản trị và chịu trách nhiệm vào quyết định, chiến lược, tranh luận, dữ kiện và áp lực trí óc. cần sự rõ ràng, trách nhiệm và khả năng dẫn dắt năng lượng này một cách chín chắn.",
+                                                          "money_vi":  "Về tiền bạc, lá này liên quan phân tích rủi ro, hợp đồng, quyết định dựa trên dữ kiện và tránh suy nghĩ cực đoan. cần sự rõ ràng, trách nhiệm và khả năng dẫn dắt năng lượng này một cách chín chắn.",
+                                                          "inner_work_vi":  "Ở tầng nội tâm, lá này chạm tới tiếng nói trong đầu, nỗi sợ, niềm tin và cách bạn diễn giải sự việc. cần sự rõ ràng, trách nhiệm và khả năng dẫn dắt năng lượng này một cách chín chắn.",
+                                                          "advice_vi":  "hành động như người có trách nhiệm, không chỉ như người có cảm xúc. nói rõ, kiểm chứng dữ kiện và cắt bớt suy diễn.",
+                                                          "warning_vi":  "sự thật không nên được dùng như vũ khí. Điểm cần tránh là lạm quyền, kiểm soát hoặc thiếu trưởng thành trong cách dùng năng lượng."
+                                                      },
+                                          "reversed":  {
+                                                           "general_vi":  "quyền lực/lãnh đạo của suit bị lệch: kiểm soát, lạnh, bốc đồng hoặc vật chất hóa quá mức tùy suit. Mặt lệch của suit Kiếm là lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "love_vi":  "Trong tình yêu, lá ngược cho thấy lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra đang bị chặn hoặc lệch. quyền lực/lãnh đạo của suit bị lệch: kiểm soát, lạnh, bốc đồng hoặc vật chất hóa quá mức tùy suit.",
+                                                           "career_vi":  "Về công việc, lá ngược cảnh báo quyết định, chiến lược, tranh luận, dữ kiện và áp lực trí óc đang thiếu nhịp, thiếu hướng hoặc thiếu sự trưởng thành phù hợp. quyền lực/lãnh đạo của suit bị lệch: kiểm soát, lạnh, bốc đồng hoặc vật chất hóa quá mức tùy suit.",
+                                                           "money_vi":  "Về tiền bạc, cần cẩn trọng vì phân tích rủi ro, hợp đồng, quyết định dựa trên dữ kiện và tránh suy nghĩ cực đoan có thể bị chi phối bởi mặt lệch: lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "inner_work_vi":  "Ở tầng nội tâm, lá ngược cho thấy bạn cần nhìn lại tiếng nói trong đầu, nỗi sợ, niềm tin và cách bạn diễn giải sự việc khi nó bị kéo bởi lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá.",
+                                                           "advice_vi":  "hành động như người có trách nhiệm, không chỉ như người có cảm xúc, nhưng trước hết hãy xử lý phần bị chặn: lạm quyền, kiểm soát hoặc thiếu trưởng thành trong cách dùng năng lượng.",
+                                                           "warning_vi":  "Nếu không điều chỉnh, lo âu, lạnh cảm xúc, phán xét, phòng thủ hoặc nói sắc quá sẽ làm người quản trị và chịu trách nhiệm biến thành điểm nghẽn."
+                                                       }
+                                      },
+                      "position_overrides":  {
+                                                 "situation":  "Tình huống đang biểu hiện người quản trị và chịu trách nhiệm trong vùng suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                                 "action":  "hành động như người có trách nhiệm, không chỉ như người có cảm xúc",
+                                                 "outcome":  "kết quả có thể ổn nếu có trách nhiệm và sự làm chủ rõ",
+                                                 "challenge":  "lạm quyền, kiểm soát hoặc thiếu trưởng thành trong cách dùng năng lượng",
+                                                 "future":  "kết quả có thể ổn nếu có trách nhiệm và sự làm chủ rõ"
+                                             },
+                      "relationship_signals":  {
+                                                   "default":  "dấu hiệu cần xem là người kia có đủ trưởng thành để chịu trách nhiệm với điều họ tạo ra không. Với Kiếm, hãy quan sát lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra.",
+                                                   "existing_relationship":  "Nếu hỏi có nên tiếp tục, Vua Kiếm yêu cầu xem lời nói, hiểu lầm, ranh giới tinh thần và sự thật cần được nói ra đang giúp hai bên tiến gần hơn hay chỉ lặp lại cùng mô thức. Trục chính là người quản trị và chịu trách nhiệm.",
+                                                   "situationship":  "Trong mập mờ, lá này nhấn vào năng lượng trưởng thành, điều phối, thể hiện ra ngoài và chịu trách nhiệm với suit trong vùng suy nghĩ, sự thật, giao tiếp và xung đột tinh thần. Dấu hiệu cần xem là có chuyển thành hành động rõ hay chỉ dừng ở cảm giác.",
+                                                   "ex":  "Với người cũ, Vua Kiếm hỏi liệu bài học người quản trị và chịu trách nhiệm đã được hiểu chưa, hay hai bên chỉ đang chạm lại vì thói quen cũ.",
+                                                   "no_contact":  "Nếu đang im lặng, lá này cho thấy năng lượng Kiếm đang bị giữ lại. Hãy xem dấu hiệu liên hệ nếu có mang tính trưởng thành hay chỉ là xung lực."
+                                               },
+                      "symbols":  [
+                                      {
+                                          "symbol":  "suit Kiếm",
+                                          "meaning_vi":  "Đưa trọng tâm về suy nghĩ, sự thật, giao tiếp và xung đột tinh thần, thuộc nguyên tố Khí."
+                                      },
+                                      {
+                                          "symbol":  "rank Vua",
+                                          "meaning_vi":  "Đưa câu chuyện vào giai đoạn người quản trị và chịu trách nhiệm."
+                                      }
+                                  ],
+                      "reader_notes_vi":  [
+                                              "Đọc lá này bằng cách kết hợp rank trước, suit sau: người quản trị và chịu trách nhiệm + suy nghĩ, sự thật, giao tiếp và xung đột tinh thần.",
+                                              "Không đổi nghĩa gốc của lá; V2 chỉ giúp diễn giải theo ngữ cảnh câu hỏi và position."
+                                          ]
+                  }
+              ]
+}

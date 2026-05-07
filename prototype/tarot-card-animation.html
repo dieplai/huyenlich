@@ -1,0 +1,1106 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tarot 3D Selection Flow</title>
+  <style>
+    :root {
+      --gold: #d4af37;
+      --violet: #8b5cf6;
+      --rose: #f43f5e;
+      --text: #f7f1df;
+      --muted: rgba(255, 255, 255, 0.68);
+      --glass: rgba(255, 255, 255, 0.045);
+      --line: rgba(255, 255, 255, 0.14);
+      font-family: "Segoe UI", Arial, "Helvetica Neue", ui-sans-serif, system-ui, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    body {
+      color: var(--text);
+      background:
+        linear-gradient(90deg, rgba(4, 4, 16, 0.46), rgba(4, 4, 16, 0.08)),
+        url("../public/background.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 48% 18%, rgba(212, 175, 55, 0.1), transparent 27%),
+        radial-gradient(circle at 78% 12%, rgba(139, 92, 246, 0.14), transparent 32%),
+        linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent 58%);
+    }
+
+    .stage {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+    }
+
+    .scene {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      perspective: 1300px;
+      transform-style: preserve-3d;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      backdrop-filter: none;
+      box-shadow: none;
+      overflow: hidden;
+    }
+
+    .brand-strip {
+      position: absolute;
+      left: clamp(42px, 8vw, 180px);
+      top: clamp(28px, 5vh, 58px);
+      z-index: 4;
+      pointer-events: none;
+      transition: opacity 420ms ease, transform 420ms ease;
+    }
+
+    .eyebrow {
+      margin: 0 0 5px;
+      color: rgba(255, 231, 157, 0.92);
+      font-size: clamp(11px, 1.2vw, 24px);
+      font-weight: 900;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-shadow: 0 0 18px rgba(255, 231, 157, 0.46);
+    }
+
+    .brand-strip h1 {
+      margin: 0;
+      font-family: "Times New Roman", Georgia, serif;
+      font-size: clamp(42px, 5.5vw, 78px);
+      line-height: 0.95;
+      color: #fff;
+      text-shadow:
+        0 0 18px rgba(255, 241, 214, 0.46),
+        0 22px 70px rgba(0, 0, 0, 0.5);
+    }
+
+    .deck-zone {
+      position: absolute;
+      inset: 0;
+      transform-style: preserve-3d;
+    }
+
+    .card {
+      --x: 0px;
+      --y: 0px;
+      --r: 0deg;
+      --scale: 1;
+      position: absolute;
+      left: 50%;
+      top: 52%;
+      width: clamp(62px, 6.4vw, 108px);
+      aspect-ratio: 400 / 700;
+      border: 0;
+      border-radius: 12px;
+      padding: 0;
+      background: transparent;
+      transform:
+        translate(-50%, -50%)
+        translate3d(var(--x), var(--y), 0)
+        rotateZ(var(--r))
+        scale(var(--scale));
+      transform-style: preserve-3d;
+      backface-visibility: hidden;
+      contain: layout style;
+      transition:
+        width 760ms cubic-bezier(.18,.88,.2,1),
+        transform 980ms cubic-bezier(.16,.86,.18,1),
+        opacity 520ms ease;
+      will-change: transform;
+    }
+
+    .card-inner {
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      transform-style: preserve-3d;
+      transition: transform 980ms cubic-bezier(.16,.86,.18,1);
+      box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.18),
+        0 0 8px rgba(139, 92, 246, 0.05);
+    }
+
+    .card.spread .card-inner {
+      box-shadow:
+        0 12px 26px rgba(0, 0, 0, 0.24),
+        0 0 10px rgba(139, 92, 246, 0.06);
+    }
+
+    .card.selected .card-inner {
+      box-shadow:
+        0 24px 52px rgba(0, 0, 0, 0.42),
+        0 0 26px rgba(139, 92, 246, 0.16);
+    }
+
+    .card-face {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: inherit;
+      background-size: cover;
+      background-position: center;
+      backface-visibility: hidden;
+    }
+
+    .card-face::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      box-shadow:
+        inset 0 0 0 10px rgba(255, 255, 255, 0.03),
+        inset 0 0 0 1px rgba(240, 208, 96, 0.22);
+      pointer-events: none;
+    }
+
+    .card-back {
+      background-image:
+        linear-gradient(135deg, rgba(255,255,255,0.14), rgba(255,255,255,0.02)),
+        var(--back);
+    }
+
+    .card-front {
+      background-image: var(--front);
+      transform: rotateY(180deg);
+    }
+
+    .card:hover:not(.disabled) {
+      z-index: 90;
+    }
+
+    .card:hover:not(.disabled) .card-inner {
+      box-shadow:
+        0 20px 42px rgba(0, 0, 0, 0.38),
+        0 0 14px rgba(212, 175, 55, 0.18);
+    }
+
+    .card.spread:hover:not(.disabled) {
+      transform:
+        translate(-50%, -50%)
+        translate3d(var(--x), calc(var(--y) - 20px), 0)
+        rotateZ(calc(var(--r) * 0.68))
+        scale(1.045);
+    }
+
+    .card.selected {
+      z-index: 100;
+    }
+
+    .card.selected .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card.disabled {
+      opacity: 0.18;
+      pointer-events: none;
+    }
+
+    .card-caption {
+      position: absolute;
+      left: calc(100% + 16px);
+      top: 50%;
+      width: min(190px, 15vw);
+      opacity: 0;
+      transform: translateY(-50%) translateX(-8px);
+      transition: opacity 360ms ease, transform 360ms ease;
+      pointer-events: none;
+      text-align: left;
+      text-shadow: 0 14px 34px rgba(0, 0, 0, 0.58);
+      z-index: 4;
+    }
+
+    .card-role {
+      display: block;
+      color: rgba(255, 231, 157, 0.88);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .card-name {
+      display: block;
+      margin-top: 5px;
+      color: #fff;
+      font-size: clamp(13px, 1.15vw, 17px);
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .select-badge {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      color: #15100a;
+      background: linear-gradient(135deg, #fff0a7, var(--gold));
+      font-size: 13px;
+      font-weight: 900;
+      opacity: 0;
+      transform: scale(0.72);
+      transition: all 260ms ease;
+      z-index: 3;
+    }
+
+    .card.selected .select-badge {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .modal {
+      position: absolute;
+      z-index: 50;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(9, 7, 22, 0.32);
+      backdrop-filter: blur(20px);
+      box-shadow:
+        0 36px 120px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      transition:
+        opacity 520ms ease,
+        transform 520ms ease,
+        visibility 520ms ease;
+    }
+
+    .modal::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      border-radius: inherit;
+      background:
+        linear-gradient(116deg, transparent 0%, rgba(255,255,255,0.045) 34%, transparent 58%),
+        radial-gradient(circle at 78% 10%, rgba(139, 92, 246, 0.11), transparent 34%),
+        radial-gradient(circle at 12% 90%, rgba(212, 175, 55, 0.08), transparent 30%);
+    }
+
+    .modal > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .modal.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: translateY(18px) scale(0.985);
+    }
+
+    .question-modal {
+      left: 50%;
+      top: 50%;
+      width: min(860px, calc(100% - 44px));
+      min-height: 470px;
+      padding: clamp(34px, 4vw, 54px) clamp(34px, 5vw, 68px);
+      text-align: center;
+      transform: translate(-50%, -50%);
+    }
+
+    .question-modal.hidden {
+      transform: translate(-50%, calc(-50% + 18px)) scale(0.985);
+    }
+
+    .question-modal h2,
+    .reading-modal h2 {
+      margin: 6px 0 14px;
+      font-family: "Times New Roman", Georgia, serif;
+      font-size: clamp(48px, 5.6vw, 82px);
+      line-height: 1;
+      color: #fff;
+    }
+
+    .question-modal p,
+    .reading-modal p {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.68;
+      margin: 0;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 140px;
+      margin-top: 26px;
+      resize: none;
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-radius: 18px;
+      padding: 15px 16px;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.06);
+      outline: none;
+      font: inherit;
+      font-size: 18px;
+      line-height: 1.55;
+    }
+
+    .question-modal textarea {
+      text-align: center;
+    }
+
+    textarea:focus {
+      border-color: rgba(212, 175, 55, 0.62);
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.14);
+    }
+
+    button {
+      min-height: 44px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 999px;
+      padding: 0 20px;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(16px);
+      cursor: pointer;
+      font-weight: 800;
+      transition: transform 220ms ease, background 220ms ease, border-color 220ms ease;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 231, 157, 0.52);
+    }
+
+    button.primary {
+      margin-top: 18px;
+      color: #15100a;
+      border-color: rgba(255, 231, 157, 0.56);
+      background: linear-gradient(135deg, #fff0a7, var(--gold) 48%, #9f6eff);
+    }
+
+    .start-action {
+      display: flex;
+      justify-content: center;
+      margin-top: 28px;
+    }
+
+    .text-cta {
+      position: relative;
+      min-height: auto;
+      border: 0;
+      border-radius: 0;
+      padding: 8px 4px 13px;
+      color: #fff4ce;
+      background: transparent;
+      backdrop-filter: none;
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      text-transform: none;
+      text-shadow: 0 0 22px rgba(212, 175, 55, 0.24);
+    }
+
+    .text-cta::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background: rgba(255, 240, 167, 0.72);
+      box-shadow: 0 0 12px rgba(212, 175, 55, 0.38);
+      opacity: 0.46;
+      transform: translateX(-50%) scaleX(0.64);
+      transform-origin: center;
+      transition: transform 240ms ease, opacity 240ms ease, height 240ms ease;
+    }
+
+    .text-cta:hover {
+      background: transparent;
+      border-color: transparent;
+      transform: translateY(-1px);
+      text-shadow:
+        0 0 18px rgba(255, 240, 167, 0.58),
+        0 0 34px rgba(139, 92, 246, 0.38);
+    }
+
+    .text-cta:hover::after {
+      height: 2px;
+      opacity: 1;
+      transform: translateX(-50%) scaleX(1);
+      box-shadow: 0 0 20px rgba(255, 240, 167, 0.72);
+    }
+
+    .reading-modal {
+      right: clamp(28px, 4vw, 60px);
+      left: 49vw;
+      top: 51%;
+      width: auto;
+      max-width: none;
+      max-height: calc(100% - 96px);
+      overflow: auto;
+      padding: clamp(30px, 3vw, 42px) clamp(34px, 3.6vw, 52px);
+      border-radius: 28px;
+      background: rgba(40, 25, 60, 0.34);
+      transform: translateY(-50%);
+    }
+
+    .reading-modal .eyebrow {
+      text-align: center;
+      font-size: clamp(11px, 1vw, 16px);
+      letter-spacing: 0.24em;
+    }
+
+    .reading-modal h2 {
+      max-width: none;
+      margin-bottom: clamp(22px, 2vw, 30px);
+      text-align: center;
+      font-size: clamp(44px, 4.6vw, 68px);
+      text-shadow:
+        0 0 20px rgba(255, 241, 214, 0.35),
+        0 18px 56px rgba(0, 0, 0, 0.48);
+    }
+
+    .reading-modal.hidden {
+      transform: translateY(calc(-50% + 18px)) scale(0.985);
+    }
+
+    .summary-block {
+      display: grid;
+      gap: 18px;
+      margin-top: 0;
+    }
+
+    .summary-block section,
+    .card-detail {
+      border: 0;
+      border-radius: 0;
+      padding: 0;
+      background: transparent;
+    }
+
+    .summary-block section:first-child {
+      grid-column: auto;
+      border-color: transparent;
+      background: transparent;
+    }
+
+    .summary-block h3,
+    .card-detail h3 {
+      margin: 0 0 7px;
+      color: #fff5d3;
+      font-size: clamp(15px, 1vw, 17px);
+      line-height: 1.25;
+      text-shadow: 0 0 14px rgba(255, 231, 157, 0.25);
+    }
+
+    .reading-modal p,
+    .card-detail p {
+      font-size: clamp(13px, 0.95vw, 15px);
+      line-height: 1.42;
+    }
+
+    .card-detail {
+      margin-top: 20px;
+      color: var(--muted);
+    }
+
+    .scene.reading-active .brand-strip {
+      opacity: 1;
+      transform: none;
+    }
+
+    .scene.reading-active .status-pill {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .scene.reading-active .card {
+      top: 54%;
+    }
+
+    .scene.reading-active .card.disabled {
+      opacity: 0;
+    }
+
+    .scene.reading-active .card.selected {
+      width: clamp(98px, 9vw, 140px);
+    }
+
+    .scene.reading-active .card.selected .card-inner {
+      box-shadow: 0 18px 36px rgba(0, 0, 0, 0.36);
+    }
+
+    .scene.finalizing-reading .card.selected {
+      transition:
+        width 1700ms cubic-bezier(.18,.82,.18,1),
+        transform 2200ms cubic-bezier(.16,.9,.18,1),
+        opacity 700ms ease;
+    }
+
+    .scene.reading-active .card.selected .card-caption {
+      display: none;
+    }
+
+    .scene.reading-active .card.selected:hover {
+      transform:
+        translate(-50%, -50%)
+        translate3d(var(--x), calc(var(--y) - 10px), 0)
+        rotateZ(0deg)
+        scale(0.84);
+    }
+
+    .scene.reading-active .card.selected:hover .card-inner {
+      box-shadow: 0 22px 42px rgba(0, 0, 0, 0.42);
+    }
+
+    .scene.reading-active .card.selected .select-badge {
+      left: 50%;
+      right: auto;
+      top: -24px;
+      width: 36px;
+      height: 36px;
+      font-size: 15px;
+      transform: translateX(-50%) scale(1);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.36);
+    }
+
+    .reading-hint {
+      width: min(430px, 100%);
+      margin: clamp(22px, 2vw, 30px) auto 0;
+      padding: 12px 18px;
+      border: 1px solid rgba(255, 231, 157, 0.5);
+      border-radius: 999px;
+      color: #fff7d7;
+      background: rgba(42, 28, 58, 0.38);
+      box-shadow:
+        0 0 18px rgba(255, 231, 157, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      text-align: center;
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .status-pill {
+      position: absolute;
+      left: 50%;
+      bottom: 28px;
+      z-index: 20;
+      transform: translateX(-50%);
+      min-width: min(520px, calc(100% - 48px));
+      padding: 13px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 999px;
+      color: #fff8de;
+      background: rgba(4, 4, 16, 0.58);
+      backdrop-filter: blur(16px);
+      text-align: center;
+      font-weight: 800;
+      box-shadow: 0 24px 70px rgba(0,0,0,0.28);
+    }
+
+    @media (max-width: 860px) {
+      .stage {
+        padding: 12px;
+      }
+
+      .brand-strip {
+        left: 18px;
+        top: 18px;
+      }
+
+      .card {
+        width: clamp(48px, 13vw, 64px);
+        border-radius: 9px;
+      }
+
+      .card.spread:hover:not(.disabled) {
+        transform:
+          translate(-50%, -50%)
+          translate3d(var(--x), calc(var(--y) - 16px), 0)
+          rotateZ(calc(var(--r) * 0.68))
+          scale(1.045);
+      }
+
+      .question-modal {
+        width: calc(100% - 28px);
+        min-height: auto;
+        padding: 28px 20px;
+      }
+
+      .question-modal h2 {
+        font-size: clamp(38px, 12vw, 54px);
+      }
+
+      .question-modal p,
+      .reading-modal p {
+        font-size: 14px;
+      }
+
+      textarea {
+        min-height: 112px;
+        font-size: 15px;
+        border-radius: 14px;
+      }
+
+      .reading-modal {
+        inset: 12px;
+        width: auto;
+        max-height: none;
+        transform: none;
+        padding: 20px;
+        border-radius: 22px;
+      }
+
+      .reading-modal h2 {
+        margin-bottom: 14px;
+        font-size: clamp(32px, 10vw, 46px);
+      }
+
+      .reading-modal .eyebrow {
+        font-size: 10px;
+      }
+
+      .summary-block {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .reading-modal.hidden {
+        transform: translateY(18px) scale(0.985);
+      }
+
+      .card-caption {
+        display: none;
+      }
+
+      .status-pill {
+        bottom: 14px;
+        min-width: calc(100% - 28px);
+        padding: 11px 13px;
+        font-size: 13px;
+      }
+
+      .scene.reading-active .card.selected {
+        width: clamp(58px, 16vw, 76px);
+      }
+
+      .scene.reading-active .card.selected .select-badge {
+        top: -18px;
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+      }
+
+      .reading-hint {
+        margin-top: 14px;
+        padding: 10px 12px;
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="stage">
+    <main class="scene" aria-label="Tarot animation scene">
+      <div class="brand-strip">
+        <p class="eyebrow">Neo-Mystic Dreamscape</p>
+        <h1>Tarot 3D Spread</h1>
+      </div>
+
+      <div id="deckZone" class="deck-zone"></div>
+
+      <section id="questionModal" class="modal question-modal">
+        <p class="eyebrow">Enter Your Question</p>
+        <h2>Hỏi điều bạn muốn nhìn rõ.</h2>
+        <p>Nhập một câu hỏi cụ thể. Sau khi bấm trải bài, popup sẽ mờ đi và bộ bài mở ra để bạn chọn 5 lá.</p>
+        <textarea id="questionInput">Người ấy im lặng 2 tuần rồi, liệu họ còn muốn quay lại với tôi không?</textarea>
+        <div class="start-action">
+          <button id="startButton" class="text-cta" type="button">Trải bài</button>
+        </div>
+      </section>
+
+      <section id="readingModal" class="modal reading-modal hidden" aria-hidden="true">
+        <p class="eyebrow">Your Reading</p>
+        <h2>Tổng quan trải bài</h2>
+        <div id="readingSummary" class="summary-block"></div>
+        <div id="cardDetail" class="card-detail"></div>
+        <div class="reading-hint">Đưa chuột vào từng lá bên trái để xem nghĩa chi tiết.</div>
+      </section>
+
+      <div id="status" class="status-pill">Nhập câu hỏi để bắt đầu.</div>
+    </main>
+  </div>
+
+  <script>
+    const backs = [
+      "../public/after1.jpg",
+      "../public/after2.jpg",
+      "../public/after3.jpg"
+    ];
+
+    const fallbackCards = [
+      {
+        name_vi: "The Fool",
+        name_en: "The Fool",
+        image: "../public/textures/cards/rws/major-00-the-fool.jpg",
+        upright_vi: "Khởi đầu mới, tự do, bước qua ngưỡng cửa.",
+        reversed_vi: "Bốc đồng, thiếu chuẩn bị hoặc né trách nhiệm.",
+        keywords_vi: ["khởi đầu", "tự do", "niềm tin"]
+      },
+      {
+        name_vi: "The Magician",
+        name_en: "The Magician",
+        image: "../public/textures/cards/rws/major-01-the-magician.jpg",
+        upright_vi: "Chủ động, kỹ năng, biến ý định thành hành động.",
+        reversed_vi: "Phân tán, hứa nhiều làm ít, dùng sai năng lực.",
+        keywords_vi: ["ý chí", "kỹ năng", "chủ động"]
+      }
+    ];
+
+    const deckZone = document.getElementById("deckZone");
+    const statusEl = document.getElementById("status");
+    const questionModal = document.getElementById("questionModal");
+    const readingModal = document.getElementById("readingModal");
+    const startButton = document.getElementById("startButton");
+    const questionInput = document.getElementById("questionInput");
+    const readingSummary = document.getElementById("readingSummary");
+    const cardDetail = document.getElementById("cardDetail");
+    const scene = document.querySelector(".scene");
+    const visibleCards = 24;
+    const targetCount = 5;
+    const cardRoles = [
+      "Nền năng lượng",
+      "Điều đang cản",
+      "Sự thật hiện tại",
+      "Điểm cần hành động",
+      "Tín hiệu gần tới"
+    ];
+    let activeCards = [];
+    let totalCards = visibleCards;
+    let selected = [];
+    let hasSpread = false;
+
+    async function loadDeckCards() {
+      try {
+        const response = await fetch("../data/tarot/rider-waite-smith.json");
+        if (!response.ok) throw new Error(`Deck load failed: ${response.status}`);
+        const deck = await response.json();
+        const cards = deck.cards.map((card) => ({
+          id: card.id,
+          name_vi: card.name_vi,
+          name_en: card.name_en,
+          image: `../${card.image.local_path}`,
+          upright_vi: card.upright_vi,
+          reversed_vi: card.reversed_vi,
+          keywords_vi: card.keywords_vi || []
+        }));
+        activeCards = sampleCards(cards, visibleCards);
+      } catch (error) {
+        console.warn(error);
+        activeCards = sampleCards(fallbackCards, visibleCards);
+      }
+      totalCards = activeCards.length;
+    }
+
+    function sampleCards(cards, count) {
+      const pool = [...cards];
+      for (let i = pool.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [pool[i], pool[j]] = [pool[j], pool[i]];
+      }
+      const sampled = pool.slice(0, Math.min(count, pool.length));
+      while (sampled.length < count) {
+        sampled.push(pool[sampled.length % pool.length]);
+      }
+      return sampled;
+    }
+
+    function createCard(index) {
+      const cardData = activeCards[index % activeCards.length];
+      const card = document.createElement("button");
+      card.type = "button";
+      card.className = "card";
+      card.dataset.index = String(index);
+      card.cardData = cardData;
+      card.style.setProperty("--back", `url("${backs[index % backs.length]}")`);
+      card.style.zIndex = String(index + 1);
+      card.innerHTML = `
+        <span class="select-badge"></span>
+        <span class="card-inner">
+          <span class="card-face card-back"></span>
+          <span class="card-face card-front"></span>
+        </span>
+        <span class="card-caption">
+          <span class="card-role"></span>
+          <span class="card-name"></span>
+        </span>
+      `;
+      card.addEventListener("click", () => selectCard(card));
+      card.addEventListener("mouseenter", () => {
+        if (card.classList.contains("selected")) renderCardDetail(card.cardData, selected.indexOf(card) + 1);
+      });
+      return card;
+    }
+
+    function buildDeck() {
+      selected = [];
+      hasSpread = false;
+      deckZone.innerHTML = "";
+      scene.classList.remove("reading-active", "finalizing-reading");
+      readingModal.classList.add("hidden");
+      readingModal.setAttribute("aria-hidden", "true");
+      for (let i = 0; i < totalCards; i++) {
+        const card = createCard(i);
+        card.style.setProperty("--x", `${(i - totalCards / 2) * 0.7}px`);
+        card.style.setProperty("--y", `${i * -0.35}px`);
+        card.style.setProperty("--r", `${(i - totalCards / 2) * 0.4}deg`);
+        deckZone.appendChild(card);
+      }
+      statusEl.textContent = "Nhập câu hỏi để bắt đầu.";
+    }
+
+    function startFlow() {
+      if (!questionInput.value.trim()) {
+        questionInput.focus();
+        return;
+      }
+      questionModal.classList.add("hidden");
+      statusEl.textContent = "Đang mở bộ bài...";
+      window.setTimeout(spreadDeck, 520);
+    }
+
+    function spreadDeck() {
+      hasSpread = true;
+      selected = [];
+      scene.classList.remove("reading-active", "finalizing-reading");
+      const cards = [...document.querySelectorAll(".card")];
+      cards.forEach((card, index) => {
+        const row = index < totalCards / 2 ? 0 : 1;
+        const rowIndex = row === 0 ? index : index - Math.ceil(totalCards / 2);
+        const rowCount = row === 0 ? Math.ceil(totalCards / 2) : totalCards - Math.ceil(totalCards / 2);
+        const t = rowCount <= 1 ? 0.5 : rowIndex / (rowCount - 1);
+        const p = t * 2 - 1;
+        const angle = p * 72;
+        const radians = (angle * Math.PI) / 180;
+        const radiusX = Math.min(650, window.innerWidth * 0.445);
+        const curveDepth = row === 0
+          ? Math.min(158, window.innerHeight * 0.195)
+          : Math.min(136, window.innerHeight * 0.165);
+        const rowBase = row === 0 ? -118 : 92;
+        const x = (Math.sin(radians) * 0.72 + p * 0.28) * radiusX;
+        const y = rowBase - Math.cos(radians) * curveDepth;
+        const rotation = angle * 0.58;
+        card.className = "card spread";
+        card.style.zIndex = String(index + 1);
+        card.style.transitionDelay = `${Math.min(index * 4, 80)}ms`;
+        card.querySelector(".select-badge").textContent = "";
+        card.style.setProperty("--x", `${x}px`);
+        card.style.setProperty("--y", `${y}px`);
+        card.style.setProperty("--r", `${rotation}deg`);
+        card.style.setProperty("--scale", "1");
+      });
+      statusEl.textContent = "Chọn 5 lá bất kỳ.";
+    }
+
+    function selectCard(card) {
+      if (!hasSpread || selected.length >= targetCount || selected.includes(card)) return;
+
+      selected.push(card);
+      const order = selected.length;
+      const role = cardRoles[order - 1] || `Lá ${order}`;
+
+      card.classList.add("selected");
+      card.style.setProperty("--front", `url("${card.cardData.image}")`);
+      card.querySelector(".select-badge").textContent = String(order);
+      card.querySelector(".card-role").textContent = role;
+      card.querySelector(".card-name").textContent = card.cardData.name_vi;
+      card.style.zIndex = String(100 + order);
+      card.style.transitionDelay = "0ms";
+      layoutSelectedCards("staging");
+
+      statusEl.textContent = `Đã chọn ${order}/5 lá.`;
+
+      if (selected.length === targetCount) {
+        document.querySelectorAll(".card:not(.selected)").forEach((item) => item.classList.add("disabled"));
+        statusEl.textContent = "Đang mở phần diễn giải...";
+        window.setTimeout(() => {
+          scene.classList.add("reading-active", "finalizing-reading");
+          layoutSelectedCards("reading");
+          window.setTimeout(() => {
+            scene.classList.remove("finalizing-reading");
+            selected.forEach((item) => {
+              item.style.transitionDelay = "0ms";
+            });
+            statusEl.textContent = "Đưa chuột vào từng lá bên trái để xem nghĩa chi tiết.";
+            renderReading();
+          }, 2100);
+        }, 220);
+      }
+    }
+
+    function layoutSelectedCards(mode = "staging") {
+      selected.forEach((card, index) => {
+        const order = index + 1;
+        const position = mode === "reading"
+          ? getReadingCardPosition(order)
+          : getStagingCardPosition(order);
+        card.style.transitionDelay = mode === "reading" ? `${index * 90}ms` : "0ms";
+        card.style.setProperty("--x", `${position.x}px`);
+        card.style.setProperty("--y", `${position.y}px`);
+        card.style.setProperty("--r", `${position.rotation}deg`);
+        card.style.setProperty("--scale", String(position.scale));
+        card.style.zIndex = String(position.z);
+      });
+    }
+
+    function getStagingCardPosition(order) {
+      if (window.innerWidth <= 860) {
+        const step = Math.min(82, window.innerWidth * 0.18);
+        return {
+          x: (order - 3) * step,
+          y: Math.min(218, window.innerHeight * 0.29),
+          rotation: 0,
+          scale: 0.76,
+          z: 100 + order
+        };
+      }
+
+      const step = Math.min(142, Math.max(112, window.innerWidth * 0.092));
+      return {
+        x: (order - 3) * step,
+        y: Math.min(250, window.innerHeight * 0.31),
+        rotation: 0,
+        scale: 0.86,
+        z: 100 + order
+      };
+    }
+
+    function getReadingCardPosition(order) {
+      if (window.innerWidth <= 860) {
+        const mobileGrid = [
+          { x: -1, y: -0.92, rotation: 0, z: 121 },
+          { x: 0, y: -0.92, rotation: 0, z: 123 },
+          { x: 1, y: -0.92, rotation: 0, z: 122 },
+          { x: -0.5, y: 0.74, rotation: 0, z: 124 },
+          { x: 0.5, y: 0.74, rotation: 0, z: 125 }
+        ][order - 1] || { x: 0, y: 0, rotation: 0, z: 121 };
+        const mobileGapX = Math.min(76, window.innerWidth * 0.18);
+        const mobileGapY = Math.min(118, window.innerHeight * 0.16);
+        return {
+          x: mobileGrid.x * mobileGapX,
+          y: mobileGrid.y * mobileGapY,
+          rotation: mobileGrid.rotation,
+          scale: 0.76,
+          z: mobileGrid.z
+        };
+      }
+
+      const finalGrid = [
+        { x: -1, y: -0.94, rotation: 0, z: 121 },
+        { x: 0, y: -0.94, rotation: 0, z: 125 },
+        { x: 1, y: -0.94, rotation: 0, z: 122 },
+        { x: -0.52, y: 0.82, rotation: 0, z: 123 },
+        { x: 0.52, y: 0.82, rotation: 0, z: 124 }
+      ][order - 1] || { x: 0, y: 0, rotation: 0, z: 121 };
+      const fanCenterX = Math.min(window.innerWidth * 0.28, 420);
+      const fanGapX = Math.min(window.innerWidth * 0.088, 126);
+      const fanGapY = Math.min(window.innerHeight * 0.17, 138);
+      return {
+        x: fanCenterX - window.innerWidth / 2 + finalGrid.x * fanGapX,
+        y: finalGrid.y * fanGapY,
+        rotation: finalGrid.rotation,
+        scale: selected.length === targetCount ? 0.82 : 0.78,
+        z: finalGrid.z
+      };
+    }
+
+    function renderReading() {
+      const question = questionInput.value.trim();
+      const cards = selected.map((item) => item.cardData);
+      const names = cards.map((card) => card.name_vi).join(" - ");
+      const keywords = cards.flatMap((card) => card.keywords_vi || []).slice(0, 8).join(", ");
+
+      readingSummary.innerHTML = `
+        <section class="reading-question">
+          <h3>Câu hỏi</h3>
+          <p>${escapeHtml(question)}</p>
+        </section>
+        <section class="reading-overview">
+          <h3>Tổng quan</h3>
+          <p>Năm lá được chọn là ${escapeHtml(names)}. Trục đọc chính đang xoay quanh ${escapeHtml(keywords || "một chuyển động cần nhìn rõ hơn")}. Hãy đọc trải bài như một đường đi: nền năng lượng, lực cản, sự thật hiện tại, điểm cần hành động và tín hiệu gần tới.</p>
+        </section>
+        <section class="reading-signal">
+          <h3>Tín hiệu gần</h3>
+          <p>Nếu quỹ đạo hiện tại tiếp tục, hãy quan sát sự nhất quán giữa lời nói, hành động và cảm giác sau mỗi tương tác. Năm lá cho phép đọc rõ hơn phần nền, điểm nghẽn, hiện tại, hướng xử lý và tín hiệu sắp tới.</p>
+        </section>
+      `;
+
+      renderCardDetail(cards[0], 1);
+      readingModal.classList.remove("hidden");
+      readingModal.setAttribute("aria-hidden", "false");
+    }
+
+    function renderCardDetail(card, order) {
+      cardDetail.innerHTML = `
+        <h3>Lá ${order}: ${escapeHtml(card.name_vi)}</h3>
+        <p><strong>Xuôi:</strong> ${escapeHtml(card.upright_vi)}</p>
+        <p><strong>Mặt cần nhìn thẳng:</strong> ${escapeHtml(card.reversed_vi)}</p>
+        <p><strong>Từ khóa:</strong> ${escapeHtml((card.keywords_vi || []).join(", ") || "chưa có")}</p>
+      `;
+    }
+
+    function escapeHtml(value) {
+      return String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    startButton.addEventListener("click", startFlow);
+    questionInput.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" && (event.ctrlKey || event.metaKey)) {
+        startFlow();
+      }
+    });
+    window.addEventListener("resize", () => {
+      if (!hasSpread) return;
+      if (selected.length === 0) {
+        spreadDeck();
+      } else {
+        layoutSelectedCards(scene.classList.contains("reading-active") ? "reading" : "staging");
+      }
+    });
+
+    loadDeckCards().then(buildDeck);
+  </script>
+</body>
+</html>

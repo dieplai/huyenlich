@@ -1,0 +1,1030 @@
+{
+  "schema_version": "2.0-major-rest",
+  "deck_id": "rider-waite-smith",
+  "coverage": {
+    "card_count": 17,
+    "notes_vi": "V2 cho 17 Major Arcana còn lại, dùng cùng schema với sample 5 lá đầu."
+  },
+  "cards": [
+    {
+      "id": "major-05-the-hierophant",
+      "source_basis": ["waite", "rachel_pollack", "product_editorial"],
+      "core": {
+        "essence_vi": "The Hierophant là hệ thống niềm tin, truyền thống, lời dạy và sự cam kết với một cấu trúc lớn hơn cái tôi cá nhân.",
+        "keywords_vi": ["truyền thống", "cam kết", "người thầy", "niềm tin", "chuẩn mực"],
+        "shadow_keywords_vi": ["giáo điều", "áp lực khuôn mẫu", "làm theo vì sợ khác biệt", "cam kết không thật lòng"]
+      },
+      "orientation": {
+        "upright": {
+          "general_vi": "Tình huống cần hệ giá trị rõ, lời khuyên từ người có kinh nghiệm hoặc một cấu trúc đã được kiểm chứng.",
+          "love_vi": "Trong tình yêu, lá này nghiêng về cam kết, định nghĩa mối quan hệ, gia đình, chuẩn mực hoặc câu hỏi hai người có cùng hệ giá trị không.",
+          "career_vi": "Về công việc, đây là năng lượng học bài bản, mentor, tổ chức, quy trình hoặc nghề cần chứng chỉ/uy tín.",
+          "money_vi": "Về tiền bạc, nên đi theo nguyên tắc đã được kiểm chứng, tránh lối tắt thiếu nền.",
+          "inner_work_vi": "Bạn đang cần hỏi: niềm tin nào thật sự là của mình, niềm tin nào chỉ được thừa hưởng?",
+          "advice_vi": "Tìm chuẩn mực rõ, hỏi người đáng tin và đưa quyết định về đúng giá trị cốt lõi.",
+          "warning_vi": "Đừng gọi một khuôn mẫu cũ là đạo đức nếu nó đang làm mất sự thật bên trong."
+        },
+        "reversed": {
+          "general_vi": "Một hệ thống hoặc niềm tin có thể đang quá chật. Lá ngược hỏi bạn có đang sống theo điều mình tin hay chỉ theo kỳ vọng bên ngoài.",
+          "love_vi": "Trong tình cảm, lá ngược cảnh báo cam kết hình thức, áp lực gia đình/xã hội hoặc hai bên lệch giá trị nhưng vẫn cố giữ khuôn.",
+          "career_vi": "Ở công việc, có thể bị nghẹt trong quy trình, cấp bậc hoặc môi trường bảo thủ.",
+          "money_vi": "Cần cẩn thận với lời khuyên tài chính được xem là 'chuẩn' nhưng không hợp hoàn cảnh của bạn.",
+          "inner_work_vi": "Đây là lúc tách tiếng nói của mình khỏi tiếng nói của hệ thống.",
+          "advice_vi": "Tôn trọng truyền thống nhưng đừng để nó thay bạn quyết định.",
+          "warning_vi": "Phá khuôn chỉ có giá trị khi bạn biết mình đang xây điều gì thay thế."
+        }
+      },
+      "position_overrides": {
+        "situation": "Tình huống xoay quanh cam kết, chuẩn mực, niềm tin hoặc sự công nhận chính thức.",
+        "action": "Hành động nên là làm rõ giá trị chung và luật chơi trước khi đi tiếp.",
+        "outcome": "Kết quả có xu hướng đi về định nghĩa/cam kết rõ hơn nếu hai bên cùng hệ giá trị.",
+        "challenge": "Thử thách là khuôn mẫu, áp lực xã hội hoặc cam kết không xuất phát từ sự thật."
+      },
+      "relationship_signals": {
+        "default": "Dấu hiệu cần xem là hai bên có cùng giá trị sống và cùng mong muốn định nghĩa quan hệ không.",
+        "existing_relationship": "Nếu hỏi có nên tiếp tục, The Hierophant yêu cầu xem mối quan hệ này có nền cam kết và giá trị chung hay chỉ đang giữ vì thói quen.",
+        "situationship": "Trong mập mờ, lá này thường đặt câu hỏi về định nghĩa: nếu không ai muốn gọi tên, vì sao vẫn đòi cảm giác an toàn?",
+        "ex": "Với người cũ, quay lại chỉ bền nếu hai bên thay đổi hệ niềm tin cũ, không chỉ hứa lại theo khuôn quen.",
+        "no_contact": "Nếu đang im lặng, cần xem im lặng này có liên quan đến áp lực gia đình, chuẩn mực hoặc nỗi sợ cam kết không."
+      },
+      "symbols": [
+        {
+          "symbol": "hai cột",
+          "meaning_vi": "Cổng vào hệ thống tri thức, nghi lễ và chuẩn mực."
+        },
+        {
+          "symbol": "hai người quỳ",
+          "meaning_vi": "Mối quan hệ giữa người học và người dạy, cá nhân và truyền thống."
+        },
+        {
+          "symbol": "chìa khóa",
+          "meaning_vi": "Tri thức mở khóa khi được trao đúng cách."
+        }
+      ],
+      "reader_notes_vi": [
+        "Không đọc Hierophant đơn giản là 'kết hôn'; hãy đọc là cam kết, giá trị chung và hệ thống.",
+        "Trong tình yêu hiện đại, lá này rất mạnh khi user hỏi về định nghĩa mối quan hệ."
+      ]
+    },
+    {
+      "id": "major-06-the-lovers",
+      "source_basis": ["waite", "rachel_pollack", "product_editorial"],
+      "core": {
+        "essence_vi": "The Lovers là lựa chọn bằng giá trị thật của trái tim: sự hấp dẫn, đồng thuận và câu hỏi liệu hai con đường có thật sự hòa hợp không.",
+        "keywords_vi": ["lựa chọn", "hòa hợp", "gắn kết", "giá trị", "tình yêu"],
+        "shadow_keywords_vi": ["lệch giá trị", "né chọn lựa", "phụ thuộc hấp dẫn", "chia đôi lòng mình"]
+      },
+      "orientation": {
+        "upright": {
+          "general_vi": "Một lựa chọn quan trọng cần được đưa ra từ giá trị thật, không chỉ từ sợ mất hay ham muốn nhất thời.",
+          "love_vi": "Trong tình yêu, lá này cho thấy sức hút và khả năng hòa hợp thật, nhưng đồng thời yêu cầu lựa chọn có ý thức: hai người có chọn nhau bằng hành động không?",
+          "career_vi": "Về công việc, đây là quyết định theo giá trị cá nhân, hợp tác đúng người hoặc chọn hướng phù hợp với bản chất.",
+          "money_vi": "Về tiền bạc, hãy chọn theo giá trị dài hạn chứ không chỉ lợi ích trước mắt.",
+          "inner_work_vi": "Bạn cần hợp nhất phần muốn yêu, phần sợ tổn thương và phần biết điều gì đúng với mình.",
+          "advice_vi": "Đừng chỉ hỏi mình muốn gì; hãy hỏi mình đang chọn điều gì bằng hành động.",
+          "warning_vi": "Hấp dẫn mạnh không tự động đồng nghĩa với tương thích dài hạn."
+        },
+        "reversed": {
+          "general_vi": "Có sự lệch pha giữa giá trị, lựa chọn và hành động. Bạn có thể đang trì hoãn một quyết định không thể né mãi.",
+          "love_vi": "Trong tình cảm, lá ngược thường chỉ sự mất đồng bộ: một bên muốn gần, một bên lùi; hoặc hai người có chemistry nhưng khác điều cần trong cam kết.",
+          "career_vi": "Ở công việc, có thể bạn đang chọn theo kỳ vọng bên ngoài thay vì đúng giá trị.",
+          "money_vi": "Cẩn thận quyết định tài chính vì muốn làm hài lòng người khác.",
+          "inner_work_vi": "Có thể bạn đang chia đôi chính mình để giữ một lựa chọn không còn nguyên vẹn.",
+          "advice_vi": "Gọi tên lựa chọn thật. Không chọn cũng là một lựa chọn.",
+          "warning_vi": "Nếu giá trị lõi lệch nhau, cảm xúc mạnh chỉ trì hoãn vấn đề."
+        }
+      },
+      "position_overrides": {
+        "situation": "Tình huống xoay quanh lựa chọn, hấp dẫn và sự hòa hợp giá trị.",
+        "action": "Hành động nên là chọn rõ dựa trên giá trị, không chỉ cảm xúc nhất thời.",
+        "outcome": "Kết quả có thể đi về gắn kết nếu hai bên cùng chọn nhau bằng hành động.",
+        "challenge": "Thử thách là né quyết định hoặc nhầm chemistry với tương thích."
+      },
+      "relationship_signals": {
+        "default": "Dấu hiệu cần xem là hai bên có thật sự chọn nhau, hay chỉ bị kéo bởi cảm xúc mạnh.",
+        "existing_relationship": "Nếu hỏi có nên tiếp tục, lá này nói: chỉ tiếp tục khi lựa chọn đó còn đúng với giá trị sâu của bạn, không chỉ vì sợ buông.",
+        "situationship": "Trong mập mờ, The Lovers cho thấy hấp dẫn thật nhưng đòi hỏi một lựa chọn rõ hơn.",
+        "ex": "Với người cũ, có thể còn kết nối mạnh, nhưng câu hỏi là liệu giá trị từng lệch đã được sửa chưa.",
+        "no_contact": "Nếu đang im lặng, sự im lặng có thể đang ép cả hai nhìn lại lựa chọn thật của mình."
+      },
+      "symbols": [
+        {
+          "symbol": "thiên thần",
+          "meaning_vi": "Sự chứng giám của giá trị cao hơn ham muốn tức thời."
+        },
+        {
+          "symbol": "hai nhân vật",
+          "meaning_vi": "Sự gặp gỡ giữa hai phần, hai người hoặc hai lựa chọn."
+        },
+        {
+          "symbol": "ngọn núi",
+          "meaning_vi": "Tình yêu thật vẫn có thử thách và yêu cầu trưởng thành."
+        }
+      ],
+      "reader_notes_vi": [
+        "The Lovers luôn có yếu tố lựa chọn, không chỉ là 'tình yêu đẹp'.",
+        "Khi user hỏi có nên tiếp tục, hãy nhấn vào giá trị và hành động chọn nhau."
+      ]
+    },
+    {
+      "id": "major-07-the-chariot",
+      "source_basis": ["waite", "rachel_pollack", "product_editorial"],
+      "core": {
+        "essence_vi": "The Chariot là ý chí điều khiển hai lực trái chiều để tiến về một hướng. Chiến thắng đến từ tập trung, không phải kéo căng bản thân vô hạn.",
+        "keywords_vi": ["ý chí", "tiến lên", "kiểm soát", "chiến thắng", "định hướng"],
+        "shadow_keywords_vi": ["cố chấp", "lao quá nhanh", "kiểm soát quá mức", "mất hướng"]
+      },
+      "orientation": {
+        "upright": {
+          "general_vi": "Bạn có thể vượt qua tình huống nếu giữ mục tiêu rõ và không để lực kéo trái chiều làm lệch tay lái.",
+          "love_vi": "Trong tình yêu, lá này cho thấy cần quyết định hướng đi. Nếu hai người cùng hướng, có thể tiến nhanh; nếu mỗi người kéo một phía, mối quan hệ sẽ mệt.",
+          "career_vi": "Về công việc, đây là lá tốt cho cạnh tranh, deadline, di chuyển, dự án cần quyết tâm và quyền điều phối.",
+          "money_vi": "Về tiền bạc, cần kiểm soát kế hoạch và không để cảm xúc kéo lệch mục tiêu.",
+          "inner_work_vi": "Bạn đang học cách điều khiển phản ứng bên trong thay vì để nó kéo mình đi.",
+          "advice_vi": "Chọn hướng, giảm phân tán, rồi hành động dứt khoát.",
+          "warning_vi": "Tiến nhanh không có nghĩa là đi đúng nếu bạn không biết mình đang tới đâu."
+        },
+        "reversed": {
+          "general_vi": "Năng lượng bị mất hướng, kiểm soát quá đà hoặc bị kéo bởi hai lực trái chiều.",
+          "love_vi": "Trong tình cảm, lá ngược cảnh báo giằng co quyền kiểm soát, hai người không cùng hướng hoặc một bên cố thắng hơn là hiểu.",
+          "career_vi": "Ở công việc, cần xem bạn có đang chạy nhiều hướng cùng lúc hoặc đẩy quá mạnh một kế hoạch chưa đủ rõ không.",
+          "money_vi": "Tài chính cần phanh lại: đừng để tham vọng hoặc áp lực khiến bạn quyết quá nhanh.",
+          "inner_work_vi": "Có thể bạn đang gồng để chứng minh mình ổn, thay vì thật sự điều khiển được cảm xúc.",
+          "advice_vi": "Dừng lại để chỉnh hướng trước khi tăng tốc.",
+          "warning_vi": "Một mối quan hệ thành cuộc đấu quyền lực sẽ làm cả hai kiệt sức."
+        }
+      },
+      "position_overrides": {
+        "situation": "Tình huống cần định hướng và điều phối lực trái chiều.",
+        "action": "Hành động nên là chọn một hướng rõ và không kéo dài sự lưỡng lự.",
+        "outcome": "Nếu giữ được hướng, kết quả có thể tiến nhanh; nếu không, sự giằng co sẽ lộ rõ.",
+        "challenge": "Thử thách là kiểm soát quá mức hoặc mỗi bên kéo một hướng."
+      },
+      "relationship_signals": {
+        "default": "Dấu hiệu cần xem là hai người có đang cùng muốn đi về một hướng không.",
+        "existing_relationship": "Nếu hỏi có nên tiếp tục, The Chariot nói rằng tiếp tục chỉ bền khi cả hai cùng cầm dây cương, không phải một người kéo người kia.",
+        "situationship": "Trong mập mờ, lá này cho thấy cần quyết định hướng, nếu không sẽ thành kéo qua kéo lại.",
+        "ex": "Với người cũ, quay lại có thể tiến nhanh nhưng cũng dễ lặp thế đấu quyền lực.",
+        "no_contact": "Nếu đang im lặng, một động thái chủ động có thể xuất hiện, nhưng hãy xem đó là muốn hiểu hay muốn thắng."
+      },
+      "symbols": [
+        {
+          "symbol": "hai nhân sư",
+          "meaning_vi": "Hai lực trái chiều cần được điều khiển bằng ý chí."
+        },
+        {
+          "symbol": "cỗ xe",
+          "meaning_vi": "Phương tiện tiến tới mục tiêu, nhưng cần người cầm hướng."
+        },
+        {
+          "symbol": "áo giáp",
+          "meaning_vi": "Bảo vệ và kỷ luật, nhưng cũng có thể là phòng thủ."
+        }
+      ],
+      "reader_notes_vi": [
+        "Đừng đọc Chariot là chiến thắng vô điều kiện; luôn hỏi hướng đi có rõ không.",
+        "Trong tình yêu, lá này thường liên quan đến quyết định và quyền kiểm soát."
+      ]
+    },
+    {
+      "id": "major-08-strength",
+      "source_basis": ["waite", "rachel_pollack", "product_editorial"],
+      "core": {
+        "essence_vi": "Strength là nội lực mềm: thuần hóa bản năng bằng lòng can đảm, kiên nhẫn và sự dịu dàng, không phải bằng ép buộc.",
+        "keywords_vi": ["can đảm", "kiên nhẫn", "nội lực", "dịu dàng", "tự chủ"],
+        "shadow_keywords_vi": ["kiệt sức", "kìm nén", "phản ứng bản năng", "thiếu tự tin"]
+      },
+      "orientation": {
+        "upright": {
+          "general_vi": "Bạn có sức mạnh để đi qua chuyện này, nhưng sức mạnh ở đây là bình tĩnh và bền bỉ chứ không phải thắng bằng lực.",
+          "love_vi": "Trong tình yêu, lá này nói về sự kiên nhẫn, dịu lại cái tôi và khả năng giữ tình cảm không biến thành phản ứng nóng.",
+          "career_vi": "Về công việc, đây là năng lực chịu áp lực, xử lý người khó hoặc giữ phong độ qua giai đoạn dài.",
+          "money_vi": "Về tiền bạc, cần tự chủ trước ham muốn tức thời và giữ kỷ luật mềm.",
+          "inner_work_vi": "Bạn đang học cách ôm phần bản năng, giận, sợ hoặc tổn thương mà không để nó điều khiển.",
+          "advice_vi": "Chọn phản ứng chậm hơn, mềm hơn, nhưng không yếu hơn.",
+          "warning_vi": "Kiên nhẫn không có nghĩa là chịu đựng vô hạn."
+        },
+        "reversed": {
+          "general_vi": "Nội lực đang cạn hoặc bản năng đang mạnh hơn sự tự chủ. Bạn cần phục hồi trước khi xử lý tiếp.",
+          "love_vi": "Trong tình cảm, lá ngược có thể chỉ sự mệt vì phải nhẫn quá lâu, hoặc phản ứng nóng vì vết thương chưa được chăm.",
+          "career_vi": "Ở công việc, cần chú ý kiệt sức, mất tự tin hoặc áp lực kéo dài.",
+          "money_vi": "Cẩn thận quyết định tài chính vì muốn giải tỏa cảm xúc.",
+          "inner_work_vi": "Bạn không yếu; bạn có thể chỉ đang mệt vì gồng quá lâu.",
+          "advice_vi": "Rút về chăm sức trước, rồi mới nói chuyện hoặc quyết định.",
+          "warning_vi": "Nếu bạn phải tự thuần hóa mọi cơn bão một mình, mối quan hệ đang thiếu nâng đỡ."
+        }
+      },
+      "position_overrides": {
+        "situation": "Tình huống cần kiên nhẫn, nội lực và kiểm soát phản ứng bản năng.",
+        "action": "Hành động nên là dịu lại, nhưng vẫn giữ ranh giới.",
+        "outcome": "Nếu có đủ kiên nhẫn và tự chủ, tình huống có thể mềm lại.",
+        "challenge": "Thử thách là kiệt sức, phản ứng nóng hoặc nhẫn nhịn quá lâu."
+      },
+      "relationship_signals": {
+        "default": "Dấu hiệu cần xem là khi căng thẳng, hai bên có dịu lại được không hay chỉ kích hoạt nhau mạnh hơn.",
+        "existing_relationship": "Nếu hỏi có nên tiếp tục, Strength nói mối quan hệ còn cơ hội nếu cả hai biết hạ cái tôi và chăm phần tổn thương.",
+        "situationship": "Trong mập mờ, lá này nhắc đừng dùng kiên nhẫn để hợp thức hóa việc chờ vô hạn.",
+        "ex": "Với người cũ, cần xem vết thương cũ đã được thuần hóa chưa hay chỉ bị nén lại.",
+        "no_contact": "Nếu đang im lặng, khoảng lặng có thể là cách một bên đang cố kiểm soát cảm xúc."
+      },
+      "symbols": [
+        {
+          "symbol": "sư tử",
+          "meaning_vi": "Bản năng, ham muốn, giận dữ hoặc sức sống cần được thuần hóa."
+        },
+        {
+          "symbol": "người phụ nữ",
+          "meaning_vi": "Sức mạnh mềm, lòng can đảm không cần áp đảo."
+        },
+        {
+          "symbol": "vô cực",
+          "meaning_vi": "Nội lực bền khi không bị dùng để gồng quá mức."
+        }
+      ],
+      "reader_notes_vi": [
+        "Strength là sức mạnh mềm, không phải chịu đựng mù quáng.",
+        "Trong tình yêu, phải phân biệt kiên nhẫn lành mạnh và chờ đợi tự làm đau mình."
+      ]
+    },
+    {
+      "id": "major-09-the-hermit",
+      "source_basis": ["waite", "rachel_pollack", "product_editorial"],
+      "core": {
+        "essence_vi": "The Hermit là hành trình lùi khỏi tiếng ồn để tìm ánh sáng riêng. Lá này ưu tiên sự thật nội tâm hơn câu trả lời nhanh từ bên ngoài.",
+        "keywords_vi": ["chiêm nghiệm", "tìm kiếm", "cô tịch", "minh triết", "lùi lại"],
+        "shadow_keywords_vi": ["cô lập", "né tránh", "đóng cửa cảm xúc", "sợ kết nối"]
+      },
+      "orientation": {
+        "upright": {
+          "general_vi": "Bạn cần thời gian yên để nhìn rõ điều mình thật sự biết. Không phải lúc nào câu trả lời cũng đến từ hành động ngay.",
+          "love_vi": "Trong tình yêu, lá này thường chỉ khoảng cách, nhu cầu ở một mình, hoặc một người đang đi vào bên trong để hiểu cảm xúc.",
+          "career_vi": "Về công việc, đây là nghiên cứu sâu, làm độc lập, mentor hoặc giai đoạn thu mình để xây chuyên môn.",
+          "money_vi": "Về tiền bạc, nên xem xét kỹ và tránh bị cuốn theo đám đông.",
+          "inner_work_vi": "Bạn đang được mời lắng nghe ánh sáng riêng thay vì hỏi quá nhiều người.",
+          "advice_vi": "Tạm lùi một bước, giảm nhiễu và viết ra điều bạn đã biết mà chưa dám tin.",
+          "warning_vi": "Ở một mình để sáng rõ khác với biến mất để khỏi đối diện."
+        },
+        "reversed": {
+          "general_vi": "Sự lùi lại có thể đã thành cô lập hoặc né tránh. Ánh sáng bên trong cần được mang trở lại đời sống.",
+          "love_vi": "Trong tình cảm, lá ngược cảnh báo một bên im lặng quá lâu, đóng cửa hoặc dùng khoảng cách để tránh cuộc trò chuyện cần thiết.",
+          "career_vi": "Ở công việc, có thể bạn đang làm một mình quá lâu hoặc không nhận hỗ trợ cần thiết.",
+          "money_vi": "Tránh tự quyết trong cô lập nếu thiếu dữ kiện.",
+          "inner_work_vi": "Có thể bạn đã nghĩ đủ; bước tiếp theo là chia sẻ hoặc hành động nhỏ.",
+          "advice_vi": "Nếu cần không gian, hãy nói rõ. Đừng để người khác chỉ nhận được sự biến mất.",
+          "warning_vi": "Im lặng không giải quyết được điều cần được gọi tên."
+        }
+      },
+      "position_overrides": {
+        "situation": "Tình huống có yếu tố khoảng cách, suy ngẫm hoặc cần nhìn sâu.",
+        "action": "Hành động nên là lùi lại đủ để thấy rõ, nhưng không biến mất thiếu trách nhiệm.",
+        "outcome": "Xu hướng gần là cần thời gian và sự chín bên trong trước khi rõ hướng.",
+        "challenge": "Thử thách là cô lập hoặc dùng im lặng để né đối thoại."
+      },
+      "relationship_signals": {
+        "default": "Dấu hiệu cần xem là khoảng cách này giúp hai bên hiểu nhau hơn hay chỉ khiến kết nối lạnh dần.",
+        "existing_relationship": "Nếu hỏi có nên tiếp tục, Hermit nói cần không gian để nhìn rõ, nhưng mối quan hệ không thể sống mãi bằng im lặng.",
+        "situationship": "Trong mập mờ, lá này cho thấy một bên có thể đang rút vào thế quan sát, chưa sẵn sàng tiến gần.",
+        "ex": "Với người cũ, khoảng cách đang là phần của quá trình hiểu lại mình.",
+        "no_contact": "Nếu đang im lặng, đây là lá rất đúng trạng thái: đừng vội ép kết luận, nhưng cũng đừng để im lặng thành câu trả lời duy nhất."
+      },
+      "symbols": [
+        {
+          "symbol": "đèn lồng",
+          "meaning_vi": "Ánh sáng nội tâm soi từng bước, không soi cả con đường một lúc."
+        },
+        {
+          "symbol": "đỉnh núi",
+          "meaning_vi": "Tầm nhìn có được sau quá trình đi lên và tách khỏi ồn ào."
+        },
+        {
+          "symbol": "gậy",
+          "meaning_vi": "Sự nâng đỡ của kinh nghiệm và kỷ luật cá nhân."
+        }
+      ],
+      "reader_notes_vi": [
+        "Hermit không nhất thiết là chia tay; nó là khoảng cách và nhu cầu soi rõ.",
+        "Trong no contact, lá này cần viết rất tinh tế để không gieo hy vọng giả."
+      ]
+    },
+    {
+      "id": "major-10-wheel-of-fortune",
+      "source_basis": ["waite", "rachel_pollack", "product_editorial"],
+      "core": {
+        "essence_vi": "Wheel of Fortune là bánh xe chu kỳ: thời điểm đổi, vận hội xoay, mô thức lặp lại và cơ hội nhận ra mình đang ở khúc nào của vòng quay.",
+        "keywords_vi": ["chu kỳ", "vận hội", "biến chuyển", "thời điểm", "mô thức"],
+        "shadow_keywords_vi": ["lặp lại bài cũ", "phó mặc số phận", "chống thay đổi", "bám vào khúc đã qua"]
+      },
+      "orientation": {
+        "upright": {
+          "general_vi": "Một chu kỳ đang xoay. Điều quan trọng là nhận ra thời điểm và hành động đúng nhịp thay vì cố giữ mọi thứ đứng yên.",
+          "love_vi": "Trong tình yêu, lá này cho thấy mối quan hệ bước vào khúc ngoặt, có cơ hội đổi chiều hoặc một mô thức cũ đang quay lại để được xử lý.",
+          "career_vi": "Về công việc, có cơ hội, thay đổi lịch trình, biến động thị trường hoặc thời điểm cần nắm bắt.",
+          "money_vi": "Về tiền bạc, vận động có thể nhanh; cần linh hoạt và không đặt hết vào may rủi.",
+          "inner_work_vi": "Bạn đang nhìn thấy một vòng lặp đời mình. Nhận ra pattern là bước đầu đổi vận.",
+          "advice_vi": "Đừng bám vào khúc cũ của bánh xe. Hãy đọc thời điểm và xoay cùng nó.",
+          "warning_vi": "May mắn không thay thế cho lựa chọn tỉnh táo."
+        },
+        "reversed": {
+          "general_vi": "Bánh xe vẫn xoay nhưng bạn có thể đang chống lại chu kỳ hoặc mắc lại cùng bài học.",
+          "love_vi": "Trong tình cảm, lá ngược cảnh báo on-off, lặp lại mô thức cũ hoặc hy vọng vận may đổi mà không ai đổi hành vi.",
+          "career_vi": "Ở công việc, thay đổi có thể chậm, lệch nhịp hoặc bị ảnh hưởng bởi yếu tố ngoài kiểm soát.",
+          "money_vi": "Không nên đánh cược vào may rủi khi pattern rủi ro đã rõ.",
+          "inner_work_vi": "Hãy hỏi: bài học nào cứ quay lại dưới hình thức khác?",
+          "advice_vi": "Dừng vòng lặp bằng một lựa chọn khác trước đây.",
+          "warning_vi": "Nếu hành vi không đổi, vòng quay sẽ đưa bạn về bài cũ."
+        }
+      },
+      "position_overrides": {
+        "situation": "Tình huống đang ở khúc chuyển chu kỳ hoặc lặp lại pattern.",
+        "action": "Hành động nên là nhận ra thời điểm và chọn khác với vòng lặp cũ.",
+        "outcome": "Xu hướng gần có biến động hoặc đổi chiều.",
+        "challenge": "Thử thách là chống thay đổi hoặc phó mặc mọi thứ cho may rủi."
+      },
+      "relationship_signals": {
+        "default": "Dấu hiệu cần xem là đây là bước ngoặt thật hay chỉ là vòng lặp quen thuộc.",
+        "existing_relationship": "Nếu hỏi có nên tiếp tục, Wheel hỏi: hai bạn đang sang chu kỳ mới hay chỉ quay lại cùng vấn đề?",
+        "situationship": "Trong mập mờ, lá này dễ chỉ trạng thái lúc gần lúc xa, cần nhìn pattern thay vì từng khoảnh khắc.",
+        "ex": "Với người cũ, khả năng quay lại/chạm lại có thể có, nhưng quan trọng là mô thức cũ có được phá không.",
+        "no_contact": "Nếu đang im lặng, một chuyển động bất ngờ có thể đến, nhưng hãy xem nó có bền không."
+      },
+      "symbols": [
+        {
+          "symbol": "bánh xe",
+          "meaning_vi": "Chu kỳ lên xuống và sự xoay chuyển của hoàn cảnh."
+        },
+        {
+          "symbol": "sinh vật quanh bánh xe",
+          "meaning_vi": "Các lực lớn hơn cá nhân đang tham gia vào chuyển động."
+        },
+        {
+          "symbol": "sách",
+          "meaning_vi": "Bài học cần được đọc ra từ vòng lặp."
+        }
+      ],
+      "reader_notes_vi": [
+        "Wheel không chỉ là may mắn; phải đọc yếu tố chu kỳ và pattern.",
+        "Trong tình yêu, đặc biệt hữu ích để nói về on-off và người cũ."
+      ]
+    },
+    {
+      "id": "major-11-justice",
+      "source_basis": ["waite", "rachel_pollack", "product_editorial"],
+      "core": {
+        "essence_vi": "Justice là sự thật, cân bằng và hệ quả. Lá này đưa tình huống về câu hỏi: điều gì công bằng, điều gì đúng, và ai chịu trách nhiệm cho lựa chọn nào?",
+        "keywords_vi": ["sự thật", "công bằng", "nhân quả", "trách nhiệm", "quyết định"],
+        "shadow_keywords_vi": ["né trách nhiệm", "thiên lệch", "phán xét lạnh", "không minh bạch"]
+      },
+      "orientation": {
+        "upright": {
+          "general_vi": "Sự thật và trách nhiệm là trọng tâm. Quyết định đúng cần dựa trên dữ kiện, không chỉ cảm xúc.",
+          "love_vi": "Trong tình yêu, Justice hỏi về sự công bằng, minh bạch và trách nhiệm hai chiều. Nó không chiều lòng cảm xúc nếu sự thật đang lệch.",
+          "career_vi": "Về công việc, lá này liên quan hợp đồng, đánh giá, quy định, quyết định chính thức hoặc trách nhiệm nghề nghiệp.",
+          "money_vi": "Về tiền bạc, cần minh bạch, giấy tờ rõ và cân bằng cho-nhận.",
+          "inner_work_vi": "Bạn cần nhìn phần trách nhiệm của mình mà không tự kết án quá nặng.",
+          "advice_vi": "Thu thập dữ kiện, nói thật và đặt quyết định trên sự công bằng.",
+          "warning_vi": "Nếu né sự thật, hệ quả vẫn sẽ đến."
+        },
+        "reversed": {
+          "general_vi": "Có sự lệch cán cân: thiếu minh bạch, né trách nhiệm hoặc một quyết định chưa công bằng.",
+          "love_vi": "Trong tình cảm, lá ngược cảnh báo một bên đang chịu thiệt, sự thật bị né, hoặc lời xin lỗi chưa đi kèm trách nhiệm.",
+          "career_vi": "Ở công việc, cần cẩn thận giấy tờ, đánh giá thiếu công bằng hoặc lỗi do không rõ trách nhiệm.",
+          "money_vi": "Tránh thỏa thuận tài chính mập mờ.",
+          "inner_work_vi": "Đừng biến tự soi xét thành tự trừng phạt; mục tiêu là cân bằng lại.",
+          "advice_vi": "Hỏi thẳng điều gì chưa công bằng và cần điều kiện nào để cân bằng lại.",
+          "warning_vi": "Tha thứ không có nghĩa là bỏ qua hệ quả."
+        }
+      },
+      "position_overrides": {
+        "situation": "Tình huống cần sự thật, minh bạch và trách nhiệm.",
+        "action": "Hành động nên là nói rõ dữ kiện và yêu cầu công bằng.",
+        "outcome": "Kết quả có xu hướng phản ánh đúng mức trách nhiệm của các bên.",
+        "challenge": "Thử thách là thiên lệch, né sự thật hoặc thiếu công bằng."
+      },
+      "relationship_signals": {
+        "default": "Dấu hiệu cần xem là hai bên có cùng chịu trách nhiệm hay không.",
+        "existing_relationship": "Nếu hỏi có nên tiếp tục, Justice nói chỉ nên tiếp tục khi cán cân cho-nhận và sự thật được đặt lại.",
+        "situationship": "Trong mập mờ, lá này yêu cầu minh bạch: bạn có đang nhận ít hơn điều mình cho không?",
+        "ex": "Với người cũ, cần xem chuyện cũ đã được nhìn nhận công bằng chưa.",
+        "no_contact": "Nếu đang im lặng, có thể một cuộc nói chuyện cần đặt sự thật lên bàn, không chỉ cảm xúc."
+      },
+      "symbols": [
+        {
+          "symbol": "cán cân",
+          "meaning_vi": "Sự cân bằng giữa hai phía và hệ quả của lựa chọn."
+        },
+        {
+          "symbol": "thanh kiếm",
+          "meaning_vi": "Sự thật sắc bén, quyết định rõ."
+        },
+        {
+          "symbol": "ngai",
+          "meaning_vi": "Quyền phán xét đi cùng trách nhiệm."
+        }
+      ],
+      "reader_notes_vi": [
+        "Justice cần ngôn ngữ rõ, ít mơ hồ.",
+        "Không dùng lá này để phán xét đạo đức user; dùng để đưa về trách nhiệm và cân bằng."
+      ]
+    },
+    {
+      "id": "major-12-the-hanged-man",
+      "source_basis": ["waite", "rachel_pollack", "product_editorial"],
+      "core": {
+        "essence_vi": "The Hanged Man là sự tạm dừng có ý nghĩa: buông quyền kiểm soát cũ để nhìn tình huống từ một góc khác.",
+        "keywords_vi": ["tạm dừng", "buông", "góc nhìn mới", "hy sinh", "chờ đợi"],
+        "shadow_keywords_vi": ["mắc kẹt", "trì hoãn", "hy sinh vô ích", "đóng vai nạn nhân"]
+      },
+      "orientation": {
+        "upright": {
+          "general_vi": "Không phải lúc nào tiến lên cũng là hành động đúng. Tình huống cần một khoảng dừng để đổi góc nhìn.",
+          "love_vi": "Trong tình yêu, lá này cho thấy giai đoạn treo lơ lửng: chưa tiến, chưa dứt, cần nhìn lại điều bạn đang hy sinh và vì sao.",
+          "career_vi": "Về công việc, có thể cần chờ, đổi chiến lược hoặc nhìn vấn đề từ góc khác trước khi hành động.",
+          "money_vi": "Về tiền bạc, không nên ép quyết định khi dữ kiện hoặc thời điểm chưa chín.",
+          "inner_work_vi": "Bạn đang học cách buông nhu cầu kiểm soát để thấy một sự thật sâu hơn.",
+          "advice_vi": "Tạm dừng có chủ đích. Đừng hành động chỉ để thoát cảm giác khó chịu.",
+          "warning_vi": "Hy sinh chỉ có ý nghĩa khi nó mở ra nhận thức, không phải khi nó xóa bạn khỏi câu chuyện."
+        },
+        "reversed": {
+          "general_vi": "Sự tạm dừng có thể đã thành trì hoãn hoặc mắc kẹt. Bạn cần phân biệt chờ đúng thời điểm với không dám chọn.",
+          "love_vi": "Trong tình cảm, lá ngược cảnh báo chờ quá lâu, hy sinh một chiều hoặc giữ mình trong thế treo vì sợ mất.",
+          "career_vi": "Ở công việc, có thể bạn đang trì hoãn quyết định cần làm.",
+          "money_vi": "Đừng để tiền hoặc kế hoạch treo quá lâu mà không có tiêu chí rõ.",
+          "inner_work_vi": "Bạn có thể đang gọi sự bất động là kiên nhẫn.",
+          "advice_vi": "Đặt hạn cho việc chờ. Khi hết hạn, hãy chọn.",
+          "warning_vi": "Nếu chỉ một người hy sinh, đó không còn là tình yêu cân bằng."
+        }
+      },
+      "position_overrides": {
+        "situation": "Tình huống đang treo, cần đổi góc nhìn hoặc buông kiểm soát.",
+        "action": "Hành động nên là tạm dừng có thời hạn và quan sát điều mình đang hy sinh.",
+        "outcome": "Xu hướng gần là chưa có chuyển động nhanh, nhưng có nhận thức mới.",
+        "challenge": "Thử thách là mắc kẹt trong chờ đợi hoặc hy sinh vô ích."
+      },
+      "relationship_signals": {
+        "default": "Dấu hiệu cần xem là bạn đang chờ vì có tín hiệu phát triển, hay chỉ vì sợ buông.",
+        "existing_relationship": "Nếu hỏi có nên tiếp tục, Hanged Man nói chưa nên quyết bằng phản ứng nóng; nhưng cũng không nên treo vô hạn.",
+        "situationship": "Trong mập mờ, lá này cảnh báo trạng thái lơ lửng kéo dài.",
+        "ex": "Với người cũ, có thể bạn đang treo mình trong một khả năng chưa chắc thành hình.",
+        "no_contact": "Nếu đang im lặng, đây là khoảng dừng; cần đặt câu hỏi khoảng dừng này giúp sáng rõ hay chỉ kéo dài đau."
+      },
+      "symbols": [
+        {
+          "symbol": "người treo ngược",
+          "meaning_vi": "Góc nhìn đảo chiều và sự buông kiểm soát cũ."
+        },
+        {
+          "symbol": "hào quang",
+          "meaning_vi": "Nhận thức có thể sinh ra từ trạng thái tạm dừng."
+        },
+        {
+          "symbol": "chân bắt chéo",
+          "meaning_vi": "Sự tự nguyện hoặc bài học trong việc dừng lại."
+        }
+      ],
+      "reader_notes_vi": [
+        "Hanged Man không phải 'không có gì xảy ra'; nó là giai đoạn đổi nhận thức.",
+        "Trong tình yêu, phải cảnh báo việc chờ vô hạn."
+      ]
+    },
+    {
+      "id": "major-13-death",
+      "source_basis": ["waite", "rachel_pollack", "product_editorial"],
+      "core": {
+        "essence_vi": "Death là kết thúc cần thiết để chuyển hóa. Lá này không nói về cái chết vật lý trong product reading; nó nói về việc điều cũ phải khép lại để điều mới có chỗ sinh ra.",
+        "keywords_vi": ["kết thúc", "chuyển hóa", "buông bỏ", "tái sinh", "khép chu kỳ"],
+        "shadow_keywords_vi": ["kháng cự", "bám víu", "sợ mất", "kéo dài điều đã hết"]
+      },
+      "orientation": {
+        "upright": {
+          "general_vi": "Một giai đoạn đang cần khép lại. Càng thành thật với điều đã hết vai trò, quá trình tái sinh càng nhẹ.",
+          "love_vi": "Trong tình yêu, Death cho thấy mối quan hệ hoặc mô thức cũ phải thay đổi tận gốc. Không nhất thiết là chia tay, nhưng không thể tiếp tục như cũ.",
+          "career_vi": "Về công việc, đây là dấu hiệu kết thúc vai trò, cách làm hoặc định hướng cũ để mở sang giai đoạn khác.",
+          "money_vi": "Về tiền bạc, cần cắt bỏ thói quen/nguồn tiêu hao cũ.",
+          "inner_work_vi": "Bạn đang học buông phần bản ngã bám vào điều quen thuộc vì sợ trống.",
+          "advice_vi": "Gọi tên điều đã hết vai trò và ngừng nuôi nó bằng hy vọng mơ hồ.",
+          "warning_vi": "Nếu cố giữ một điều đã chết năng lượng, bạn sẽ trả giá bằng sự cạn kiệt."
+        },
+        "reversed": {
+          "general_vi": "Bạn có thể đang kháng cự kết thúc hoặc giữ một mô thức đã không còn sống.",
+          "love_vi": "Trong tình cảm, lá ngược thường chỉ bám víu, chưa chịu khép lại hoặc muốn thay đổi bề mặt mà không đổi gốc.",
+          "career_vi": "Ở công việc, có thể bạn biết một hướng đã hết nhưng chưa dám rời.",
+          "money_vi": "Cần dứt thói quen tài chính cũ thay vì sửa tạm.",
+          "inner_work_vi": "Nỗi sợ mất đang làm bạn trì hoãn tái sinh.",
+          "advice_vi": "Buông một phần nhỏ trước: một kỳ vọng, một mô thức, một thói quen.",
+          "warning_vi": "Không buông cũng là một lựa chọn, và nó có hệ quả."
+        }
+      },
+      "position_overrides": {
+        "situation": "Tình huống đang ở ngưỡng kết thúc/chuyển hóa.",
+        "action": "Hành động nên là buông mô thức cũ và cho phép sự thật đổi hình.",
+        "outcome": "Kết quả có xu hướng khép một chu kỳ để mở chu kỳ mới.",
+        "challenge": "Thử thách là sợ mất và kháng cự thay đổi tận gốc."
+      },
+      "relationship_signals": {
+        "default": "Dấu hiệu cần xem là điều gì trong mối quan hệ đã không còn sống như trước.",
+        "existing_relationship": "Nếu hỏi có nên tiếp tục, Death nói chỉ tiếp tục nếu cả hai chấp nhận thay đổi mô thức cũ tận gốc; nếu không, kết thúc sẽ đến dưới dạng khác.",
+        "situationship": "Trong mập mờ, lá này thường nói cần kết thúc trạng thái lửng lơ.",
+        "ex": "Với người cũ, lá này nghiêng về khép lại mô thức cũ hơn là lặp lại nó.",
+        "no_contact": "Nếu đang im lặng, im lặng có thể là dấu hiệu một chu kỳ đang tự khép."
+      },
+      "symbols": [
+        {
+          "symbol": "kỵ sĩ xương",
+          "meaning_vi": "Sự thay đổi không thể mặc cả khi chu kỳ đã tới hạn."
+        },
+        {
+          "symbol": "mặt trời xa",
+          "meaning_vi": "Tái sinh sau khi kết thúc được chấp nhận."
+        },
+        {
+          "symbol": "lá cờ",
+          "meaning_vi": "Sự chuyển hóa mang tính tuyên bố, không âm thầm mãi."
+        }
+      ],
+      "reader_notes_vi": [
+        "Không diễn giải Death là chết chóc vật lý.",
+        "Trong tình yêu, tránh nói chắc chia tay; hãy nói mô thức cũ không thể tiếp tục như cũ."
+      ]
+    },
+    {
+      "id": "major-14-temperance",
+      "source_basis": ["waite", "rachel_pollack", "product_editorial"],
+      "core": {
+        "essence_vi": "Temperance là nghệ thuật hòa trộn: chữa lành, điều độ, phối hợp hai dòng khác nhau để tạo cân bằng mới.",
+        "keywords_vi": ["cân bằng", "chữa lành", "điều độ", "hòa hợp", "pha trộn"],
+        "shadow_keywords_vi": ["mất cân bằng", "quá đà", "thiếu kiên nhẫn", "khó dung hòa"]
+      },
+      "orientation": {
+        "upright": {
+          "general_vi": "Tình huống cần điều chỉnh nhịp, bớt cực đoan và cho quá trình chữa lành có thời gian.",
+          "love_vi": "Trong tình yêu, Temperance là tín hiệu hòa giải, nhịp chậm lại, học cách gặp nhau ở giữa thay vì kéo nhau về cực của mình.",
+          "career_vi": "Về công việc, đây là phối hợp, tối ưu quy trình, cân bằng nguồn lực hoặc làm việc liên phòng ban.",
+          "money_vi": "Về tiền bạc, cần điều độ, phân bổ và tránh cực đoan chi/giữ.",
+          "inner_work_vi": "Bạn đang học cách sống cùng nhiều phần khác nhau của mình mà không loại bỏ phần nào.",
+          "advice_vi": "Chọn nhịp vừa đủ. Hòa giải không phải thua, mà là tìm tỷ lệ đúng.",
+          "warning_vi": "Đừng ép mọi thứ lành ngay khi vết thương còn cần thời gian."
+        },
+        "reversed": {
+          "general_vi": "Có sự mất nhịp hoặc lệch tỷ lệ. Một bên có thể đang quá nhiều, một bên quá ít.",
+          "love_vi": "Trong tình cảm, lá ngược cảnh báo hai người khó gặp nhau ở giữa, hoặc một bên luôn phải điều chỉnh để giữ hòa khí.",
+          "career_vi": "Ở công việc, có thể quá tải, phối hợp kém hoặc nhịp vận hành lệch.",
+          "money_vi": "Cần xem lại cân bằng thu-chi và thói quen bù cảm xúc.",
+          "inner_work_vi": "Bạn đang cần phục hồi sự điều độ trong thân, tâm và cảm xúc.",
+          "advice_vi": "Giảm cực đoan. Chọn một điều nhỏ để đưa về nhịp lành.",
+          "warning_vi": "Hòa giải một chiều sẽ biến thành tự xóa mình."
+        }
+      },
+      "position_overrides": {
+        "situation": "Tình huống cần chữa lành và điều chỉnh nhịp.",
+        "action": "Hành động nên là hòa giải, tiết chế và phối hợp dần.",
+        "outcome": "Nếu có kiên nhẫn, kết quả có thể mềm lại và cân bằng hơn.",
+        "challenge": "Thử thách là mất nhịp, cực đoan hoặc một bên phải điều chỉnh quá nhiều."
+      },
+      "relationship_signals": {
+        "default": "Dấu hiệu cần xem là hai bên có sẵn sàng gặp nhau ở giữa không.",
+        "existing_relationship": "Nếu hỏi có nên tiếp tục, Temperance nghiêng về có cơ hội nếu cả hai cùng chữa lành và điều chỉnh, không chỉ một bên nhịn.",
+        "situationship": "Trong mập mờ, lá này cần nhịp rõ hơn; sự chậm có thể tốt nếu có tiến triển thật.",
+        "ex": "Với người cũ, có thể có cơ hội hòa giải chậm, nhưng không nên vội quay lại.",
+        "no_contact": "Nếu đang im lặng, khoảng lặng có thể giúp dịu cảm xúc nếu sau đó có đối thoại cân bằng."
+      },
+      "symbols": [
+        {
+          "symbol": "thiên thần rót nước",
+          "meaning_vi": "Sự pha trộn và điều chỉnh tỷ lệ giữa hai dòng năng lượng."
+        },
+        {
+          "symbol": "một chân trên đất một chân dưới nước",
+          "meaning_vi": "Cân bằng giữa thực tế và cảm xúc."
+        },
+        {
+          "symbol": "con đường",
+          "meaning_vi": "Chữa lành là tiến trình, không phải khoảnh khắc."
+        }
+      ],
+      "reader_notes_vi": [
+        "Temperance là lá tốt cho healing nhưng không nên hứa mọi thứ tự ổn.",
+        "Trong tình yêu, luôn kiểm tra sự điều chỉnh có hai chiều không."
+      ]
+    },
+    {
+      "id": "major-15-the-devil",
+      "source_basis": ["waite", "rachel_pollack", "product_editorial"],
+      "core": {
+        "essence_vi": "The Devil phơi bày ràng buộc, ham muốn, nghiện mô thức và những chiếc xích tưởng như không tháo được nhưng thường bắt đầu từ nhận thức.",
+        "keywords_vi": ["ràng buộc", "ám ảnh", "cám dỗ", "bóng tối", "phụ thuộc"],
+        "shadow_keywords_vi": ["kiểm soát", "nghiện cảm xúc", "sợ mất", "thỏa hiệp với điều làm đau"]
+      },
+      "orientation": {
+        "upright": {
+          "general_vi": "Có một ràng buộc hoặc mô thức đang chi phối. Việc nhìn thẳng nó là bước đầu để lấy lại quyền lựa chọn.",
+          "love_vi": "Trong tình yêu, The Devil thường chỉ hấp dẫn mạnh, phụ thuộc, kiểm soát, ghen, nghiện cảm xúc hoặc biết đau nhưng khó rời.",
+          "career_vi": "Về công việc, lá này cảnh báo mắc kẹt vì tiền, quyền lực, môi trường độc hại hoặc tham vọng làm mất tự do.",
+          "money_vi": "Về tiền bạc, chú ý nợ, nghiện mua sắm, tham lời nhanh hoặc bị lợi ích trói buộc.",
+          "inner_work_vi": "Bạn cần gọi tên điều đang có quyền trên mình: sợ cô đơn, ham muốn, tội lỗi hay nhu cầu được chọn.",
+          "advice_vi": "Đừng hỏi 'mình có muốn không' trước; hãy hỏi 'điều này có làm mình tự do hơn không'.",
+          "warning_vi": "Cường độ không đồng nghĩa với tình yêu lành mạnh."
+        },
+        "reversed": {
+          "general_vi": "Có cơ hội tháo xích, nhưng chỉ khi bạn dám nhìn mô thức và ngừng nuôi nó.",
+          "love_vi": "Trong tình cảm, lá ngược có thể là bắt đầu tỉnh ra khỏi phụ thuộc, hoặc ngược lại là phủ nhận ràng buộc vì chưa muốn buông.",
+          "career_vi": "Ở công việc, bạn có thể thấy rõ điều đang trói mình và bắt đầu tìm lối ra.",
+          "money_vi": "Đây là lúc cắt thói quen tài chính gây nghiện hoặc ràng buộc.",
+          "inner_work_vi": "Tự do bắt đầu khi bạn thôi xấu hổ vì bóng tối và bắt đầu chịu trách nhiệm với nó.",
+          "advice_vi": "Chọn một sợi xích cụ thể để tháo trước.",
+          "warning_vi": "Nếu chỉ nói 'tôi ổn' mà hành vi không đổi, lá ngược vẫn là cảnh báo."
+        }
+      },
+      "position_overrides": {
+        "situation": "Tình huống có ràng buộc, phụ thuộc hoặc hấp dẫn mạnh nhưng không hoàn toàn tự do.",
+        "action": "Hành động nên là gọi tên sợi xích và giảm quyền lực của nó.",
+        "outcome": "Nếu không thay đổi, mô thức có thể tiếp tục trói; nếu nhìn thẳng, có cơ hội giải phóng.",
+        "challenge": "Thử thách là nghiện cảm xúc, kiểm soát hoặc thỏa hiệp với điều làm đau."
+      },
+      "relationship_signals": {
+        "default": "Dấu hiệu cần xem là bạn cảm thấy tự do hơn hay bị kéo vào vòng lệ thuộc hơn sau mỗi lần tương tác.",
+        "existing_relationship": "Nếu hỏi có nên tiếp tục, Devil nói phải kiểm tra mức lành mạnh: còn yêu hay đang nghiện vòng đau-ngọt?",
+        "situationship": "Trong mập mờ, lá này rất dễ là chemistry mạnh nhưng thiếu tự do và rõ ràng.",
+        "ex": "Với người cũ, hãy cẩn thận vòng quay ám ảnh/quay lại vì thiếu chứ không vì trưởng thành.",
+        "no_contact": "Nếu đang im lặng, sức kéo vẫn có thể mạnh, nhưng im lặng không chứng minh tình yêu; nó có thể là withdrawal."
+      },
+      "symbols": [
+        {
+          "symbol": "xiềng xích",
+          "meaning_vi": "Ràng buộc có vẻ mạnh nhưng cần xem ta có đang tự giữ nó không."
+        },
+        {
+          "symbol": "nhân vật có đuôi",
+          "meaning_vi": "Bản năng và ham muốn khi chưa được ý thức hóa."
+        },
+        {
+          "symbol": "ngọn lửa",
+          "meaning_vi": "Cám dỗ, dục vọng hoặc năng lượng tiêu hao nhanh."
+        }
+      ],
+      "reader_notes_vi": [
+        "Devil trong tình yêu cần viết sắc nhưng không dọa.",
+        "Không moralize ham muốn; tập trung vào tự do, phụ thuộc và quyền lựa chọn."
+      ]
+    },
+    {
+      "id": "major-16-the-tower",
+      "source_basis": ["waite", "rachel_pollack", "product_editorial"],
+      "core": {
+        "essence_vi": "The Tower là sự thật phá vỡ cấu trúc giả. Nó gây sốc vì điều không bền không thể tiếp tục đứng vững.",
+        "keywords_vi": ["sụp đổ", "sự thật", "đột biến", "giải phóng", "tỉnh thức mạnh"],
+        "shadow_keywords_vi": ["kháng cự biến động", "bám vào ảo tưởng", "khủng hoảng vì nền sai"]
+      },
+      "orientation": {
+        "upright": {
+          "general_vi": "Một cấu trúc thiếu thật có thể bị phá vỡ. Dù bất ngờ, biến động này đưa sự thật ra ánh sáng.",
+          "love_vi": "Trong tình yêu, Tower cho thấy một cú thức tỉnh: sự thật, cãi vã, đổ vỡ niềm tin hoặc khoảnh khắc không thể giả vờ mọi thứ vẫn ổn.",
+          "career_vi": "Về công việc, đây là biến động hệ thống, thay đổi bất ngờ hoặc kế hoạch cũ bị phá.",
+          "money_vi": "Về tiền bạc, cần giảm rủi ro và chuẩn bị cho biến động, không đánh cược trên nền yếu.",
+          "inner_work_vi": "Có một ảo tưởng về bản thân hoặc người khác đang bị phá để bạn tự do hơn.",
+          "advice_vi": "Đừng cố trang trí lại một tòa tháp đang nứt. Hãy nhìn nền móng.",
+          "warning_vi": "Điều bị che quá lâu có thể lộ ra bằng cách mạnh hơn bạn muốn."
+        },
+        "reversed": {
+          "general_vi": "Bạn có thể đang tránh một biến động cần thiết hoặc cảm nhận cơn sấm trước khi nó lộ rõ.",
+          "love_vi": "Trong tình cảm, lá ngược cảnh báo trì hoãn cuộc nói chuyện có thể làm cú vỡ sau này mạnh hơn.",
+          "career_vi": "Ở công việc, có dấu hiệu hệ thống không ổn nhưng chưa bùng ra.",
+          "money_vi": "Cần xử lý lỗ hổng tài chính sớm thay vì chờ nó thành khủng hoảng.",
+          "inner_work_vi": "Một phần bạn đã biết sự thật, chỉ chưa muốn để nó phá hình ảnh cũ.",
+          "advice_vi": "Chủ động tháo phần không bền trước khi nó tự sập.",
+          "warning_vi": "Trì hoãn sự thật không làm nó biến mất."
+        }
+      },
+      "position_overrides": {
+        "situation": "Tình huống có nền không bền hoặc sự thật sắp/đang lộ.",
+        "action": "Hành động nên là nhìn thẳng nền móng và chủ động sửa/cắt phần sai.",
+        "outcome": "Nếu tiếp tục né, biến động có thể mạnh; nếu nhìn thật, có giải phóng.",
+        "challenge": "Thử thách là bám vào ảo tưởng vì sợ đổ vỡ."
+      },
+      "relationship_signals": {
+        "default": "Dấu hiệu cần xem là sự thật nào đang làm cả hai không thể giả vờ bình thường.",
+        "existing_relationship": "Nếu hỏi có nên tiếp tục, Tower nói cần xử lý cú thật lớn; tiếp tục chỉ có nghĩa nếu xây lại từ nền khác.",
+        "situationship": "Trong mập mờ, lá này có thể là khoảnh khắc vỡ ảo tưởng về vị trí của mình.",
+        "ex": "Với người cũ, quay lại mà không xử lý cú vỡ cũ sẽ chỉ dựng lại cùng tòa tháp.",
+        "no_contact": "Nếu đang im lặng, có thể im lặng là sau một cú sốc hoặc trước khi sự thật bùng ra."
+      },
+      "symbols": [
+        {
+          "symbol": "sét",
+          "meaning_vi": "Sự thật bất ngờ phá qua cấu trúc giả."
+        },
+        {
+          "symbol": "tòa tháp",
+          "meaning_vi": "Hệ thống được xây cao nhưng nền không bền."
+        },
+        {
+          "symbol": "người rơi",
+          "meaning_vi": "Cái tôi bị kéo khỏi vị trí an toàn giả."
+        }
+      ],
+      "reader_notes_vi": [
+        "Tower không nên viết như tận thế; nó là phá cấu trúc giả để lộ sự thật.",
+        "Trong UX, cần dùng ngôn ngữ mạnh nhưng không khủng bố cảm xúc."
+      ]
+    },
+    {
+      "id": "major-17-the-star",
+      "source_basis": ["waite", "rachel_pollack", "product_editorial"],
+      "core": {
+        "essence_vi": "The Star là hy vọng sau biến động: niềm tin trở lại không bằng ảo tưởng, mà bằng cảm giác mình vẫn còn được dẫn đường.",
+        "keywords_vi": ["hy vọng", "chữa lành", "cảm hứng", "niềm tin", "dịu lại"],
+        "shadow_keywords_vi": ["mất niềm tin", "lý tưởng hóa", "chờ phép màu", "khó nhận nâng đỡ"]
+      },
+      "orientation": {
+        "upright": {
+          "general_vi": "Sau giai đoạn nặng, có tín hiệu chữa lành và hy vọng. Tình huống chưa xong ngay, nhưng ánh sáng đã trở lại.",
+          "love_vi": "Trong tình yêu, Star là sự dịu lại, chữa lành, hy vọng lành mạnh và khả năng nhìn mối quan hệ bằng trái tim ít phòng thủ hơn.",
+          "career_vi": "Về công việc, lá này tốt cho tầm nhìn, truyền cảm hứng, xây thương hiệu cá nhân hoặc hồi phục sau thất bại.",
+          "money_vi": "Về tiền bạc, niềm tin cần đi cùng kế hoạch nhẹ nhàng; đừng tuyệt vọng cũng đừng mơ mộng quá.",
+          "inner_work_vi": "Bạn đang được mời tin rằng phần đẹp trong mình chưa mất.",
+          "advice_vi": "Chọn điều làm bạn hồi phục từng chút, không cần ép kết quả ngay.",
+          "warning_vi": "Hy vọng lành mạnh khác với việc chờ người khác cứu mình."
+        },
+        "reversed": {
+          "general_vi": "Niềm tin đang bị che hoặc bạn khó nhận ra dấu hiệu hồi phục dù nó có mặt.",
+          "love_vi": "Trong tình cảm, lá ngược có thể là thất vọng, mất niềm tin hoặc lý tưởng hóa một người/khả năng chưa đủ thật.",
+          "career_vi": "Ở công việc, cảm hứng giảm hoặc bạn không còn tin vào hướng cũ.",
+          "money_vi": "Cần tránh quyết định vì tuyệt vọng hoặc vì hy vọng thiếu dữ kiện.",
+          "inner_work_vi": "Bạn cần chăm lại niềm tin nhỏ nhất trước khi nghĩ tới bức tranh lớn.",
+          "advice_vi": "Tìm một dấu hiệu nhỏ cho thấy mình đang hồi phục, rồi đi từ đó.",
+          "warning_vi": "Đừng nhầm hy vọng với việc bỏ qua dữ kiện đau."
+        }
+      },
+      "position_overrides": {
+        "situation": "Tình huống có nhu cầu chữa lành, hy vọng hoặc lấy lại niềm tin.",
+        "action": "Hành động nên là dịu lại, thành thật và chọn điều nuôi hy vọng có cơ sở.",
+        "outcome": "Xu hướng gần là hồi phục chậm, ánh sáng quay lại.",
+        "challenge": "Thử thách là mất niềm tin hoặc lý tưởng hóa."
+      },
+      "relationship_signals": {
+        "default": "Dấu hiệu cần xem là mối quan hệ này khiến bạn hồi phục hay chỉ khiến bạn bám vào hy vọng.",
+        "existing_relationship": "Nếu hỏi có nên tiếp tục, Star nói còn hy vọng nếu có sự chữa lành thật và hai bên dịu lại với nhau.",
+        "situationship": "Trong mập mờ, hãy phân biệt tín hiệu hy vọng thật với việc tự thắp sáng một mình.",
+        "ex": "Với người cũ, có thể còn sự chữa lành hoặc mong muốn hòa bình, nhưng không nhất thiết là quay lại ngay.",
+        "no_contact": "Nếu đang im lặng, lá này khuyên dùng khoảng lặng để hồi phục thay vì chỉ chờ tin."
+      },
+      "symbols": [
+        {
+          "symbol": "ngôi sao lớn",
+          "meaning_vi": "Niềm tin dẫn đường sau bóng tối."
+        },
+        {
+          "symbol": "nước đổ",
+          "meaning_vi": "Dòng chữa lành chảy vào cả cảm xúc và đời sống."
+        },
+        {
+          "symbol": "nhân vật trần",
+          "meaning_vi": "Sự thành thật, dễ tổn thương và không còn phòng thủ."
+        }
+      ],
+      "reader_notes_vi": [
+        "Star là hy vọng sau khủng hoảng, không phải cam kết kết quả chắc chắn.",
+        "Trong tình yêu, phải phân biệt healing và fantasy."
+      ]
+    },
+    {
+      "id": "major-18-the-moon",
+      "source_basis": ["waite", "rachel_pollack", "product_editorial"],
+      "core": {
+        "essence_vi": "The Moon là vùng sương mù của tiềm thức: nỗi sợ, trực giác, ảo ảnh và những điều chưa đủ sáng để kết luận.",
+        "keywords_vi": ["mơ hồ", "tiềm thức", "nỗi sợ", "trực giác", "ảo ảnh"],
+        "shadow_keywords_vi": ["suy diễn", "lừa mình", "hoang mang", "bí mật", "lo âu"]
+      },
+      "orientation": {
+        "upright": {
+          "general_vi": "Không phải mọi thứ đang rõ. Hãy đi chậm, kiểm chứng cảm nhận và đừng quyết định khi sương mù còn dày.",
+          "love_vi": "Trong tình yêu, Moon thường chỉ mập mờ, lo âu, cảm giác có điều chưa nói hoặc bạn đang đọc quá nhiều dấu hiệu vì thiếu rõ ràng.",
+          "career_vi": "Về công việc, cần cẩn thận thông tin mơ hồ, gossip, chiến lược chưa lộ hoặc cảm giác bất an.",
+          "money_vi": "Về tiền bạc, không nên quyết khi thông tin chưa minh bạch.",
+          "inner_work_vi": "Nỗi sợ đang nói, nhưng không phải mọi nỗi sợ đều là sự thật.",
+          "advice_vi": "Chậm lại, ghi nhận cảm giác, rồi tìm bằng chứng trước khi kết luận.",
+          "warning_vi": "Đừng để sự thiếu rõ ràng biến thành câu chuyện bạn tự viết trong đầu."
+        },
+        "reversed": {
+          "general_vi": "Sương mù bắt đầu tan hoặc bạn đang có cơ hội nhìn ra điều từng làm mình rối.",
+          "love_vi": "Trong tình cảm, lá ngược có thể là sự thật dần lộ, lo âu giảm, hoặc một ảo tưởng bị nhìn thẳng.",
+          "career_vi": "Ở công việc, thông tin ẩn có thể dần rõ hơn.",
+          "money_vi": "Cần tiếp tục kiểm chứng trước khi hành động, dù đã bớt mơ hồ.",
+          "inner_work_vi": "Bạn đang học phân biệt trực giác với nỗi sợ.",
+          "advice_vi": "Đưa một điều mơ hồ ra ánh sáng bằng câu hỏi/dữ kiện cụ thể.",
+          "warning_vi": "Đừng vội kết luận ngay khi mới thấy một phần sự thật."
+        }
+      },
+      "position_overrides": {
+        "situation": "Tình huống mơ hồ, nhiều cảm xúc và thiếu dữ kiện.",
+        "action": "Hành động nên là kiểm chứng thay vì suy diễn.",
+        "outcome": "Xu hướng gần là sự thật chưa lộ hết; cần thời gian để rõ.",
+        "challenge": "Thử thách là nỗi sợ, ảo ảnh hoặc thiếu minh bạch."
+      },
+      "relationship_signals": {
+        "default": "Dấu hiệu cần xem là bạn có đang có dữ kiện thật hay chỉ đang nối các khoảng trống bằng lo âu.",
+        "existing_relationship": "Nếu hỏi có nên tiếp tục, Moon nói chưa nên quyết khi thiếu rõ ràng; trước hết cần ánh sáng.",
+        "situationship": "Trong mập mờ, đây là lá rất mạnh: sự không rõ đang là vấn đề chính.",
+        "ex": "Với người cũ, có thể còn nhiều cảm xúc lẫn lộn và ký ức làm méo hiện tại.",
+        "no_contact": "Nếu đang im lặng, hãy cẩn thận với việc tự suy diễn ý nghĩa của im lặng."
+      },
+      "symbols": [
+        {
+          "symbol": "mặt trăng",
+          "meaning_vi": "Ánh sáng phản chiếu, không phải sự rõ ràng đầy đủ."
+        },
+        {
+          "symbol": "chó và sói",
+          "meaning_vi": "Bản năng thuần hóa và bản năng hoang dã cùng lên tiếng."
+        },
+        {
+          "symbol": "con đường",
+          "meaning_vi": "Hành trình qua sợ hãi để tới sự rõ ràng hơn."
+        }
+      ],
+      "reader_notes_vi": [
+        "Moon cần tránh phán chắc; trọng tâm là mơ hồ và kiểm chứng.",
+        "Rất hữu ích cho questions về mập mờ, no contact, cảm giác bất an."
+      ]
+    },
+    {
+      "id": "major-19-the-sun",
+      "source_basis": ["waite", "rachel_pollack", "product_editorial"],
+      "core": {
+        "essence_vi": "The Sun là ánh sáng rõ ràng, niềm vui, sức sống và sự thật được nhìn thấy mà không còn nặng nề.",
+        "keywords_vi": ["rõ ràng", "niềm vui", "thành công", "sức sống", "công khai"],
+        "shadow_keywords_vi": ["lạc quan quá mức", "cái tôi", "niềm vui bị che", "trẻ con hóa vấn đề"]
+      },
+      "orientation": {
+        "upright": {
+          "general_vi": "Tình huống có cơ hội sáng rõ, nhẹ hơn và tích cực hơn. Đây là lá của sự minh bạch và sức sống.",
+          "love_vi": "Trong tình yêu, Sun cho thấy sự ấm áp, rõ ràng, vui vẻ và khả năng hai bên không còn phải đoán quá nhiều.",
+          "career_vi": "Về công việc, đây là thành tựu, được nhìn nhận, công khai kết quả hoặc giai đoạn tự tin hơn.",
+          "money_vi": "Về tiền bạc, có tín hiệu tích cực nếu quyết định minh bạch và dựa trên dữ kiện rõ.",
+          "inner_work_vi": "Bạn được mời sống thật hơn, đơn giản hơn và tin vào phần sáng của mình.",
+          "advice_vi": "Đưa điều mơ hồ ra ánh sáng. Chọn sự rõ ràng.",
+          "warning_vi": "Đừng để sự vui nhất thời làm bạn bỏ qua chi tiết cần xem."
+        },
+        "reversed": {
+          "general_vi": "Ánh sáng vẫn có, nhưng bị che bởi nghi ngờ, mệt mỏi hoặc kỳ vọng quá cao.",
+          "love_vi": "Trong tình cảm, lá ngược có thể là niềm vui bị giảm, sự rõ ràng chưa trọn hoặc một bên chưa dám công khai/thẳng thắn.",
+          "career_vi": "Ở công việc, thành tựu có thể chậm được ghi nhận hoặc bạn chưa thấy giá trị của mình.",
+          "money_vi": "Cẩn thận lạc quan quá mức với kết quả tài chính.",
+          "inner_work_vi": "Bạn cần tìm lại điều làm mình có sức sống, không chỉ chạy theo việc phải ổn.",
+          "advice_vi": "Đơn giản hóa vấn đề và tìm dữ kiện sáng rõ nhất.",
+          "warning_vi": "Không phải cứ tích cực là mọi thứ đã được giải quyết."
+        }
+      },
+      "position_overrides": {
+        "situation": "Tình huống cần hoặc đang có sự rõ ràng, công khai và sức sống.",
+        "action": "Hành động nên là nói thẳng, đơn giản hóa và chọn minh bạch.",
+        "outcome": "Xu hướng gần tích cực hơn, rõ hơn và nhẹ hơn.",
+        "challenge": "Thử thách là lạc quan quá mức hoặc chưa dám nhìn rõ."
+      },
+      "relationship_signals": {
+        "default": "Dấu hiệu cần xem là mối quan hệ có làm bạn thấy sáng, nhẹ và rõ hơn không.",
+        "existing_relationship": "Nếu hỏi có nên tiếp tục, Sun là tín hiệu tốt khi hai bên có thể rõ ràng, vui vẻ và công khai hơn.",
+        "situationship": "Trong mập mờ, lá này yêu cầu đưa mọi thứ ra ánh sáng: rõ danh phận, rõ mong muốn, rõ hành động.",
+        "ex": "Với người cũ, có thể có cuộc nói chuyện làm rõ và giảm nặng nề.",
+        "no_contact": "Nếu đang im lặng, Sun khuyên tìm sự rõ ràng thay vì sống trong bóng đoán."
+      },
+      "symbols": [
+        {
+          "symbol": "mặt trời",
+          "meaning_vi": "Ánh sáng trực tiếp, sự sống và minh bạch."
+        },
+        {
+          "symbol": "đứa trẻ",
+          "meaning_vi": "Sự chân thật, tự nhiên và niềm vui không phòng thủ."
+        },
+        {
+          "symbol": "hoa hướng dương",
+          "meaning_vi": "Sự phát triển quay về phía ánh sáng."
+        }
+      ],
+      "reader_notes_vi": [
+        "Sun là một trong các lá tích cực nhất nhưng vẫn cần đọc theo vị trí.",
+        "Trong tình yêu, nhấn vào rõ ràng, công khai và cảm giác nhẹ."
+      ]
+    },
+    {
+      "id": "major-20-judgement",
+      "source_basis": ["waite", "rachel_pollack", "product_editorial"],
+      "core": {
+        "essence_vi": "Judgement là tiếng gọi thức tỉnh: nhìn lại quá khứ, nghe lời gọi sâu hơn và bước vào một phiên bản trưởng thành hơn.",
+        "keywords_vi": ["thức tỉnh", "tiếng gọi", "tái sinh", "nhìn lại", "quyết định lớn"],
+        "shadow_keywords_vi": ["tự phán xét", "né tiếng gọi", "mắc kẹt trong quá khứ", "sợ thay đổi danh tính"]
+      },
+      "orientation": {
+        "upright": {
+          "general_vi": "Một khoảnh khắc đánh thức đang đến. Bạn cần nhìn lại toàn bộ câu chuyện để quyết định từ phiên bản trưởng thành hơn.",
+          "love_vi": "Trong tình yêu, Judgement có thể là cơ hội gọi tên sự thật, quay lại để giải quyết điều cũ, hoặc quyết định nâng mối quan hệ lên tầng ý thức khác.",
+          "career_vi": "Về công việc, đây là tiếng gọi nghề nghiệp, đánh giá lại đường đi hoặc quyết định quan trọng sau một giai đoạn dài.",
+          "money_vi": "Về tiền bạc, cần nhìn lại hệ quả cũ và đưa ra lựa chọn trưởng thành hơn.",
+          "inner_work_vi": "Bạn không còn là người cũ, nhưng cần tha thứ cho quá khứ để bước tiếp.",
+          "advice_vi": "Nhìn lại không phải để tự trách, mà để trả lời tiếng gọi hiện tại.",
+          "warning_vi": "Nếu bạn phớt lờ điều mình đã biết, tiếng gọi sẽ quay lại mạnh hơn."
+        },
+        "reversed": {
+          "general_vi": "Bạn có thể đang né tiếng gọi, sợ bị đánh giá hoặc tự phán xét đến mức không dám bước tiếp.",
+          "love_vi": "Trong tình cảm, lá ngược cảnh báo lặp lại quá khứ mà chưa học bài học, hoặc không dám nói sự thật vì sợ kết luận.",
+          "career_vi": "Ở công việc, có thể bạn biết mình cần đổi hướng nhưng chưa dám thừa nhận.",
+          "money_vi": "Cần ngừng tự trách và bắt đầu sửa quyết định tài chính cũ bằng kế hoạch mới.",
+          "inner_work_vi": "Tha thứ không xóa trách nhiệm; nó giúp bạn có năng lượng để chọn khác.",
+          "advice_vi": "Trả lời một câu hỏi: bài học lớn nhất của chu kỳ này là gì?",
+          "warning_vi": "Nếu chỉ quay lại quá khứ mà không thay đổi, đó không phải tái sinh."
+        }
+      },
+      "position_overrides": {
+        "situation": "Tình huống là một lời gọi nhìn lại và quyết định trưởng thành hơn.",
+        "action": "Hành động nên là nói sự thật, tổng kết bài học và chọn từ phiên bản mới.",
+        "outcome": "Xu hướng gần là thức tỉnh, quyết định lớn hoặc tái sinh sau nhìn lại.",
+        "challenge": "Thử thách là tự phán xét hoặc né tiếng gọi."
+      },
+      "relationship_signals": {
+        "default": "Dấu hiệu cần xem là bài học cũ đã được hiểu thật chưa.",
+        "existing_relationship": "Nếu hỏi có nên tiếp tục, Judgement nói cần một cuộc đánh giá thật: tiếp tục như phiên bản mới hay khép chu kỳ cũ.",
+        "situationship": "Trong mập mờ, lá này có thể là tiếng gọi phải định nghĩa, không thể trôi vô thức nữa.",
+        "ex": "Với người cũ, đây là lá mạnh cho việc quá khứ gọi lại, nhưng mục tiêu là học bài học, không nhất thiết tái hợp.",
+        "no_contact": "Nếu đang im lặng, có thể một bên đang nhìn lại hoặc sắp tới lúc phải nói điều đã nén."
+      },
+      "symbols": [
+        {
+          "symbol": "thiên thần thổi kèn",
+          "meaning_vi": "Tiếng gọi thức tỉnh không thể mãi bị phớt lờ."
+        },
+        {
+          "symbol": "người trỗi dậy",
+          "meaning_vi": "Tái sinh sau khi nhìn lại quá khứ."
+        },
+        {
+          "symbol": "quan tài mở",
+          "meaning_vi": "Điều tưởng đã đóng lại có thể được nhìn lại để giải phóng."
+        }
+      ],
+      "reader_notes_vi": [
+        "Judgement liên quan review và awakening, không chỉ là 'phán xét'.",
+        "Trong chuyện người cũ, cần viết cẩn thận: có tiếng gọi quá khứ nhưng không hứa tái hợp."
+      ]
+    },
+    {
+      "id": "major-21-the-world",
+      "source_basis": ["waite", "rachel_pollack", "product_editorial"],
+      "core": {
+        "essence_vi": "The World là sự hoàn tất và hội nhập: một chu kỳ đã đi đủ xa để khép lại, ghi nhận thành tựu và bước sang vòng mới với cảm giác toàn vẹn hơn.",
+        "keywords_vi": ["hoàn tất", "hội nhập", "thành tựu", "chu kỳ mới", "toàn vẹn"],
+        "shadow_keywords_vi": ["chưa khép vòng", "thiếu closure", "sợ bước tiếp", "thành tựu chưa được ghi nhận"]
+      },
+      "orientation": {
+        "upright": {
+          "general_vi": "Một chu kỳ có thể hoàn tất trọn vẹn. Đây là lúc ghi nhận hành trình và chuẩn bị bước sang vòng mới.",
+          "love_vi": "Trong tình yêu, World có thể là cảm giác đi đến một cột mốc: hoàn thiện, rõ vị trí, hoặc khép một chương để trưởng thành hơn.",
+          "career_vi": "Về công việc, đây là hoàn thành dự án, được công nhận, mở rộng phạm vi hoặc bước sang cấp độ mới.",
+          "money_vi": "Về tiền bạc, lá này tốt cho thành quả sau quá trình dài và kế hoạch hoàn tất có cấu trúc.",
+          "inner_work_vi": "Bạn đang gom các phần rời rạc của mình thành một cảm giác toàn vẹn hơn.",
+          "advice_vi": "Khép vòng đúng cách: ghi nhận, hoàn tất, rồi bước tiếp.",
+          "warning_vi": "Đừng kéo dài một chương chỉ vì bạn chưa quen với chương mới."
+        },
+        "reversed": {
+          "general_vi": "Một chu kỳ chưa khép hẳn hoặc còn thiếu bước cuối để hoàn tất.",
+          "love_vi": "Trong tình cảm, lá ngược chỉ thiếu closure, mối quan hệ chưa định hình trọn hoặc một chương cũ còn níu.",
+          "career_vi": "Ở công việc, có thể dự án gần xong nhưng còn phần cuối, hoặc bạn chưa nhận ra thành quả.",
+          "money_vi": "Cần hoàn tất một cam kết/tài chính cũ trước khi mở vòng mới.",
+          "inner_work_vi": "Bạn có thể đang đứng gần đích nhưng chưa cho phép mình kết thúc.",
+          "advice_vi": "Tìm bước cuối còn thiếu: một lời nói, một hành động, một sự công nhận hoặc một quyết định.",
+          "warning_vi": "Không khép vòng sẽ khiến bạn mang bài cũ sang chu kỳ mới."
+        }
+      },
+      "position_overrides": {
+        "situation": "Tình huống đang ở giai đoạn hoàn tất, hội nhập hoặc cần closure.",
+        "action": "Hành động nên là khép vòng rõ ràng và ghi nhận điều đã học.",
+        "outcome": "Kết quả có xu hướng hoàn tất một chu kỳ và mở vòng mới.",
+        "challenge": "Thử thách là chưa closure hoặc sợ rời chương cũ."
+      },
+      "relationship_signals": {
+        "default": "Dấu hiệu cần xem là mối quan hệ này đang đi đến cột mốc hoàn thiện hay cần khép lại để cả hai trưởng thành.",
+        "existing_relationship": "Nếu hỏi có nên tiếp tục, World nói mối quan hệ cần được đưa đến một cột mốc rõ: cam kết trưởng thành hơn hoặc khép vòng tử tế.",
+        "situationship": "Trong mập mờ, lá này hỏi: đã đến lúc hoàn tất trạng thái lửng lơ chưa?",
+        "ex": "Với người cũ, World thường nghiêng về closure và hoàn tất bài học hơn là quay lại vì thiếu.",
+        "no_contact": "Nếu đang im lặng, có thể đây là giai đoạn cần khép vòng bên trong, dù chưa có cuộc nói chuyện cuối."
+      },
+      "symbols": [
+        {
+          "symbol": "vòng nguyệt quế",
+          "meaning_vi": "Chu kỳ hoàn tất và cánh cổng sang vòng mới."
+        },
+        {
+          "symbol": "nhân vật trung tâm",
+          "meaning_vi": "Sự hội nhập, tự do và toàn vẹn sau hành trình."
+        },
+        {
+          "symbol": "bốn sinh vật",
+          "meaning_vi": "Bốn lực/khía cạnh được cân bằng trong tổng thể."
+        }
+      ],
+      "reader_notes_vi": [
+        "World là hoàn tất, không luôn là tiếp tục; nó có thể là closure đẹp.",
+        "Trong tình yêu, đọc theo câu hỏi: cột mốc cam kết hay khép chương."
+      ]
+    }
+  ]
+}

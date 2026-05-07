@@ -1,0 +1,237 @@
+{
+  "schema_version": "1.0",
+  "source_basis": ["product_editorial"],
+  "purpose": "Structured classification for free-form user Tarot questions before selecting spread, meaning context, and safety boundaries.",
+  "default_context": "general",
+  "contexts": [
+    {
+      "id": "general",
+      "name_vi": "Tổng quan",
+      "description_vi": "Câu hỏi mở, không thuộc lĩnh vực cụ thể.",
+      "recommended_spreads": ["one_card", "situation_action_outcome", "past_present_future"],
+      "meaning_context_priority": ["general", "advice"]
+    },
+    {
+      "id": "love",
+      "name_vi": "Tình yêu",
+      "description_vi": "Tình cảm, crush, người yêu, hôn nhân, kết nối, quay lại, chia tay.",
+      "recommended_spreads": ["situation_action_outcome", "past_present_future", "love_five"],
+      "meaning_context_priority": ["love", "inner_work", "general"]
+    },
+    {
+      "id": "career",
+      "name_vi": "Sự nghiệp",
+      "description_vi": "Công việc, dự án, đổi việc, thăng tiến, đồng nghiệp, định hướng nghề.",
+      "recommended_spreads": ["situation_action_outcome", "career_five", "past_present_future"],
+      "meaning_context_priority": ["career", "money", "general"]
+    },
+    {
+      "id": "money",
+      "name_vi": "Tiền bạc",
+      "description_vi": "Tài chính cá nhân, thu nhập, chi tiêu, cơ hội kiếm tiền.",
+      "recommended_spreads": ["situation_action_outcome", "career_five"],
+      "meaning_context_priority": ["money", "career", "general"],
+      "safety_note_vi": "Không đưa lời khuyên đầu tư chắc chắn hoặc dự đoán lời/lỗ."
+    },
+    {
+      "id": "inner_work",
+      "name_vi": "Nội tâm",
+      "description_vi": "Cảm xúc, chữa lành, lựa chọn bên trong, tự hiểu mình.",
+      "recommended_spreads": ["one_card", "past_present_future", "situation_action_outcome"],
+      "meaning_context_priority": ["inner_work", "general", "advice"]
+    },
+    {
+      "id": "decision",
+      "name_vi": "Quyết định",
+      "description_vi": "Có nên làm gì, chọn A/B, đi tiếp hay dừng lại.",
+      "recommended_spreads": ["situation_action_outcome", "one_card"],
+      "meaning_context_priority": ["advice", "general", "career", "love", "money"]
+    },
+    {
+      "id": "wellbeing_sensitive",
+      "name_vi": "Sức khỏe / nhạy cảm",
+      "description_vi": "Câu hỏi liên quan sức khỏe, bệnh, mang thai, an toàn, pháp lý hoặc rủi ro cao.",
+      "recommended_spreads": ["one_card"],
+      "meaning_context_priority": ["inner_work", "advice"],
+      "requires_safety_boundary": true,
+      "safety_note_vi": "Không chẩn đoán, không thay thế chuyên gia. Chỉ phản chiếu cảm xúc và hướng hành động an toàn."
+    }
+  ],
+  "intent_types": [
+    {
+      "id": "diagnostic",
+      "name_vi": "Muốn hiểu tình huống",
+      "examples_vi": ["Chuyện này đang như thế nào?", "Người ấy đang nghĩ gì về mối quan hệ này?"]
+    },
+    {
+      "id": "advice",
+      "name_vi": "Muốn lời khuyên",
+      "examples_vi": ["Tôi nên làm gì?", "Tôi nên tiếp tục hay dừng lại?"]
+    },
+    {
+      "id": "forecast",
+      "name_vi": "Muốn xem xu hướng",
+      "examples_vi": ["Tương lai gần sẽ ra sao?", "Cơ hội này có phát triển không?"]
+    },
+    {
+      "id": "decision",
+      "name_vi": "Muốn chọn lựa",
+      "examples_vi": ["Tôi có nên nhận việc này không?", "Tôi nên chọn A hay B?"]
+    },
+    {
+      "id": "reflection",
+      "name_vi": "Muốn soi chiếu nội tâm",
+      "examples_vi": ["Tôi cần học bài học gì?", "Vì sao tôi cứ mắc kẹt?"]
+    }
+  ],
+  "relationship_stages": [
+    {
+      "id": "not_applicable",
+      "name_vi": "Không áp dụng"
+    },
+    {
+      "id": "new_interest",
+      "name_vi": "Mới chú ý / mới quen"
+    },
+    {
+      "id": "crush",
+      "name_vi": "Crush / đơn phương"
+    },
+    {
+      "id": "existing_relationship",
+      "name_vi": "Đang trong mối quan hệ"
+    },
+    {
+      "id": "situationship",
+      "name_vi": "Mối quan hệ mập mờ"
+    },
+    {
+      "id": "ex",
+      "name_vi": "Người cũ"
+    },
+    {
+      "id": "no_contact",
+      "name_vi": "Đang im lặng / không liên lạc"
+    },
+    {
+      "id": "long_distance",
+      "name_vi": "Xa cách / yêu xa"
+    },
+    {
+      "id": "work_connection",
+      "name_vi": "Kết nối trong công việc"
+    },
+    {
+      "id": "unknown",
+      "name_vi": "Không đủ dữ kiện"
+    }
+  ],
+  "classifier_output_schema": {
+    "type": "object",
+    "required": [
+      "normalized_question",
+      "reading_focus_vi",
+      "relationship_stage",
+      "core_tension",
+      "user_need",
+      "hidden_assumption",
+      "reading_angle",
+      "specific_signals_to_watch",
+      "primary_context",
+      "secondary_contexts",
+      "intent_type",
+      "time_horizon",
+      "emotional_tone",
+      "safety_flags",
+      "recommended_spread_id",
+      "engine_notes_vi",
+      "reader_tone_vi",
+      "confidence",
+      "reason_vi"
+    ],
+    "properties": {
+      "normalized_question": {
+        "type": "string"
+      },
+      "reading_focus_vi": {
+        "type": "string"
+      },
+      "relationship_stage": {
+        "type": "string",
+        "enum": ["not_applicable", "new_interest", "crush", "existing_relationship", "situationship", "ex", "no_contact", "long_distance", "work_connection", "unknown"]
+      },
+      "core_tension": {
+        "type": "string"
+      },
+      "user_need": {
+        "type": "string"
+      },
+      "hidden_assumption": {
+        "type": "string"
+      },
+      "reading_angle": {
+        "type": "string"
+      },
+      "specific_signals_to_watch": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "primary_context": {
+        "type": "string",
+        "enum": ["general", "love", "career", "money", "inner_work", "decision", "wellbeing_sensitive"]
+      },
+      "secondary_contexts": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": ["general", "love", "career", "money", "inner_work", "decision", "wellbeing_sensitive"]
+        }
+      },
+      "intent_type": {
+        "type": "string",
+        "enum": ["diagnostic", "advice", "forecast", "decision", "reflection"]
+      },
+      "time_horizon": {
+        "type": "string",
+        "enum": ["none", "near_future", "month", "year", "long_term"]
+      },
+      "emotional_tone": {
+        "type": "string",
+        "enum": ["neutral", "anxious", "hopeful", "confused", "heartbroken", "urgent"]
+      },
+      "safety_flags": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": ["medical", "legal", "financial_investment", "self_harm", "pregnancy", "minor_safety", "none"]
+        }
+      },
+      "recommended_spread_id": {
+        "type": "string",
+        "enum": ["one_card", "past_present_future", "situation_action_outcome", "love_five", "career_five"]
+      },
+      "engine_notes_vi": {
+        "type": "string"
+      },
+      "reader_tone_vi": {
+        "type": "string"
+      },
+      "confidence": {
+        "type": "number"
+      },
+      "reason_vi": {
+        "type": "string"
+      }
+    }
+  },
+  "implementation_notes": [
+    "Use AI classification for free-form question parsing, but keep Tarot rule engine deterministic and source-backed.",
+    "Use structured output / JSON schema, not plain text classification.",
+    "Classifier must infer hidden context from one user question only; do not ask follow-up questions in V1.",
+    "core_tension, user_need, hidden_assumption, reading_angle, and specific_signals_to_watch are required to reduce generic readings.",
+    "If confidence is low, fallback to general + situation_action_outcome.",
+    "If safety flags are present, route to safe reflective wording and avoid deterministic claims."
+  ]
+}

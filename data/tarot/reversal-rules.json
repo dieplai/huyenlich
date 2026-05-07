@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0",
+  "source_basis": ["mary_greer_reversals", "joan_bunning_learning_tarot", "product_editorial"],
+  "purpose": "Rules for interpreting reversed Tarot cards without reducing them to simplistic negative meanings.",
+  "orientation_policy": {
+    "default_for_mvp": "enabled_with_probability",
+    "reversal_probability": 0.25,
+    "allow_user_toggle": true,
+    "max_reversal_ratio_soft_cap": 0.5,
+    "never_force_negative": true,
+    "notes_vi": "Lá ngược là năng lượng bị chặn, quay vào trong, chậm lại, quá đà hoặc cần học, không mặc định là xấu."
+  },
+  "modes": [
+    {
+      "id": "blocked",
+      "name_vi": "Bị chặn",
+      "description_vi": "Năng lượng của lá có mặt nhưng chưa chảy tự nhiên.",
+      "use_when": ["challenge", "shadow", "block", "present"],
+      "prompt_hint_vi": "Diễn giải như một điều đang bị nghẽn hoặc chưa được cho phép bộc lộ."
+    },
+    {
+      "id": "internalized",
+      "name_vi": "Quay vào bên trong",
+      "description_vi": "Chủ đề của lá đang diễn ra trong nội tâm hơn là biểu hiện ra ngoài.",
+      "use_when": ["inner_work", "self_view", "present"],
+      "prompt_hint_vi": "Diễn giải như một quá trình tự nhận thức, tự xử lý hoặc cảm xúc chưa nói ra."
+    },
+    {
+      "id": "delayed",
+      "name_vi": "Trì hoãn",
+      "description_vi": "Năng lượng của lá đang chậm, chưa tới thời điểm hoặc cần điều kiện chín hơn.",
+      "use_when": ["forecast", "outcome", "near_future"],
+      "prompt_hint_vi": "Diễn giải như xu hướng có thể đến chậm hoặc cần chuẩn bị thêm."
+    },
+    {
+      "id": "shadow",
+      "name_vi": "Mặt bóng",
+      "description_vi": "Lá cho thấy mặt chưa được nhìn nhận, nỗi sợ, mô thức cũ hoặc bài học khó.",
+      "use_when": ["shadow", "challenge", "hopes_fears"],
+      "prompt_hint_vi": "Diễn giải như điều user cần nhìn thẳng, không dùng giọng đe dọa."
+    },
+    {
+      "id": "overexpressed",
+      "name_vi": "Quá đà",
+      "description_vi": "Năng lượng của lá đang bị dùng quá mức hoặc lệch khỏi cân bằng.",
+      "use_when": ["diagnostic", "warning", "challenge"],
+      "prompt_hint_vi": "Diễn giải như một phẩm chất tốt đang đi quá xa và cần điều chỉnh."
+    },
+    {
+      "id": "weak_or_undeveloped",
+      "name_vi": "Yếu hoặc chưa trưởng thành",
+      "description_vi": "Năng lượng của lá còn non, thiếu kinh nghiệm hoặc chưa đủ lực để thành kết quả.",
+      "use_when": ["resource", "opportunity", "advice"],
+      "prompt_hint_vi": "Diễn giải như tiềm năng cần rèn thêm, không phủ nhận hoàn toàn khả năng."
+    }
+  ],
+  "mode_selection_rules": [
+    {
+      "id": "shadow_positions_prefer_shadow",
+      "condition": "position.function in ['shadow','challenge','block','hopes_fears']",
+      "preferred_modes": ["shadow", "blocked", "overexpressed"]
+    },
+    {
+      "id": "advice_positions_prefer_actionable",
+      "condition": "position.function in ['advice','next_step']",
+      "preferred_modes": ["weak_or_undeveloped", "blocked", "internalized"]
+    },
+    {
+      "id": "forecast_positions_prefer_delayed",
+      "condition": "position.function in ['forecast','outcome','near_future']",
+      "preferred_modes": ["delayed", "blocked", "weak_or_undeveloped"]
+    },
+    {
+      "id": "inner_work_prefer_internalized",
+      "condition": "question_context == 'inner_work'",
+      "preferred_modes": ["internalized", "shadow", "blocked"]
+    }
+  ],
+  "copy_rules": [
+    "Do not write reversed cards as guaranteed bad outcomes.",
+    "Mention the useful lesson or adjustment implied by the reversal.",
+    "When multiple reversals appear, summarize them as blocked/internal processing before interpreting individual cards.",
+    "If a spread has more than 50% reversed cards, soften the tone and emphasize reflection, timing, and adjustment."
+  ]
+}

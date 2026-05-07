@@ -1,0 +1,280 @@
+{
+  "schema_version": "1.0",
+  "source_basis": ["waite", "joan_bunning_spreads", "product_editorial"],
+  "default_spread_id": "situation_action_outcome",
+  "recommendation_policy": {
+    "free_default": "one_card",
+    "mvp_default": "situation_action_outcome",
+    "paid_default": "situation_action_outcome",
+    "advanced_later": "celtic_cross"
+  },
+  "spreads": [
+    {
+      "id": "one_card",
+      "name_vi": "Một Lá",
+      "card_count": 1,
+      "complexity": "simple",
+      "phase": "v1",
+      "recommended_contexts": ["general", "love", "career", "money", "inner_work", "decision"],
+      "use_when_vi": "Thông điệp nhanh, daily reading, câu hỏi đơn giản hoặc free preview.",
+      "free_strategy": "full",
+      "paid_strategy": "not_required",
+      "positions": [
+        {
+          "index": 1,
+          "id": "main_message",
+          "name_vi": "Thông điệp chính",
+          "function": "diagnostic_advice",
+          "prompt_instruction_vi": "Đọc lá này như thông điệp trọng tâm và lời khuyên ngắn cho câu hỏi."
+        }
+      ]
+    },
+    {
+      "id": "past_present_future",
+      "name_vi": "Quá Khứ - Hiện Tại - Tương Lai",
+      "card_count": 3,
+      "complexity": "core",
+      "phase": "v1",
+      "recommended_contexts": ["general", "love", "career", "inner_work"],
+      "use_when_vi": "Khi user hỏi về một tiến trình, mối quan hệ hoặc tình huống đang diễn biến theo thời gian.",
+      "free_strategy": "show_present_plus_summary",
+      "paid_strategy": "show_all_cards_plus_flow",
+      "positions": [
+        {
+          "index": 1,
+          "id": "past",
+          "name_vi": "Quá khứ",
+          "function": "background",
+          "prompt_instruction_vi": "Đọc như nguồn gốc, mô thức cũ, hoặc điều đã đặt nền cho tình huống."
+        },
+        {
+          "index": 2,
+          "id": "present",
+          "name_vi": "Hiện tại",
+          "function": "diagnostic",
+          "prompt_instruction_vi": "Đọc như năng lượng chính đang vận hành ở hiện tại."
+        },
+        {
+          "index": 3,
+          "id": "future",
+          "name_vi": "Tương lai gần",
+          "function": "forecast",
+          "prompt_instruction_vi": "Đọc như xu hướng có khả năng xảy ra nếu quỹ đạo hiện tại tiếp tục; không phán quyết tuyệt đối."
+        }
+      ]
+    },
+    {
+      "id": "situation_action_outcome",
+      "name_vi": "Tình Huống - Hành Động - Kết Quả",
+      "card_count": 3,
+      "complexity": "core",
+      "phase": "v1",
+      "recommended_contexts": ["general", "love", "career", "money", "decision"],
+      "use_when_vi": "Spread mặc định tốt nhất cho sản phẩm vì kết quả có lời khuyên hành động rõ.",
+      "free_strategy": "show_situation_plus_action_teaser",
+      "paid_strategy": "show_all_cards_plus_action_plan",
+      "positions": [
+        {
+          "index": 1,
+          "id": "situation",
+          "name_vi": "Tình huống",
+          "function": "diagnostic",
+          "prompt_instruction_vi": "Đọc như bản chất thật của tình huống, không chỉ bề mặt."
+        },
+        {
+          "index": 2,
+          "id": "action",
+          "name_vi": "Hành động nên chọn",
+          "function": "advice",
+          "prompt_instruction_vi": "Chuyển nghĩa lá thành hành động thực tế, mềm nhưng cụ thể."
+        },
+        {
+          "index": 3,
+          "id": "outcome",
+          "name_vi": "Kết quả tiềm năng",
+          "function": "outcome",
+          "prompt_instruction_vi": "Đọc như xu hướng nếu user đi theo hành động được gợi ý; tránh diễn đạt định mệnh tuyệt đối."
+        }
+      ]
+    },
+    {
+      "id": "love_five",
+      "name_vi": "Tình Yêu Năm Lá",
+      "card_count": 5,
+      "complexity": "paid",
+      "phase": "v1_paid",
+      "recommended_contexts": ["love"],
+      "use_when_vi": "Khi user hỏi về tình cảm, người yêu, crush, mối quan hệ mơ hồ hoặc khả năng tiếp tục.",
+      "free_strategy": "show_card_3_connection_dynamic_only",
+      "paid_strategy": "show_all_cards_plus_relationship_pattern",
+      "positions": [
+        {
+          "index": 1,
+          "id": "user_energy",
+          "name_vi": "Năng lượng của bạn",
+          "function": "diagnostic",
+          "prompt_instruction_vi": "Đọc như cảm xúc, nhu cầu hoặc vai trò hiện tại của user trong mối quan hệ."
+        },
+        {
+          "index": 2,
+          "id": "other_energy",
+          "name_vi": "Năng lượng của người kia",
+          "function": "diagnostic",
+          "prompt_instruction_vi": "Đọc như năng lượng/khả năng thể hiện của người kia, tránh khẳng định chắc tâm trí người khác."
+        },
+        {
+          "index": 3,
+          "id": "connection_dynamic",
+          "name_vi": "Động lực kết nối",
+          "function": "relationship_dynamic",
+          "prompt_instruction_vi": "Đọc như điều đang kéo hai bên lại gần hoặc làm mối quan hệ vận hành."
+        },
+        {
+          "index": 4,
+          "id": "challenge",
+          "name_vi": "Thử thách",
+          "function": "shadow",
+          "prompt_instruction_vi": "Đọc như điểm nghẽn, nỗi sợ, lệch pha hoặc điều cần đối diện."
+        },
+        {
+          "index": 5,
+          "id": "next_step",
+          "name_vi": "Bước tiếp theo",
+          "function": "advice",
+          "prompt_instruction_vi": "Đưa lời khuyên thực tế để user hành động hoặc quan sát rõ hơn."
+        }
+      ]
+    },
+    {
+      "id": "career_five",
+      "name_vi": "Sự Nghiệp Năm Lá",
+      "card_count": 5,
+      "complexity": "paid",
+      "phase": "v1_paid",
+      "recommended_contexts": ["career", "money", "decision"],
+      "use_when_vi": "Khi user hỏi về công việc, định hướng nghề nghiệp, dự án, cơ hội mới hoặc quyết định đổi việc.",
+      "free_strategy": "show_current_state_only",
+      "paid_strategy": "show_all_cards_plus_action_plan",
+      "positions": [
+        {
+          "index": 1,
+          "id": "current_state",
+          "name_vi": "Hiện trạng",
+          "function": "diagnostic",
+          "prompt_instruction_vi": "Đọc như bức tranh thật của công việc/dự án hiện tại."
+        },
+        {
+          "index": 2,
+          "id": "strength",
+          "name_vi": "Thế mạnh",
+          "function": "resource",
+          "prompt_instruction_vi": "Đọc như nguồn lực, kỹ năng hoặc lợi thế user đang có."
+        },
+        {
+          "index": 3,
+          "id": "block",
+          "name_vi": "Điểm nghẽn",
+          "function": "shadow",
+          "prompt_instruction_vi": "Đọc như rào cản, thói quen hoặc điều kiện đang làm chậm tiến trình."
+        },
+        {
+          "index": 4,
+          "id": "opportunity",
+          "name_vi": "Cơ hội",
+          "function": "opportunity",
+          "prompt_instruction_vi": "Đọc như hướng mở hoặc điều nên chú ý trong thời gian tới."
+        },
+        {
+          "index": 5,
+          "id": "next_step",
+          "name_vi": "Bước tiếp theo",
+          "function": "advice",
+          "prompt_instruction_vi": "Đưa hành động thực tế, tránh hứa chắc kết quả tài chính."
+        }
+      ]
+    },
+    {
+      "id": "celtic_cross",
+      "name_vi": "Celtic Cross",
+      "card_count": 10,
+      "complexity": "advanced",
+      "phase": "later",
+      "recommended_contexts": ["general", "love", "career", "inner_work", "decision"],
+      "use_when_vi": "Spread nâng cao cho paid/VIP sau này; không dùng MVP vì dài và dễ làm user mới bị ngợp.",
+      "free_strategy": "not_recommended",
+      "paid_strategy": "vip_longform",
+      "positions": [
+        {
+          "index": 1,
+          "id": "present_situation",
+          "name_vi": "Hiện trạng",
+          "function": "diagnostic",
+          "prompt_instruction_vi": "Trung tâm của vấn đề."
+        },
+        {
+          "index": 2,
+          "id": "crossing_challenge",
+          "name_vi": "Thử thách cắt ngang",
+          "function": "challenge",
+          "prompt_instruction_vi": "Lực cản, áp lực hoặc điều cần vượt qua."
+        },
+        {
+          "index": 3,
+          "id": "foundation",
+          "name_vi": "Nền tảng",
+          "function": "background",
+          "prompt_instruction_vi": "Gốc rễ sâu hơn của vấn đề."
+        },
+        {
+          "index": 4,
+          "id": "recent_past",
+          "name_vi": "Quá khứ gần",
+          "function": "background",
+          "prompt_instruction_vi": "Điều vừa qua còn ảnh hưởng."
+        },
+        {
+          "index": 5,
+          "id": "conscious_goal",
+          "name_vi": "Điều đang hướng tới",
+          "function": "goal",
+          "prompt_instruction_vi": "Mục tiêu, mong muốn hoặc điều user nghĩ mình cần."
+        },
+        {
+          "index": 6,
+          "id": "near_future",
+          "name_vi": "Tương lai gần",
+          "function": "forecast",
+          "prompt_instruction_vi": "Xu hướng gần nếu tiến trình hiện tại tiếp tục."
+        },
+        {
+          "index": 7,
+          "id": "self_position",
+          "name_vi": "Bản thân",
+          "function": "self_view",
+          "prompt_instruction_vi": "Cách user đang đứng trong câu chuyện."
+        },
+        {
+          "index": 8,
+          "id": "environment",
+          "name_vi": "Môi trường",
+          "function": "external",
+          "prompt_instruction_vi": "Người khác, hoàn cảnh hoặc lực bên ngoài."
+        },
+        {
+          "index": 9,
+          "id": "hopes_fears",
+          "name_vi": "Hy vọng và nỗi sợ",
+          "function": "shadow",
+          "prompt_instruction_vi": "Điều user mong đợi hoặc lo ngại."
+        },
+        {
+          "index": 10,
+          "id": "likely_outcome",
+          "name_vi": "Kết quả có khả năng",
+          "function": "outcome",
+          "prompt_instruction_vi": "Xu hướng tổng hợp; tránh diễn đạt như định mệnh cố định."
+        }
+      ]
+    }
+  ]
+}

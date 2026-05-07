@@ -1,0 +1,310 @@
+{
+  "schema_version": "2.0-sample",
+  "deck_id": "rider-waite-smith",
+  "coverage": {
+    "card_count": 5,
+    "notes_vi": "Sample V2 cho 5 Major Arcana đầu tiên để test classifier + writer. Sau khi chất lượng ổn sẽ mở rộng 22 Major rồi 78 lá."
+  },
+  "cards": [
+    {
+      "id": "major-00-the-fool",
+      "source_basis": ["waite", "rachel_pollack", "product_editorial"],
+      "core": {
+        "essence_vi": "The Fool là khoảnh khắc bước qua ngưỡng cửa: chưa biết hết điều phía trước, nhưng đã có một lực gọi mình phải thử, phải sống thật với phần còn non trẻ và tự do.",
+        "keywords_vi": ["khởi đầu", "tự do", "niềm tin", "liều lĩnh có tiềm năng", "chưa có kinh nghiệm"],
+        "shadow_keywords_vi": ["bốc đồng", "né trách nhiệm", "ảo tưởng tự do", "đi mà không nhìn đất dưới chân"]
+      },
+      "orientation": {
+        "upright": {
+          "general_vi": "Một chu kỳ mới đang mở. Điều quan trọng không phải là biết hết mọi thứ, mà là nhận ra lời mời bước tới và giữ tinh thần học hỏi.",
+          "love_vi": "Trong tình yêu, lá này nói về sự mở lòng, một khởi đầu mới hoặc nhu cầu được thở tự do. Nó đẹp nếu hai bên cùng thành thật về sự non mới; nó rủi ro nếu một người chỉ muốn cảm giác mà không muốn trách nhiệm.",
+          "career_vi": "Về công việc, đây là tín hiệu thử hướng mới, nhận cơ hội mới hoặc bước vào vùng chưa quen. Thành công đến từ học nhanh hơn là tỏ ra đã biết.",
+          "money_vi": "Về tiền bạc, lá này nhắc có cơ hội mới nhưng cần tránh quyết định tài chính chỉ vì hứng thú nhất thời.",
+          "inner_work_vi": "Bên trong bạn có một phần muốn sống nhẹ hơn, bớt sợ sai hơn. Hãy nghe nó, nhưng đừng bỏ qua bài học từ thực tế.",
+          "advice_vi": "Đi bước đầu tiên, nhưng mang theo một nguyên tắc an toàn rõ ràng.",
+          "warning_vi": "Đừng nhầm cảm giác mới mẻ với cam kết thật."
+        },
+        "reversed": {
+          "general_vi": "Năng lượng khởi đầu đang bị lệch: hoặc bạn đứng yên vì sợ, hoặc lao đi mà không nhìn rủi ro.",
+          "love_vi": "Trong tình cảm, lá ngược thường chỉ một kiểu chưa sẵn sàng: muốn tự do nhưng lại kéo người khác vào kỳ vọng, hoặc muốn tiếp tục nhưng không chịu gọi tên trách nhiệm.",
+          "career_vi": "Về công việc, cần xem lại kế hoạch trước khi nhảy. Sự liều lĩnh có thể hữu ích, nhưng chỉ khi có điểm tựa.",
+          "money_vi": "Không nên chi tiền hoặc đầu tư chỉ vì cảm giác 'cơ hội này hiếm'. Hãy kiểm chứng dữ kiện.",
+          "inner_work_vi": "Có thể bạn đang tự trách mình vì muốn bắt đầu lại. Bài học là phân biệt sợ hãi thật với lời cảnh báo hợp lý.",
+          "advice_vi": "Chậm lại một nhịp, hỏi: điều gì là tự do thật, điều gì chỉ là trốn tránh?",
+          "warning_vi": "Một lời hứa chưa có hành động đi kèm không đủ để đặt cược."
+        }
+      },
+      "position_overrides": {
+        "situation": "Tình huống còn mở, chưa được định hình hoàn toàn; user đang đứng ở ngưỡng phải chọn cách bước vào.",
+        "action": "Hành động tốt nhất là thử một bước nhỏ có kiểm soát, thay vì nhảy toàn bộ hoặc đứng yên.",
+        "outcome": "Nếu đi tiếp, xu hướng là một giai đoạn mới mở ra, nhưng kết quả phụ thuộc vào mức trưởng thành sau bước đầu.",
+        "challenge": "Thử thách nằm ở sự non kinh nghiệm hoặc nỗi sợ trách nhiệm."
+      },
+      "relationship_signals": {
+        "default": "Có tín hiệu mới hoặc mong muốn làm mới kết nối, nhưng cần xem người kia có đi cùng bằng hành động thật không.",
+        "existing_relationship": "Nếu hỏi có nên tiếp tục, The Fool cho thấy mối quan hệ có thể cần một cách bắt đầu lại; dấu hiệu cần xem là hai người có dám nói thật và thay đổi hành vi cũ hay không.",
+        "situationship": "Trong mối quan hệ mập mờ, lá này rất dễ là cảm giác hấp dẫn nhưng thiếu định nghĩa. Đừng để sự mới mẻ thay thế cho cam kết rõ.",
+        "ex": "Với người cũ, lá này có thể là mong muốn bắt đầu lại, nhưng chỉ có giá trị nếu cả hai không lặp nguyên mô thức cũ.",
+        "no_contact": "Nếu đang im lặng, dấu hiệu là một người có thể muốn phá băng, nhưng hành động ban đầu có thể còn vụng hoặc thử phản ứng."
+      },
+      "symbols": [
+        {
+          "symbol": "vách núi",
+          "meaning_vi": "Ngưỡng chuyển tiếp: bước tới thì mở đường mới, nhưng cũng cần nhận thức rủi ro."
+        },
+        {
+          "symbol": "con chó",
+          "meaning_vi": "Bản năng cảnh báo hoặc người/điều nhắc bạn đừng quá vô tư."
+        },
+        {
+          "symbol": "bông hoa trắng",
+          "meaning_vi": "Sự trong trẻo, ý định ban đầu chưa bị tính toán làm nặng."
+        }
+      ],
+      "reader_notes_vi": [
+        "Lá này không phải lúc nào cũng là 'cứ đi đi'; trong câu hỏi quyết định, phải đọc kèm mức sẵn sàng chịu trách nhiệm.",
+        "Khi viết cho tình yêu, tránh lãng mạn hóa sự mập mờ."
+      ]
+    },
+    {
+      "id": "major-01-the-magician",
+      "source_basis": ["waite", "rachel_pollack", "product_editorial"],
+      "core": {
+        "essence_vi": "The Magician là năng lực biến ý định thành hành động. Lá này hỏi: bạn có đang dùng đúng công cụ, đúng lời nói và đúng ý chí không?",
+        "keywords_vi": ["ý chí", "biểu hiện", "kỹ năng", "chủ động", "tập trung"],
+        "shadow_keywords_vi": ["thao túng", "hứa nhiều làm ít", "dùng lời nói để điều khiển", "phân tán năng lực"]
+      },
+      "orientation": {
+        "upright": {
+          "general_vi": "Bạn có nhiều công cụ hơn mình nghĩ. Điều cần làm là gom ý chí, gọi đúng tên mục tiêu và biến nó thành hành động cụ thể.",
+          "love_vi": "Trong tình yêu, lá này nói về sự chủ động, lời nói có sức tác động và khả năng tạo chuyển biến. Nếu hai bên nói rõ mong muốn, tình huống có thể đổi nhanh.",
+          "career_vi": "Về sự nghiệp, đây là lá rất mạnh cho pitch, deal, ra mắt sản phẩm, phỏng vấn hoặc bất kỳ việc gì cần trình bày năng lực.",
+          "money_vi": "Về tiền bạc, cơ hội đến qua kỹ năng, thương lượng hoặc khả năng biến tài nguyên sẵn có thành giá trị.",
+          "inner_work_vi": "Bạn cần nhận lại quyền chủ động. Đừng chờ hoàn cảnh hoàn hảo mới bắt đầu.",
+          "advice_vi": "Nói rõ điều bạn muốn, rồi chứng minh bằng một hành động có thể đo được.",
+          "warning_vi": "Sức hút và lời nói mạnh không thay thế cho sự nhất quán."
+        },
+        "reversed": {
+          "general_vi": "Năng lực có đó nhưng đang bị dùng sai, bị phân tán hoặc chưa thành hành động thật.",
+          "love_vi": "Trong tình cảm, lá ngược cảnh báo lời nói đẹp nhưng thiếu nền. Một bên có thể biết cách tạo cảm giác, nhưng chưa chắc đi cùng bằng cam kết.",
+          "career_vi": "Về công việc, cần tránh overpromise. Hãy kiểm tra năng lực triển khai trước khi nhận thêm việc hoặc hứa kết quả.",
+          "money_vi": "Cẩn thận với lời chào mời quá hấp dẫn, kế hoạch kiếm tiền thiếu minh bạch hoặc quyết định dựa trên thuyết phục cảm xúc.",
+          "inner_work_vi": "Có thể bạn đang nghi ngờ năng lực của mình, hoặc dùng sự bận rộn để né việc quan trọng nhất.",
+          "advice_vi": "Giảm nhiễu. Chọn một việc chính và biến nó thành hành động nhỏ trong hôm nay.",
+          "warning_vi": "Đừng để lời nói tạo ảo giác rằng vấn đề đã được giải quyết."
+        }
+      },
+      "position_overrides": {
+        "situation": "Tình huống xoay quanh quyền chủ động, lời nói và khả năng biến ý định thành thực tế.",
+        "action": "Hành động nên là giao tiếp rõ, đề xuất cụ thể hoặc dùng kỹ năng đang có để tạo chuyển động.",
+        "outcome": "Nếu dùng đúng nguồn lực, kết quả có thể chuyển nhanh từ ý tưởng sang hiện thực.",
+        "challenge": "Điểm nghẽn là thao túng, hứa quá mức hoặc thiếu hành động sau lời nói."
+      },
+      "relationship_signals": {
+        "default": "Hãy quan sát sự nhất quán giữa lời nói và hành động. The Magician đẹp khi người kia chủ động thật, không chỉ biết nói đúng điều bạn muốn nghe.",
+        "existing_relationship": "Nếu hỏi có nên tiếp tục, lá này yêu cầu một cuộc nói chuyện rõ ràng và kế hoạch thay đổi cụ thể.",
+        "situationship": "Trong mập mờ, lá này có thể chỉ sức hút và chemistry mạnh, nhưng cần kiểm tra cam kết.",
+        "ex": "Với người cũ, lời quay lại chỉ có giá trị nếu đi kèm hành động sửa mô thức cũ.",
+        "no_contact": "Nếu đang im lặng, có khả năng một tin nhắn/động thái mở lời xuất hiện, nhưng cần nhìn nội dung thực chất."
+      },
+      "symbols": [
+        {
+          "symbol": "bàn với bốn vật phẩm",
+          "meaning_vi": "Đủ công cụ của bốn suit: hành động, cảm xúc, lý trí và vật chất."
+        },
+        {
+          "symbol": "một tay chỉ trời một tay chỉ đất",
+          "meaning_vi": "Biến ý tưởng vô hình thành kết quả hữu hình."
+        },
+        {
+          "symbol": "vô cực",
+          "meaning_vi": "Dòng năng lực liên tục khi ý chí được tập trung."
+        }
+      ],
+      "reader_notes_vi": [
+        "Trong bài tình yêu, phải kiểm tra ranh giới giữa chủ động chân thành và thao túng cảm xúc.",
+        "Lá này cần câu cụ thể về hành động, không nên viết chung 'bạn có sức mạnh'."
+      ]
+    },
+    {
+      "id": "major-02-the-high-priestess",
+      "source_basis": ["waite", "rachel_pollack", "product_editorial"],
+      "core": {
+        "essence_vi": "The High Priestess là phần biết nhưng chưa nói, thấy nhưng chưa vội phán xét. Lá này mở ra vùng trực giác, bí mật và thông tin còn nằm dưới mặt nước.",
+        "keywords_vi": ["trực giác", "bí mật", "im lặng", "quan sát", "nội tâm"],
+        "shadow_keywords_vi": ["mập mờ", "giấu giếm", "thụ động", "đọc dấu hiệu quá mức", "không nói nhu cầu"]
+      },
+      "orientation": {
+        "upright": {
+          "general_vi": "Không phải mọi câu trả lời đều cần ép lộ ngay. Hãy quan sát thêm, tin trực giác nhưng vẫn phân biệt cảm nhận với bằng chứng.",
+          "love_vi": "Trong tình yêu, lá này thường chỉ sự im lặng, cảm xúc chưa nói hoặc một tầng thông tin còn ẩn. Sự thu hút có thể sâu, nhưng chưa chắc đã được gọi tên.",
+          "career_vi": "Về công việc, cần nghiên cứu kín, giữ chiến lược, hoặc chờ thêm dữ kiện trước khi công bố.",
+          "money_vi": "Về tiền bạc, đừng quyết định khi thông tin chưa đủ rõ. Hãy đọc kỹ phần nhỏ, điều kiện ẩn và cảm giác bất thường.",
+          "inner_work_vi": "Bên trong bạn đã cảm thấy điều gì đó trước khi lý trí kịp gọi tên. Hãy ghi nhận cảm giác đó thay vì phủ nhận.",
+          "advice_vi": "Chậm lại, quan sát dấu hiệu lặp lại, rồi hỏi câu hỏi thật đúng.",
+          "warning_vi": "Trực giác không phải cái cớ để đoán thay cho đối thoại."
+        },
+        "reversed": {
+          "general_vi": "Có điều bị giấu quá lâu, trực giác bị nhiễu hoặc bạn đang im lặng đến mức đánh mất tiếng nói của mình.",
+          "love_vi": "Trong tình cảm, lá ngược cảnh báo mập mờ kéo dài, bí mật, hoặc việc bạn tự diễn giải quá nhiều vì thiếu đối thoại rõ.",
+          "career_vi": "Ở công việc, có thể có thông tin chưa được chia sẻ hoặc bạn chưa đọc đúng tín hiệu trong môi trường.",
+          "money_vi": "Không nên ký/chi/đầu tư khi còn cảm giác có điều chưa minh bạch.",
+          "inner_work_vi": "Có thể bạn đang không tin chính mình, hoặc trốn trong im lặng để khỏi phải đưa ra lựa chọn.",
+          "advice_vi": "Đưa một điều mơ hồ ra ánh sáng bằng câu hỏi trực tiếp nhưng bình tĩnh.",
+          "warning_vi": "Im lặng quá lâu có thể biến trực giác thành lo âu."
+        }
+      },
+      "position_overrides": {
+        "situation": "Tình huống có lớp ẩn: cảm xúc, thông tin hoặc động cơ chưa được nói thẳng.",
+        "action": "Hành động tốt nhất là quan sát và hỏi đúng câu, không ép kết luận vội.",
+        "outcome": "Xu hướng gần là sự thật dần hiện lên, nhưng qua dấu hiệu nhỏ hơn là biến cố lớn.",
+        "challenge": "Thử thách là phân biệt trực giác thật với nỗi sợ và suy diễn."
+      },
+      "relationship_signals": {
+        "default": "Có điều chưa nói hết. Dấu hiệu cần xem là người kia có mở lòng khi bạn hỏi rõ hay tiếp tục né vào im lặng.",
+        "existing_relationship": "Nếu hỏi có nên tiếp tục, lá này cho thấy quyết định chưa nên dựa trên đoán mò; cần một cuộc đối thoại đủ yên để sự thật nổi lên.",
+        "situationship": "Trong mập mờ, High Priestess xác nhận sự mơ hồ là chủ đề chính. Sự hấp dẫn có thể thật, nhưng thiếu định nghĩa.",
+        "ex": "Với người cũ, có thể còn cảm xúc âm thầm hoặc điều chưa khép lại, nhưng chưa đủ bằng chứng cho hành động rõ.",
+        "no_contact": "Nếu đang im lặng, lá này phản ánh đúng trạng thái: nhiều năng lượng nằm dưới bề mặt. Đừng vội đọc im lặng là hết hoặc còn."
+      },
+      "symbols": [
+        {
+          "symbol": "tấm màn",
+          "meaning_vi": "Ranh giới giữa điều đã biết và điều chưa được phép lộ diện."
+        },
+        {
+          "symbol": "hai cột",
+          "meaning_vi": "Cân bằng giữa đối cực: biết và không biết, nói và im lặng."
+        },
+        {
+          "symbol": "mặt trăng",
+          "meaning_vi": "Chu kỳ cảm xúc, trực giác và vùng vô thức."
+        }
+      ],
+      "reader_notes_vi": [
+        "Đây là lá rất mạnh cho câu hỏi mập mờ, no contact và cảm xúc người kia.",
+        "Không nên viết chắc 'người ấy đang giấu bạn'; hãy viết có lớp thông tin/cảm xúc chưa được nói rõ."
+      ]
+    },
+    {
+      "id": "major-03-the-empress",
+      "source_basis": ["waite", "rachel_pollack", "product_editorial"],
+      "core": {
+        "essence_vi": "The Empress là sự sống được nuôi dưỡng: tình cảm, thân thể, sáng tạo, chăm sóc và cảm giác đủ đầy khi điều gì đó được cho thời gian lớn lên.",
+        "keywords_vi": ["nuôi dưỡng", "sinh sôi", "ấm áp", "cảm xúc", "sáng tạo"],
+        "shadow_keywords_vi": ["ôm đồm", "hy sinh quá mức", "phụ thuộc chăm sóc", "mong được đáp lại vì đã cho quá nhiều"]
+      },
+      "orientation": {
+        "upright": {
+          "general_vi": "Có điều đang cần được chăm đều chứ không ép lớn nhanh. Lá này tốt cho sự phát triển tự nhiên, cảm xúc mềm và cảm giác được nuôi dưỡng.",
+          "love_vi": "Trong tình yêu, The Empress là sự ấm áp, hấp dẫn và mong muốn chăm sóc. Mối quan hệ có tiềm năng nở ra nếu sự cho đi không biến thành một chiều.",
+          "career_vi": "Về công việc, lá này tốt cho sáng tạo, xây sản phẩm, thương hiệu, nội dung, thiết kế hoặc môi trường cần nuôi dưỡng cộng đồng.",
+          "money_vi": "Về tiền bạc, đây là năng lượng tăng trưởng qua chăm sóc nguồn lực, không phải ăn xổi.",
+          "inner_work_vi": "Bạn cần quay về thân thể, cảm xúc và khả năng tự nuôi mình thay vì chỉ chờ bên ngoài xác nhận.",
+          "advice_vi": "Hãy chăm điều bạn muốn thấy lớn lên bằng hành động đều và mềm.",
+          "warning_vi": "Đừng biến yêu thương thành gánh trách nhiệm một chiều."
+        },
+        "reversed": {
+          "general_vi": "Dòng nuôi dưỡng bị cạn hoặc lệch. Bạn có thể đang cho quá nhiều, đòi quá nhiều, hoặc quên chăm chính mình.",
+          "love_vi": "Trong tình cảm, lá ngược thường chỉ sự mất cân bằng chăm sóc: một bên ôm cảm xúc, chờ phản hồi, hoặc cố làm mối quan hệ sống thay cho cả hai.",
+          "career_vi": "Về công việc, sáng tạo có thể bị nghẽn vì kiệt sức, thiếu môi trường hỗ trợ hoặc chăm quá nhiều thứ cùng lúc.",
+          "money_vi": "Cẩn thận chi tiêu để bù cảm xúc hoặc nuôi một kế hoạch chưa có nền.",
+          "inner_work_vi": "Bạn cần hỏi: mình đang chăm người khác để yêu, hay để được cần đến?",
+          "advice_vi": "Thu năng lượng về, chăm phần đang cạn trước khi tiếp tục cho đi.",
+          "warning_vi": "Nếu chỉ một bên nuôi mối quan hệ, sự ấm áp sẽ thành mệt mỏi."
+        }
+      },
+      "position_overrides": {
+        "situation": "Tình huống xoay quanh chăm sóc, hấp dẫn, cảm xúc và khả năng nuôi điều gì đó lớn lên.",
+        "action": "Hành động nên là chăm đều nhưng đặt ranh giới.",
+        "outcome": "Nếu năng lượng được cân bằng, kết quả có xu hướng nở ra và mềm lại.",
+        "challenge": "Thử thách là cho đi quá mức hoặc nhầm chăm sóc với kiểm soát."
+      },
+      "relationship_signals": {
+        "default": "Có sự ấm áp hoặc mong muốn chăm sóc. Dấu hiệu cần xem là sự chăm sóc có hai chiều không.",
+        "existing_relationship": "Nếu hỏi có nên tiếp tục, lá này nghiêng về tiếp tục khi hai bên còn biết nuôi nhau, không phải chỉ một người giữ lửa.",
+        "situationship": "Trong mập mờ, The Empress có thể là hấp dẫn mạnh nhưng cũng dễ khiến một bên cho quá nhiều khi chưa có cam kết.",
+        "ex": "Với người cũ, còn tình cảm mềm hoặc ký ức ấm, nhưng cần hỏi liệu có nền mới hay chỉ là nhớ cảm giác được chăm.",
+        "no_contact": "Nếu đang im lặng, hãy xem ai là người luôn phải nuôi kết nối. Đó là tín hiệu quan trọng."
+      },
+      "symbols": [
+        {
+          "symbol": "vườn cây",
+          "meaning_vi": "Sự phát triển tự nhiên cần môi trường và thời gian."
+        },
+        {
+          "symbol": "lúa mì",
+          "meaning_vi": "Kết quả vật chất từ quá trình chăm sóc đều đặn."
+        },
+        {
+          "symbol": "trái tim Venus",
+          "meaning_vi": "Tình yêu, hấp dẫn, thẩm mỹ và giá trị bản thân."
+        }
+      ],
+      "reader_notes_vi": [
+        "Lá này dễ làm bài đọc tình yêu nghe ấm, nhưng phải luôn kiểm tra ranh giới.",
+        "Khi reversed, trọng tâm là kiệt sức cảm xúc và cho đi một chiều."
+      ]
+    },
+    {
+      "id": "major-04-the-emperor",
+      "source_basis": ["waite", "rachel_pollack", "product_editorial"],
+      "core": {
+        "essence_vi": "The Emperor là cấu trúc, trách nhiệm và khả năng bảo vệ điều quan trọng bằng ranh giới rõ. Lá này hỏi: nền tảng có đủ vững để cảm xúc hoặc dự án đứng lâu không?",
+        "keywords_vi": ["cấu trúc", "trách nhiệm", "ranh giới", "quyền lực", "ổn định"],
+        "shadow_keywords_vi": ["cứng nhắc", "kiểm soát", "lạnh cảm xúc", "áp đặt", "sợ mất quyền chủ động"]
+      },
+      "orientation": {
+        "upright": {
+          "general_vi": "Cần trật tự, kế hoạch và ranh giới. Đây là lá tốt khi tình huống cần người đứng ra chịu trách nhiệm thay vì để mọi thứ trôi theo cảm xúc.",
+          "love_vi": "Trong tình yêu, The Emperor nói về cam kết, sự rõ ràng và hành động có trách nhiệm. Nó không lãng mạn mềm, nhưng cho thấy nhu cầu về nền tảng và vị trí rõ.",
+          "career_vi": "Về công việc, lá này rất mạnh cho quản lý, chiến lược, xây hệ thống, ký kết, lãnh đạo và quyết định có kỷ luật.",
+          "money_vi": "Về tiền bạc, cần ngân sách, nguyên tắc và kế hoạch dài hạn. Không nên để cảm xúc điều khiển chi tiêu.",
+          "inner_work_vi": "Bạn cần xây lại cảm giác tự chủ: biết mình muốn gì, không để người khác kéo qua lại.",
+          "advice_vi": "Đặt ranh giới, nói điều kiện rõ, và xem ai có đủ trách nhiệm để đáp lại.",
+          "warning_vi": "Ổn định không đồng nghĩa với kiểm soát toàn bộ."
+        },
+        "reversed": {
+          "general_vi": "Cấu trúc đang lệch: hoặc quá cứng, hoặc quá thiếu người chịu trách nhiệm. Quyền lực/ràng buộc có thể là điểm nghẽn.",
+          "love_vi": "Trong tình cảm, lá ngược cảnh báo kiểm soát, im lặng lạnh, thiếu cam kết rõ hoặc một người muốn mọi thứ theo luật của mình.",
+          "career_vi": "Ở công việc, có thể gặp quản lý cứng, hệ thống nghẹt hoặc chính bạn đang thiếu kế hoạch thực tế.",
+          "money_vi": "Cần kiểm soát lại dòng tiền, nợ, cam kết hoặc các quyết định tài chính thiếu kỷ luật.",
+          "inner_work_vi": "Hãy xem bạn đang cần ranh giới thật, hay đang dựng tường vì sợ tổn thương.",
+          "advice_vi": "Làm rõ luật chơi. Nếu người kia không đáp được điều kiện tối thiểu, đừng tự thuyết phục rằng sự mập mờ là ổn.",
+          "warning_vi": "Một mối quan hệ không có trách nhiệm rõ sẽ làm bạn phải tự gánh cấu trúc một mình."
+        }
+      },
+      "position_overrides": {
+        "situation": "Tình huống cần cấu trúc, ranh giới hoặc cam kết rõ hơn.",
+        "action": "Hành động nên là đặt điều kiện, nói rõ giới hạn và xem phản hồi thực tế.",
+        "outcome": "Nếu có trách nhiệm rõ, kết quả có thể ổn định; nếu không, sự cứng/lạnh sẽ lộ rõ hơn.",
+        "challenge": "Thử thách là kiểm soát, sợ mềm yếu hoặc thiếu người đứng ra chịu trách nhiệm."
+      },
+      "relationship_signals": {
+        "default": "Dấu hiệu cần xem là sự nhất quán, trách nhiệm và khả năng gọi tên mối quan hệ.",
+        "existing_relationship": "Nếu hỏi có nên tiếp tục, The Emperor nghiêng về câu hỏi: mối quan hệ này có cấu trúc lành mạnh không, hay bạn đang tự giữ nó bằng kỷ luật một chiều?",
+        "situationship": "Trong mập mờ, lá này yêu cầu định nghĩa. Nếu người kia né cấu trúc, đó là dữ kiện quan trọng.",
+        "ex": "Với người cũ, quay lại chỉ có ý nghĩa nếu có luật mới và trách nhiệm mới.",
+        "no_contact": "Nếu đang im lặng, đừng chỉ chờ cảm xúc; hãy xem ai có đủ trưởng thành để mở một cuộc nói chuyện rõ."
+      },
+      "symbols": [
+        {
+          "symbol": "ngai đá",
+          "meaning_vi": "Nền tảng cứng, vị trí rõ, quyền lực gắn với trách nhiệm."
+        },
+        {
+          "symbol": "núi đá",
+          "meaning_vi": "Thử thách, sự bền bỉ và đôi khi là khô cứng cảm xúc."
+        },
+        {
+          "symbol": "áo giáp",
+          "meaning_vi": "Khả năng bảo vệ nhưng cũng có thể là phòng thủ."
+        }
+      ],
+      "reader_notes_vi": [
+        "Trong câu hỏi tình yêu, The Emperor không nên được viết như 'anh ấy chắc chắn nghiêm túc'; phải kiểm tra hành động và cấu trúc.",
+        "Lá này rất hữu ích để nói về ranh giới và cam kết."
+      ]
+    }
+  ]
+}

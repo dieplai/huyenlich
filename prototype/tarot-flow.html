@@ -1,0 +1,2867 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tarot Flow</title>
+  <style>
+    :root {
+      --bg: #070812;
+      --panel: rgba(18, 20, 36, 0.86);
+      --panel-2: rgba(27, 30, 50, 0.82);
+      --line: rgba(220, 190, 120, 0.24);
+      --gold: #d4af37;
+      --cyan: #78e7ff;
+      --rose: #ff7795;
+      --text: #f2f0e8;
+      --muted: #a9a6b8;
+      --danger: #ff6873;
+      --ok: #89f7b5;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 20% 10%, rgba(120, 231, 255, 0.12), transparent 30%),
+        radial-gradient(circle at 85% 0%, rgba(212, 175, 55, 0.12), transparent 30%),
+        linear-gradient(135deg, #070812 0%, #10111f 42%, #080914 100%);
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        radial-gradient(circle, rgba(255,255,255,0.42) 0 1px, transparent 1.4px),
+        radial-gradient(circle, rgba(212,175,55,0.22) 0 1px, transparent 1.2px);
+      background-size: 80px 80px, 130px 130px;
+      opacity: 0.18;
+    }
+
+    .shell {
+      position: relative;
+      width: min(1320px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 28px 0 48px;
+    }
+
+    header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(30px, 4vw, 54px);
+      letter-spacing: 0;
+      line-height: 1;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      margin-top: 8px;
+      max-width: 760px;
+      line-height: 1.55;
+    }
+
+    .status {
+      min-width: 220px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--muted);
+      background: rgba(0,0,0,0.18);
+      font-size: 13px;
+      text-align: right;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 18px 70px rgba(0,0,0,0.34);
+      backdrop-filter: blur(18px);
+    }
+
+    .panel h2 {
+      margin: 0;
+      padding: 18px 18px 0;
+      font-size: 16px;
+      letter-spacing: 0;
+      color: #fff7d1;
+    }
+
+    .panel-body { padding: 18px; }
+
+    label {
+      display: block;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 7px;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      color: var(--text);
+      background: rgba(255,255,255,0.055);
+      border: 1px solid rgba(255,255,255,0.13);
+      border-radius: 8px;
+      padding: 11px 12px;
+      outline: none;
+      font: inherit;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+      line-height: 1.5;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: rgba(212, 175, 55, 0.65);
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.13);
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .field { margin-top: 14px; }
+
+    .check-row {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .check-row input {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--gold);
+    }
+
+    button {
+      width: 100%;
+      margin-top: 16px;
+      padding: 13px 16px;
+      border: 0;
+      border-radius: 8px;
+      color: #17120a;
+      background: linear-gradient(135deg, #f4d66c, #d4af37 45%, #78e7ff);
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 12px 34px rgba(212, 175, 55, 0.22);
+    }
+
+    button:disabled {
+      opacity: 0.55;
+      cursor: wait;
+    }
+
+    .small {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .result-stack {
+      display: grid;
+      gap: 18px;
+    }
+
+    .classification {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .pill {
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05);
+      min-height: 62px;
+    }
+
+    .pill span {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      margin-bottom: 5px;
+    }
+
+    .pill strong {
+      font-size: 14px;
+      color: #fff;
+      overflow-wrap: anywhere;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      background: var(--panel-2);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px;
+      overflow: hidden;
+      min-height: 100%;
+    }
+
+    .card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 400 / 700;
+      object-fit: cover;
+      background: #111;
+    }
+
+    .card-content {
+      padding: 12px;
+    }
+
+    .position {
+      color: var(--cyan);
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
+
+    .card-title {
+      font-weight: 800;
+      line-height: 1.25;
+    }
+
+    .orientation {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 6px;
+    }
+
+    .reading {
+      display: grid;
+      gap: 14px;
+      line-height: 1.7;
+    }
+
+    .reading h3 {
+      margin: 4px 0 0;
+      color: #fff7d1;
+      font-size: 18px;
+    }
+
+    .reading p {
+      margin: 0;
+      color: #e9e5dc;
+    }
+
+    .reading ul {
+      margin: 0;
+      padding-left: 20px;
+      color: #e9e5dc;
+    }
+
+    .debug {
+      white-space: pre-wrap;
+      overflow: auto;
+      max-height: 480px;
+      color: #d7d5e8;
+      font-size: 12px;
+      line-height: 1.5;
+      background: rgba(0,0,0,0.24);
+      border-radius: 8px;
+      padding: 12px;
+    }
+
+    .error { color: var(--danger); }
+    .ok { color: var(--ok); }
+
+    @media (max-width: 960px) {
+      header {
+        display: block;
+      }
+
+      .status {
+        text-align: left;
+        margin-top: 14px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .classification {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    /* Product UI pass */
+    :root {
+      --bg-void: #040410;
+      --bg-deep: #0a0a1e;
+      --bg-surface: rgba(18, 18, 42, 0.76);
+      --bg-elevated: rgba(26, 26, 56, 0.82);
+      --accent-gold: #d4af37;
+      --accent-gold-glow: #f0d060;
+      --accent-purple: #8b5cf6;
+      --accent-rose: #f43f5e;
+      --text-primary: #e8e8f0;
+      --text-secondary: #a8a6bd;
+      --text-muted: #6f6b89;
+      --glass-border: rgba(180, 150, 255, 0.16);
+      --shadow-heavy: 0 22px 90px rgba(0, 0, 0, 0.45);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      overflow-x: hidden;
+      color: var(--text-primary);
+      background:
+        radial-gradient(circle at 50% -10%, rgba(212, 175, 55, 0.16), transparent 34%),
+        radial-gradient(circle at 12% 22%, rgba(244, 63, 94, 0.14), transparent 34%),
+        radial-gradient(circle at 85% 18%, rgba(139, 92, 246, 0.18), transparent 36%),
+        linear-gradient(140deg, var(--bg-void), #090918 46%, #05050f);
+      font-family: "Be Vietnam Pro", Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body::before {
+      opacity: 0.15;
+      mask-image: linear-gradient(to bottom, #000 0%, transparent 88%);
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: auto -10vw -28vh -10vw;
+      height: 48vh;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse at center, rgba(212, 175, 55, 0.13), transparent 56%),
+        linear-gradient(to top, rgba(4, 4, 16, 0.9), transparent);
+      filter: blur(10px);
+    }
+
+    .ambient {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .ambient span {
+      position: absolute;
+      display: block;
+      width: 42vw;
+      height: 42vw;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.1), transparent 64%);
+      filter: blur(18px);
+      opacity: 0.7;
+      animation: drift 18s ease-in-out infinite alternate;
+    }
+
+    .ambient span:nth-child(1) {
+      left: -18vw;
+      top: 8vh;
+    }
+
+    .ambient span:nth-child(2) {
+      right: -16vw;
+      top: 18vh;
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.13), transparent 64%);
+      animation-duration: 22s;
+    }
+
+    .ambient span:nth-child(3) {
+      left: 28vw;
+      bottom: -26vw;
+      background: radial-gradient(circle, rgba(244, 63, 94, 0.1), transparent 62%);
+      animation-duration: 26s;
+    }
+
+    @keyframes drift {
+      from { transform: translate3d(0, 0, 0) scale(1); }
+      to { transform: translate3d(4vw, -3vh, 0) scale(1.12); }
+    }
+
+    .shell {
+      width: min(1440px, calc(100vw - 28px));
+      padding: 22px 0 56px;
+    }
+
+    .topbar {
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      border-radius: 8px;
+      color: var(--accent-gold-glow);
+      background:
+        radial-gradient(circle at 50% 34%, rgba(212, 175, 55, 0.22), transparent 56%),
+        rgba(255, 255, 255, 0.04);
+      box-shadow: 0 0 28px rgba(212, 175, 55, 0.14);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 22px;
+    }
+
+    .eyebrow {
+      margin: 0 0 3px;
+      color: var(--accent-gold);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      font-size: clamp(26px, 3.2vw, 46px);
+      line-height: 0.95;
+    }
+
+    .subtitle {
+      max-width: 680px;
+      color: var(--text-secondary);
+      font-size: 14px;
+    }
+
+    .status {
+      min-width: 238px;
+      border-color: rgba(212, 175, 55, 0.22);
+      border-radius: 999px;
+      background: rgba(10, 10, 30, 0.68);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+    }
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: minmax(330px, 420px) minmax(0, 1fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .panel {
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(145deg, rgba(255,255,255,0.075), rgba(255,255,255,0.025)),
+        var(--bg-surface);
+      border: 1px solid var(--glass-border);
+      border-radius: 8px;
+      box-shadow: var(--shadow-heavy);
+    }
+
+    .panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(110deg, rgba(212, 175, 55, 0.12), transparent 24%),
+        radial-gradient(circle at 85% 0%, rgba(139, 92, 246, 0.15), transparent 32%);
+      opacity: 0.8;
+    }
+
+    .panel > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .question-panel {
+      min-height: 680px;
+    }
+
+    .panel h2,
+    .reading h3 {
+      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      color: #fff2bd;
+    }
+
+    .panel h2 {
+      padding: 20px 20px 0;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .panel-kicker {
+      padding: 20px 20px 0;
+      color: var(--accent-rose);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .question-panel h2 {
+      padding-top: 6px;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.04;
+    }
+
+    .panel-copy {
+      margin: 10px 20px 0;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .panel-body {
+      padding: 20px;
+    }
+
+    label {
+      color: #c6bed7;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    textarea,
+    input,
+    select {
+      border-color: rgba(255, 255, 255, 0.12);
+      background: rgba(3, 4, 16, 0.48);
+      border-radius: 8px;
+      color: var(--text-primary);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    }
+
+    textarea {
+      min-height: 154px;
+      font-size: 15px;
+    }
+
+    .example-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 11px;
+    }
+
+    .example-chip {
+      width: auto;
+      margin: 0;
+      padding: 8px 10px;
+      color: #e9e0ff;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.055);
+      box-shadow: none;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .example-chip:hover {
+      border-color: rgba(212, 175, 55, 0.44);
+      color: #fff5ca;
+    }
+
+    .settings {
+      margin-top: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      background: rgba(0, 0, 0, 0.16);
+    }
+
+    .settings summary {
+      cursor: pointer;
+      padding: 12px 13px;
+      color: #fff2bd;
+      font-weight: 800;
+      list-style: none;
+    }
+
+    .settings summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .settings summary::after {
+      content: "+";
+      float: right;
+      color: var(--accent-gold);
+    }
+
+    .settings[open] summary::after {
+      content: "-";
+    }
+
+    .settings-body {
+      padding: 0 13px 14px;
+    }
+
+    button#runButton {
+      min-height: 52px;
+      margin-top: 18px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #f7db7b, #d4af37 42%, #9f6eff 100%);
+      color: #130f09;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      box-shadow:
+        0 18px 44px rgba(212, 175, 55, 0.2),
+        0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+    }
+
+    .vault-stage {
+      min-height: 680px;
+      display: grid;
+      align-content: stretch;
+    }
+
+    .stage-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 20px 20px 0;
+      align-items: start;
+    }
+
+    .stage-title {
+      margin: 0;
+      padding: 0;
+      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      font-size: clamp(28px, 4vw, 48px);
+      line-height: 1;
+      color: #fff2bd;
+    }
+
+    .stage-note {
+      margin: 8px 0 0;
+      max-width: 560px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    .stage-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(82px, 1fr));
+      gap: 8px;
+      min-width: 290px;
+    }
+
+    .metric {
+      padding: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      background: rgba(0, 0, 0, 0.18);
+      text-align: center;
+    }
+
+    .metric strong {
+      display: block;
+      color: #fff;
+      font-size: 17px;
+    }
+
+    .metric span {
+      color: var(--text-muted);
+      font-size: 11px;
+    }
+
+    .vault-visual {
+      position: relative;
+      min-height: 450px;
+      display: grid;
+      place-items: center;
+      padding: 28px 20px 20px;
+      overflow: hidden;
+    }
+
+    .vault-visual::before {
+      content: "";
+      position: absolute;
+      inset: 8% 6% 2%;
+      background:
+        radial-gradient(ellipse at 50% 60%, rgba(212, 175, 55, 0.16), transparent 44%),
+        radial-gradient(ellipse at 50% 100%, rgba(244, 63, 94, 0.12), transparent 56%);
+      filter: blur(6px);
+    }
+
+    .deck-placeholder {
+      position: relative;
+      width: min(560px, 88vw);
+      height: 330px;
+      display: grid;
+      place-items: center;
+      transform-style: preserve-3d;
+    }
+
+    .deck-card {
+      position: absolute;
+      width: 128px;
+      aspect-ratio: 400 / 700;
+      border: 1px solid rgba(212, 175, 55, 0.42);
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(212, 175, 55, 0.22), transparent 32%),
+        radial-gradient(circle at center, rgba(139, 92, 246, 0.24), transparent 52%),
+        repeating-linear-gradient(45deg, rgba(255,255,255,0.04) 0 1px, transparent 1px 9px),
+        #121127;
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.34);
+      transform-origin: 50% 100%;
+    }
+
+    .deck-card:nth-child(1) { transform: rotate(-30deg) translateY(42px); }
+    .deck-card:nth-child(2) { transform: rotate(-20deg) translateY(20px); }
+    .deck-card:nth-child(3) { transform: rotate(-10deg) translateY(8px); }
+    .deck-card:nth-child(4) { transform: rotate(0deg) translateY(0); }
+    .deck-card:nth-child(5) { transform: rotate(10deg) translateY(8px); }
+    .deck-card:nth-child(6) { transform: rotate(20deg) translateY(20px); }
+    .deck-card:nth-child(7) { transform: rotate(30deg) translateY(42px); }
+
+    .deck-message {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: min(420px, 88%);
+      transform: translateX(-50%);
+      padding: 13px 15px;
+      border: 1px solid rgba(212, 175, 55, 0.22);
+      border-radius: 8px;
+      background: rgba(4, 4, 16, 0.72);
+      color: #e8e1d1;
+      line-height: 1.5;
+      text-align: center;
+      backdrop-filter: blur(14px);
+    }
+
+    .cards {
+      width: 100%;
+      grid-template-columns: repeat(auto-fit, minmax(172px, 1fr));
+      align-items: start;
+    }
+
+    .drawn-card {
+      background: rgba(8, 8, 24, 0.66);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 18px 44px rgba(0, 0, 0, 0.34);
+      transition: transform 180ms ease, border-color 180ms ease;
+    }
+
+    .drawn-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(212, 175, 55, 0.42);
+    }
+
+    .drawn-card.reversed img {
+      transform: rotate(180deg);
+    }
+
+    .drawn-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 400 / 700;
+      object-fit: cover;
+      background: #080812;
+    }
+
+    .card-content {
+      padding: 13px;
+    }
+
+    .position {
+      color: var(--accent-gold-glow);
+      font-weight: 800;
+    }
+
+    .orientation {
+      color: var(--text-secondary);
+    }
+
+    .reading-layout {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: minmax(300px, 420px) minmax(0, 1fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    .classification {
+      grid-template-columns: 1fr;
+    }
+
+    .pill {
+      min-height: auto;
+      border-color: rgba(255, 255, 255, 0.1);
+      background: rgba(0, 0, 0, 0.18);
+    }
+
+    .pill strong {
+      color: #f5efe4;
+      line-height: 1.35;
+    }
+
+    .reading {
+      gap: 18px;
+      font-size: 16px;
+    }
+
+    .reading h3 {
+      margin-top: 8px;
+      font-size: 25px;
+      line-height: 1.08;
+    }
+
+    .reading p {
+      color: #eee9df;
+    }
+
+    .reading .small {
+      display: block;
+      margin-top: 8px;
+      color: #bdb6ca;
+    }
+
+    .debug-panel {
+      grid-column: 1 / -1;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    .debug-panel summary {
+      cursor: pointer;
+      padding: 14px 16px;
+      color: var(--text-secondary);
+      font-weight: 800;
+      list-style: none;
+    }
+
+    .debug-panel summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .debug-panel summary::after {
+      content: "+";
+      float: right;
+      color: var(--accent-gold);
+    }
+
+    .debug-panel[open] summary::after {
+      content: "-";
+    }
+
+    .debug {
+      margin: 0 16px 16px;
+      max-height: 360px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(0, 0, 0, 0.34);
+    }
+
+    @media (max-width: 1080px) {
+      .experience-grid,
+      .reading-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .question-panel,
+      .vault-stage {
+        min-height: auto;
+      }
+
+      .stage-header {
+        display: block;
+      }
+
+      .stage-metrics {
+        min-width: 0;
+        margin-top: 14px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .shell {
+        width: min(100vw - 18px, 1440px);
+        padding-top: 12px;
+      }
+
+      .topbar {
+        display: block;
+      }
+
+      .status {
+        width: 100%;
+        margin-top: 14px;
+        text-align: left;
+      }
+
+      .row {
+        grid-template-columns: 1fr;
+      }
+
+      .stage-metrics {
+        grid-template-columns: 1fr;
+      }
+
+      .deck-placeholder {
+        height: 280px;
+      }
+
+      .deck-card {
+        width: 96px;
+      }
+
+      .cards {
+        grid-template-columns: repeat(auto-fit, minmax(138px, 1fr));
+      }
+    }
+
+    /* Neo-Mystic Dreamscape layout inspired by the provided reference */
+    body {
+      min-height: 100vh;
+      background-image:
+        linear-gradient(90deg, rgba(4, 4, 16, 0.38), rgba(4, 4, 16, 0.1)),
+        url("../public/background.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body::before {
+      background-image:
+        radial-gradient(circle, rgba(255,255,255,0.62) 0 1px, transparent 1.4px),
+        radial-gradient(circle, rgba(212,175,55,0.24) 0 1px, transparent 1.2px);
+      opacity: 0.14;
+    }
+
+    .ambient {
+      display: none;
+    }
+
+    .dream-page {
+      position: relative;
+      z-index: 1;
+      height: 100dvh;
+      display: grid;
+      place-items: center;
+      padding: 48px 28px;
+      overflow: hidden;
+    }
+
+    .dream-frame {
+      width: min(1280px, 100%);
+      height: min(720px, calc(100dvh - 72px));
+      min-height: 520px;
+      display: grid;
+      grid-template-columns: 96px minmax(420px, 1fr) minmax(480px, 1.08fr);
+      overflow: hidden;
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(16px);
+      box-shadow:
+        0 34px 110px rgba(0, 0, 0, 0.48),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    }
+
+    .dream-sidebar {
+      display: grid;
+      grid-template-rows: 92px 1fr 92px;
+      align-items: center;
+      justify-items: center;
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(16px);
+    }
+
+    .nav-icon {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      margin: 0;
+      padding: 0;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #fff6d9;
+      background: rgba(255, 255, 255, 0.04);
+      box-shadow: 0 0 24px rgba(139, 92, 246, 0.24);
+      font-size: 18px;
+    }
+
+    .nav-icon:hover {
+      border-color: rgba(212, 175, 55, 0.45);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .side-word {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      color: rgba(255, 255, 255, 0.78);
+      letter-spacing: 0.26em;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .dream-cards {
+      position: relative;
+      min-height: 720px;
+      overflow: hidden;
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+      background:
+        linear-gradient(180deg, rgba(5, 5, 18, 0.04), rgba(5, 5, 18, 0.58)),
+        url("../public/background.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .dream-cards::after {
+      content: "";
+      position: absolute;
+      inset: auto -12% -18% -12%;
+      height: 46%;
+      background:
+        linear-gradient(to top, rgba(0,0,0,0.76), transparent),
+        radial-gradient(ellipse at center, rgba(212, 175, 55, 0.2), rgba(4, 4, 16, 0.72) 54%, transparent 70%);
+      opacity: 0.68;
+      filter: saturate(0.85);
+    }
+
+    .cards-copy {
+      position: absolute;
+      left: 34px;
+      top: 34px;
+      z-index: 3;
+    }
+
+    .cards-copy h2 {
+      max-width: 310px;
+      margin: 0;
+      padding: 0;
+      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      color: #fff7df;
+      font-size: clamp(26px, 3vw, 40px);
+      line-height: 0.98;
+      text-shadow: 0 18px 48px rgba(0,0,0,0.4);
+    }
+
+    .card-fan-wrap {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      min-height: inherit;
+      display: grid;
+      place-items: center;
+      padding: 78px 24px 44px;
+    }
+
+    .deck-placeholder {
+      position: relative;
+      width: min(500px, 94%);
+      height: 430px;
+      transform-style: preserve-3d;
+    }
+
+    .placeholder-card {
+      position: absolute;
+      top: 56px;
+      left: 50%;
+      width: 168px;
+      aspect-ratio: 400 / 700;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.02)),
+        radial-gradient(circle at 50% 36%, rgba(212, 175, 55, 0.13), transparent 26%),
+        var(--card-bg);
+      background-size: cover;
+      background-position: center;
+      opacity: 0.94;
+      backdrop-filter: blur(16px);
+      filter: saturate(1.06) contrast(1.03);
+      box-shadow:
+        0 26px 48px rgba(0, 0, 0, 0.42),
+        0 0 28px rgba(139, 92, 246, 0.26);
+      transition: all 0.4s ease;
+    }
+
+    .placeholder-one { --card-bg: url("../public/after1.jpg"); }
+    .placeholder-two { --card-bg: url("../public/after2.jpg"); }
+    .placeholder-three { --card-bg: url("../public/after3.jpg"); }
+
+    .placeholder-card::before,
+    .placeholder-card::after {
+      content: "";
+      position: absolute;
+      inset: 13px;
+      border: 1px solid rgba(240, 208, 96, 0.32);
+      border-radius: 8px;
+      pointer-events: none;
+    }
+
+    .placeholder-card::after {
+      inset: 28px;
+      border-color: rgba(255, 255, 255, 0.13);
+      background:
+        linear-gradient(90deg, transparent 48%, rgba(255,255,255,0.18) 49%, rgba(255,255,255,0.18) 51%, transparent 52%),
+        linear-gradient(0deg, transparent 48%, rgba(255,255,255,0.18) 49%, rgba(255,255,255,0.18) 51%, transparent 52%);
+      opacity: 0.52;
+    }
+
+    .placeholder-left {
+      transform: translateX(-112%) translateY(32px) rotateZ(-17deg);
+      z-index: 1;
+    }
+
+    .placeholder-center {
+      transform: translateX(-50%) translateY(-8px) rotateZ(0deg);
+      z-index: 3;
+    }
+
+    .placeholder-right {
+      transform: translateX(12%) translateY(34px) rotateZ(17deg);
+      z-index: 2;
+    }
+
+    .placeholder-card:hover {
+      z-index: 5;
+      transform: translateX(-50%) translateY(-42px) rotateZ(0deg) scale(1.04);
+      opacity: 0.82;
+      border-color: rgba(240, 208, 96, 0.76);
+      box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.54),
+        0 0 38px rgba(212, 175, 55, 0.38),
+        0 0 48px rgba(139, 92, 246, 0.28);
+    }
+
+    .placeholder-left:hover {
+      transform: translateX(-88%) translateY(-38px) rotateZ(-4deg) scale(1.04);
+    }
+
+    .placeholder-right:hover {
+      transform: translateX(-14%) translateY(-38px) rotateZ(4deg) scale(1.04);
+    }
+
+    .dream-cards .cards {
+      position: relative;
+      z-index: 4;
+      width: min(520px, 100%);
+      min-height: 430px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      padding: 0;
+    }
+
+    .selection-board {
+      width: min(560px, 100%);
+      display: grid;
+      gap: 18px;
+      align-self: center;
+    }
+
+    .selection-instruction {
+      justify-self: center;
+      width: min(420px, 92%);
+      padding: 12px 15px;
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-radius: 999px;
+      color: rgba(255, 255, 255, 0.72);
+      background: rgba(4, 4, 16, 0.58);
+      backdrop-filter: blur(16px);
+      text-align: center;
+      box-shadow: 0 18px 44px rgba(0, 0, 0, 0.28);
+    }
+
+    .selection-instruction strong {
+      color: #fff6d1;
+    }
+
+    .selection-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(44px, 1fr));
+      gap: 11px;
+      align-items: center;
+      perspective: 900px;
+    }
+
+    .select-card {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 400 / 700;
+      margin: 0;
+      padding: 0;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      color: #fff6d1;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.02)),
+        var(--select-bg);
+      background-size: cover;
+      background-position: center;
+      cursor: pointer;
+      opacity: 0.9;
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.38);
+      transform: translateY(var(--deck-y, 0)) rotateZ(var(--deck-r, 0deg));
+      transition: all 0.4s ease;
+    }
+
+    .select-card::before {
+      content: "";
+      position: absolute;
+      inset: 8px;
+      border: 1px solid rgba(240, 208, 96, 0.32);
+      border-radius: 6px;
+      pointer-events: none;
+    }
+
+    .select-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: radial-gradient(circle at 50% 42%, rgba(255,255,255,0.15), transparent 36%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .select-card:hover,
+    .select-card.selected {
+      z-index: 5;
+      opacity: 1;
+      border-color: rgba(240, 208, 96, 0.78);
+      transform: translateY(-18px) rotateZ(0deg) scale(1.04);
+      box-shadow:
+        0 24px 52px rgba(0, 0, 0, 0.5),
+        0 0 34px rgba(212, 175, 55, 0.34),
+        0 0 44px rgba(139, 92, 246, 0.28);
+    }
+
+    .select-card:hover::after,
+    .select-card.selected::after {
+      opacity: 1;
+    }
+
+    .select-card.locked:not(.selected) {
+      opacity: 0.42;
+      cursor: default;
+      transform: translateY(var(--deck-y, 0)) rotateZ(var(--deck-r, 0deg));
+    }
+
+    .select-order {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      width: 24px;
+      height: 24px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      color: #120d06;
+      background: linear-gradient(135deg, #fff3b4, #d4af37);
+      font-size: 12px;
+      font-weight: 900;
+      opacity: 0;
+      transform: scale(0.7);
+      transition: all 0.28s ease;
+    }
+
+    .select-card.selected .select-order {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .dream-cards .drawn-card {
+      flex: 0 0 148px;
+      margin-inline: -20px;
+      transform: translateY(26px) rotateZ(-10deg);
+      border-radius: 10px;
+      transition: all 0.4s ease;
+    }
+
+    .dream-cards .drawn-card:nth-child(2) {
+      z-index: 3;
+      transform: translateY(-16px) rotateZ(0deg);
+    }
+
+    .dream-cards .drawn-card:nth-child(3) {
+      transform: translateY(26px) rotateZ(10deg);
+    }
+
+    .dream-cards .drawn-card:nth-child(n+4) {
+      transform: translateY(52px) rotateZ(0deg);
+    }
+
+    .dream-cards .drawn-card:hover {
+      z-index: 6;
+      transform: translateY(-46px) rotateZ(0deg) scale(1.04);
+      border-color: rgba(240, 208, 96, 0.76);
+      box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.54),
+        0 0 38px rgba(212, 175, 55, 0.38),
+        0 0 48px rgba(139, 92, 246, 0.28);
+    }
+
+    .dream-cards .drawn-card .card-content {
+      background: rgba(4, 4, 16, 0.78);
+      backdrop-filter: blur(10px);
+    }
+
+    .dream-panel {
+      position: relative;
+      min-height: 720px;
+      padding: clamp(34px, 5vw, 66px) clamp(32px, 5vw, 62px) 32px;
+      overflow: auto;
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(16px);
+    }
+
+    .dream-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(114deg, transparent 0%, rgba(255,255,255,0.08) 34%, transparent 58%),
+        radial-gradient(circle at 74% 12%, rgba(139, 92, 246, 0.2), transparent 36%),
+        radial-gradient(circle at 18% 88%, rgba(212, 175, 55, 0.12), transparent 28%);
+      opacity: 0.86;
+    }
+
+    .dream-panel > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .dream-panel .status {
+      float: right;
+      width: fit-content;
+      min-width: 0;
+      margin: -22px 0 20px 20px;
+      padding: 9px 13px;
+      text-align: left;
+      font-size: 12px;
+    }
+
+    .dream-panel h1 {
+      clear: both;
+      margin: 8px 0 14px;
+      font-family: "Playfair Display", "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      font-size: clamp(58px, 6vw, 78px);
+      color: #fff;
+      line-height: 0.95;
+      text-shadow: 0 26px 70px rgba(0, 0, 0, 0.46);
+    }
+
+    .lead {
+      max-width: 610px;
+      margin: 0 0 24px;
+      color: rgba(255, 255, 255, 0.76);
+      line-height: 1.78;
+      font-size: 15px;
+    }
+
+    .reading-principles {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin: 0 0 24px;
+    }
+
+    .principle {
+      min-height: 82px;
+      padding: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(16px);
+    }
+
+    .principle strong {
+      display: block;
+      color: #fff5d3;
+      font-size: 13px;
+      margin-bottom: 5px;
+    }
+
+    .principle span {
+      display: block;
+      color: rgba(255, 255, 255, 0.58);
+      font-size: 11px;
+      line-height: 1.45;
+    }
+
+    .dream-panel .question-field {
+      margin-top: 0;
+    }
+
+    .dream-panel textarea {
+      min-height: 106px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.045);
+    }
+
+    .dream-panel .settings {
+      background: rgba(255, 255, 255, 0.035);
+      backdrop-filter: blur(16px);
+    }
+
+    .dream-panel #runButton {
+      width: auto;
+      min-width: 240px;
+      margin-top: 22px;
+      padding: 15px 28px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(16px);
+      box-shadow:
+        0 16px 48px rgba(0, 0, 0, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    .dream-panel #runButton:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.36);
+      box-shadow:
+        0 18px 56px rgba(0, 0, 0, 0.32),
+        0 0 32px rgba(212, 175, 55, 0.18);
+    }
+
+    .result-area {
+      margin-top: 28px;
+      display: grid;
+      gap: 20px;
+    }
+
+    .dream-panel .classification {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .dream-panel .pill {
+      background: rgba(255,255,255,0.045);
+      backdrop-filter: blur(16px);
+    }
+
+    .dream-panel .reading {
+      padding-top: 4px;
+      max-width: 680px;
+    }
+
+    .dream-panel .reading h3 {
+      color: #fff;
+      font-size: 25px;
+      margin-top: 16px;
+    }
+
+    .dream-panel .reading p {
+      color: rgba(255, 255, 255, 0.78);
+      line-height: 1.82;
+    }
+
+    .dream-panel .debug-panel {
+      margin-top: 22px;
+      background: rgba(255, 255, 255, 0.035);
+      backdrop-filter: blur(16px);
+    }
+
+    @media (max-width: 980px) {
+      .dream-page {
+        display: grid;
+        padding: 18px;
+      }
+
+      .dream-frame {
+        height: calc(100dvh - 36px);
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        border-radius: 24px;
+      }
+
+      .dream-sidebar {
+        order: 3;
+        height: 72px;
+        display: flex;
+        justify-content: space-around;
+        border-right: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .side-word {
+        writing-mode: horizontal-tb;
+        transform: none;
+        font-size: 10px;
+      }
+
+      .dream-cards {
+        min-height: 0;
+        flex: 0 0 38%;
+        border-right: 0;
+      }
+
+      .dream-panel {
+        flex: 1 1 auto;
+        min-height: auto;
+        overflow: auto;
+      }
+
+      .dream-panel .status {
+        float: none;
+        margin: 0 0 18px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .dream-page {
+        height: 100dvh;
+        padding: 10px;
+      }
+
+      .dream-frame {
+        height: calc(100dvh - 20px);
+      }
+
+      .dream-panel {
+        padding: 28px 18px;
+      }
+
+      .dream-panel h1 {
+        font-size: 48px;
+      }
+
+      .dream-panel .classification {
+        grid-template-columns: 1fr;
+      }
+
+      .reading-principles {
+        grid-template-columns: 1fr;
+      }
+
+      .placeholder-card {
+        width: 124px;
+      }
+
+      .dream-cards .drawn-card {
+        flex-basis: 118px;
+        margin-inline: -14px;
+      }
+
+      .cards-copy {
+        left: 18px;
+        top: 18px;
+      }
+    }
+
+    /* Modal-driven Tarot flow */
+    .dream-frame {
+      position: relative;
+      grid-template-columns: 96px minmax(0, 1fr);
+    }
+
+    .dream-cards {
+      min-height: 0;
+      height: 100%;
+      border-right: 0;
+    }
+
+    .flow-modal {
+      position: absolute;
+      top: clamp(22px, 4vw, 48px);
+      right: clamp(22px, 4vw, 48px);
+      z-index: 30;
+      width: min(650px, calc(100% - 140px));
+      max-height: calc(100% - clamp(44px, 8vw, 96px));
+      overflow: auto;
+      padding: clamp(28px, 4vw, 46px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(18px);
+      box-shadow:
+        0 34px 110px rgba(0, 0, 0, 0.46),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+      transition:
+        opacity 520ms ease,
+        transform 520ms ease,
+        visibility 520ms ease;
+    }
+
+    .flow-modal::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      border-radius: inherit;
+      background:
+        linear-gradient(116deg, transparent 0%, rgba(255,255,255,0.09) 34%, transparent 58%),
+        radial-gradient(circle at 76% 12%, rgba(139, 92, 246, 0.22), transparent 34%),
+        radial-gradient(circle at 12% 86%, rgba(212, 175, 55, 0.12), transparent 30%);
+    }
+
+    .flow-modal > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .flow-modal.is-hidden,
+    .flow-modal.is-fading {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: translateY(18px) scale(0.985);
+    }
+
+    .question-flow-modal h1 {
+      clear: both;
+      margin: 8px 0 14px;
+      font-family: "Playfair Display", "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      font-size: clamp(56px, 6vw, 78px);
+      line-height: 0.95;
+      color: #fff;
+      text-shadow: 0 26px 70px rgba(0, 0, 0, 0.46);
+    }
+
+    .question-flow-modal .status {
+      float: right;
+      width: fit-content;
+      min-width: 0;
+      margin: -10px 0 18px 18px;
+      padding: 9px 13px;
+      text-align: left;
+      font-size: 12px;
+    }
+
+    .question-flow-modal textarea {
+      min-height: 120px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.045);
+    }
+
+    .question-flow-modal #runButton,
+    .ghost-button {
+      width: auto;
+      min-width: 210px;
+      margin-top: 22px;
+      padding: 15px 28px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(16px);
+      box-shadow:
+        0 16px 48px rgba(0, 0, 0, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    .question-flow-modal #runButton:hover,
+    .ghost-button:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.36);
+      box-shadow:
+        0 18px 56px rgba(0, 0, 0, 0.32),
+        0 0 32px rgba(212, 175, 55, 0.18);
+    }
+
+    .reading-flow-modal {
+      width: min(760px, calc(100% - 140px));
+    }
+
+    .modal-header-row {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 20px;
+    }
+
+    .modal-header-row h2 {
+      margin: 4px 0 0;
+      padding: 0;
+      color: #fff;
+      font-family: "Playfair Display", "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      font-size: clamp(38px, 4vw, 54px);
+      line-height: 1;
+    }
+
+    .reading-flow-modal .result-area {
+      margin-top: 0;
+    }
+
+    .reading-flow-modal .classification {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .reading-flow-modal .reading {
+      max-width: 680px;
+      padding-top: 4px;
+    }
+
+    .reading-flow-modal .reading h3 {
+      color: #fff;
+      font-size: 25px;
+      margin-top: 16px;
+    }
+
+    .reading-flow-modal .reading p {
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.82;
+    }
+
+    .reading-flow-modal .debug-panel {
+      margin-top: 22px;
+      background: rgba(255, 255, 255, 0.035);
+      backdrop-filter: blur(16px);
+    }
+
+    @media (max-width: 980px) {
+      .dream-frame {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .dream-sidebar {
+        display: none;
+      }
+
+      .flow-modal {
+        inset: 18px;
+        width: auto;
+        max-height: calc(100% - 36px);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .flow-modal {
+        inset: 10px;
+        max-height: calc(100% - 20px);
+        padding: 22px 18px;
+      }
+
+      .question-flow-modal h1 {
+        font-size: 46px;
+      }
+
+      .reading-flow-modal .classification {
+        grid-template-columns: 1fr;
+      }
+
+      .modal-header-row {
+        display: grid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="dream-page">
+    <main class="dream-frame">
+      <aside class="dream-sidebar" aria-label="Điều hướng">
+        <button class="nav-icon" type="button" aria-label="Trang chủ">⌂</button>
+        <div class="side-word">MODERN VISION</div>
+        <button class="nav-icon" type="button" aria-label="Tài khoản">◎</button>
+      </aside>
+
+      <section class="dream-cards" aria-label="Bộ bài Tarot">
+        <div class="cards-copy">
+          <p class="eyebrow">Rider-Waite-Smith</p>
+          <h2>Neo-Mystic Dreamscape</h2>
+        </div>
+          <div class="card-fan-wrap">
+          <div id="deckPlaceholder" class="deck-placeholder">
+            <div class="placeholder-card placeholder-left placeholder-one" aria-label="Tarot card back 1"></div>
+            <div class="placeholder-card placeholder-center placeholder-two" aria-label="Tarot card back 2"></div>
+            <div class="placeholder-card placeholder-right placeholder-three" aria-label="Tarot card back 3"></div>
+          </div>
+          <div id="cards" class="cards"></div>
+        </div>
+      </section>
+
+      <section id="questionModal" class="flow-modal question-flow-modal">
+        <div id="status" class="status">Đang tải dữ liệu...</div>
+        <p class="eyebrow">Dark Mode</p>
+        <h1>Tarot Reading</h1>
+        <p class="lead">Đặt một câu hỏi thật rõ. Trải bài sẽ không chỉ an ủi, mà đọc cả phần đang sáng, phần đang nghẽn và điều có thể xuất hiện trong những ngày gần tới.</p>
+
+        <div class="reading-principles" aria-label="Nguyên tắc bài đọc">
+          <div class="principle">
+            <strong>Truth First</strong>
+            <span>Tổng quan gộp cả điểm sáng, điểm khó và kết nối giữa các lá.</span>
+          </div>
+          <div class="principle">
+            <strong>Card Locked</strong>
+            <span>AI không đổi nghĩa lá, không rút thêm, không tự thêm luật ngoài data.</span>
+          </div>
+          <div class="principle">
+            <strong>Near Signal</strong>
+            <span>Kết bài luôn có dấu hiệu cụ thể để quan sát trong 7 ngày tới.</span>
+          </div>
+        </div>
+
+        <div class="field question-field">
+          <label for="question">Câu hỏi của bạn</label>
+          <textarea id="question">Tôi có nên tiếp tục mối quan hệ này không?</textarea>
+        </div>
+
+        <div class="example-row" aria-label="Câu hỏi mẫu">
+          <button class="example-chip" type="button" data-question="Người ấy im lặng 2 tuần rồi, liệu họ còn muốn quay lại với tôi không?">No-contact</button>
+          <button class="example-chip" type="button" data-question="Tôi có nên nghỉ việc hiện tại để nhận offer mới trong tháng này không?">Đổi việc</button>
+          <button class="example-chip" type="button" data-question="Mối quan hệ mập mờ này có đi tới cam kết thật không hay chỉ là cảm xúc nhất thời?">Mập mờ</button>
+        </div>
+
+        <details class="settings">
+          <summary>Thiết lập thử nghiệm</summary>
+          <div class="settings-body">
+            <div class="row">
+              <div>
+                <label for="providerMode">API mode</label>
+                <select id="providerMode">
+                  <option value="proxy">Local proxy</option>
+                  <option value="direct">Direct browser</option>
+                </select>
+              </div>
+              <div>
+                <label for="model">Model</label>
+                <input id="model" value="gpt-5.5">
+              </div>
+            </div>
+
+            <div id="directFields" style="display:none">
+              <div class="field">
+                <label for="apiBase">API base</label>
+                <input id="apiBase" value="https://ckey.vn/v1/chat/completions">
+              </div>
+              <div class="field">
+                <label for="apiKey">API key</label>
+                <input id="apiKey" type="password" autocomplete="off" placeholder="sk-...">
+              </div>
+            </div>
+
+            <div class="row">
+              <div>
+                <label for="spreadPolicy">Spread</label>
+                <select id="spreadPolicy">
+                  <option value="ai">Theo câu hỏi</option>
+                  <option value="mvp3">MVP 3 lá</option>
+                  <option value="one">Một lá</option>
+                </select>
+              </div>
+              <div>
+                <label for="writerStyle">Giọng đọc</label>
+                <select id="writerStyle">
+                  <option value="deep">Sâu, ấm, giữ chân</option>
+                  <option value="direct">Thẳng, thực tế</option>
+                  <option value="mystic">Huyền bí hơn</option>
+                </select>
+              </div>
+            </div>
+
+            <label class="check-row">
+              <input id="enableReversals" type="checkbox" checked>
+              <span>Bật lá ngược</span>
+            </label>
+
+            <label class="check-row">
+              <input id="useAiWriter" type="checkbox" checked>
+              <span>Dùng AI viết bài đọc</span>
+            </label>
+          </div>
+        </details>
+
+        <button id="runButton">Glassmorphism Tarot Reading</button>
+      </section>
+
+      <section id="readingModal" class="flow-modal reading-flow-modal is-hidden" aria-hidden="true">
+        <div class="modal-header-row">
+          <div>
+            <p class="eyebrow">Your Reading</p>
+            <h2>Kết quả trải bài</h2>
+          </div>
+          <button id="newQuestionButton" class="ghost-button" type="button">Hỏi câu khác</button>
+        </div>
+        <div class="result-area">
+          <div id="classification" class="classification">
+            <div class="pill"><span>Trạng thái</span><strong>Chưa phân tích câu hỏi.</strong></div>
+          </div>
+          <div id="reading" class="reading">
+            <p class="small">Bài luận giải sẽ xuất hiện sau khi rút bài.</p>
+          </div>
+        </div>
+
+        <details class="debug-panel">
+          <summary>Dữ liệu kỹ thuật</summary>
+          <div id="debug" class="debug">Chưa có dữ liệu.</div>
+        </details>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const state = {
+      deck: null,
+      spreads: null,
+      contexts: null,
+      elements: null,
+      reversals: null,
+      numbers: null,
+      combinations: null,
+      prompts: null,
+      cardV2: null,
+      cardV2ById: {},
+      pendingSelection: null
+    };
+
+    const $ = (id) => document.getElementById(id);
+
+    function setStatus(text, className = "") {
+      const el = $("status");
+      el.textContent = text;
+      el.className = `status ${className}`;
+    }
+
+    function setDebug(data) {
+      $("debug").textContent = typeof data === "string" ? data : JSON.stringify(data, null, 2);
+    }
+
+    async function loadJson(path) {
+      const res = await fetch(path);
+      if (!res.ok) throw new Error(`Cannot load ${path}: ${res.status}`);
+      return res.json();
+    }
+
+    async function loadOptionalJson(path) {
+      try {
+        return await loadJson(path);
+      } catch {
+        return null;
+      }
+    }
+
+    async function loadData() {
+      const base = "../data/tarot/";
+      const [deck, spreads, contexts, elements, reversals, numbers, combinations, cardV2Sample, cardV2MajorRest, cardV2Wands, cardV2Cups, cardV2Swords, cardV2Pentacles] = await Promise.all([
+        loadJson(base + "rider-waite-smith.json"),
+        loadJson(base + "spreads.json"),
+        loadJson(base + "question-contexts.json"),
+        loadJson(base + "elemental-dignities.json"),
+        loadJson(base + "reversal-rules.json"),
+        loadJson(base + "numerology-patterns.json"),
+        loadJson(base + "combination-rules.json"),
+        loadOptionalJson(base + "rider-waite-smith.v2.sample.json"),
+        loadOptionalJson(base + "rider-waite-smith.v2.major-rest.json"),
+        loadOptionalJson(base + "rider-waite-smith.v2.wands.json"),
+        loadOptionalJson(base + "rider-waite-smith.v2.cups.json"),
+        loadOptionalJson(base + "rider-waite-smith.v2.swords.json"),
+        loadOptionalJson(base + "rider-waite-smith.v2.pentacles.json")
+      ]);
+
+      const cardV2ById = {};
+      const cardV2Cards = [
+        ...(cardV2Sample?.cards || []),
+        ...(cardV2MajorRest?.cards || []),
+        ...(cardV2Wands?.cards || []),
+        ...(cardV2Cups?.cards || []),
+        ...(cardV2Swords?.cards || []),
+        ...(cardV2Pentacles?.cards || [])
+      ];
+
+      for (const card of cardV2Cards) {
+        cardV2ById[card.id] = card;
+      }
+
+      const cardV2 = {
+        schema_version: "2.0-merged",
+        deck_id: "rider-waite-smith",
+        cards: cardV2Cards
+      };
+
+      Object.assign(state, { deck, spreads, contexts, elements, reversals, numbers, combinations, cardV2, cardV2ById });
+      setStatus("Dữ liệu đã sẵn sàng", "ok");
+    }
+
+    function providerUrl() {
+      return $("providerMode").value === "proxy" ? "/api/chat/completions" : $("apiBase").value.trim();
+    }
+
+    function providerHeaders() {
+      const headers = { "Content-Type": "application/json" };
+      if ($("providerMode").value === "direct") {
+        const key = $("apiKey").value.trim();
+        if (!key) throw new Error("Thiếu API key cho direct browser mode.");
+        headers.Authorization = `Bearer ${key}`;
+      }
+      return headers;
+    }
+
+    async function callChatCompletions(body) {
+      const res = await fetch(providerUrl(), {
+        method: "POST",
+        headers: providerHeaders(),
+        body: JSON.stringify(body)
+      });
+
+      const text = await res.text();
+      let json;
+      try {
+        json = JSON.parse(text);
+      } catch {
+        throw new Error(`API trả về non-JSON: ${text.slice(0, 400)}`);
+      }
+
+      if (!res.ok) {
+        throw new Error(json.error?.message || json.message || `API error ${res.status}`);
+      }
+
+      return json;
+    }
+
+    function classifierSchema() {
+      return {
+        type: "object",
+        additionalProperties: false,
+        required: [
+          "normalized_question",
+          "reading_focus_vi",
+          "relationship_stage",
+          "core_tension",
+          "user_need",
+          "hidden_assumption",
+          "reading_angle",
+          "specific_signals_to_watch",
+          "primary_context",
+          "secondary_contexts",
+          "intent_type",
+          "time_horizon",
+          "emotional_tone",
+          "safety_flags",
+          "recommended_spread_id",
+          "engine_notes_vi",
+          "reader_tone_vi",
+          "confidence",
+          "reason_vi"
+        ],
+        properties: {
+          normalized_question: { type: "string" },
+          reading_focus_vi: { type: "string" },
+          relationship_stage: {
+            type: "string",
+            enum: ["not_applicable", "new_interest", "crush", "existing_relationship", "situationship", "ex", "no_contact", "long_distance", "work_connection", "unknown"]
+          },
+          core_tension: { type: "string" },
+          user_need: { type: "string" },
+          hidden_assumption: { type: "string" },
+          reading_angle: { type: "string" },
+          specific_signals_to_watch: {
+            type: "array",
+            items: { type: "string" }
+          },
+          primary_context: {
+            type: "string",
+            enum: ["general", "love", "career", "money", "inner_work", "decision", "wellbeing_sensitive"]
+          },
+          secondary_contexts: {
+            type: "array",
+            items: {
+              type: "string",
+              enum: ["general", "love", "career", "money", "inner_work", "decision", "wellbeing_sensitive"]
+            }
+          },
+          intent_type: {
+            type: "string",
+            enum: ["diagnostic", "advice", "forecast", "decision", "reflection"]
+          },
+          time_horizon: {
+            type: "string",
+            enum: ["none", "near_future", "month", "year", "long_term"]
+          },
+          emotional_tone: {
+            type: "string",
+            enum: ["neutral", "anxious", "hopeful", "confused", "heartbroken", "urgent"]
+          },
+          safety_flags: {
+            type: "array",
+            items: {
+              type: "string",
+              enum: ["medical", "legal", "financial_investment", "self_harm", "pregnancy", "minor_safety", "none"]
+            }
+          },
+          recommended_spread_id: {
+            type: "string",
+            enum: ["one_card", "past_present_future", "situation_action_outcome", "love_five", "career_five"]
+          },
+          engine_notes_vi: { type: "string" },
+          reader_tone_vi: { type: "string" },
+          confidence: { type: "number" },
+          reason_vi: { type: "string" }
+        }
+      };
+    }
+
+    function writerSchema() {
+      return {
+        type: "object",
+        additionalProperties: false,
+        required: ["opening", "synthesis", "card_readings", "near_future_and_closing", "retention_hook"],
+        properties: {
+          opening: { type: "string" },
+          synthesis: { type: "string" },
+          card_readings: {
+            type: "array",
+            items: {
+              type: "object",
+              additionalProperties: false,
+              required: ["position_name", "card_name", "interpretation", "shadow_or_risk", "advice", "evidence"],
+              properties: {
+                position_name: { type: "string" },
+                card_name: { type: "string" },
+                interpretation: { type: "string" },
+                shadow_or_risk: { type: "string" },
+                advice: { type: "string" },
+                evidence: { type: "string" }
+              }
+            }
+          },
+          near_future_and_closing: { type: "string" },
+          retention_hook: { type: "string" }
+        }
+      };
+    }
+
+    function classifierPrompt() {
+      return [
+        "Bạn là Tarot Question Classifier.",
+        "Nhiệm vụ: phân tích câu hỏi tiếng Việt của user thành dữ liệu có cấu trúc để tarot engine đọc đúng nhất.",
+        "Không bói bài, không rút bài, không đưa lời khuyên.",
+        "Viết lại câu hỏi thành reading_focus_vi: ngắn, rõ, trung tính, dùng được làm ngữ cảnh cho engine.",
+        "Phải suy luận các lớp ẩn từ chính câu hỏi, không hỏi thêm user: relationship_stage, core_tension, user_need, hidden_assumption, reading_angle.",
+        "specific_signals_to_watch phải là các dấu hiệu cụ thể user nên quan sát, không viết chung chung kiểu 'lắng nghe trái tim'.",
+        "Nếu không phải câu hỏi tình yêu, relationship_stage = not_applicable.",
+        "Nếu câu hỏi mơ hồ, vẫn phân loại theo ý chính có xác suất cao nhất.",
+        "Nếu liên quan sức khỏe/pháp lý/đầu tư/mang thai/tự hại, đặt safety_flags phù hợp và recommended_spread_id là one_card nếu cần.",
+        "Ưu tiên situation_action_outcome cho quyết định; love_five cho tình yêu paid; career_five cho sự nghiệp paid.",
+        "Trả về JSON đúng schema, không thêm chữ ngoài JSON."
+      ].join("\n");
+    }
+
+    async function classifyQuestion(question) {
+      const body = {
+        model: $("model").value.trim(),
+        messages: [
+          { role: "system", content: classifierPrompt() },
+          { role: "user", content: question }
+        ],
+        response_format: {
+          type: "json_schema",
+          json_schema: {
+            name: "tarot_question_classifier",
+            strict: true,
+            schema: classifierSchema()
+          }
+        }
+      };
+
+      const response = await callChatCompletions(body);
+      const content = response.choices?.[0]?.message?.content || "";
+      return JSON.parse(content);
+    }
+
+    function chooseSpread(classification) {
+      const policy = $("spreadPolicy").value;
+      let id = classification.recommended_spread_id || state.spreads.default_spread_id;
+
+      if (policy === "one") id = "one_card";
+      if (policy === "mvp3" && !["past_present_future", "situation_action_outcome"].includes(id)) {
+        id = "situation_action_outcome";
+      }
+
+      return state.spreads.spreads.find((spread) => spread.id === id) ||
+        state.spreads.spreads.find((spread) => spread.id === state.spreads.default_spread_id);
+    }
+
+    function randomInt(max) {
+      const values = new Uint32Array(1);
+      crypto.getRandomValues(values);
+      return values[0] % max;
+    }
+
+    function shuffleCards(cards) {
+      const shuffled = [...cards];
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = randomInt(i + 1);
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      return shuffled;
+    }
+
+    function drawCards(spread) {
+      const cards = [...state.deck.cards];
+      const drawn = [];
+      const reversalEnabled = $("enableReversals").checked;
+      const reversalProbability = state.reversals.orientation_policy.reversal_probability || 0.25;
+
+      while (drawn.length < spread.card_count && cards.length) {
+        const index = randomInt(cards.length);
+        const [card] = cards.splice(index, 1);
+        const reversed = reversalEnabled && Math.random() < reversalProbability;
+        const position = spread.positions[drawn.length];
+        drawn.push({ card, reversed, position });
+      }
+
+      return drawn;
+    }
+
+    function selectionCandidateCount(spread) {
+      if (spread.card_count <= 1) return 9;
+      if (spread.card_count <= 3) return 15;
+      return 18;
+    }
+
+    function prepareSelectionDeck(spread) {
+      const shuffled = shuffleCards(state.deck.cards);
+      const reversalEnabled = $("enableReversals").checked;
+      const reversalProbability = state.reversals.orientation_policy.reversal_probability || 0.25;
+      return shuffled.slice(0, selectionCandidateCount(spread)).map((card, index) => ({
+        card,
+        index,
+        reversed: reversalEnabled && Math.random() < reversalProbability,
+        back: (index % 3) + 1
+      }));
+    }
+
+    function renderSelectionDeck(selection) {
+      const placeholder = $("deckPlaceholder");
+      if (placeholder) placeholder.style.display = "none";
+
+      const selectedCount = selection.selectedIndexes.length;
+      const targetCount = selection.spread.card_count;
+      const locked = selectedCount >= targetCount;
+      const selectedSet = new Set(selection.selectedIndexes);
+      const selectedOrder = new Map(selection.selectedIndexes.map((candidateIndex, orderIndex) => [candidateIndex, orderIndex + 1]));
+
+      $("cards").innerHTML = `
+        <div class="selection-board">
+          <div class="selection-instruction">
+            <strong>Chọn ${targetCount} lá</strong> · đã chọn ${selectedCount}/${targetCount}
+          </div>
+          <div class="selection-grid">
+            ${selection.candidates.map((candidate, index) => {
+              const selected = selectedSet.has(index);
+              const order = selectedOrder.get(index) || "";
+              const rotate = ((index % 6) - 2.5) * 1.4;
+              const y = (index % 2) * 7;
+              return `
+                <button
+                  type="button"
+                  class="select-card ${selected ? "selected" : ""} ${locked && !selected ? "locked" : ""}"
+                  data-candidate-index="${index}"
+                  style="--select-bg: url('../public/after${candidate.back}.jpg'); --deck-r: ${rotate}deg; --deck-y: ${y}px;"
+                  ${locked && !selected ? "disabled" : ""}
+                  aria-label="Chọn lá số ${index + 1}"
+                >
+                  <span class="select-order">${order}</span>
+                </button>
+              `;
+            }).join("")}
+          </div>
+        </div>
+      `;
+
+      document.querySelectorAll("[data-candidate-index]").forEach((button) => {
+        button.addEventListener("click", () => handleCardSelection(Number(button.dataset.candidateIndex)));
+      });
+    }
+
+    async function startCardSelection(question, classification, spread) {
+      state.pendingSelection = {
+        question,
+        classification,
+        spread,
+        candidates: prepareSelectionDeck(spread),
+        selectedIndexes: []
+      };
+      renderSelectionDeck(state.pendingSelection);
+      setStatus(`Chọn ${spread.card_count} lá để lật bài...`);
+    }
+
+    function handleCardSelection(candidateIndex) {
+      const selection = state.pendingSelection;
+      if (!selection) return;
+      if (selection.selectedIndexes.includes(candidateIndex)) return;
+      if (selection.selectedIndexes.length >= selection.spread.card_count) return;
+
+      selection.selectedIndexes.push(candidateIndex);
+      renderSelectionDeck(selection);
+
+      if (selection.selectedIndexes.length === selection.spread.card_count) {
+        setStatus("Đã chọn đủ lá, đang lật bài...");
+        window.setTimeout(() => finalizeSelectedCards(selection), 650);
+      } else {
+        setStatus(`Đã chọn ${selection.selectedIndexes.length}/${selection.spread.card_count} lá...`);
+      }
+    }
+
+    async function finalizeSelectedCards(selection) {
+      const drawn = selection.selectedIndexes.map((candidateIndex, orderIndex) => {
+        const candidate = selection.candidates[candidateIndex];
+        return {
+          card: candidate.card,
+          reversed: candidate.reversed,
+          position: selection.spread.positions[orderIndex]
+        };
+      });
+
+      await completeReading(selection.question, selection.classification, selection.spread, drawn);
+      state.pendingSelection = null;
+    }
+
+    function elementFor(card) {
+      if (!card.suit) return null;
+      return state.elements.suit_to_element[card.suit] || null;
+    }
+
+    function rankNumberKey(card) {
+      if (card.arcana !== "minor") return null;
+      if (card.rank === "ace") return "ace";
+      const map = { two: "2", three: "3", four: "4", five: "5", six: "6", seven: "7", eight: "8", nine: "9", ten: "10" };
+      return map[card.rank] || null;
+    }
+
+    function countBy(items, fn) {
+      return items.reduce((acc, item) => {
+        const key = fn(item);
+        if (key) acc[key] = (acc[key] || 0) + 1;
+        return acc;
+      }, {});
+    }
+
+    function analyzeReading(classification, spread, drawn) {
+      const cardItems = drawn.map((item) => item.card);
+      const suitDistribution = countBy(cardItems, (card) => card.suit);
+      const elementDistribution = countBy(cardItems, elementFor);
+      const majorCount = cardItems.filter((card) => card.arcana === "major").length;
+      const minorCount = cardItems.filter((card) => card.arcana === "minor").length;
+      const courtCount = cardItems.filter((card) => ["page", "knight", "queen", "king"].includes(card.rank)).length;
+      const reversedCount = drawn.filter((item) => item.reversed).length;
+      const hardCardIds = new Set([
+        "major-13-death",
+        "major-15-the-devil",
+        "major-16-the-tower",
+        "major-18-the-moon",
+        "wands-10-ten",
+        "cups-05-five",
+        "swords-03-three",
+        "swords-05-five",
+        "swords-07-seven",
+        "swords-08-eight",
+        "swords-09-nine",
+        "swords-10-ten",
+        "pentacles-05-five"
+      ]);
+      const hardPositionFunctions = new Set(["shadow", "challenge", "block", "hopes_fears"]);
+
+      const adjacent = [];
+      for (let i = 0; i < drawn.length - 1; i++) {
+        const left = drawn[i];
+        const right = drawn[i + 1];
+        const leftElement = elementFor(left.card);
+        const rightElement = elementFor(right.card);
+        let relation = null;
+        if (leftElement && rightElement) {
+          relation = state.elements.matrix[leftElement][rightElement];
+        }
+        adjacent.push({
+          from_position: left.position.name_vi,
+          to_position: right.position.name_vi,
+          from_card: left.card.name_vi,
+          to_card: right.card.name_vi,
+          left_element: leftElement,
+          right_element: rightElement,
+          relation: relation?.relation || "none",
+          effect: relation?.effect || "none",
+          summary_vi: relation?.summary_vi || "Không có tương tác nguyên tố rõ vì có Major Arcana hoặc thiếu suit."
+        });
+      }
+
+      const numberKeys = cardItems.map(rankNumberKey).filter(Boolean);
+      const numberCounts = numberKeys.reduce((acc, key) => {
+        acc[key] = (acc[key] || 0) + 1;
+        return acc;
+      }, {});
+
+      const patterns = [];
+      const riskSignals = [];
+      if (majorCount / drawn.length >= 0.5 && drawn.length >= 3) {
+        patterns.push("Nhiều Major Arcana: chủ đề có tính bước ngoặt hoặc bài học lớn.");
+      }
+      if (reversedCount / drawn.length >= 0.5) {
+        patterns.push("Nhiều lá ngược: năng lượng đang bị chặn, quay vào trong hoặc cần điều chỉnh.");
+        riskSignals.push("Nhiều lá ngược cho thấy tình huống có thể đang bị nghẽn, trì hoãn hoặc chưa sẵn sàng biểu hiện ra ngoài.");
+      }
+      if (courtCount / drawn.length >= 0.4 && drawn.length >= 3) {
+        patterns.push("Nhiều court cards: vai trò con người, cách hành xử hoặc mức trưởng thành đang quan trọng.");
+      }
+
+      drawn.forEach((item) => {
+        const v2 = contextualV2Snippet(item.card, classification);
+        const positionLabel = item.position.name_vi;
+        if (item.reversed) {
+          riskSignals.push(`${positionLabel} có ${item.card.name_vi} ngược: cần đọc như điểm nghẽn, chậm lại hoặc mặt lệch của lá.`);
+        }
+        if (hardPositionFunctions.has(item.position.function)) {
+          riskSignals.push(`${positionLabel} là vị trí thử thách/điểm nghẽn: không nên diễn giải quá tích cực.`);
+        }
+        if (hardCardIds.has(item.card.id)) {
+          riskSignals.push(`${item.card.name_vi} là lá có sắc thái khó: cần nói rõ phần mất mát, đổ vỡ, ràng buộc, lo âu hoặc sự thật khó nhìn nếu phù hợp câu hỏi.`);
+        }
+        if (v2?.warning_context_vi) {
+          riskSignals.push(`${item.card.name_vi} warning: ${v2.warning_context_vi}`);
+        }
+      });
+
+      for (const [suit, count] of Object.entries(suitDistribution)) {
+        if (count >= 2) {
+          const element = state.elements.suit_to_element[suit];
+          patterns.push(`${suit.toUpperCase()} trội: ${state.elements.elements[element].keywords_vi.join(", ")}.`);
+        }
+      }
+
+      for (const [key, count] of Object.entries(numberCounts)) {
+        if (count >= 2) {
+          const info = state.numbers.minor_numbers[key];
+          if (info) patterns.push(`Lặp số ${key}: ${info.combination_signal_vi}`);
+        }
+      }
+
+      return {
+        classification,
+        spread: {
+          id: spread.id,
+          name_vi: spread.name_vi,
+          card_count: spread.card_count
+        },
+        counts: {
+          major_count: majorCount,
+          minor_count: minorCount,
+          court_count: courtCount,
+          reversed_count: reversedCount
+        },
+        suit_distribution: suitDistribution,
+        element_distribution: elementDistribution,
+        adjacent_relations: adjacent,
+        number_counts: numberCounts,
+        patterns,
+        risk_signals: riskSignals
+      };
+    }
+
+    function contextualV2Snippet(card, classification) {
+      const v2 = state.cardV2ById[card.id];
+      if (!v2) return null;
+
+      const primary = classification?.primary_context || "general";
+      const stage = classification?.relationship_stage || "not_applicable";
+      const orientationContexts = v2.orientation || {};
+
+      return {
+        essence_vi: v2.core?.essence_vi,
+        shadow_keywords_vi: v2.core?.shadow_keywords_vi || [],
+        symbols: v2.symbols || [],
+        upright_context_vi: orientationContexts.upright?.[`${primary}_vi`] || orientationContexts.upright?.general_vi,
+        reversed_context_vi: orientationContexts.reversed?.[`${primary}_vi`] || orientationContexts.reversed?.general_vi,
+        warning_context_vi: orientationContexts.upright?.warning_vi || orientationContexts.reversed?.warning_vi,
+        advice_context_vi: orientationContexts.upright?.advice_vi || orientationContexts.reversed?.advice_vi,
+        position_overrides: v2.position_overrides || {},
+        relationship_signal_vi: v2.relationship_signals?.[stage] ||
+          v2.relationship_signals?.[classification?.intent_type] ||
+          v2.relationship_signals?.default,
+        reader_notes_vi: v2.reader_notes_vi || [],
+        source_basis: v2.source_basis || []
+      };
+    }
+
+    function cardPromptData(drawn, classification = null) {
+      return drawn.map((item) => ({
+        position: {
+          id: item.position.id,
+          name_vi: item.position.name_vi,
+          function: item.position.function,
+          instruction_vi: item.position.prompt_instruction_vi
+        },
+        card: {
+          id: item.card.id,
+          name_en: item.card.name_en,
+          name_vi: item.card.name_vi,
+          arcana: item.card.arcana,
+          suit: item.card.suit,
+          rank: item.card.rank,
+          keywords_vi: item.card.keywords_vi,
+          upright_vi: item.card.upright_vi,
+          reversed_vi: item.card.reversed_vi,
+          element: elementFor(item.card)
+        },
+        card_context: contextualV2Snippet(item.card, classification),
+        orientation: item.reversed ? "reversed" : "upright",
+        selected_meaning_vi: item.reversed ? item.card.reversed_vi : item.card.upright_vi
+      }));
+    }
+
+    function writerPrompt(style) {
+      const styleLine = {
+        deep: "Giọng sâu, ấm, có cảm giác nhìn thấu tình huống, giữ người đọc ở lại bằng insight cụ thể.",
+        direct: "Giọng thẳng, thực tế, ít màu mè, ưu tiên hành động rõ.",
+        mystic: "Giọng huyền bí hơn, giàu hình ảnh, nhưng vẫn không phán quyết tuyệt đối."
+      }[style] || "";
+
+      return [
+        "Bạn là Tarot Reader, viết bằng tiếng Việt.",
+        "Bạn chỉ được dùng cards, spread, question context và reading context được cung cấp.",
+        "Không tự rút thêm lá, không đổi tên lá, không thêm luật Tarot ngoài dữ liệu.",
+        "Bài đọc phải vừa đúng rule vừa có cảm giác cá nhân hóa theo câu hỏi user.",
+        "Không viết câu đúng với mọi người. Mỗi insight phải bám vào câu hỏi, nhu cầu ẩn, giả định ẩn, dấu hiệu cần quan sát, lá bài, vị trí hoặc dữ kiện ngữ cảnh được cung cấp.",
+        "Tuyệt đối không để lộ tên dữ liệu kỹ thuật, tên key, tên schema hoặc cách hệ thống xử lý nội bộ cho user.",
+        "Nếu dùng tương tác nguyên tố hoặc rule nội bộ, hãy dịch sang ngôn ngữ đời thường. Không nói kiểu 'hệ thống ghi nhận Khí và Thổ căng nhau'; hãy viết 'một bên muốn rõ ràng nhanh, nhưng thực tế và cam kết đang kéo chậm lại'.",
+        "synthesis là mục Tổng quan duy nhất: phải gộp bức tranh chung, sự thật cần nhìn thẳng, điểm rủi ro/điểm nghẽn và cách các lá kết nối với nhau. Mục này được phép dài.",
+        "synthesis không được chỉ tích cực. Nếu cards, reversed orientation, shadow/challenge position, warning_context_vi hoặc risk signals cho thấy điểm xấu, phải nói thẳng phần đó trong Tổng quan.",
+        "Trong synthesis phải có ít nhất một câu nêu sự thật khó nghe nhưng hữu ích, bám vào lá/position/câu hỏi. Không dùng câu chung kiểu 'hãy yêu bản thân hơn'.",
+        "Mỗi card_reading phải có shadow_or_risk và evidence. evidence phải nói rõ căn cứ bằng ngôn ngữ user hiểu: tên lá + xuôi/ngược + vị trí, không nhắc tên dữ liệu nội bộ.",
+        "Tách rõ hy vọng khỏi bằng chứng. Không viết 'mọi chuyện sẽ ổn' nếu lá không ủng hộ.",
+        "Nếu outcome/near future xấu, được nói rõ xu hướng chậm, xa cách, đổ vỡ, né tránh, mất cơ hội hoặc thiếu cam kết, nhưng diễn đạt như xu hướng có điều kiện.",
+        "Tỉ lệ giọng văn: 60% nhìn thẳng vấn đề, 25% lời khuyên hành động, 15% nâng đỡ. Không biến mọi lá thành tích cực.",
+        "Nếu một lá có ngữ cảnh chi tiết, ưu tiên ngữ cảnh đó hơn nghĩa ngắn V1, nhưng không nhắc tên dữ liệu nội bộ trong bài viết.",
+        "Phải nhắc đến core_tension và user_need bằng ngôn ngữ tự nhiên trong opening hoặc synthesis.",
+        "near_future_and_closing phải gộp tín hiệu quan sát trong 7 ngày tới, điều nên làm, điều không nên làm và lời kết. Mục này được phép dài.",
+        "Phải đưa dấu hiệu quan sát cụ thể trong 7 ngày tới, dựa trên specific_signals_to_watch và lá ở vị trí outcome/next_step.",
+        "Tạo cảm giác dự báo tương lai gần bằng ngôn ngữ xu hướng: 'nếu quỹ đạo này tiếp tục', 'dấu hiệu gần tới', 'khả năng cao là'.",
+        "Không nói chắc chắn tuyệt đối, không dọa sợ, không dự đoán chết chóc/bệnh tật/pháp lý/lời lỗ đầu tư.",
+        "Nếu có safety flags, chuyển thành lời soi chiếu và khuyên tìm chuyên gia khi phù hợp.",
+        "Mỗi lá phải được đọc theo đúng vị trí spread.",
+        "Phải kết nối các lá ngay trong synthesis, không tách thành mục riêng và không chỉ giải từng lá rời rạc.",
+        styleLine,
+        "Trả về JSON đúng schema."
+      ].join("\n");
+    }
+
+    async function writeReading(question, classification, spread, drawn, analysis) {
+      const payload = {
+        original_question: question,
+        question_context: classification,
+        spread: {
+          id: spread.id,
+          name_vi: spread.name_vi,
+          positions: spread.positions
+        },
+        cards: cardPromptData(drawn, classification),
+        reading_context: analysis,
+        requested_style: $("writerStyle").value
+      };
+
+      const body = {
+        model: $("model").value.trim(),
+        messages: [
+          { role: "system", content: writerPrompt($("writerStyle").value) },
+          { role: "user", content: JSON.stringify(payload, null, 2) }
+        ],
+        response_format: {
+          type: "json_schema",
+          json_schema: {
+            name: "tarot_reading",
+            strict: true,
+            schema: writerSchema()
+          }
+        }
+      };
+
+      const response = await callChatCompletions(body);
+      const content = response.choices?.[0]?.message?.content || "";
+      return JSON.parse(content);
+    }
+
+    function fallbackReading(classification, spread, drawn, analysis) {
+      const cardReadings = drawn.map((item) => ({
+        position_name: item.position.name_vi,
+        card_name: item.card.name_vi,
+        interpretation: item.reversed ? item.card.reversed_vi : item.card.upright_vi,
+        shadow_or_risk: item.reversed
+          ? "Lá ngược cho thấy năng lượng của lá đang bị chặn, lệch hoặc chưa sẵn sàng biểu hiện rõ."
+          : "Điểm cần nhìn thẳng là cách lá này thể hiện trong đúng vị trí spread, không nên tự làm mềm nghĩa.",
+        advice: item.position.prompt_instruction_vi,
+        evidence: `${item.card.name_vi} ${item.reversed ? "ngược" : "xuôi"} ở vị trí ${item.position.name_vi}.`
+      }));
+
+      return {
+        opening: `Câu hỏi được gom lại thành trọng tâm: ${classification.reading_focus_vi || classification.normalized_question}. Mâu thuẫn lõi là: ${classification.core_tension || "chưa rõ"}.`,
+        synthesis: [
+          `Trải bài ${spread.name_vi} cho thấy ${analysis.patterns[0] || "một dòng năng lượng cần được đọc theo từng vị trí."}`,
+          `Nhu cầu ẩn: ${classification.user_need || "muốn nhìn rõ hơn trước khi quyết định"}.`,
+          `Sự thật cần nhìn thẳng: ${analysis.risk_signals[0] || "bài này chưa đủ dữ kiện để hứa một kết quả đẹp; cần quan sát hành động thật thay vì chỉ dựa vào cảm giác."}`,
+          analysis.adjacent_relations.length
+            ? `Các lá nối với nhau theo hướng: ${analysis.adjacent_relations.map((rel) => rel.summary_vi).join(" ")}`
+            : "Vì chỉ có một lá, trọng tâm nằm ở thông điệp chính của lá đó hơn là câu chuyện giữa nhiều lá."
+        ].join(" "),
+        card_readings: cardReadings,
+        near_future_and_closing: `Trong 7 ngày tới, hãy quan sát: ${(classification.specific_signals_to_watch || ["mức độ nhất quán giữa lời nói và hành động"]).join("; ")}. Việc nên làm là quan sát điểm nghẽn rõ nhất trong 24-72 giờ tới, chọn một hành động nhỏ và không phản ứng vội. Đây là bản đọc local fallback, chưa qua AI writer.`,
+        retention_hook: "Bản AI writer sẽ cho bài đọc mềm và sâu hơn khi API hoạt động."
+      };
+    }
+
+    function renderClassification(classification) {
+      const items = [
+        ["Trọng tâm", classification.reading_focus_vi],
+        ["Mâu thuẫn lõi", classification.core_tension],
+        ["Nhu cầu ẩn", classification.user_need],
+        ["Góc đọc", classification.reading_angle],
+        ["Vùng câu hỏi", classification.primary_context],
+        ["Giai đoạn quan hệ", classification.relationship_stage],
+        ["Kiểu câu hỏi", classification.intent_type],
+        ["Spread", classification.recommended_spread_id],
+        ["Sắc thái cảm xúc", classification.emotional_tone],
+        ["Nhịp thời gian", classification.time_horizon],
+        ["Dấu hiệu", (classification.specific_signals_to_watch || []).join(" · ")],
+        ["Độ chắc", String(classification.confidence)],
+        ["Cảnh báo", (classification.safety_flags || []).join(", ")]
+      ];
+
+      $("classification").innerHTML = items.map(([label, value]) => `
+        <div class="pill"><span>${escapeHtml(label)}</span><strong>${escapeHtml(value || "-")}</strong></div>
+      `).join("");
+    }
+
+    function imagePath(card) {
+      return "../" + card.image.local_path.replaceAll("\\", "/");
+    }
+
+    function renderCards(drawn) {
+      const placeholder = $("deckPlaceholder");
+      if (placeholder) placeholder.style.display = "none";
+      $("cards").innerHTML = drawn.map((item) => `
+        <article class="drawn-card ${item.reversed ? "reversed" : ""}">
+          <img src="${escapeHtml(imagePath(item.card))}" alt="${escapeHtml(item.card.name_en)}">
+          <div class="card-content">
+            <div class="position">${escapeHtml(item.position.name_vi)}</div>
+            <div class="card-title">${escapeHtml(item.card.name_vi)} <span class="small">(${escapeHtml(item.card.name_en)})</span></div>
+            <div class="orientation">${item.reversed ? "Ngược" : "Xuôi"} · ${escapeHtml(item.card.arcana)}</div>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    function renderReading(reading) {
+      $("reading").innerHTML = `
+        <h3>Mở bài</h3>
+        <p>${escapeHtml(reading.opening)}</p>
+        <h3>Tổng quan</h3>
+        <p>${escapeHtml(reading.synthesis)}</p>
+        <h3>Từng lá</h3>
+        ${reading.card_readings.map((item) => `
+          <p><strong>${escapeHtml(item.position_name)} · ${escapeHtml(item.card_name)}</strong><br>${escapeHtml(item.interpretation)}<br><span class="small">${escapeHtml(item.advice)}</span></p>
+          <p class="small"><strong>Mặt cần nhìn thẳng:</strong> ${escapeHtml(item.shadow_or_risk || "-")}<br><strong>Căn cứ:</strong> ${escapeHtml(item.evidence || "-")}</p>
+        `).join("")}
+        <h3>Tín hiệu gần và lời kết</h3>
+        <p>${escapeHtml(reading.near_future_and_closing)}</p>
+        <p class="small">${escapeHtml(reading.retention_hook)}</p>
+      `;
+    }
+
+    function escapeHtml(value) {
+      return String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function delay(ms) {
+      return new Promise((resolve) => window.setTimeout(resolve, ms));
+    }
+
+    function showQuestionModal() {
+      const modal = $("questionModal");
+      modal.classList.remove("is-hidden", "is-fading");
+      modal.setAttribute("aria-hidden", "false");
+    }
+
+    function hideQuestionModal() {
+      const modal = $("questionModal");
+      modal.classList.add("is-fading");
+      modal.setAttribute("aria-hidden", "true");
+      window.setTimeout(() => {
+        modal.classList.add("is-hidden");
+        modal.classList.remove("is-fading");
+      }, 520);
+    }
+
+    function showReadingModal() {
+      const modal = $("readingModal");
+      modal.classList.remove("is-hidden", "is-fading");
+      modal.setAttribute("aria-hidden", "false");
+    }
+
+    function hideReadingModal() {
+      const modal = $("readingModal");
+      modal.classList.add("is-hidden");
+      modal.setAttribute("aria-hidden", "true");
+    }
+
+    function resetFlowForNewQuestion() {
+      state.pendingSelection = null;
+      hideReadingModal();
+      $("cards").innerHTML = "";
+      $("reading").innerHTML = `<p class="small">Bài luận giải sẽ xuất hiện sau khi bạn chọn bài.</p>`;
+      $("classification").innerHTML = `<div class="pill"><span>Trạng thái</span><strong>Chưa phân tích câu hỏi.</strong></div>`;
+      const placeholder = $("deckPlaceholder");
+      if (placeholder) placeholder.style.display = "";
+      const button = $("runButton");
+      button.disabled = false;
+      setStatus("Sẵn sàng", "ok");
+      showQuestionModal();
+    }
+
+    async function completeReading(question, classification, spread, drawn) {
+      const button = $("runButton");
+
+      try {
+        renderCards(drawn);
+
+        const analysis = analyzeReading(classification, spread, drawn);
+        setDebug({ classification, spread, drawn: cardPromptData(drawn, classification), analysis });
+
+        let reading;
+        if ($("useAiWriter").checked) {
+          setStatus("AI đang viết bài đọc...");
+          try {
+            reading = await writeReading(question, classification, spread, drawn, analysis);
+          } catch (writerError) {
+            reading = fallbackReading(classification, spread, drawn, analysis);
+            reading.retention_hook = `AI writer gặp lỗi nên đang dùng fallback local: ${writerError.message}`;
+          }
+        } else {
+          reading = fallbackReading(classification, spread, drawn, analysis);
+        }
+
+        renderReading(reading);
+        setDebug({ classification, spread, cards: cardPromptData(drawn, classification), analysis, reading });
+        setStatus("Hoàn tất", "ok");
+        showReadingModal();
+      } catch (error) {
+        console.error(error);
+        $("reading").innerHTML = `<p class="error">${escapeHtml(error.message)}</p>`;
+        setStatus("Có lỗi", "error");
+        setDebug(String(error.stack || error.message || error));
+        showReadingModal();
+      } finally {
+        button.disabled = false;
+      }
+    }
+
+    async function runFlow() {
+      const button = $("runButton");
+      const question = $("question").value.trim();
+      if (!question) return;
+
+      button.disabled = true;
+      state.pendingSelection = null;
+      $("reading").innerHTML = `<p class="small">Sau khi phân tích câu hỏi, bộ bài úp sẽ hiện ra để bạn chọn.</p>`;
+      $("cards").innerHTML = `
+        <div class="selection-board">
+          <div class="selection-instruction">
+            <strong>Đang đọc câu hỏi...</strong> Bộ bài sẽ mở ra khi ngữ cảnh đã sẵn sàng.
+          </div>
+        </div>
+      `;
+      $("classification").innerHTML = "";
+      const placeholder = $("deckPlaceholder");
+      if (placeholder) placeholder.style.display = "";
+      hideQuestionModal();
+      await delay(320);
+
+      try {
+        setStatus("AI đang phân tích câu hỏi...");
+        const classification = await classifyQuestion(question);
+        renderClassification(classification);
+
+        const spread = chooseSpread(classification);
+        await startCardSelection(question, classification, spread);
+        setDebug({ classification, spread, selection_candidates: state.pendingSelection.candidates.map((item) => item.card.id) });
+      } catch (error) {
+        console.error(error);
+        $("reading").innerHTML = `<p class="error">${escapeHtml(error.message)}</p>`;
+        setStatus("Có lỗi", "error");
+        setDebug(String(error.stack || error.message || error));
+        showReadingModal();
+        button.disabled = false;
+      } finally {
+        if (!state.pendingSelection) {
+          button.disabled = false;
+        }
+      }
+    }
+
+    $("providerMode").addEventListener("change", () => {
+      $("directFields").style.display = $("providerMode").value === "direct" ? "block" : "none";
+    });
+
+    document.querySelectorAll("[data-question]").forEach((button) => {
+      button.addEventListener("click", () => {
+        $("question").value = button.dataset.question || "";
+        $("question").focus();
+      });
+    });
+
+    $("runButton").addEventListener("click", runFlow);
+    $("newQuestionButton").addEventListener("click", resetFlowForNewQuestion);
+
+    loadData().catch((error) => {
+      setStatus("Không tải được dữ liệu", "error");
+      setDebug(error.stack || error.message);
+    });
+  </script>
+</body>
+</html>

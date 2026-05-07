@@ -1,0 +1,121 @@
+{
+  "schema_version": "1.0",
+  "source_basis": ["joan_bunning_learning_tarot", "benebell_holistic_tarot", "rachel_pollack", "product_editorial"],
+  "purpose": "Tarot number patterns for Minor Arcana and spread-level synthesis inside the Tarot reading engine.",
+  "minor_numbers": {
+    "ace": {
+      "number": 1,
+      "stage_vi": "Khởi đầu",
+      "keywords_vi": ["hạt giống", "cơ hội mới", "tiềm năng", "tia đầu tiên"],
+      "combination_signal_vi": "Nhiều Ace cho thấy nhiều cánh cửa mới hoặc nhiều hướng bắt đầu cùng lúc."
+    },
+    "2": {
+      "number": 2,
+      "stage_vi": "Đối cực và lựa chọn",
+      "keywords_vi": ["cân bằng", "quan hệ", "phản chiếu", "quyết định"],
+      "combination_signal_vi": "Nhiều số 2 nhấn mạnh lựa chọn, quan hệ, sự chờ đợi hoặc nhu cầu cân bằng."
+    },
+    "3": {
+      "number": 3,
+      "stage_vi": "Phát triển",
+      "keywords_vi": ["biểu đạt", "hợp tác", "mở rộng", "sáng tạo"],
+      "combination_signal_vi": "Nhiều số 3 cho thấy quá trình phát triển, nhóm, giao tiếp hoặc sáng tạo đang nổi bật."
+    },
+    "4": {
+      "number": 4,
+      "stage_vi": "Cấu trúc",
+      "keywords_vi": ["nền tảng", "ổn định", "ranh giới", "hệ thống"],
+      "combination_signal_vi": "Nhiều số 4 nhấn mạnh an toàn, cấu trúc, giới hạn hoặc sự cần thiết của nền móng."
+    },
+    "5": {
+      "number": 5,
+      "stage_vi": "Biến động",
+      "keywords_vi": ["xung đột", "thử thách", "bất ổn", "thay đổi"],
+      "combination_signal_vi": "Nhiều số 5 là tín hiệu biến động mạnh, xung đột hoặc một giai đoạn cần điều chỉnh."
+    },
+    "6": {
+      "number": 6,
+      "stage_vi": "Điều hòa",
+      "keywords_vi": ["hòa hợp", "phục hồi", "hỗ trợ", "trao nhận"],
+      "combination_signal_vi": "Nhiều số 6 cho thấy nhu cầu chữa lành, hỗ trợ và đưa mọi thứ về cân bằng."
+    },
+    "7": {
+      "number": 7,
+      "stage_vi": "Thử thách nội tâm",
+      "keywords_vi": ["đánh giá", "phòng thủ", "tìm kiếm", "mơ hồ"],
+      "combination_signal_vi": "Nhiều số 7 cho thấy giai đoạn kiểm tra niềm tin, lựa chọn kỹ và đi sâu vào nội tâm."
+    },
+    "8": {
+      "number": 8,
+      "stage_vi": "Sức mạnh và tiến trình",
+      "keywords_vi": ["kiểm soát", "chuyển động", "rèn luyện", "năng lực"],
+      "combination_signal_vi": "Nhiều số 8 nhấn mạnh quyền lực cá nhân, vận hành, kỷ luật hoặc tốc độ tiến triển."
+    },
+    "9": {
+      "number": 9,
+      "stage_vi": "Kết tinh",
+      "keywords_vi": ["gần hoàn tất", "chiều sâu", "tự chủ", "trải nghiệm tích lũy"],
+      "combination_signal_vi": "Nhiều số 9 cho thấy quá trình gần kết thúc, cần nhìn lại và rút bài học."
+    },
+    "10": {
+      "number": 10,
+      "stage_vi": "Hoàn tất chu kỳ",
+      "keywords_vi": ["kết thúc", "chuyển pha", "đỉnh điểm", "di sản"],
+      "combination_signal_vi": "Nhiều số 10 cho thấy một chu kỳ đang đóng lại và chuẩn bị chuyển sang vòng mới."
+    }
+  },
+  "court_rank_patterns": {
+    "page": {
+      "maturity_vi": "Người học",
+      "keywords_vi": ["tin mới", "khởi đầu học hỏi", "tò mò", "non kinh nghiệm"],
+      "reading_note_vi": "Có thể là người trẻ, vai trò học việc, tin nhắn, hoặc cách tiếp cận còn mới."
+    },
+    "knight": {
+      "maturity_vi": "Người hành động",
+      "keywords_vi": ["theo đuổi", "di chuyển", "cực đoan của suit", "động lực"],
+      "reading_note_vi": "Có thể là người mang năng lượng tiến tới, hoặc lời khuyên về cách hành động."
+    },
+    "queen": {
+      "maturity_vi": "Người làm chủ bên trong",
+      "keywords_vi": ["tiếp nhận", "nuôi dưỡng", "trực giác", "nội lực"],
+      "reading_note_vi": "Có thể là vai trò chăm sóc, năng lượng nội tâm trưởng thành, hoặc cách giữ không gian."
+    },
+    "king": {
+      "maturity_vi": "Người quản trị",
+      "keywords_vi": ["quyền lực", "trách nhiệm", "thể hiện ra ngoài", "lãnh đạo"],
+      "reading_note_vi": "Có thể là người có thẩm quyền, vai trò quyết định, hoặc lời khuyên về trách nhiệm."
+    }
+  },
+  "sequence_rules": [
+    {
+      "id": "ascending_numbers",
+      "condition": "numbers are mostly increasing across spread order",
+      "interpretation_vi": "Tiến trình đang đi tới, trưởng thành hoặc mở rộng."
+    },
+    {
+      "id": "descending_numbers",
+      "condition": "numbers are mostly decreasing across spread order",
+      "interpretation_vi": "Tình huống có thể đang quay lại bài học cũ, cần sửa nền hoặc giải quyết phần chưa xong."
+    },
+    {
+      "id": "repeated_number",
+      "condition": "same number appears at least twice",
+      "interpretation_vi": "Chủ đề của con số đó là pattern nổi bật trong reading."
+    },
+    {
+      "id": "many_aces",
+      "condition": "ace_count >= 2",
+      "interpretation_vi": "Nhiều khởi đầu mới cùng lúc; cần chọn hạt giống đáng nuôi nhất."
+    },
+    {
+      "id": "many_fives",
+      "condition": "number_5_count >= 2",
+      "interpretation_vi": "Giai đoạn nhiều biến động/xung đột; lời khuyên nên tập trung điều chỉnh thay vì cố kiểm soát mọi thứ."
+    },
+    {
+      "id": "many_tens",
+      "condition": "number_10_count >= 2",
+      "interpretation_vi": "Nhiều chu kỳ đang đóng lại; cần chuẩn bị cho chuyển pha."
+    }
+  ]
+}

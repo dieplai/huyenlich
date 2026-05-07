@@ -1,0 +1,192 @@
+{
+  "schema_version": "1.0",
+  "source_basis": ["golden_dawn_book_t", "joan_bunning_learning_tarot", "benebell_holistic_tarot", "product_editorial"],
+  "purpose": "Rule categories for combining cards into a coherent Tarot reading without manually hardcoding every card pair.",
+  "evaluation_order": [
+    "question_context",
+    "spread_positions",
+    "card_core_meanings",
+    "orientation_reversal",
+    "adjacent_relations",
+    "elemental_dignities",
+    "arcana_weight",
+    "suit_distribution",
+    "number_patterns",
+    "court_card_density",
+    "spread_level_synthesis"
+  ],
+  "relation_types": {
+    "amplifies": {
+      "name_vi": "Khuếch đại",
+      "description_vi": "Hai lá cùng nhấn mạnh một chủ đề, nguyên tố, số hoặc biểu tượng."
+    },
+    "supports": {
+      "name_vi": "Hỗ trợ",
+      "description_vi": "Một lá cung cấp điều kiện giúp lá kia biểu hiện lành mạnh hơn."
+    },
+    "challenges": {
+      "name_vi": "Thử thách",
+      "description_vi": "Hai lá kéo về hai hướng khác nhau hoặc chỉ ra điểm căng."
+    },
+    "clarifies": {
+      "name_vi": "Làm rõ",
+      "description_vi": "Lá sau hoặc lá cạnh làm rõ ý nghĩa của lá trước/lá trung tâm."
+    },
+    "transitions": {
+      "name_vi": "Chuyển pha",
+      "description_vi": "Thứ tự lá kể một tiến trình từ trạng thái này sang trạng thái khác."
+    },
+    "contrasts": {
+      "name_vi": "Đối chiếu",
+      "description_vi": "Hai lá không nhất thiết xung đột, nhưng cho thấy hai mặt cần so sánh."
+    }
+  },
+  "rule_categories": [
+    {
+      "id": "arcana_weight",
+      "source_basis": ["waite", "joan_bunning_learning_tarot", "product_editorial"],
+      "rules": [
+        {
+          "id": "many_major_arcana",
+          "condition": "major_count / card_count >= 0.5 and card_count >= 3",
+          "signal": "turning_point",
+          "interpretation_vi": "Reading có nhiều Major Arcana: chủ đề mang tính bài học lớn, bước ngoặt hoặc quá trình chuyển hóa sâu."
+        },
+        {
+          "id": "major_minor_pair",
+          "condition": "major adjacent to minor",
+          "signal": "theme_and_manifestation",
+          "interpretation_vi": "Major là chủ đề lớn; Minor chỉ cách chủ đề đó đang hiện ra trong đời sống thường ngày."
+        },
+        {
+          "id": "mostly_minor_arcana",
+          "condition": "minor_count / card_count >= 0.75",
+          "signal": "practical_action",
+          "interpretation_vi": "Reading thiên về tình huống thực tế, có thể thay đổi qua lựa chọn và hành động."
+        }
+      ]
+    },
+    {
+      "id": "suit_distribution",
+      "source_basis": ["joan_bunning_learning_tarot", "benebell_holistic_tarot", "product_editorial"],
+      "rules": [
+        {
+          "id": "dominant_wands",
+          "condition": "wands_count is highest and wands_count >= 2",
+          "signal": "action_passion",
+          "interpretation_vi": "Wands trội: hành động, đam mê, động lực, sáng tạo hoặc xung lực là trọng tâm."
+        },
+        {
+          "id": "dominant_cups",
+          "condition": "cups_count is highest and cups_count >= 2",
+          "signal": "emotion_relationship",
+          "interpretation_vi": "Cups trội: cảm xúc, tình yêu, kết nối hoặc chữa lành là trọng tâm."
+        },
+        {
+          "id": "dominant_swords",
+          "condition": "swords_count is highest and swords_count >= 2",
+          "signal": "mind_conflict_truth",
+          "interpretation_vi": "Swords trội: suy nghĩ, giao tiếp, quyết định, sự thật hoặc căng thẳng tinh thần là trọng tâm."
+        },
+        {
+          "id": "dominant_pentacles",
+          "condition": "pentacles_count is highest and pentacles_count >= 2",
+          "signal": "work_money_body",
+          "interpretation_vi": "Pentacles trội: công việc, tiền bạc, thân thể, thói quen và nền tảng thực tế là trọng tâm."
+        },
+        {
+          "id": "missing_suit",
+          "condition": "card_count >= 3 and a suit count is 0",
+          "signal": "missing_energy",
+          "interpretation_vi": "Một suit vắng mặt cho thấy năng lượng đó có thể đang bị thiếu, bị bỏ qua hoặc không phải trọng tâm hiện tại."
+        }
+      ]
+    },
+    {
+      "id": "orientation_density",
+      "source_basis": ["mary_greer_reversals", "product_editorial"],
+      "rules": [
+        {
+          "id": "many_reversals",
+          "condition": "reversed_count / card_count >= 0.5",
+          "signal": "blocked_internal_processing",
+          "interpretation_vi": "Nhiều lá ngược: năng lượng đang bị chặn, quay vào trong, trì hoãn hoặc cần điều chỉnh trước khi biểu hiện ra ngoài."
+        },
+        {
+          "id": "single_reversal_in_upright_spread",
+          "condition": "reversed_count == 1 and card_count >= 3",
+          "signal": "specific_block",
+          "interpretation_vi": "Một lá ngược giữa nhiều lá xuôi là điểm nghẽn hoặc bài học nổi bật nhất."
+        }
+      ]
+    },
+    {
+      "id": "court_card_density",
+      "source_basis": ["benebell_holistic_tarot", "joan_bunning_learning_tarot", "product_editorial"],
+      "rules": [
+        {
+          "id": "many_court_cards",
+          "condition": "court_count / card_count >= 0.4 and card_count >= 3",
+          "signal": "people_roles_social_dynamics",
+          "interpretation_vi": "Nhiều court cards: con người, vai trò xã hội, cách hành xử hoặc mức trưởng thành của năng lượng đang quan trọng."
+        },
+        {
+          "id": "court_card_in_advice",
+          "condition": "card.rank in ['page','knight','queen','king'] and position.function == 'advice'",
+          "signal": "behavioral_mode",
+          "interpretation_vi": "Court card ở vị trí lời khuyên nên được đọc như cách user nên hành động, không mặc định là một người khác."
+        }
+      ]
+    },
+    {
+      "id": "adjacent_flow",
+      "source_basis": ["golden_dawn_book_t", "joan_bunning_learning_tarot", "product_editorial"],
+      "rules": [
+        {
+          "id": "adjacent_same_suit",
+          "condition": "adjacent cards share same suit",
+          "relation": "amplifies",
+          "interpretation_vi": "Hai lá cùng suit làm chủ đề của suit đó rõ và mạnh hơn."
+        },
+        {
+          "id": "adjacent_friendly_elements",
+          "condition": "elemental relation is friendly",
+          "relation": "supports",
+          "interpretation_vi": "Hai lá có nguyên tố hỗ trợ nhau; đọc như một dòng năng lượng dễ phối hợp."
+        },
+        {
+          "id": "adjacent_contrary_elements",
+          "condition": "elemental relation is contrary",
+          "relation": "challenges",
+          "interpretation_vi": "Hai lá có nguyên tố xung khắc; đọc như điểm căng hoặc hai nhu cầu kéo ngược nhau."
+        },
+        {
+          "id": "ordered_progression",
+          "condition": "spread order shows clear narrative from card A to card B",
+          "relation": "transitions",
+          "interpretation_vi": "Thứ tự lá tạo câu chuyện; đọc hướng chuyển từ lá trước sang lá sau."
+        }
+      ]
+    }
+  ],
+  "synthesis_template_vi": {
+    "free": [
+      "Tóm tắt năng lượng chính của spread bằng 2-3 câu.",
+      "Nêu một pattern nổi bật nhất.",
+      "Đưa một lời khuyên hành động ngắn."
+    ],
+    "paid": [
+      "Mở bằng bức tranh tổng thể.",
+      "Giải từng lá theo position.",
+      "Kết nối các lá cạnh nhau.",
+      "Nêu pattern toàn spread.",
+      "Đưa 2-4 bước hành động thực tế.",
+      "Kết bằng câu định hướng, không phán quyết tuyệt đối."
+    ]
+  },
+  "safety_rules": [
+    "Do not predict death, illness, pregnancy, legal outcomes, or guaranteed financial gains/losses.",
+    "For medical, legal, or investment questions, classify as sensitive and shift to reflective guidance.",
+    "Do not use fear-based paywall language."
+  ]
+}

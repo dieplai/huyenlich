@@ -1,0 +1,201 @@
+﻿{
+  "schema_version": "1.0",
+  "project": "Tarot",
+  "domain": "tarot",
+  "tradition": "rider_waite_smith",
+  "source_basis_enum": [
+    "waite",
+    "golden_dawn_book_t",
+    "mary_greer_reversals",
+    "joan_bunning_learning_tarot",
+    "joan_bunning_spreads",
+    "rachel_pollack",
+    "benebell_holistic_tarot",
+    "robert_place",
+    "institutional_history",
+    "product_editorial"
+  ],
+  "usage_policy": {
+    "principle": "Rules-first Tarot: source-backed rules are converted to structured data; AI may phrase and synthesize but must not invent new rules.",
+    "copyright": "Paraphrase and summarize copyrighted modern sources. Do not copy long passages or card interpretations from modern books/sites.",
+    "public_domain": "Waite's Pictorial Key is used as the primary public-domain source for Rider-Waite-Smith meanings, still rewritten in Tarot voice.",
+    "source_traceability": "Every major rule file should include source_basis or source_ids so future changes remain auditable."
+  },
+  "sources": [
+    {
+      "id": "waite",
+      "title": "The Pictorial Key to the Tarot",
+      "author": "Arthur Edward Waite",
+      "type": "primary_public_domain",
+      "reliability_tier": 1,
+      "urls": [
+        "https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot",
+        "https://sacred-texts.com/tarot/pkt/pktcont.htm"
+      ],
+      "use_for": [
+        "rws_card_meanings",
+        "upright_reversed_seed_meanings",
+        "major_arcana_symbolism",
+        "celtic_cross_reference"
+      ],
+      "notes": "Primary anchor for Rider-Waite-Smith. Language is old-fashioned; product copy should be rewritten."
+    },
+    {
+      "id": "golden_dawn_book_t",
+      "title": "Book T - The Tarot",
+      "author": "Golden Dawn / Mathers-Felkin material",
+      "type": "esoteric_system_source",
+      "reliability_tier": 1,
+      "urls": [
+        "https://www.mr-kaplan.com/Library/Mathers/Book-T.html",
+        "https://mytarot.org/2022/01/24/book-t-the-tarot-by-samuel-liddell-macgregor-mathers-and-harriet-felkin-1888-members-of-the-golden-dawn/"
+      ],
+      "use_for": [
+        "elemental_dignities",
+        "court_card_elements",
+        "adjacent_card_weighting",
+        "well_dignified_ill_dignified_logic"
+      ],
+      "notes": "Use selectively for rules engine. Do not force full Golden Dawn astrology/qabalah into MVP unless explicitly needed."
+    },
+    {
+      "id": "mary_greer_reversals",
+      "title": "The Complete Book of Tarot Reversals",
+      "author": "Mary K. Greer",
+      "type": "modern_practice",
+      "reliability_tier": 2,
+      "urls": [
+        "https://books.google.com/books/about/The_Complete_Book_of_Tarot_Reversals.html?id=0QnoqX0TOS0C",
+        "https://www.llewellyn.com/product.php?ean=9781567182859"
+      ],
+      "use_for": [
+        "reversal_modes",
+        "non_binary_reversal_interpretation"
+      ],
+      "notes": "Use as framework, not copied text."
+    },
+    {
+      "id": "joan_bunning_learning_tarot",
+      "title": "Learning the Tarot",
+      "author": "Joan Bunning",
+      "type": "modern_practice",
+      "reliability_tier": 2,
+      "urls": [
+        "https://play.google.com/store/books/details/Learning_the_Tarot_A_Tarot_Book_for_Beginners?id=GtLPNvengDoC",
+        "https://books.google.com/books/about/Learning_the_Tarot.html?id=he3J6UYYPakC"
+      ],
+      "use_for": [
+        "keyword_synthesis",
+        "card_pairs",
+        "story_reading",
+        "similar_opposite_cards"
+      ],
+      "notes": "Useful for readable, beginner-friendly reading structure."
+    },
+    {
+      "id": "joan_bunning_spreads",
+      "title": "Learning Tarot Spreads",
+      "author": "Joan Bunning",
+      "type": "modern_practice",
+      "reliability_tier": 2,
+      "urls": [
+        "https://books.google.com/books/about/Learning_Tarot_Spreads.html?id=nXyZnU6MA_wC",
+        "https://redwheelweiser.com/book/learning-tarot-spreads-9781578632701/"
+      ],
+      "use_for": [
+        "spread_catalog",
+        "position_meanings",
+        "subject_specific_spreads"
+      ],
+      "notes": "Use to structure spread positions; do not copy full spread text."
+    },
+    {
+      "id": "rachel_pollack",
+      "title": "Seventy-Eight Degrees of Wisdom",
+      "author": "Rachel Pollack",
+      "type": "modern_classic",
+      "reliability_tier": 2,
+      "urls": [
+        "https://books.google.com/books/about/Seventy_Eight_Degrees_of_Wisdom.html?id=8Js0NMhA6B0C",
+        "https://www.labyrinthbooks.com/seventy-eight-degrees-of-wisdom/"
+      ],
+      "use_for": [
+        "archetype_notes",
+        "psychological_lens",
+        "major_arcana_journey"
+      ],
+      "notes": "Useful for depth and paid-reading tone, not a rigid rules engine."
+    },
+    {
+      "id": "benebell_holistic_tarot",
+      "title": "Holistic Tarot",
+      "author": "Benebell Wen",
+      "type": "modern_compendium",
+      "reliability_tier": 2,
+      "urls": [
+        "https://benebellwen.com/about-the-book/",
+        "https://benebellwen.com/about-the-book/holistic-tarot-supplements/",
+        "https://books.google.com/books?id=ZwcDBAAAQBAJ"
+      ],
+      "use_for": [
+        "rws_study_structure",
+        "advanced_spread_practice",
+        "court_card_framework",
+        "reading_workflow"
+      ],
+      "notes": "Very useful for product-oriented structure; do not copy copyrighted content."
+    },
+    {
+      "id": "robert_place",
+      "title": "The Tarot: History, Symbolism, and Divination",
+      "author": "Robert M. Place",
+      "type": "history_symbolism",
+      "reliability_tier": 2,
+      "urls": [
+        "https://books.google.com/books/about/The_Tarot.html?id=KCiQEAAAQBAJ",
+        "https://www.aeclectic.net/tarot/books/history-symbolism-divination/"
+      ],
+      "use_for": [
+        "history_notes",
+        "symbol_history",
+        "myth_busting"
+      ],
+      "notes": "Use to avoid invented historical claims."
+    },
+    {
+      "id": "institutional_history",
+      "title": "Institutional references",
+      "author": "Britannica / V&A / Met / library collections",
+      "type": "institutional_reference",
+      "reliability_tier": 2,
+      "urls": [
+        "https://www.britannica.com/topic/tarot",
+        "https://www.vam.ac.uk/articles/tarot-cards",
+        "https://www.metmuseum.org/en/perspectives/tarot",
+        "https://aspace.library.jhu.edu/repositories/3/archival_objects/330032"
+      ],
+      "use_for": [
+        "deck_structure",
+        "history_context",
+        "public_explanation"
+      ],
+      "notes": "Use for background and factual framing, not card-by-card interpretation."
+    },
+    {
+      "id": "product_editorial",
+      "title": "Tarot editorial layer",
+      "author": "Tarot",
+      "type": "product_voice",
+      "reliability_tier": 3,
+      "urls": [],
+      "use_for": [
+        "vietnamese_copy",
+        "paywall_teasers",
+        "ux_microcopy",
+        "safe_actionable_advice"
+      ],
+      "notes": "Must not be presented as ancient/traditional source."
+    }
+  ]
+}
+

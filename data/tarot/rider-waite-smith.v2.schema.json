@@ -1,0 +1,160 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tarot.local/schemas/tarot/rider-waite-smith.v2.schema.json",
+  "title": "Tarot Rider-Waite-Smith Tarot V2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "deck_id", "coverage", "cards"],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "deck_id": {
+      "type": "string"
+    },
+    "coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["card_count", "notes_vi"],
+      "properties": {
+        "card_count": {
+          "type": "integer"
+        },
+        "notes_vi": {
+          "type": "string"
+        }
+      }
+    },
+    "cards": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/card"
+      }
+    }
+  },
+  "$defs": {
+    "card": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "source_basis",
+        "core",
+        "orientation",
+        "position_overrides",
+        "relationship_signals",
+        "symbols",
+        "reader_notes_vi"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "source_basis": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "core": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["essence_vi", "keywords_vi", "shadow_keywords_vi"],
+          "properties": {
+            "essence_vi": {
+              "type": "string"
+            },
+            "keywords_vi": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "shadow_keywords_vi": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "orientation": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["upright", "reversed"],
+          "properties": {
+            "upright": {
+              "$ref": "#/$defs/contextMeanings"
+            },
+            "reversed": {
+              "$ref": "#/$defs/contextMeanings"
+            }
+          }
+        },
+        "position_overrides": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "relationship_signals": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "symbols": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["symbol", "meaning_vi"],
+            "properties": {
+              "symbol": {
+                "type": "string"
+              },
+              "meaning_vi": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "reader_notes_vi": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "contextMeanings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["general_vi", "love_vi", "career_vi", "money_vi", "inner_work_vi", "advice_vi", "warning_vi"],
+      "properties": {
+        "general_vi": {
+          "type": "string"
+        },
+        "love_vi": {
+          "type": "string"
+        },
+        "career_vi": {
+          "type": "string"
+        },
+        "money_vi": {
+          "type": "string"
+        },
+        "inner_work_vi": {
+          "type": "string"
+        },
+        "advice_vi": {
+          "type": "string"
+        },
+        "warning_vi": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
+
