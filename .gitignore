@@ -3,6 +3,7 @@
 .dev-browser/
 .dev-logs/
 .claude/
+.secrets/
 /public/
 
 backend/.env
