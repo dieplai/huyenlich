@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://tarot.local'),
+  metadataBase: new URL('https://huyenlich.io.vn'),
   title: {
     default: 'Tarot — Trải Bài Rider-Waite-Smith',
     template: '%s | Tarot',
