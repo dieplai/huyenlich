@@ -8,12 +8,12 @@ Production is isolated under `/opt/huyenlich` and uses host ports that are not u
 
 Required DNS:
 
-- `huyenlich.io.vn` A record -> `103.47.226.171`
+- `tarot.huyenlich.io.vn` A record -> `103.47.226.171`
 
 After DNS resolves, enable HTTPS on the VPS:
 
 ```bash
-certbot --nginx -d huyenlich.io.vn
+certbot --nginx -d tarot.huyenlich.io.vn
 ```
 
 GitHub Actions secrets for automatic deployment:
