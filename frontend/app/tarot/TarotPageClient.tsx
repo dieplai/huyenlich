@@ -6,7 +6,7 @@ import { readingAPI, streamTarotReading } from '@/lib/api'
 import { SparklesCore } from '@/components/ui/sparkles'
 
 type Step = 'question' | 'selecting' | 'loading' | 'result'
-type DeckPhase = 'stack' | 'revealing' | 'split' | 'rowstacks' | 'fanned'
+type DeckPhase = 'stack' | 'fan'
 
 interface TarotCard {
   id: string
@@ -97,6 +97,9 @@ const CROSS_POSITION_LABELS = [
 ]
 
 const CARD_BACKS = ['/after1.jpg', '/after2.jpg', '/after3.jpg']
+const VISUAL_CARD_LIMIT = 32
+const DECK_READY_DELAY = 1800
+const DECK_FAN_DELAY = 80
 
 function shuffleCards(cards: TarotCard[]) {
   const next = [...cards]
@@ -215,43 +218,8 @@ function deckTransform(
     }
   }
 
-  if (phase === 'revealing') {
-    return {
-      x: side * Math.min(absStack, 18) * (isMobile ? 0.72 : 0.88),
-      y: Math.min(absStack, 18) * 0.08 - 2,
-      rotate: side * Math.min(absStack, 18) * (isMobile ? 0.14 : 0.18),
-      rotateY: 0,
-      scale: 1,
-      delay: Math.min(absStack, 22) * 0.005,
-    }
-  }
-
-  if (phase === 'split') {
-    const pileX = row === 0 ? (isMobile ? -54 : -86) : (isMobile ? 54 : 86)
-    return {
-      x: pileX + localOffset * (isMobile ? 0.12 : 0.18),
-      y: localOffset * 0.045,
-      rotate: (row === 0 ? -4.8 : 4.8) + localOffset * 0.035,
-      rotateY: 0,
-      scale: 0.995,
-      delay: (local * 3 + row * 70) / 1000,
-    }
-  }
-
   const rowGap = isMobile ? 120 : 146
   const rowBase = row === 0 ? -rowGap : rowGap * 0.72
-
-  if (phase === 'rowstacks') {
-    return {
-      x: localOffset * (isMobile ? 0.13 : 0.18),
-      y: rowBase + localOffset * 0.035,
-      rotate: localOffset * 0.025,
-      rotateY: 0,
-      scale: 0.995,
-      delay: (90 + row * 120 + local * 2) / 1000,
-    }
-  }
-
   const p = safeRowSize <= 1 ? 0 : local / (safeRowSize - 1) * 2 - 1
   const angle = p * (isMobile ? 23 : 29)
   const arcDepth = Math.min(isMobile ? 42 : 66, Math.max(34, stageWidth * 0.064))
@@ -299,6 +267,7 @@ export function TarotPageClient() {
   const receivedContentRef = useRef('')
   const streamCompleteRef = useRef(false)
   const readingStartedRef = useRef(false)
+  const prepareRequestIdRef = useRef(0)
   const [stageWidth, setStageWidth] = useState(760)
   const [spread, setSpread] = useState<TarotSpreadState>(DEFAULT_SPREAD)
   const [preparedAnalysis, setPreparedAnalysis] = useState<Record<string, unknown> | null>(null)
@@ -368,11 +337,9 @@ export function TarotPageClient() {
   const startDeckDeal = () => {
     clearDeckSequence()
     setDeckReady(false)
-    setDeckPhase('revealing')
-    queueDeckPhase('split', 760)
-    queueDeckPhase('rowstacks', 1760)
-    queueDeckPhase('fanned', 2940)
-    sequenceTimersRef.current.push(setTimeout(() => setDeckReady(true), 5900))
+    setDeckPhase('stack')
+    queueDeckPhase('fan', DECK_FAN_DELAY)
+    sequenceTimersRef.current.push(setTimeout(() => setDeckReady(true), DECK_READY_DELAY))
   }
 
   useEffect(() => {
@@ -529,34 +496,31 @@ export function TarotPageClient() {
     setActiveCardId(null)
   }
 
-  const beginSelection = async (event?: FormEvent) => {
+  const beginSelection = (event?: FormEvent) => {
     event?.preventDefault()
     const nextQuestion = (questionInputRef.current?.value ?? question).trim()
     if (!nextQuestion) return
+
+    const requestId = prepareRequestIdRef.current + 1
+    prepareRequestIdRef.current = requestId
+
     setQuestion(nextQuestion)
     resetReadingState()
     setPreparedAnalysis(null)
-
-    let nextSpread = DEFAULT_SPREAD
-    try {
-      const response = await readingAPI.prepare({ question: nextQuestion })
-      const apiSpread = response.data.spread
-      setPreparedAnalysis(response.data.analysis)
-      if (apiSpread?.id && (apiSpread.card_count === 3 || apiSpread.card_count === 5)) {
-        nextSpread = {
-          id: apiSpread.id,
-          targetCount: apiSpread.card_count,
-          desc: apiSpread.name_vi,
-        }
-      }
-    } catch {
-      // Keep the default 3-card spread when the backend is not ready.
-    }
-
-    setSpread(nextSpread)
+    setSpread(DEFAULT_SPREAD)
     setDrawPool(shuffleCards(allCards))
     setStep('selecting')
     startDeckDeal()
+
+    void readingAPI.prepare({ question: nextQuestion })
+      .then(response => {
+        if (prepareRequestIdRef.current !== requestId) return
+        setPreparedAnalysis(response.data.analysis)
+      })
+      .catch(() => {
+        if (prepareRequestIdRef.current !== requestId) return
+        setPreparedAnalysis(null)
+      })
   }
 
   const reshuffle = () => {
@@ -656,7 +620,7 @@ export function TarotPageClient() {
     autoOpenTimerRef.current = setTimeout(() => {
       autoOpenTimerRef.current = null
       void submitReading(cardIds)
-    }, 220)
+    }, 160)
 
     return () => {
       if (autoOpenTimerRef.current) {
@@ -672,6 +636,7 @@ export function TarotPageClient() {
     setDeckPhase('stack')
     setDeckReady(false)
     setQuestion('')
+    prepareRequestIdRef.current += 1
     setSpread(DEFAULT_SPREAD)
     setPreparedAnalysis(null)
     if (questionInputRef.current) questionInputRef.current.value = ''
@@ -730,20 +695,21 @@ export function TarotPageClient() {
               style={{ perspective: '1200px', perspectiveOrigin: '50% 42%' }}
             >
               <div className="absolute left-1/2 top-[42%] h-0 w-0 md:top-[43%]">
-                {drawPool.map((card, index) => {
+                {drawPool.slice(0, Math.min(drawPool.length, VISUAL_CARD_LIMIT)).map((card, index) => {
                   const selectedOrder = selectedIds.indexOf(card.id)
                   const selected = selectedOrder >= 0
                   const disabled = !selected && selectedIds.length >= spread.targetCount
-                  const transform = deckTransform(index, drawPool.length, selected, selectedOrder, spread.targetCount, stageWidth, step, deckPhase)
+                  const visualTotal = Math.min(drawPool.length, VISUAL_CARD_LIMIT)
+                  const transform = deckTransform(index, visualTotal, selected, selectedOrder, spread.targetCount, stageWidth, step, deckPhase)
                   const active = selected && card.id === activeCard?.id
                   const clickable = (step === 'selecting' && deckReady) || (step === 'result' && selected)
                   const fullSelection = selectedIds.length >= spread.targetCount
                   const readingLayout = step === 'loading' || step === 'result'
                   const clearingDeck = fullSelection && !selected
-                  const rowSize = Math.ceil(drawPool.length / 2)
+                  const rowSize = Math.ceil(visualTotal / 2)
                   const row = index < rowSize ? 0 : 1
                   const local = row === 0 ? index : index - rowSize
-                  const cardZIndex = deckPhase === 'fanned'
+                  const cardZIndex = deckPhase === 'fan'
                     ? Math.round((row === 0 ? 170 : 118) + local)
                     : index + 1
 
@@ -783,7 +749,7 @@ export function TarotPageClient() {
                         zIndex: 240,
                       } : undefined}
                       transition={{
-                        duration: clearingDeck ? 0.82 : step === 'selecting' && deckReady ? 0.34 : 1.38,
+                        duration: clearingDeck ? 0.82 : step === 'selecting' && deckReady ? 0.34 : 1.75,
                         ease: [0.16, 0.86, 0.18, 1],
                         delay: deckReady ? 0 : transform.delay,
                       }}
@@ -799,7 +765,7 @@ export function TarotPageClient() {
                             ? active
                               ? '0 24px 62px rgba(0,0,0,0.62), 0 0 0 2px rgba(240,208,96,0.8), 0 0 34px rgba(212,175,55,0.28)'
                               : '0 22px 54px rgba(0,0,0,0.58), 0 0 0 2px rgba(212,175,55,0.38)'
-                            : deckPhase === 'fanned'
+                            : deckPhase === 'fan'
                               ? '0 10px 20px rgba(0,0,0,0.24)'
                               : 'none',
                         }}
